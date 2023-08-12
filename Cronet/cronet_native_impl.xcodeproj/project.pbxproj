@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		785B06D12A78FBEB0088C2FC /* upload_data_sink.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06C72A78FBEA0088C2FC /* upload_data_sink.cc */; };
+		785B06D22A78FBEB0088C2FC /* io_buffer_with_cronet_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06C82A78FBEA0088C2FC /* io_buffer_with_cronet_buffer.cc */; };
+		785B06D32A78FBEB0088C2FC /* runnables.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06C92A78FBEA0088C2FC /* runnables.cc */; };
+		785B06D42A78FBEB0088C2FC /* native_metrics_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06CB2A78FBEA0088C2FC /* native_metrics_util.cc */; };
+		785B06D52A78FBEB0088C2FC /* buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06CD2A78FBEA0088C2FC /* buffer.cc */; };
+		785B06D62A78FBEB0088C2FC /* url_request.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06CE2A78FBEB0088C2FC /* url_request.cc */; };
+		785B06D72A78FBEB0088C2FC /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06CF2A78FBEB0088C2FC /* engine.cc */; };
+		785B06DF2A78FC4C0088C2FC /* cronet.idl_impl_interface.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06DB2A78FC4C0088C2FC /* cronet.idl_impl_interface.cc */; };
+		785B06E02A78FC4C0088C2FC /* cronet.idl_impl_struct.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06DD2A78FC4C0088C2FC /* cronet.idl_impl_struct.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785B06C42A78FBEA0088C2FC /* io_buffer_with_cronet_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = io_buffer_with_cronet_buffer.h; path = ../src/components/cronet/native/io_buffer_with_cronet_buffer.h; sourceTree = "<group>"; };
+		785B06C52A78FBEA0088C2FC /* url_request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = url_request.h; path = ../src/components/cronet/native/url_request.h; sourceTree = "<group>"; };
+		785B06C62A78FBEA0088C2FC /* runnables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = runnables.h; path = ../src/components/cronet/native/runnables.h; sourceTree = "<group>"; };
+		785B06C72A78FBEA0088C2FC /* upload_data_sink.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = upload_data_sink.cc; path = ../src/components/cronet/native/upload_data_sink.cc; sourceTree = "<group>"; };
+		785B06C82A78FBEA0088C2FC /* io_buffer_with_cronet_buffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = io_buffer_with_cronet_buffer.cc; path = ../src/components/cronet/native/io_buffer_with_cronet_buffer.cc; sourceTree = "<group>"; };
+		785B06C92A78FBEA0088C2FC /* runnables.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = runnables.cc; path = ../src/components/cronet/native/runnables.cc; sourceTree = "<group>"; };
+		785B06CA2A78FBEA0088C2FC /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = engine.h; path = ../src/components/cronet/native/engine.h; sourceTree = "<group>"; };
+		785B06CB2A78FBEA0088C2FC /* native_metrics_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = native_metrics_util.cc; path = ../src/components/cronet/native/native_metrics_util.cc; sourceTree = "<group>"; };
+		785B06CC2A78FBEA0088C2FC /* native_metrics_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = native_metrics_util.h; path = ../src/components/cronet/native/native_metrics_util.h; sourceTree = "<group>"; };
+		785B06CD2A78FBEA0088C2FC /* buffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = buffer.cc; path = ../src/components/cronet/native/buffer.cc; sourceTree = "<group>"; };
+		785B06CE2A78FBEB0088C2FC /* url_request.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = url_request.cc; path = ../src/components/cronet/native/url_request.cc; sourceTree = "<group>"; };
+		785B06CF2A78FBEB0088C2FC /* engine.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = engine.cc; path = ../src/components/cronet/native/engine.cc; sourceTree = "<group>"; };
+		785B06D02A78FBEB0088C2FC /* upload_data_sink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upload_data_sink.h; path = ../src/components/cronet/native/upload_data_sink.h; sourceTree = "<group>"; };
+		785B06DB2A78FC4C0088C2FC /* cronet.idl_impl_interface.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cronet.idl_impl_interface.cc; path = ../src/components/cronet/native/generated/cronet.idl_impl_interface.cc; sourceTree = "<group>"; };
+		785B06DC2A78FC4C0088C2FC /* cronet.idl_impl_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet.idl_impl_interface.h; path = ../src/components/cronet/native/generated/cronet.idl_impl_interface.h; sourceTree = "<group>"; };
+		785B06DD2A78FC4C0088C2FC /* cronet.idl_impl_struct.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cronet.idl_impl_struct.cc; path = ../src/components/cronet/native/generated/cronet.idl_impl_struct.cc; sourceTree = "<group>"; };
+		785B06DE2A78FC4C0088C2FC /* cronet.idl_impl_struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet.idl_impl_struct.h; path = ../src/components/cronet/native/generated/cronet.idl_impl_struct.h; sourceTree = "<group>"; };
+		785BFE1E2A77A4750088C2FC /* libcronet_native_impl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcronet_native_impl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785B06D82A78FBFD0088C2FC /* native */ = {
+			isa = PBXGroup;
+			children = (
+				785B06E12A78FC500088C2FC /* generated */,
+				785B06CD2A78FBEA0088C2FC /* buffer.cc */,
+				785B06CF2A78FBEB0088C2FC /* engine.cc */,
+				785B06CA2A78FBEA0088C2FC /* engine.h */,
+				785B06C82A78FBEA0088C2FC /* io_buffer_with_cronet_buffer.cc */,
+				785B06C42A78FBEA0088C2FC /* io_buffer_with_cronet_buffer.h */,
+				785B06CB2A78FBEA0088C2FC /* native_metrics_util.cc */,
+				785B06CC2A78FBEA0088C2FC /* native_metrics_util.h */,
+				785B06C92A78FBEA0088C2FC /* runnables.cc */,
+				785B06C62A78FBEA0088C2FC /* runnables.h */,
+				785B06C72A78FBEA0088C2FC /* upload_data_sink.cc */,
+				785B06D02A78FBEB0088C2FC /* upload_data_sink.h */,
+				785B06CE2A78FBEB0088C2FC /* url_request.cc */,
+				785B06C52A78FBEA0088C2FC /* url_request.h */,
+			);
+			name = native;
+			sourceTree = "<group>";
+		};
+		785B06D92A78FC0F0088C2FC /* cronet */ = {
+			isa = PBXGroup;
+			children = (
+				785B06D82A78FBFD0088C2FC /* native */,
+			);
+			name = cronet;
+			sourceTree = "<group>";
+		};
+		785B06DA2A78FC190088C2FC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				785B06D92A78FC0F0088C2FC /* cronet */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		785B06E12A78FC500088C2FC /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				785B06DB2A78FC4C0088C2FC /* cronet.idl_impl_interface.cc */,
+				785B06DC2A78FC4C0088C2FC /* cronet.idl_impl_interface.h */,
+				785B06DD2A78FC4C0088C2FC /* cronet.idl_impl_struct.cc */,
+				785B06DE2A78FC4C0088C2FC /* cronet.idl_impl_struct.h */,
+			);
+			name = generated;
+			sourceTree = "<group>";
+		};
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libcronet_native_impl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				785B06DA2A78FC190088C2FC /* components */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* cronet_native_impl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "cronet_native_impl" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cronet_native_impl;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libcronet_native_impl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "cronet_native_impl" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* cronet_native_impl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785B06D42A78FBEB0088C2FC /* native_metrics_util.cc in Sources */,
+				785B06D22A78FBEB0088C2FC /* io_buffer_with_cronet_buffer.cc in Sources */,
+				785B06D12A78FBEB0088C2FC /* upload_data_sink.cc in Sources */,
+				785B06DF2A78FC4C0088C2FC /* cronet.idl_impl_interface.cc in Sources */,
+				785B06D62A78FBEB0088C2FC /* url_request.cc in Sources */,
+				785B06D52A78FBEB0088C2FC /* buffer.cc in Sources */,
+				785B06D32A78FBEB0088C2FC /* runnables.cc in Sources */,
+				785B06E02A78FC4C0088C2FC /* cronet.idl_impl_struct.cc in Sources */,
+				785B06D72A78FBEB0088C2FC /* engine.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					../src/third_party/boringssl/src/include,
+					../src/third_party/protobuf/src,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../src,
+					../gen,
+					"../src/third_party/abseil-cpp",
+					../src/components/cronet/native/include,
+					../src/net/third_party/quiche/src,
+					../src/components/cronet/native/generated,
+					../gen/net/third_party/quiche/src,
+					../src/net/third_party/quiche/src/quiche/common/platform/default,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					../src/third_party/boringssl/src/include,
+					../src/third_party/protobuf/src,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../src,
+					../gen,
+					"../src/third_party/abseil-cpp",
+					../src/components/cronet/native/include,
+					../src/net/third_party/quiche/src,
+					../src/components/cronet/native/generated,
+					../gen/net/third_party/quiche/src,
+					../src/net/third_party/quiche/src/quiche/common/platform/default,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "cronet_native_impl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "cronet_native_impl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

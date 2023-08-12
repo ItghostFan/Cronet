@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78C659D52A7A473B00B7B63C /* histogram_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659D42A7A473B00B7B63C /* histogram_manager.cc */; };
+		78C659EB2A7A488A00B7B63C /* clean_exit_beacon.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659E32A7A488A00B7B63C /* clean_exit_beacon.cc */; };
+		78C659EC2A7A488A00B7B63C /* client_info.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659E42A7A488A00B7B63C /* client_info.cc */; };
+		78C659ED2A7A488A00B7B63C /* cloned_install_detector.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659E52A7A488A00B7B63C /* cloned_install_detector.cc */; };
+		78C659F92A7A48AF00B7B63C /* data_use_tracker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659EF2A7A48AF00B7B63C /* data_use_tracker.cc */; };
+		78C659FA2A7A48AF00B7B63C /* cpu_metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659F12A7A48AF00B7B63C /* cpu_metrics_provider.cc */; };
+		78C659FB2A7A48AF00B7B63C /* date_changed_helper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659F22A7A48AF00B7B63C /* date_changed_helper.cc */; };
+		78C659FC2A7A48AF00B7B63C /* daily_event.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659F52A7A48AF00B7B63C /* daily_event.cc */; };
+		78C659FD2A7A48AF00B7B63C /* delegating_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659F62A7A48AF00B7B63C /* delegating_provider.cc */; };
+		78C65A082A7A48D800B7B63C /* enabled_state_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659FE2A7A48D800B7B63C /* enabled_state_provider.cc */; };
+		78C65A092A7A48D800B7B63C /* drive_metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A002A7A48D800B7B63C /* drive_metrics_provider.cc */; };
+		78C65A0A2A7A48D800B7B63C /* entropy_state.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A022A7A48D800B7B63C /* entropy_state.cc */; };
+		78C65A0B2A7A48D800B7B63C /* entropy_state_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A032A7A48D800B7B63C /* entropy_state_provider.cc */; };
+		78C65A0C2A7A48D800B7B63C /* environment_recorder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A042A7A48D800B7B63C /* environment_recorder.cc */; };
+		78C65A172A7A490600B7B63C /* expired_histogram_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A0E2A7A490500B7B63C /* expired_histogram_util.cc */; };
+		78C65A182A7A490600B7B63C /* histogram_encoder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A0F2A7A490500B7B63C /* histogram_encoder.cc */; };
+		78C65A1A2A7A490600B7B63C /* field_trials_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A122A7A490600B7B63C /* field_trials_provider.cc */; };
+		78C65A1B2A7A490600B7B63C /* expired_histograms_checker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A132A7A490600B7B63C /* expired_histograms_checker.cc */; };
+		78C65A262A7A493000B7B63C /* metrics_pref_names.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A1E2A7A492F00B7B63C /* metrics_pref_names.cc */; };
+		78C65A272A7A493000B7B63C /* metrics_log.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A202A7A492F00B7B63C /* metrics_log.cc */; };
+		78C65A282A7A493000B7B63C /* log_decoder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A212A7A492F00B7B63C /* log_decoder.cc */; };
+		78C65A292A7A493000B7B63C /* metrics_log_store.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A232A7A493000B7B63C /* metrics_log_store.cc */; };
+		78C65A2A2A7A493000B7B63C /* metrics_log_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A242A7A493000B7B63C /* metrics_log_manager.cc */; };
+		78C65A352A7A495300B7B63C /* metrics_scheduler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A2D2A7A495200B7B63C /* metrics_scheduler.cc */; };
+		78C65A362A7A495300B7B63C /* metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A2F2A7A495300B7B63C /* metrics_provider.cc */; };
+		78C65A372A7A495300B7B63C /* metrics_reporting_service.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A312A7A495300B7B63C /* metrics_reporting_service.cc */; };
+		78C65A382A7A495300B7B63C /* metrics_reporting_default_state.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A322A7A495300B7B63C /* metrics_reporting_default_state.cc */; };
+		78C65A392A7A495300B7B63C /* metrics_rotation_scheduler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A342A7A495300B7B63C /* metrics_rotation_scheduler.cc */; };
+		78C65A452A7A497900B7B63C /* metrics_service_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A3C2A7A497900B7B63C /* metrics_service_client.cc */; };
+		78C65A462A7A497900B7B63C /* metrics_switches.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A3D2A7A497900B7B63C /* metrics_switches.cc */; };
+		78C65A472A7A497900B7B63C /* metrics_service_accessor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A3F2A7A497900B7B63C /* metrics_service_accessor.cc */; };
+		78C65A532A7A499E00B7B63C /* persistent_histograms.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A492A7A499E00B7B63C /* persistent_histograms.cc */; };
+		78C65A542A7A499E00B7B63C /* persistent_system_profile.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A4A2A7A499E00B7B63C /* persistent_system_profile.cc */; };
+		78C65A552A7A499E00B7B63C /* reporting_service.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A4B2A7A499E00B7B63C /* reporting_service.cc */; };
+		78C65A562A7A499E00B7B63C /* sampling_metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A4F2A7A499E00B7B63C /* sampling_metrics_provider.cc */; };
+		78C65A572A7A499E00B7B63C /* metrics_upload_scheduler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A522A7A499E00B7B63C /* metrics_upload_scheduler.cc */; };
+		78C65A632A7A49D800B7B63C /* unsent_log_store_metrics_impl.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A5C2A7A49D700B7B63C /* unsent_log_store_metrics_impl.cc */; };
+		78C65A642A7A49D800B7B63C /* unsent_log_store_metrics.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A5F2A7A49D800B7B63C /* unsent_log_store_metrics.cc */; };
+		78C65A662A7A49D800B7B63C /* unsent_log_store.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A612A7A49D800B7B63C /* unsent_log_store.cc */; };
+		78C65A6C2A7A49E800B7B63C /* url_constants.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A692A7A49E800B7B63C /* url_constants.cc */; };
+		78C65A6E2A7A4A0A00B7B63C /* drive_metrics_provider_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A6D2A7A4A0A00B7B63C /* drive_metrics_provider_ios.mm */; };
+		78C65A702A7A4A2200B7B63C /* machine_id_provider_nonwin.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A6F2A7A4A2200B7B63C /* machine_id_provider_nonwin.cc */; };
+		78E062972A82A7AE002E9727 /* clean_exit_beacon_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78E062962A82A7AE002E9727 /* clean_exit_beacon_ios.mm */; };
+		78E0629D2A82A93E002E9727 /* stability_metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E0629B2A82A93D002E9727 /* stability_metrics_provider.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785BFE1E2A77A4750088C2FC /* libmetrics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmetrics.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C659D32A7A473B00B7B63C /* histogram_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = histogram_manager.h; path = ../../src/components/metrics/library_support/histogram_manager.h; sourceTree = "<group>"; };
+		78C659D42A7A473B00B7B63C /* histogram_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = histogram_manager.cc; path = ../../src/components/metrics/library_support/histogram_manager.cc; sourceTree = "<group>"; };
+		78C659E32A7A488A00B7B63C /* clean_exit_beacon.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = clean_exit_beacon.cc; path = ../../src/components/metrics/clean_exit_beacon.cc; sourceTree = "<group>"; };
+		78C659E42A7A488A00B7B63C /* client_info.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = client_info.cc; path = ../../src/components/metrics/client_info.cc; sourceTree = "<group>"; };
+		78C659E52A7A488A00B7B63C /* cloned_install_detector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cloned_install_detector.cc; path = ../../src/components/metrics/cloned_install_detector.cc; sourceTree = "<group>"; };
+		78C659E72A7A488A00B7B63C /* cloned_install_detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cloned_install_detector.h; path = ../../src/components/metrics/cloned_install_detector.h; sourceTree = "<group>"; };
+		78C659E82A7A488A00B7B63C /* client_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = client_info.h; path = ../../src/components/metrics/client_info.h; sourceTree = "<group>"; };
+		78C659E92A7A488A00B7B63C /* clean_exit_beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clean_exit_beacon.h; path = ../../src/components/metrics/clean_exit_beacon.h; sourceTree = "<group>"; };
+		78C659EF2A7A48AF00B7B63C /* data_use_tracker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = data_use_tracker.cc; path = ../../src/components/metrics/data_use_tracker.cc; sourceTree = "<group>"; };
+		78C659F02A7A48AF00B7B63C /* data_use_tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = data_use_tracker.h; path = ../../src/components/metrics/data_use_tracker.h; sourceTree = "<group>"; };
+		78C659F12A7A48AF00B7B63C /* cpu_metrics_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cpu_metrics_provider.cc; path = ../../src/components/metrics/cpu_metrics_provider.cc; sourceTree = "<group>"; };
+		78C659F22A7A48AF00B7B63C /* date_changed_helper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = date_changed_helper.cc; path = ../../src/components/metrics/date_changed_helper.cc; sourceTree = "<group>"; };
+		78C659F32A7A48AF00B7B63C /* date_changed_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = date_changed_helper.h; path = ../../src/components/metrics/date_changed_helper.h; sourceTree = "<group>"; };
+		78C659F42A7A48AF00B7B63C /* daily_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = daily_event.h; path = ../../src/components/metrics/daily_event.h; sourceTree = "<group>"; };
+		78C659F52A7A48AF00B7B63C /* daily_event.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = daily_event.cc; path = ../../src/components/metrics/daily_event.cc; sourceTree = "<group>"; };
+		78C659F62A7A48AF00B7B63C /* delegating_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = delegating_provider.cc; path = ../../src/components/metrics/delegating_provider.cc; sourceTree = "<group>"; };
+		78C659F72A7A48AF00B7B63C /* delegating_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = delegating_provider.h; path = ../../src/components/metrics/delegating_provider.h; sourceTree = "<group>"; };
+		78C659F82A7A48AF00B7B63C /* cpu_metrics_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpu_metrics_provider.h; path = ../../src/components/metrics/cpu_metrics_provider.h; sourceTree = "<group>"; };
+		78C659FE2A7A48D800B7B63C /* enabled_state_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = enabled_state_provider.cc; path = ../../src/components/metrics/enabled_state_provider.cc; sourceTree = "<group>"; };
+		78C659FF2A7A48D800B7B63C /* drive_metrics_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drive_metrics_provider.h; path = ../../src/components/metrics/drive_metrics_provider.h; sourceTree = "<group>"; };
+		78C65A002A7A48D800B7B63C /* drive_metrics_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = drive_metrics_provider.cc; path = ../../src/components/metrics/drive_metrics_provider.cc; sourceTree = "<group>"; };
+		78C65A012A7A48D800B7B63C /* entropy_state.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = entropy_state.h; path = ../../src/components/metrics/entropy_state.h; sourceTree = "<group>"; };
+		78C65A022A7A48D800B7B63C /* entropy_state.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entropy_state.cc; path = ../../src/components/metrics/entropy_state.cc; sourceTree = "<group>"; };
+		78C65A032A7A48D800B7B63C /* entropy_state_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entropy_state_provider.cc; path = ../../src/components/metrics/entropy_state_provider.cc; sourceTree = "<group>"; };
+		78C65A042A7A48D800B7B63C /* environment_recorder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = environment_recorder.cc; path = ../../src/components/metrics/environment_recorder.cc; sourceTree = "<group>"; };
+		78C65A052A7A48D800B7B63C /* enabled_state_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enabled_state_provider.h; path = ../../src/components/metrics/enabled_state_provider.h; sourceTree = "<group>"; };
+		78C65A062A7A48D800B7B63C /* environment_recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = environment_recorder.h; path = ../../src/components/metrics/environment_recorder.h; sourceTree = "<group>"; };
+		78C65A072A7A48D800B7B63C /* entropy_state_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = entropy_state_provider.h; path = ../../src/components/metrics/entropy_state_provider.h; sourceTree = "<group>"; };
+		78C65A0D2A7A490500B7B63C /* field_trials_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = field_trials_provider.h; path = ../../src/components/metrics/field_trials_provider.h; sourceTree = "<group>"; };
+		78C65A0E2A7A490500B7B63C /* expired_histogram_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = expired_histogram_util.cc; path = ../../src/components/metrics/expired_histogram_util.cc; sourceTree = "<group>"; };
+		78C65A0F2A7A490500B7B63C /* histogram_encoder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = histogram_encoder.cc; path = ../../src/components/metrics/histogram_encoder.cc; sourceTree = "<group>"; };
+		78C65A122A7A490600B7B63C /* field_trials_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = field_trials_provider.cc; path = ../../src/components/metrics/field_trials_provider.cc; sourceTree = "<group>"; };
+		78C65A132A7A490600B7B63C /* expired_histograms_checker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = expired_histograms_checker.cc; path = ../../src/components/metrics/expired_histograms_checker.cc; sourceTree = "<group>"; };
+		78C65A142A7A490600B7B63C /* expired_histogram_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expired_histogram_util.h; path = ../../src/components/metrics/expired_histogram_util.h; sourceTree = "<group>"; };
+		78C65A152A7A490600B7B63C /* expired_histograms_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expired_histograms_checker.h; path = ../../src/components/metrics/expired_histograms_checker.h; sourceTree = "<group>"; };
+		78C65A162A7A490600B7B63C /* histogram_encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = histogram_encoder.h; path = ../../src/components/metrics/histogram_encoder.h; sourceTree = "<group>"; };
+		78C65A1C2A7A492F00B7B63C /* metrics_log_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_log_manager.h; path = ../../src/components/metrics/metrics_log_manager.h; sourceTree = "<group>"; };
+		78C65A1D2A7A492F00B7B63C /* log_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log_decoder.h; path = ../../src/components/metrics/log_decoder.h; sourceTree = "<group>"; };
+		78C65A1E2A7A492F00B7B63C /* metrics_pref_names.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_pref_names.cc; path = ../../src/components/metrics/metrics_pref_names.cc; sourceTree = "<group>"; };
+		78C65A1F2A7A492F00B7B63C /* metrics_pref_names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_pref_names.h; path = ../../src/components/metrics/metrics_pref_names.h; sourceTree = "<group>"; };
+		78C65A202A7A492F00B7B63C /* metrics_log.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_log.cc; path = ../../src/components/metrics/metrics_log.cc; sourceTree = "<group>"; };
+		78C65A212A7A492F00B7B63C /* log_decoder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log_decoder.cc; path = ../../src/components/metrics/log_decoder.cc; sourceTree = "<group>"; };
+		78C65A222A7A492F00B7B63C /* metrics_log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_log.h; path = ../../src/components/metrics/metrics_log.h; sourceTree = "<group>"; };
+		78C65A232A7A493000B7B63C /* metrics_log_store.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_log_store.cc; path = ../../src/components/metrics/metrics_log_store.cc; sourceTree = "<group>"; };
+		78C65A242A7A493000B7B63C /* metrics_log_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_log_manager.cc; path = ../../src/components/metrics/metrics_log_manager.cc; sourceTree = "<group>"; };
+		78C65A252A7A493000B7B63C /* metrics_log_store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_log_store.h; path = ../../src/components/metrics/metrics_log_store.h; sourceTree = "<group>"; };
+		78C65A2B2A7A495200B7B63C /* metrics_scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_scheduler.h; path = ../../src/components/metrics/metrics_scheduler.h; sourceTree = "<group>"; };
+		78C65A2C2A7A495200B7B63C /* metrics_reporting_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_reporting_service.h; path = ../../src/components/metrics/metrics_reporting_service.h; sourceTree = "<group>"; };
+		78C65A2D2A7A495200B7B63C /* metrics_scheduler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_scheduler.cc; path = ../../src/components/metrics/metrics_scheduler.cc; sourceTree = "<group>"; };
+		78C65A2E2A7A495200B7B63C /* metrics_reporting_default_state.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_reporting_default_state.h; path = ../../src/components/metrics/metrics_reporting_default_state.h; sourceTree = "<group>"; };
+		78C65A2F2A7A495300B7B63C /* metrics_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_provider.cc; path = ../../src/components/metrics/metrics_provider.cc; sourceTree = "<group>"; };
+		78C65A302A7A495300B7B63C /* metrics_rotation_scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_rotation_scheduler.h; path = ../../src/components/metrics/metrics_rotation_scheduler.h; sourceTree = "<group>"; };
+		78C65A312A7A495300B7B63C /* metrics_reporting_service.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_reporting_service.cc; path = ../../src/components/metrics/metrics_reporting_service.cc; sourceTree = "<group>"; };
+		78C65A322A7A495300B7B63C /* metrics_reporting_default_state.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_reporting_default_state.cc; path = ../../src/components/metrics/metrics_reporting_default_state.cc; sourceTree = "<group>"; };
+		78C65A332A7A495300B7B63C /* metrics_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_provider.h; path = ../../src/components/metrics/metrics_provider.h; sourceTree = "<group>"; };
+		78C65A342A7A495300B7B63C /* metrics_rotation_scheduler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_rotation_scheduler.cc; path = ../../src/components/metrics/metrics_rotation_scheduler.cc; sourceTree = "<group>"; };
+		78C65A3B2A7A497900B7B63C /* metrics_service_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_service_client.h; path = ../../src/components/metrics/metrics_service_client.h; sourceTree = "<group>"; };
+		78C65A3C2A7A497900B7B63C /* metrics_service_client.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_service_client.cc; path = ../../src/components/metrics/metrics_service_client.cc; sourceTree = "<group>"; };
+		78C65A3D2A7A497900B7B63C /* metrics_switches.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_switches.cc; path = ../../src/components/metrics/metrics_switches.cc; sourceTree = "<group>"; };
+		78C65A3F2A7A497900B7B63C /* metrics_service_accessor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_service_accessor.cc; path = ../../src/components/metrics/metrics_service_accessor.cc; sourceTree = "<group>"; };
+		78C65A422A7A497900B7B63C /* metrics_switches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_switches.h; path = ../../src/components/metrics/metrics_switches.h; sourceTree = "<group>"; };
+		78C65A432A7A497900B7B63C /* metrics_service_accessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_service_accessor.h; path = ../../src/components/metrics/metrics_service_accessor.h; sourceTree = "<group>"; };
+		78C65A492A7A499E00B7B63C /* persistent_histograms.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = persistent_histograms.cc; path = ../../src/components/metrics/persistent_histograms.cc; sourceTree = "<group>"; };
+		78C65A4A2A7A499E00B7B63C /* persistent_system_profile.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = persistent_system_profile.cc; path = ../../src/components/metrics/persistent_system_profile.cc; sourceTree = "<group>"; };
+		78C65A4B2A7A499E00B7B63C /* reporting_service.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reporting_service.cc; path = ../../src/components/metrics/reporting_service.cc; sourceTree = "<group>"; };
+		78C65A4C2A7A499E00B7B63C /* persistent_histograms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = persistent_histograms.h; path = ../../src/components/metrics/persistent_histograms.h; sourceTree = "<group>"; };
+		78C65A4D2A7A499E00B7B63C /* sampling_metrics_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sampling_metrics_provider.h; path = ../../src/components/metrics/sampling_metrics_provider.h; sourceTree = "<group>"; };
+		78C65A4E2A7A499E00B7B63C /* reporting_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reporting_service.h; path = ../../src/components/metrics/reporting_service.h; sourceTree = "<group>"; };
+		78C65A4F2A7A499E00B7B63C /* sampling_metrics_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sampling_metrics_provider.cc; path = ../../src/components/metrics/sampling_metrics_provider.cc; sourceTree = "<group>"; };
+		78C65A502A7A499E00B7B63C /* metrics_upload_scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_upload_scheduler.h; path = ../../src/components/metrics/metrics_upload_scheduler.h; sourceTree = "<group>"; };
+		78C65A512A7A499E00B7B63C /* persistent_system_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = persistent_system_profile.h; path = ../../src/components/metrics/persistent_system_profile.h; sourceTree = "<group>"; };
+		78C65A522A7A499E00B7B63C /* metrics_upload_scheduler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_upload_scheduler.cc; path = ../../src/components/metrics/metrics_upload_scheduler.cc; sourceTree = "<group>"; };
+		78C65A582A7A49D700B7B63C /* unsent_log_store_metrics_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unsent_log_store_metrics_impl.h; path = ../../src/components/metrics/unsent_log_store_metrics_impl.h; sourceTree = "<group>"; };
+		78C65A592A7A49D700B7B63C /* unsent_log_store_metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unsent_log_store_metrics.h; path = ../../src/components/metrics/unsent_log_store_metrics.h; sourceTree = "<group>"; };
+		78C65A5A2A7A49D700B7B63C /* unsent_log_store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unsent_log_store.h; path = ../../src/components/metrics/unsent_log_store.h; sourceTree = "<group>"; };
+		78C65A5C2A7A49D700B7B63C /* unsent_log_store_metrics_impl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unsent_log_store_metrics_impl.cc; path = ../../src/components/metrics/unsent_log_store_metrics_impl.cc; sourceTree = "<group>"; };
+		78C65A5F2A7A49D800B7B63C /* unsent_log_store_metrics.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unsent_log_store_metrics.cc; path = ../../src/components/metrics/unsent_log_store_metrics.cc; sourceTree = "<group>"; };
+		78C65A612A7A49D800B7B63C /* unsent_log_store.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unsent_log_store.cc; path = ../../src/components/metrics/unsent_log_store.cc; sourceTree = "<group>"; };
+		78C65A682A7A49E800B7B63C /* url_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = url_constants.h; path = ../../src/components/metrics/url_constants.h; sourceTree = "<group>"; };
+		78C65A692A7A49E800B7B63C /* url_constants.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = url_constants.cc; path = ../../src/components/metrics/url_constants.cc; sourceTree = "<group>"; };
+		78C65A6D2A7A4A0A00B7B63C /* drive_metrics_provider_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = drive_metrics_provider_ios.mm; path = ../../src/components/metrics/drive_metrics_provider_ios.mm; sourceTree = "<group>"; };
+		78C65A6F2A7A4A2200B7B63C /* machine_id_provider_nonwin.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = machine_id_provider_nonwin.cc; path = ../../src/components/metrics/machine_id_provider_nonwin.cc; sourceTree = "<group>"; };
+		78E062962A82A7AE002E9727 /* clean_exit_beacon_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = clean_exit_beacon_ios.mm; path = ../../src/components/metrics/clean_exit_beacon_ios.mm; sourceTree = "<group>"; };
+		78E0629B2A82A93D002E9727 /* stability_metrics_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stability_metrics_provider.cc; path = ../../src/components/metrics/stability_metrics_provider.cc; sourceTree = "<group>"; };
+		78E0629C2A82A93D002E9727 /* stability_metrics_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stability_metrics_provider.h; path = ../../src/components/metrics/stability_metrics_provider.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libmetrics.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				78C659D82A7A475800B7B63C /* components */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		78C659D62A7A474300B7B63C /* library_support */ = {
+			isa = PBXGroup;
+			children = (
+				78C659D42A7A473B00B7B63C /* histogram_manager.cc */,
+				78C659D32A7A473B00B7B63C /* histogram_manager.h */,
+			);
+			name = library_support;
+			sourceTree = "<group>";
+		};
+		78C659D72A7A474E00B7B63C /* metrics */ = {
+			isa = PBXGroup;
+			children = (
+				78E0629B2A82A93D002E9727 /* stability_metrics_provider.cc */,
+				78E0629C2A82A93D002E9727 /* stability_metrics_provider.h */,
+				78E062962A82A7AE002E9727 /* clean_exit_beacon_ios.mm */,
+				78C65A6F2A7A4A2200B7B63C /* machine_id_provider_nonwin.cc */,
+				78C65A6D2A7A4A0A00B7B63C /* drive_metrics_provider_ios.mm */,
+				78C65A692A7A49E800B7B63C /* url_constants.cc */,
+				78C65A682A7A49E800B7B63C /* url_constants.h */,
+				78C65A5C2A7A49D700B7B63C /* unsent_log_store_metrics_impl.cc */,
+				78C65A582A7A49D700B7B63C /* unsent_log_store_metrics_impl.h */,
+				78C65A5F2A7A49D800B7B63C /* unsent_log_store_metrics.cc */,
+				78C65A592A7A49D700B7B63C /* unsent_log_store_metrics.h */,
+				78C65A612A7A49D800B7B63C /* unsent_log_store.cc */,
+				78C65A5A2A7A49D700B7B63C /* unsent_log_store.h */,
+				78C65A522A7A499E00B7B63C /* metrics_upload_scheduler.cc */,
+				78C65A502A7A499E00B7B63C /* metrics_upload_scheduler.h */,
+				78C65A492A7A499E00B7B63C /* persistent_histograms.cc */,
+				78C65A4C2A7A499E00B7B63C /* persistent_histograms.h */,
+				78C65A4A2A7A499E00B7B63C /* persistent_system_profile.cc */,
+				78C65A512A7A499E00B7B63C /* persistent_system_profile.h */,
+				78C65A4B2A7A499E00B7B63C /* reporting_service.cc */,
+				78C65A4E2A7A499E00B7B63C /* reporting_service.h */,
+				78C65A4F2A7A499E00B7B63C /* sampling_metrics_provider.cc */,
+				78C65A4D2A7A499E00B7B63C /* sampling_metrics_provider.h */,
+				78C65A3F2A7A497900B7B63C /* metrics_service_accessor.cc */,
+				78C65A432A7A497900B7B63C /* metrics_service_accessor.h */,
+				78C65A3C2A7A497900B7B63C /* metrics_service_client.cc */,
+				78C65A3B2A7A497900B7B63C /* metrics_service_client.h */,
+				78C65A3D2A7A497900B7B63C /* metrics_switches.cc */,
+				78C65A422A7A497900B7B63C /* metrics_switches.h */,
+				78C65A2F2A7A495300B7B63C /* metrics_provider.cc */,
+				78C65A332A7A495300B7B63C /* metrics_provider.h */,
+				78C65A322A7A495300B7B63C /* metrics_reporting_default_state.cc */,
+				78C65A2E2A7A495200B7B63C /* metrics_reporting_default_state.h */,
+				78C65A312A7A495300B7B63C /* metrics_reporting_service.cc */,
+				78C65A2C2A7A495200B7B63C /* metrics_reporting_service.h */,
+				78C65A342A7A495300B7B63C /* metrics_rotation_scheduler.cc */,
+				78C65A302A7A495300B7B63C /* metrics_rotation_scheduler.h */,
+				78C65A2D2A7A495200B7B63C /* metrics_scheduler.cc */,
+				78C65A2B2A7A495200B7B63C /* metrics_scheduler.h */,
+				78C65A212A7A492F00B7B63C /* log_decoder.cc */,
+				78C65A1D2A7A492F00B7B63C /* log_decoder.h */,
+				78C65A242A7A493000B7B63C /* metrics_log_manager.cc */,
+				78C65A1C2A7A492F00B7B63C /* metrics_log_manager.h */,
+				78C65A232A7A493000B7B63C /* metrics_log_store.cc */,
+				78C65A252A7A493000B7B63C /* metrics_log_store.h */,
+				78C65A202A7A492F00B7B63C /* metrics_log.cc */,
+				78C65A222A7A492F00B7B63C /* metrics_log.h */,
+				78C65A1E2A7A492F00B7B63C /* metrics_pref_names.cc */,
+				78C65A1F2A7A492F00B7B63C /* metrics_pref_names.h */,
+				78C659E32A7A488A00B7B63C /* clean_exit_beacon.cc */,
+				78C659E92A7A488A00B7B63C /* clean_exit_beacon.h */,
+				78C659E42A7A488A00B7B63C /* client_info.cc */,
+				78C659E82A7A488A00B7B63C /* client_info.h */,
+				78C659E52A7A488A00B7B63C /* cloned_install_detector.cc */,
+				78C659E72A7A488A00B7B63C /* cloned_install_detector.h */,
+				78C659F12A7A48AF00B7B63C /* cpu_metrics_provider.cc */,
+				78C659F82A7A48AF00B7B63C /* cpu_metrics_provider.h */,
+				78C659F52A7A48AF00B7B63C /* daily_event.cc */,
+				78C659F42A7A48AF00B7B63C /* daily_event.h */,
+				78C659EF2A7A48AF00B7B63C /* data_use_tracker.cc */,
+				78C659F02A7A48AF00B7B63C /* data_use_tracker.h */,
+				78C659F22A7A48AF00B7B63C /* date_changed_helper.cc */,
+				78C659F32A7A48AF00B7B63C /* date_changed_helper.h */,
+				78C659F62A7A48AF00B7B63C /* delegating_provider.cc */,
+				78C659F72A7A48AF00B7B63C /* delegating_provider.h */,
+				78C65A002A7A48D800B7B63C /* drive_metrics_provider.cc */,
+				78C659FF2A7A48D800B7B63C /* drive_metrics_provider.h */,
+				78C659FE2A7A48D800B7B63C /* enabled_state_provider.cc */,
+				78C65A052A7A48D800B7B63C /* enabled_state_provider.h */,
+				78C65A032A7A48D800B7B63C /* entropy_state_provider.cc */,
+				78C65A072A7A48D800B7B63C /* entropy_state_provider.h */,
+				78C65A022A7A48D800B7B63C /* entropy_state.cc */,
+				78C65A012A7A48D800B7B63C /* entropy_state.h */,
+				78C65A042A7A48D800B7B63C /* environment_recorder.cc */,
+				78C65A062A7A48D800B7B63C /* environment_recorder.h */,
+				78C65A0E2A7A490500B7B63C /* expired_histogram_util.cc */,
+				78C65A142A7A490600B7B63C /* expired_histogram_util.h */,
+				78C65A132A7A490600B7B63C /* expired_histograms_checker.cc */,
+				78C65A152A7A490600B7B63C /* expired_histograms_checker.h */,
+				78C65A122A7A490600B7B63C /* field_trials_provider.cc */,
+				78C65A0D2A7A490500B7B63C /* field_trials_provider.h */,
+				78C65A0F2A7A490500B7B63C /* histogram_encoder.cc */,
+				78C65A162A7A490600B7B63C /* histogram_encoder.h */,
+				78C659D62A7A474300B7B63C /* library_support */,
+			);
+			name = metrics;
+			sourceTree = "<group>";
+		};
+		78C659D82A7A475800B7B63C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				78C659D72A7A474E00B7B63C /* metrics */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* metrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "metrics" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = metrics;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libmetrics.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "metrics" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* metrics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C659EC2A7A488A00B7B63C /* client_info.cc in Sources */,
+				78C65A532A7A499E00B7B63C /* persistent_histograms.cc in Sources */,
+				78C65A262A7A493000B7B63C /* metrics_pref_names.cc in Sources */,
+				78C65A6E2A7A4A0A00B7B63C /* drive_metrics_provider_ios.mm in Sources */,
+				78C65A562A7A499E00B7B63C /* sampling_metrics_provider.cc in Sources */,
+				78C65A172A7A490600B7B63C /* expired_histogram_util.cc in Sources */,
+				78C659F92A7A48AF00B7B63C /* data_use_tracker.cc in Sources */,
+				78C659FC2A7A48AF00B7B63C /* daily_event.cc in Sources */,
+				78C65A392A7A495300B7B63C /* metrics_rotation_scheduler.cc in Sources */,
+				78C65A372A7A495300B7B63C /* metrics_reporting_service.cc in Sources */,
+				78C65A0A2A7A48D800B7B63C /* entropy_state.cc in Sources */,
+				78C65A182A7A490600B7B63C /* histogram_encoder.cc in Sources */,
+				78C659FB2A7A48AF00B7B63C /* date_changed_helper.cc in Sources */,
+				78C65A572A7A499E00B7B63C /* metrics_upload_scheduler.cc in Sources */,
+				78C65A0C2A7A48D800B7B63C /* environment_recorder.cc in Sources */,
+				78C65A282A7A493000B7B63C /* log_decoder.cc in Sources */,
+				78C65A272A7A493000B7B63C /* metrics_log.cc in Sources */,
+				78C65A1B2A7A490600B7B63C /* expired_histograms_checker.cc in Sources */,
+				78C65A092A7A48D800B7B63C /* drive_metrics_provider.cc in Sources */,
+				78C659EB2A7A488A00B7B63C /* clean_exit_beacon.cc in Sources */,
+				78C659FA2A7A48AF00B7B63C /* cpu_metrics_provider.cc in Sources */,
+				78C65A382A7A495300B7B63C /* metrics_reporting_default_state.cc in Sources */,
+				78C65A462A7A497900B7B63C /* metrics_switches.cc in Sources */,
+				78C65A0B2A7A48D800B7B63C /* entropy_state_provider.cc in Sources */,
+				78C65A1A2A7A490600B7B63C /* field_trials_provider.cc in Sources */,
+				78C65A352A7A495300B7B63C /* metrics_scheduler.cc in Sources */,
+				78C65A702A7A4A2200B7B63C /* machine_id_provider_nonwin.cc in Sources */,
+				78C659FD2A7A48AF00B7B63C /* delegating_provider.cc in Sources */,
+				78C65A642A7A49D800B7B63C /* unsent_log_store_metrics.cc in Sources */,
+				78C659D52A7A473B00B7B63C /* histogram_manager.cc in Sources */,
+				78C65A632A7A49D800B7B63C /* unsent_log_store_metrics_impl.cc in Sources */,
+				78C65A472A7A497900B7B63C /* metrics_service_accessor.cc in Sources */,
+				78C659ED2A7A488A00B7B63C /* cloned_install_detector.cc in Sources */,
+				78C65A292A7A493000B7B63C /* metrics_log_store.cc in Sources */,
+				78C65A6C2A7A49E800B7B63C /* url_constants.cc in Sources */,
+				78C65A452A7A497900B7B63C /* metrics_service_client.cc in Sources */,
+				78C65A362A7A495300B7B63C /* metrics_provider.cc in Sources */,
+				78C65A542A7A499E00B7B63C /* persistent_system_profile.cc in Sources */,
+				78C65A082A7A48D800B7B63C /* enabled_state_provider.cc in Sources */,
+				78C65A552A7A499E00B7B63C /* reporting_service.cc in Sources */,
+				78C65A2A2A7A493000B7B63C /* metrics_log_manager.cc in Sources */,
+				78E0629D2A82A93E002E9727 /* stability_metrics_provider.cc in Sources */,
+				78E062972A82A7AE002E9727 /* clean_exit_beacon_ios.mm in Sources */,
+				78C65A662A7A49D800B7B63C /* unsent_log_store.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"U_SHOW_CPLUSPLUS_API=1",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					../../src/third_party/protobuf/src,
+					../../src/third_party/boringssl/src/include,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+					../../gen/third_party/metrics_proto,
+					../../src/third_party/icu/source/common,
+					../../src/third_party/icu/source/i18n,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = "U_SHOW_CPLUSPLUS_API=1";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					../../src/third_party/protobuf/src,
+					../../src/third_party/boringssl/src/include,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+					../../gen/third_party/metrics_proto,
+					../../src/third_party/icu/source/common,
+					../../src/third_party/icu/source/i18n,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "metrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "metrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

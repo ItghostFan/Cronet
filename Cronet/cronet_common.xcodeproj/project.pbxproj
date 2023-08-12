@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		785B06B52A78FA450088C2FC /* cronet_prefs_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06A92A78FA450088C2FC /* cronet_prefs_manager.cc */; };
+		785B06B62A78FA450088C2FC /* stale_host_resolver.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06AA2A78FA450088C2FC /* stale_host_resolver.cc */; };
+		785B06B82A78FA450088C2FC /* url_request_context_config.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06AD2A78FA450088C2FC /* url_request_context_config.cc */; };
+		785B06B92A78FA450088C2FC /* cronet_url_request.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06AF2A78FA450088C2FC /* cronet_url_request.cc */; };
+		785B06BA2A78FA450088C2FC /* cronet_upload_data_stream.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06B22A78FA450088C2FC /* cronet_upload_data_stream.cc */; };
+		785B06BB2A78FA450088C2FC /* host_cache_persistence_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06B42A78FA450088C2FC /* host_cache_persistence_manager.cc */; };
+		7881038A2A85F27F004A94DB /* cronet_context.cc in Sources */ = {isa = PBXBuildFile; fileRef = 788103892A85F27F004A94DB /* cronet_context.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785B06A72A78FA450088C2FC /* cronet_upload_data_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_upload_data_stream.h; path = ../src/components/cronet/cronet_upload_data_stream.h; sourceTree = "<group>"; };
+		785B06A82A78FA450088C2FC /* stale_host_resolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stale_host_resolver.h; path = ../src/components/cronet/stale_host_resolver.h; sourceTree = "<group>"; };
+		785B06A92A78FA450088C2FC /* cronet_prefs_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cronet_prefs_manager.cc; path = ../src/components/cronet/cronet_prefs_manager.cc; sourceTree = "<group>"; };
+		785B06AA2A78FA450088C2FC /* stale_host_resolver.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stale_host_resolver.cc; path = ../src/components/cronet/stale_host_resolver.cc; sourceTree = "<group>"; };
+		785B06AD2A78FA450088C2FC /* url_request_context_config.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = url_request_context_config.cc; path = ../src/components/cronet/url_request_context_config.cc; sourceTree = "<group>"; };
+		785B06AE2A78FA450088C2FC /* url_request_context_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = url_request_context_config.h; path = ../src/components/cronet/url_request_context_config.h; sourceTree = "<group>"; };
+		785B06AF2A78FA450088C2FC /* cronet_url_request.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cronet_url_request.cc; path = ../src/components/cronet/cronet_url_request.cc; sourceTree = "<group>"; };
+		785B06B02A78FA450088C2FC /* host_cache_persistence_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = host_cache_persistence_manager.h; path = ../src/components/cronet/host_cache_persistence_manager.h; sourceTree = "<group>"; };
+		785B06B12A78FA450088C2FC /* cronet_prefs_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_prefs_manager.h; path = ../src/components/cronet/cronet_prefs_manager.h; sourceTree = "<group>"; };
+		785B06B22A78FA450088C2FC /* cronet_upload_data_stream.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cronet_upload_data_stream.cc; path = ../src/components/cronet/cronet_upload_data_stream.cc; sourceTree = "<group>"; };
+		785B06B32A78FA450088C2FC /* cronet_url_request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_url_request.h; path = ../src/components/cronet/cronet_url_request.h; sourceTree = "<group>"; };
+		785B06B42A78FA450088C2FC /* host_cache_persistence_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = host_cache_persistence_manager.cc; path = ../src/components/cronet/host_cache_persistence_manager.cc; sourceTree = "<group>"; };
+		785BFE1E2A77A4750088C2FC /* libcronet_common.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcronet_common.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		788103882A85F27E004A94DB /* cronet_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_context.h; path = ../src/components/cronet/cronet_context.h; sourceTree = "<group>"; };
+		788103892A85F27F004A94DB /* cronet_context.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cronet_context.cc; path = ../src/components/cronet/cronet_context.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785B06BC2A78FA590088C2FC /* cronet */ = {
+			isa = PBXGroup;
+			children = (
+				785B06A92A78FA450088C2FC /* cronet_prefs_manager.cc */,
+				785B06B12A78FA450088C2FC /* cronet_prefs_manager.h */,
+				785B06B22A78FA450088C2FC /* cronet_upload_data_stream.cc */,
+				785B06A72A78FA450088C2FC /* cronet_upload_data_stream.h */,
+				788103892A85F27F004A94DB /* cronet_context.cc */,
+				788103882A85F27E004A94DB /* cronet_context.h */,
+				785B06AF2A78FA450088C2FC /* cronet_url_request.cc */,
+				785B06B32A78FA450088C2FC /* cronet_url_request.h */,
+				785B06B42A78FA450088C2FC /* host_cache_persistence_manager.cc */,
+				785B06B02A78FA450088C2FC /* host_cache_persistence_manager.h */,
+				785B06AA2A78FA450088C2FC /* stale_host_resolver.cc */,
+				785B06A82A78FA450088C2FC /* stale_host_resolver.h */,
+				785B06AD2A78FA450088C2FC /* url_request_context_config.cc */,
+				785B06AE2A78FA450088C2FC /* url_request_context_config.h */,
+			);
+			name = cronet;
+			sourceTree = "<group>";
+		};
+		785B06BD2A78FA780088C2FC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				785B06BC2A78FA590088C2FC /* cronet */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libcronet_common.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				785B06BD2A78FA780088C2FC /* components */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* cronet_common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "cronet_common" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cronet_common;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libcronet_common.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "cronet_common" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* cronet_common */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785B06B52A78FA450088C2FC /* cronet_prefs_manager.cc in Sources */,
+				7881038A2A85F27F004A94DB /* cronet_context.cc in Sources */,
+				785B06B82A78FA450088C2FC /* url_request_context_config.cc in Sources */,
+				785B06B92A78FA450088C2FC /* cronet_url_request.cc in Sources */,
+				785B06B62A78FA450088C2FC /* stale_host_resolver.cc in Sources */,
+				785B06BA2A78FA450088C2FC /* cronet_upload_data_stream.cc in Sources */,
+				785B06BB2A78FA450088C2FC /* host_cache_persistence_manager.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					../src/third_party/boringssl/src/include,
+					../src/third_party/protobuf/src,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../src,
+					../gen,
+					"../src/third_party/abseil-cpp",
+					../src/net/third_party/quiche/src,
+					../gen/net/third_party/quiche/src,
+					../src/net/third_party/quiche/src/quiche/common/platform/default,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					../src/third_party/boringssl/src/include,
+					../src/third_party/protobuf/src,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../src,
+					../gen,
+					"../src/third_party/abseil-cpp",
+					../src/net/third_party/quiche/src,
+					../gen/net/third_party/quiche/src,
+					../src/net/third_party/quiche/src/quiche/common/platform/default,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "cronet_common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "cronet_common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

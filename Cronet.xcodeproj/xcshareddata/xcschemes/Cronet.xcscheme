@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1430"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "78C82AE42A7360BF002ED78F"
+               BuildableName = "Cronet.framework"
+               BlueprintName = "Cronet"
+               ReferencedContainer = "container:Cronet.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libbase_static.a"
+               BlueprintName = "base_static"
+               ReferencedContainer = "container:libs/base_static/base_static.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libnet.a"
+               BlueprintName = "net"
+               ReferencedContainer = "container:libs/net/net.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libgrpc_support.a"
+               BlueprintName = "grpc_support"
+               ReferencedContainer = "container:libs/grpc_support/grpc_support.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libprefs.a"
+               BlueprintName = "prefs"
+               ReferencedContainer = "container:libs/prefs/prefs.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libnetwork_protocol.a"
+               BlueprintName = "network_protocol"
+               ReferencedContainer = "container:libs/network_protocol/network_protocol.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libmodp_b64.a"
+               BlueprintName = "modp_b64"
+               ReferencedContainer = "container:libs/modp_b64/modp_b64.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libchrome_zlib.a"
+               BlueprintName = "chrome_zlib"
+               ReferencedContainer = "container:libs/chrome_zlib/chrome_zlib.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libcronet_common.a"
+               BlueprintName = "cronet_common"
+               ReferencedContainer = "container:Cronet/cronet_common.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libdns.a"
+               BlueprintName = "dns"
+               ReferencedContainer = "container:libs/dns/dns.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "liburl.a"
+               BlueprintName = "url"
+               ReferencedContainer = "container:libs/url/url.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libdec.a"
+               BlueprintName = "dec"
+               ReferencedContainer = "container:libs/dec/dec.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libzlib_inflate_chunk_simd.a"
+               BlueprintName = "zlib_inflate_chunk_simd"
+               ReferencedContainer = "container:libs/zlib_inflate_chunk_simd/zlib_inflate_chunk_simd.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libboringssl.a"
+               BlueprintName = "boringssl"
+               ReferencedContainer = "container:libs/boringssl/boringssl.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libperfetto.a"
+               BlueprintName = "perfetto"
+               ReferencedContainer = "container:libs/perfetto/perfetto.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libcronet_native_impl.a"
+               BlueprintName = "cronet_native_impl"
+               ReferencedContainer = "container:Cronet/cronet_native_impl.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libcrcrypto.a"
+               BlueprintName = "crcrypto"
+               ReferencedContainer = "container:libs/crcrypto/crcrypto.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libprotobuf_lite.a"
+               BlueprintName = "protobuf_lite"
+               ReferencedContainer = "container:libs/protobuf_lite/protobuf_lite.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libboringssl_asm.a"
+               BlueprintName = "boringssl_asm"
+               ReferencedContainer = "container:libs/boringssl_asm/boringssl_asm.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libmetrics.a"
+               BlueprintName = "metrics"
+               ReferencedContainer = "container:libs/metrics/metrics.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BF9C12A775CBE0088C2FC"
+               BuildableName = "libbase.a"
+               BlueprintName = "base"
+               ReferencedContainer = "container:libs/base/base.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libmetrics_proto.a"
+               BlueprintName = "metrics_proto"
+               ReferencedContainer = "container:libs/metrics_proto/metrics_proto.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libabseil-cpp.a"
+               BlueprintName = "abseil-cpp"
+               ReferencedContainer = "container:libs/abseil-cpp/abseil-cpp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libglobal_state.a"
+               BlueprintName = "global_state"
+               ReferencedContainer = "container:libs/global_state/global_state.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libcommon.a"
+               BlueprintName = "common"
+               ReferencedContainer = "container:libs/common/common.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "785BFE1D2A77A4750088C2FC"
+               BuildableName = "libboringssl_x86.a"
+               BlueprintName = "boringssl_x86"
+               ReferencedContainer = "container:libs/boringssl_x86/boringssl_x86.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "78C82AEC2A7360C0002ED78F"
+               BuildableName = "CronetTests.xctest"
+               BlueprintName = "CronetTests"
+               ReferencedContainer = "container:Cronet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "78C82AE42A7360BF002ED78F"
+            BuildableName = "Cronet.framework"
+            BlueprintName = "Cronet"
+            ReferencedContainer = "container:Cronet.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

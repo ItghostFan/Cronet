@@ -1,0 +1,13 @@
+[
+  {
+    "traits_headers": [
+      "mojo/public/cpp/bindings/tests/nullable_numerics_and_enums_unittest_mojom_traits.h"
+    ],
+    "types": [
+      {
+        "cpp": "::mojo::test::nullable_numerics_and_enums_unittest::TypemappedEnum",
+        "mojom": "mojo.test.nullable_numerics_and_enums_unittest.mojom.TypemappedEnum"
+      }
+    ]
+  }
+]

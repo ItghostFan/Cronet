@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		788103832A85E754004A94DB /* custom_tab_session.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 788103812A85E754004A94DB /* custom_tab_session.pb.cc */; };
+		78C65AB32A7A4D4600B7B63C /* system_profile.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A892A7A4D4500B7B63C /* system_profile.pb.cc */; };
+		78C65AB42A7A4D4600B7B63C /* chrome_user_metrics_extension.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A8B2A7A4D4500B7B63C /* chrome_user_metrics_extension.pb.cc */; };
+		78C65AB52A7A4D4600B7B63C /* structured_data.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A902A7A4D4500B7B63C /* structured_data.pb.cc */; };
+		78C65AB62A7A4D4600B7B63C /* chrome_os_app_list_launch_event.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A942A7A4D4500B7B63C /* chrome_os_app_list_launch_event.pb.cc */; };
+		78C65AB82A7A4D4600B7B63C /* perf_data.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A962A7A4D4500B7B63C /* perf_data.pb.cc */; };
+		78C65AB92A7A4D4600B7B63C /* user_action_event.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A992A7A4D4500B7B63C /* user_action_event.pb.cc */; };
+		78C65ABA2A7A4D4600B7B63C /* printer_event.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A9A2A7A4D4500B7B63C /* printer_event.pb.cc */; };
+		78C65ABB2A7A4D4600B7B63C /* omnibox_event.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A9C2A7A4D4500B7B63C /* omnibox_event.pb.cc */; };
+		78C65ABC2A7A4D4600B7B63C /* reporting_info.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A9F2A7A4D4500B7B63C /* reporting_info.pb.cc */; };
+		78C65ABD2A7A4D4600B7B63C /* user_demographics.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA12A7A4D4500B7B63C /* user_demographics.pb.cc */; };
+		78C65ABE2A7A4D4600B7B63C /* translate_event.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA22A7A4D4500B7B63C /* translate_event.pb.cc */; };
+		78C65ABF2A7A4D4600B7B63C /* call_stack_profile.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA32A7A4D4500B7B63C /* call_stack_profile.pb.cc */; };
+		78C65AC02A7A4D4600B7B63C /* omnibox_input_type.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA42A7A4D4500B7B63C /* omnibox_input_type.pb.cc */; };
+		78C65AC12A7A4D4600B7B63C /* histogram_event.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA62A7A4D4500B7B63C /* histogram_event.pb.cc */; };
+		78C65AC22A7A4D4600B7B63C /* perf_stat.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA82A7A4D4600B7B63C /* perf_stat.pb.cc */; };
+		78C65AC32A7A4D4600B7B63C /* trace_log.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AA92A7A4D4600B7B63C /* trace_log.pb.cc */; };
+		78C65AC42A7A4D4600B7B63C /* cast_logs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AAA2A7A4D4600B7B63C /* cast_logs.pb.cc */; };
+		78C65AC62A7A4D4600B7B63C /* extension_install.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AAE2A7A4D4600B7B63C /* extension_install.pb.cc */; };
+		78C65AC72A7A4D4600B7B63C /* sampled_profile.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AB02A7A4D4600B7B63C /* sampled_profile.pb.cc */; };
+		78C65AC82A7A4D4600B7B63C /* execution_context.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AB22A7A4D4600B7B63C /* execution_context.pb.cc */; };
+		78C65AD32A7A4D7F00B7B63C /* entry.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65ACB2A7A4D7F00B7B63C /* entry.pb.cc */; };
+		78C65AD42A7A4D7F00B7B63C /* report.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65ACD2A7A4D7F00B7B63C /* report.pb.cc */; };
+		78C65AD52A7A4D7F00B7B63C /* aggregate.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65ACE2A7A4D7F00B7B63C /* aggregate.pb.cc */; };
+		78C65AD62A7A4D7F00B7B63C /* source.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65AD22A7A4D7F00B7B63C /* source.pb.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785BFE1E2A77A4750088C2FC /* libmetrics_proto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmetrics_proto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		788103812A85E754004A94DB /* custom_tab_session.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = custom_tab_session.pb.cc; path = ../../gen/third_party/metrics_proto/custom_tab_session.pb.cc; sourceTree = "<group>"; };
+		788103822A85E754004A94DB /* custom_tab_session.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = custom_tab_session.pb.h; path = ../../gen/third_party/metrics_proto/custom_tab_session.pb.h; sourceTree = "<group>"; };
+		78C65A882A7A4D4500B7B63C /* structured_data.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = structured_data.pb.h; path = ../../gen/third_party/metrics_proto/structured_data.pb.h; sourceTree = "<group>"; };
+		78C65A892A7A4D4500B7B63C /* system_profile.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = system_profile.pb.cc; path = ../../gen/third_party/metrics_proto/system_profile.pb.cc; sourceTree = "<group>"; };
+		78C65A8A2A7A4D4500B7B63C /* call_stack_profile.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = call_stack_profile.pb.h; path = ../../gen/third_party/metrics_proto/call_stack_profile.pb.h; sourceTree = "<group>"; };
+		78C65A8B2A7A4D4500B7B63C /* chrome_user_metrics_extension.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = chrome_user_metrics_extension.pb.cc; path = ../../gen/third_party/metrics_proto/chrome_user_metrics_extension.pb.cc; sourceTree = "<group>"; };
+		78C65A8C2A7A4D4500B7B63C /* sampled_profile.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sampled_profile.pb.h; path = ../../gen/third_party/metrics_proto/sampled_profile.pb.h; sourceTree = "<group>"; };
+		78C65A8D2A7A4D4500B7B63C /* cast_logs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cast_logs.pb.h; path = ../../gen/third_party/metrics_proto/cast_logs.pb.h; sourceTree = "<group>"; };
+		78C65A8E2A7A4D4500B7B63C /* user_demographics.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = user_demographics.pb.h; path = ../../gen/third_party/metrics_proto/user_demographics.pb.h; sourceTree = "<group>"; };
+		78C65A8F2A7A4D4500B7B63C /* system_profile.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = system_profile.pb.h; path = ../../gen/third_party/metrics_proto/system_profile.pb.h; sourceTree = "<group>"; };
+		78C65A902A7A4D4500B7B63C /* structured_data.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = structured_data.pb.cc; path = ../../gen/third_party/metrics_proto/structured_data.pb.cc; sourceTree = "<group>"; };
+		78C65A912A7A4D4500B7B63C /* reporting_info.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reporting_info.pb.h; path = ../../gen/third_party/metrics_proto/reporting_info.pb.h; sourceTree = "<group>"; };
+		78C65A922A7A4D4500B7B63C /* printer_event.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = printer_event.pb.h; path = ../../gen/third_party/metrics_proto/printer_event.pb.h; sourceTree = "<group>"; };
+		78C65A932A7A4D4500B7B63C /* perf_data.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = perf_data.pb.h; path = ../../gen/third_party/metrics_proto/perf_data.pb.h; sourceTree = "<group>"; };
+		78C65A942A7A4D4500B7B63C /* chrome_os_app_list_launch_event.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = chrome_os_app_list_launch_event.pb.cc; path = ../../gen/third_party/metrics_proto/chrome_os_app_list_launch_event.pb.cc; sourceTree = "<group>"; };
+		78C65A962A7A4D4500B7B63C /* perf_data.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = perf_data.pb.cc; path = ../../gen/third_party/metrics_proto/perf_data.pb.cc; sourceTree = "<group>"; };
+		78C65A972A7A4D4500B7B63C /* execution_context.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = execution_context.pb.h; path = ../../gen/third_party/metrics_proto/execution_context.pb.h; sourceTree = "<group>"; };
+		78C65A982A7A4D4500B7B63C /* trace_log.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trace_log.pb.h; path = ../../gen/third_party/metrics_proto/trace_log.pb.h; sourceTree = "<group>"; };
+		78C65A992A7A4D4500B7B63C /* user_action_event.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_action_event.pb.cc; path = ../../gen/third_party/metrics_proto/user_action_event.pb.cc; sourceTree = "<group>"; };
+		78C65A9A2A7A4D4500B7B63C /* printer_event.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = printer_event.pb.cc; path = ../../gen/third_party/metrics_proto/printer_event.pb.cc; sourceTree = "<group>"; };
+		78C65A9B2A7A4D4500B7B63C /* histogram_event.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = histogram_event.pb.h; path = ../../gen/third_party/metrics_proto/histogram_event.pb.h; sourceTree = "<group>"; };
+		78C65A9C2A7A4D4500B7B63C /* omnibox_event.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnibox_event.pb.cc; path = ../../gen/third_party/metrics_proto/omnibox_event.pb.cc; sourceTree = "<group>"; };
+		78C65A9D2A7A4D4500B7B63C /* omnibox_input_type.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnibox_input_type.pb.h; path = ../../gen/third_party/metrics_proto/omnibox_input_type.pb.h; sourceTree = "<group>"; };
+		78C65A9E2A7A4D4500B7B63C /* extension_install.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = extension_install.pb.h; path = ../../gen/third_party/metrics_proto/extension_install.pb.h; sourceTree = "<group>"; };
+		78C65A9F2A7A4D4500B7B63C /* reporting_info.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reporting_info.pb.cc; path = ../../gen/third_party/metrics_proto/reporting_info.pb.cc; sourceTree = "<group>"; };
+		78C65AA02A7A4D4500B7B63C /* translate_event.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = translate_event.pb.h; path = ../../gen/third_party/metrics_proto/translate_event.pb.h; sourceTree = "<group>"; };
+		78C65AA12A7A4D4500B7B63C /* user_demographics.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_demographics.pb.cc; path = ../../gen/third_party/metrics_proto/user_demographics.pb.cc; sourceTree = "<group>"; };
+		78C65AA22A7A4D4500B7B63C /* translate_event.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = translate_event.pb.cc; path = ../../gen/third_party/metrics_proto/translate_event.pb.cc; sourceTree = "<group>"; };
+		78C65AA32A7A4D4500B7B63C /* call_stack_profile.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = call_stack_profile.pb.cc; path = ../../gen/third_party/metrics_proto/call_stack_profile.pb.cc; sourceTree = "<group>"; };
+		78C65AA42A7A4D4500B7B63C /* omnibox_input_type.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnibox_input_type.pb.cc; path = ../../gen/third_party/metrics_proto/omnibox_input_type.pb.cc; sourceTree = "<group>"; };
+		78C65AA52A7A4D4500B7B63C /* user_action_event.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = user_action_event.pb.h; path = ../../gen/third_party/metrics_proto/user_action_event.pb.h; sourceTree = "<group>"; };
+		78C65AA62A7A4D4500B7B63C /* histogram_event.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = histogram_event.pb.cc; path = ../../gen/third_party/metrics_proto/histogram_event.pb.cc; sourceTree = "<group>"; };
+		78C65AA72A7A4D4500B7B63C /* perf_stat.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = perf_stat.pb.h; path = ../../gen/third_party/metrics_proto/perf_stat.pb.h; sourceTree = "<group>"; };
+		78C65AA82A7A4D4600B7B63C /* perf_stat.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = perf_stat.pb.cc; path = ../../gen/third_party/metrics_proto/perf_stat.pb.cc; sourceTree = "<group>"; };
+		78C65AA92A7A4D4600B7B63C /* trace_log.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = trace_log.pb.cc; path = ../../gen/third_party/metrics_proto/trace_log.pb.cc; sourceTree = "<group>"; };
+		78C65AAA2A7A4D4600B7B63C /* cast_logs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cast_logs.pb.cc; path = ../../gen/third_party/metrics_proto/cast_logs.pb.cc; sourceTree = "<group>"; };
+		78C65AAB2A7A4D4600B7B63C /* omnibox_event.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnibox_event.pb.h; path = ../../gen/third_party/metrics_proto/omnibox_event.pb.h; sourceTree = "<group>"; };
+		78C65AAE2A7A4D4600B7B63C /* extension_install.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = extension_install.pb.cc; path = ../../gen/third_party/metrics_proto/extension_install.pb.cc; sourceTree = "<group>"; };
+		78C65AAF2A7A4D4600B7B63C /* chrome_user_metrics_extension.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chrome_user_metrics_extension.pb.h; path = ../../gen/third_party/metrics_proto/chrome_user_metrics_extension.pb.h; sourceTree = "<group>"; };
+		78C65AB02A7A4D4600B7B63C /* sampled_profile.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sampled_profile.pb.cc; path = ../../gen/third_party/metrics_proto/sampled_profile.pb.cc; sourceTree = "<group>"; };
+		78C65AB12A7A4D4600B7B63C /* chrome_os_app_list_launch_event.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chrome_os_app_list_launch_event.pb.h; path = ../../gen/third_party/metrics_proto/chrome_os_app_list_launch_event.pb.h; sourceTree = "<group>"; };
+		78C65AB22A7A4D4600B7B63C /* execution_context.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = execution_context.pb.cc; path = ../../gen/third_party/metrics_proto/execution_context.pb.cc; sourceTree = "<group>"; };
+		78C65ACB2A7A4D7F00B7B63C /* entry.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entry.pb.cc; path = ../../gen/third_party/metrics_proto/ukm/entry.pb.cc; sourceTree = "<group>"; };
+		78C65ACC2A7A4D7F00B7B63C /* report.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = report.pb.h; path = ../../gen/third_party/metrics_proto/ukm/report.pb.h; sourceTree = "<group>"; };
+		78C65ACD2A7A4D7F00B7B63C /* report.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = report.pb.cc; path = ../../gen/third_party/metrics_proto/ukm/report.pb.cc; sourceTree = "<group>"; };
+		78C65ACE2A7A4D7F00B7B63C /* aggregate.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aggregate.pb.cc; path = ../../gen/third_party/metrics_proto/ukm/aggregate.pb.cc; sourceTree = "<group>"; };
+		78C65ACF2A7A4D7F00B7B63C /* aggregate.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aggregate.pb.h; path = ../../gen/third_party/metrics_proto/ukm/aggregate.pb.h; sourceTree = "<group>"; };
+		78C65AD02A7A4D7F00B7B63C /* source.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = source.pb.h; path = ../../gen/third_party/metrics_proto/ukm/source.pb.h; sourceTree = "<group>"; };
+		78C65AD12A7A4D7F00B7B63C /* entry.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = entry.pb.h; path = ../../gen/third_party/metrics_proto/ukm/entry.pb.h; sourceTree = "<group>"; };
+		78C65AD22A7A4D7F00B7B63C /* source.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = source.pb.cc; path = ../../gen/third_party/metrics_proto/ukm/source.pb.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				78C65A842A7A4CB700B7B63C /* gen */,
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libmetrics_proto.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		78C65A842A7A4CB700B7B63C /* gen */ = {
+			isa = PBXGroup;
+			children = (
+				78C65ACA2A7A4D6300B7B63C /* third_party */,
+			);
+			name = gen;
+			sourceTree = "<group>";
+		};
+		78C65AC92A7A4D5300B7B63C /* metrics_proto */ = {
+			isa = PBXGroup;
+			children = (
+				788103812A85E754004A94DB /* custom_tab_session.pb.cc */,
+				788103822A85E754004A94DB /* custom_tab_session.pb.h */,
+				78C65AA32A7A4D4500B7B63C /* call_stack_profile.pb.cc */,
+				78C65A8A2A7A4D4500B7B63C /* call_stack_profile.pb.h */,
+				78C65AAA2A7A4D4600B7B63C /* cast_logs.pb.cc */,
+				78C65A8D2A7A4D4500B7B63C /* cast_logs.pb.h */,
+				78C65A942A7A4D4500B7B63C /* chrome_os_app_list_launch_event.pb.cc */,
+				78C65AB12A7A4D4600B7B63C /* chrome_os_app_list_launch_event.pb.h */,
+				78C65A8B2A7A4D4500B7B63C /* chrome_user_metrics_extension.pb.cc */,
+				78C65AAF2A7A4D4600B7B63C /* chrome_user_metrics_extension.pb.h */,
+				78C65AB22A7A4D4600B7B63C /* execution_context.pb.cc */,
+				78C65A972A7A4D4500B7B63C /* execution_context.pb.h */,
+				78C65AAE2A7A4D4600B7B63C /* extension_install.pb.cc */,
+				78C65A9E2A7A4D4500B7B63C /* extension_install.pb.h */,
+				78C65AA62A7A4D4500B7B63C /* histogram_event.pb.cc */,
+				78C65A9B2A7A4D4500B7B63C /* histogram_event.pb.h */,
+				78C65A9C2A7A4D4500B7B63C /* omnibox_event.pb.cc */,
+				78C65AAB2A7A4D4600B7B63C /* omnibox_event.pb.h */,
+				78C65AA42A7A4D4500B7B63C /* omnibox_input_type.pb.cc */,
+				78C65A9D2A7A4D4500B7B63C /* omnibox_input_type.pb.h */,
+				78C65A962A7A4D4500B7B63C /* perf_data.pb.cc */,
+				78C65A932A7A4D4500B7B63C /* perf_data.pb.h */,
+				78C65AA82A7A4D4600B7B63C /* perf_stat.pb.cc */,
+				78C65AA72A7A4D4500B7B63C /* perf_stat.pb.h */,
+				78C65A9A2A7A4D4500B7B63C /* printer_event.pb.cc */,
+				78C65A922A7A4D4500B7B63C /* printer_event.pb.h */,
+				78C65A9F2A7A4D4500B7B63C /* reporting_info.pb.cc */,
+				78C65A912A7A4D4500B7B63C /* reporting_info.pb.h */,
+				78C65AB02A7A4D4600B7B63C /* sampled_profile.pb.cc */,
+				78C65A8C2A7A4D4500B7B63C /* sampled_profile.pb.h */,
+				78C65A902A7A4D4500B7B63C /* structured_data.pb.cc */,
+				78C65A882A7A4D4500B7B63C /* structured_data.pb.h */,
+				78C65A892A7A4D4500B7B63C /* system_profile.pb.cc */,
+				78C65A8F2A7A4D4500B7B63C /* system_profile.pb.h */,
+				78C65AA92A7A4D4600B7B63C /* trace_log.pb.cc */,
+				78C65A982A7A4D4500B7B63C /* trace_log.pb.h */,
+				78C65AA22A7A4D4500B7B63C /* translate_event.pb.cc */,
+				78C65AA02A7A4D4500B7B63C /* translate_event.pb.h */,
+				78C65A992A7A4D4500B7B63C /* user_action_event.pb.cc */,
+				78C65AA52A7A4D4500B7B63C /* user_action_event.pb.h */,
+				78C65AA12A7A4D4500B7B63C /* user_demographics.pb.cc */,
+				78C65A8E2A7A4D4500B7B63C /* user_demographics.pb.h */,
+			);
+			name = metrics_proto;
+			sourceTree = "<group>";
+		};
+		78C65ACA2A7A4D6300B7B63C /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				78C65AD72A7A4D8900B7B63C /* ukm */,
+				78C65AC92A7A4D5300B7B63C /* metrics_proto */,
+			);
+			name = third_party;
+			sourceTree = "<group>";
+		};
+		78C65AD72A7A4D8900B7B63C /* ukm */ = {
+			isa = PBXGroup;
+			children = (
+				78C65ACE2A7A4D7F00B7B63C /* aggregate.pb.cc */,
+				78C65ACF2A7A4D7F00B7B63C /* aggregate.pb.h */,
+				78C65ACB2A7A4D7F00B7B63C /* entry.pb.cc */,
+				78C65AD12A7A4D7F00B7B63C /* entry.pb.h */,
+				78C65ACD2A7A4D7F00B7B63C /* report.pb.cc */,
+				78C65ACC2A7A4D7F00B7B63C /* report.pb.h */,
+				78C65AD22A7A4D7F00B7B63C /* source.pb.cc */,
+				78C65AD02A7A4D7F00B7B63C /* source.pb.h */,
+			);
+			name = ukm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* metrics_proto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "metrics_proto" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = metrics_proto;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libmetrics_proto.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "metrics_proto" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* metrics_proto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C65AB32A7A4D4600B7B63C /* system_profile.pb.cc in Sources */,
+				788103832A85E754004A94DB /* custom_tab_session.pb.cc in Sources */,
+				78C65AB52A7A4D4600B7B63C /* structured_data.pb.cc in Sources */,
+				78C65AC72A7A4D4600B7B63C /* sampled_profile.pb.cc in Sources */,
+				78C65AC62A7A4D4600B7B63C /* extension_install.pb.cc in Sources */,
+				78C65AD42A7A4D7F00B7B63C /* report.pb.cc in Sources */,
+				78C65AB92A7A4D4600B7B63C /* user_action_event.pb.cc in Sources */,
+				78C65AB62A7A4D4600B7B63C /* chrome_os_app_list_launch_event.pb.cc in Sources */,
+				78C65AC12A7A4D4600B7B63C /* histogram_event.pb.cc in Sources */,
+				78C65ABA2A7A4D4600B7B63C /* printer_event.pb.cc in Sources */,
+				78C65AD32A7A4D7F00B7B63C /* entry.pb.cc in Sources */,
+				78C65AB82A7A4D4600B7B63C /* perf_data.pb.cc in Sources */,
+				78C65AC32A7A4D4600B7B63C /* trace_log.pb.cc in Sources */,
+				78C65AB42A7A4D4600B7B63C /* chrome_user_metrics_extension.pb.cc in Sources */,
+				78C65AD62A7A4D7F00B7B63C /* source.pb.cc in Sources */,
+				78C65ABC2A7A4D4600B7B63C /* reporting_info.pb.cc in Sources */,
+				78C65AC42A7A4D4600B7B63C /* cast_logs.pb.cc in Sources */,
+				78C65ABE2A7A4D4600B7B63C /* translate_event.pb.cc in Sources */,
+				78C65AD52A7A4D7F00B7B63C /* aggregate.pb.cc in Sources */,
+				78C65AC22A7A4D4600B7B63C /* perf_stat.pb.cc in Sources */,
+				78C65ABB2A7A4D4600B7B63C /* omnibox_event.pb.cc in Sources */,
+				78C65AC82A7A4D4600B7B63C /* execution_context.pb.cc in Sources */,
+				78C65ABF2A7A4D4600B7B63C /* call_stack_profile.pb.cc in Sources */,
+				78C65AC02A7A4D4600B7B63C /* omnibox_input_type.pb.cc in Sources */,
+				78C65ABD2A7A4D4600B7B63C /* user_demographics.pb.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/protobuf/src;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen/third_party/metrics_proto,
+					../../gen,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/protobuf/src;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen/third_party/metrics_proto,
+					../../gen,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "metrics_proto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "metrics_proto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

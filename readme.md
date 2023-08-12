@@ -1,0 +1,11 @@
+# 使用说明
+1、按照官方说明，把src检出到当前git工程目录下。
+
+2、执行replaces.sh，主要是为了解决llvm+clang和Xcode+clang的C++语法兼容问题。
+
+3、打开Cronet.xcodeproj，进行编译即可。
+
+4、根据具体需要情况，处理编译的产物，Framework和dSYM。
+
+# 本项目支持Chrome版本
+117.0.5914.0

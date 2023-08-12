@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78E062852A8252F6002E9727 /* chacha-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062842A8252F5002E9727 /* chacha-armv8-apple.S */; };
+		78E062872A825313002E9727 /* vpaes-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062862A825313002E9727 /* vpaes-armv8-apple.S */; };
+		78E062892A825322002E9727 /* sha1-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062882A825322002E9727 /* sha1-armv8-apple.S */; };
+		78E0628B2A825331002E9727 /* sha256-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0628A2A825331002E9727 /* sha256-armv8-apple.S */; };
+		78E0628D2A825340002E9727 /* sha512-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0628C2A825340002E9727 /* sha512-armv8-apple.S */; };
+		78E0628F2A825357002E9727 /* ghashv8-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0628E2A825357002E9727 /* ghashv8-armv8-apple.S */; };
+		78E062912A825366002E9727 /* ghash-neon-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062902A825366002E9727 /* ghash-neon-armv8-apple.S */; };
+		78E062932A825370002E9727 /* armv8-mont-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062922A825370002E9727 /* armv8-mont-apple.S */; };
+		78E062952A825380002E9727 /* aesv8-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062942A825380002E9727 /* aesv8-armv8-apple.S */; };
+		78FB87162A87BBE500DCEB6F /* aesv8-gcm-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78FB87152A87BBE500DCEB6F /* aesv8-gcm-armv8-apple.S */; };
+		78FB87182A87C3CF00DCEB6F /* bn-armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78FB87172A87C3CE00DCEB6F /* bn-armv8-apple.S */; };
+		78FB871E2A87C4B200DCEB6F /* chacha20_poly1305_armv8-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78FB871D2A87C4B200DCEB6F /* chacha20_poly1305_armv8-apple.S */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785BFE1E2A77A4750088C2FC /* libboringssl_asm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libboringssl_asm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E062842A8252F5002E9727 /* chacha-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "chacha-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/chacha/chacha-armv8-apple.S"; sourceTree = "<group>"; };
+		78E062862A825313002E9727 /* vpaes-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "vpaes-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/vpaes-armv8-apple.S"; sourceTree = "<group>"; };
+		78E062882A825322002E9727 /* sha1-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "sha1-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/sha1-armv8-apple.S"; sourceTree = "<group>"; };
+		78E0628A2A825331002E9727 /* sha256-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "sha256-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/sha256-armv8-apple.S"; sourceTree = "<group>"; };
+		78E0628C2A825340002E9727 /* sha512-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "sha512-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/sha512-armv8-apple.S"; sourceTree = "<group>"; };
+		78E0628E2A825357002E9727 /* ghashv8-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "ghashv8-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/ghashv8-armv8-apple.S"; sourceTree = "<group>"; };
+		78E062902A825366002E9727 /* ghash-neon-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "ghash-neon-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/ghash-neon-armv8-apple.S"; sourceTree = "<group>"; };
+		78E062922A825370002E9727 /* armv8-mont-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "armv8-mont-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/armv8-mont-apple.S"; sourceTree = "<group>"; };
+		78E062942A825380002E9727 /* aesv8-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "aesv8-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/aesv8-armv8-apple.S"; sourceTree = "<group>"; };
+		78FB87152A87BBE500DCEB6F /* aesv8-gcm-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "aesv8-gcm-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/aesv8-gcm-armv8-apple.S"; sourceTree = "<group>"; };
+		78FB87172A87C3CE00DCEB6F /* bn-armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "bn-armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/fipsmodule/bn-armv8-apple.S"; sourceTree = "<group>"; };
+		78FB871D2A87C4B200DCEB6F /* chacha20_poly1305_armv8-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "chacha20_poly1305_armv8-apple.S"; path = "../../src/third_party/boringssl/apple-aarch64/crypto/cipher_extra/chacha20_poly1305_armv8-apple.S"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785B043A2A78DCD30088C2FC /* boringssl */ = {
+			isa = PBXGroup;
+			children = (
+				785B07362A7909380088C2FC /* apple-aarch64 */,
+			);
+			name = boringssl;
+			sourceTree = "<group>";
+		};
+		785B043B2A78DCE50088C2FC /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				785B043A2A78DCD30088C2FC /* boringssl */,
+			);
+			name = third_party;
+			sourceTree = "<group>";
+		};
+		785B07342A7909110088C2FC /* chacha */ = {
+			isa = PBXGroup;
+			children = (
+				78E062842A8252F5002E9727 /* chacha-armv8-apple.S */,
+			);
+			name = chacha;
+			sourceTree = "<group>";
+		};
+		785B07352A7909280088C2FC /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				78FB871B2A87C49700DCEB6F /* cipher_extra */,
+				78C65EB72A7A764C00B7B63C /* fipsmodule */,
+				785B07342A7909110088C2FC /* chacha */,
+			);
+			name = crypto;
+			sourceTree = "<group>";
+		};
+		785B07362A7909380088C2FC /* apple-aarch64 */ = {
+			isa = PBXGroup;
+			children = (
+				785B07352A7909280088C2FC /* crypto */,
+			);
+			name = "apple-aarch64";
+			sourceTree = "<group>";
+		};
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libboringssl_asm.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				785B043B2A78DCE50088C2FC /* third_party */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		78C65EB72A7A764C00B7B63C /* fipsmodule */ = {
+			isa = PBXGroup;
+			children = (
+				78E062862A825313002E9727 /* vpaes-armv8-apple.S */,
+				78E062882A825322002E9727 /* sha1-armv8-apple.S */,
+				78E0628A2A825331002E9727 /* sha256-armv8-apple.S */,
+				78E0628C2A825340002E9727 /* sha512-armv8-apple.S */,
+				78E0628E2A825357002E9727 /* ghashv8-armv8-apple.S */,
+				78E062902A825366002E9727 /* ghash-neon-armv8-apple.S */,
+				78E062922A825370002E9727 /* armv8-mont-apple.S */,
+				78E062942A825380002E9727 /* aesv8-armv8-apple.S */,
+				78FB87172A87C3CE00DCEB6F /* bn-armv8-apple.S */,
+				78FB87152A87BBE500DCEB6F /* aesv8-gcm-armv8-apple.S */,
+			);
+			name = fipsmodule;
+			sourceTree = "<group>";
+		};
+		78FB871B2A87C49700DCEB6F /* cipher_extra */ = {
+			isa = PBXGroup;
+			children = (
+				78FB871D2A87C4B200DCEB6F /* chacha20_poly1305_armv8-apple.S */,
+			);
+			name = cipher_extra;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* boringssl_asm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "boringssl_asm" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = boringssl_asm;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libboringssl_asm.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "boringssl_asm" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* boringssl_asm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78E062852A8252F6002E9727 /* chacha-armv8-apple.S in Sources */,
+				78E062892A825322002E9727 /* sha1-armv8-apple.S in Sources */,
+				78E062872A825313002E9727 /* vpaes-armv8-apple.S in Sources */,
+				78E0628F2A825357002E9727 /* ghashv8-armv8-apple.S in Sources */,
+				78E0628B2A825331002E9727 /* sha256-armv8-apple.S in Sources */,
+				78FB87162A87BBE500DCEB6F /* aesv8-gcm-armv8-apple.S in Sources */,
+				78FB87182A87C3CF00DCEB6F /* bn-armv8-apple.S in Sources */,
+				78E062932A825370002E9727 /* armv8-mont-apple.S in Sources */,
+				78E062912A825366002E9727 /* ghash-neon-armv8-apple.S in Sources */,
+				78E0628D2A825340002E9727 /* sha512-armv8-apple.S in Sources */,
+				78FB871E2A87C4B200DCEB6F /* chacha20_poly1305_armv8-apple.S in Sources */,
+				78E062952A825380002E9727 /* aesv8-armv8-apple.S in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					OPENSSL_SMALL,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/boringssl/src/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = OPENSSL_SMALL;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/boringssl/src/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "boringssl_asm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "boringssl_asm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78E0625F2A8237F1002E9727 /* trampoline-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0625E2A8237F1002E9727 /* trampoline-x86_64-apple.S */; };
+		78E0626F2A823814002E9727 /* sha512-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062602A823811002E9727 /* sha512-x86_64-apple.S */; };
+		78E062702A823814002E9727 /* aesni-gcm-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062612A823811002E9727 /* aesni-gcm-x86_64-apple.S */; };
+		78E062712A823814002E9727 /* vpaes-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062622A823811002E9727 /* vpaes-x86_64-apple.S */; };
+		78E062722A823814002E9727 /* rsaz-avx2-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062632A823811002E9727 /* rsaz-avx2-apple.S */; };
+		78E062732A823814002E9727 /* ghash-ssse3-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062642A823811002E9727 /* ghash-ssse3-x86_64-apple.S */; };
+		78E062742A823814002E9727 /* x86_64-mont5-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062652A823811002E9727 /* x86_64-mont5-apple.S */; };
+		78E062752A823814002E9727 /* sha256-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062662A823812002E9727 /* sha256-x86_64-apple.S */; };
+		78E062762A823814002E9727 /* ghash-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062672A823812002E9727 /* ghash-x86_64-apple.S */; };
+		78E062772A823814002E9727 /* x86_64-mont-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062682A823812002E9727 /* x86_64-mont-apple.S */; };
+		78E062782A823814002E9727 /* p256-x86_64-asm-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062692A823812002E9727 /* p256-x86_64-asm-apple.S */; };
+		78E062792A823814002E9727 /* p256_beeu-x86_64-asm-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0626A2A823812002E9727 /* p256_beeu-x86_64-asm-apple.S */; };
+		78E0627A2A823814002E9727 /* md5-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0626B2A823813002E9727 /* md5-x86_64-apple.S */; };
+		78E0627B2A823814002E9727 /* aesni-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0626C2A823813002E9727 /* aesni-x86_64-apple.S */; };
+		78E0627C2A823814002E9727 /* sha1-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0626D2A823814002E9727 /* sha1-x86_64-apple.S */; };
+		78E0627D2A823814002E9727 /* rdrand-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0626E2A823814002E9727 /* rdrand-x86_64-apple.S */; };
+		78E062802A823826002E9727 /* chacha20_poly1305_x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0627E2A823825002E9727 /* chacha20_poly1305_x86_64-apple.S */; };
+		78E062812A823826002E9727 /* aes128gcmsiv-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E0627F2A823825002E9727 /* aes128gcmsiv-x86_64-apple.S */; };
+		78E062832A823832002E9727 /* chacha-x86_64-apple.S in Sources */ = {isa = PBXBuildFile; fileRef = 78E062822A823832002E9727 /* chacha-x86_64-apple.S */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785BFE1E2A77A4750088C2FC /* libboringssl_x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libboringssl_x86.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E0625E2A8237F1002E9727 /* trampoline-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "trampoline-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/test/trampoline-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062602A823811002E9727 /* sha512-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "sha512-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/sha512-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062612A823811002E9727 /* aesni-gcm-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "aesni-gcm-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/aesni-gcm-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062622A823811002E9727 /* vpaes-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "vpaes-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/vpaes-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062632A823811002E9727 /* rsaz-avx2-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "rsaz-avx2-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/rsaz-avx2-apple.S"; sourceTree = "<group>"; };
+		78E062642A823811002E9727 /* ghash-ssse3-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "ghash-ssse3-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/ghash-ssse3-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062652A823811002E9727 /* x86_64-mont5-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "x86_64-mont5-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/x86_64-mont5-apple.S"; sourceTree = "<group>"; };
+		78E062662A823812002E9727 /* sha256-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "sha256-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/sha256-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062672A823812002E9727 /* ghash-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "ghash-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/ghash-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062682A823812002E9727 /* x86_64-mont-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "x86_64-mont-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/x86_64-mont-apple.S"; sourceTree = "<group>"; };
+		78E062692A823812002E9727 /* p256-x86_64-asm-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "p256-x86_64-asm-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/p256-x86_64-asm-apple.S"; sourceTree = "<group>"; };
+		78E0626A2A823812002E9727 /* p256_beeu-x86_64-asm-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "p256_beeu-x86_64-asm-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/p256_beeu-x86_64-asm-apple.S"; sourceTree = "<group>"; };
+		78E0626B2A823813002E9727 /* md5-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "md5-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/md5-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E0626C2A823813002E9727 /* aesni-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "aesni-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/aesni-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E0626D2A823814002E9727 /* sha1-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "sha1-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/sha1-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E0626E2A823814002E9727 /* rdrand-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "rdrand-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/fipsmodule/rdrand-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E0627E2A823825002E9727 /* chacha20_poly1305_x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "chacha20_poly1305_x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/cipher_extra/chacha20_poly1305_x86_64-apple.S"; sourceTree = "<group>"; };
+		78E0627F2A823825002E9727 /* aes128gcmsiv-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "aes128gcmsiv-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/cipher_extra/aes128gcmsiv-x86_64-apple.S"; sourceTree = "<group>"; };
+		78E062822A823832002E9727 /* chacha-x86_64-apple.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "chacha-x86_64-apple.S"; path = "../../src/third_party/boringssl/apple-x86_64/crypto/chacha/chacha-x86_64-apple.S"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785B043A2A78DCD30088C2FC /* boringssl */ = {
+			isa = PBXGroup;
+			children = (
+				78F88F422A80CA9D00F19292 /* apple-x86_64 */,
+			);
+			name = boringssl;
+			sourceTree = "<group>";
+		};
+		785B043B2A78DCE50088C2FC /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				785B043A2A78DCD30088C2FC /* boringssl */,
+			);
+			name = third_party;
+			sourceTree = "<group>";
+		};
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libboringssl_x86.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				785B043B2A78DCE50088C2FC /* third_party */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		78F88F402A80CA8800F19292 /* chacha */ = {
+			isa = PBXGroup;
+			children = (
+				78E062822A823832002E9727 /* chacha-x86_64-apple.S */,
+			);
+			name = chacha;
+			sourceTree = "<group>";
+		};
+		78F88F412A80CA9400F19292 /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				78F88F692A80CB0400F19292 /* test */,
+				78F88F662A80CAED00F19292 /* fipsmodule */,
+				78F88F472A80CAC100F19292 /* cipher_extra */,
+				78F88F402A80CA8800F19292 /* chacha */,
+			);
+			name = crypto;
+			sourceTree = "<group>";
+		};
+		78F88F422A80CA9D00F19292 /* apple-x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				78F88F412A80CA9400F19292 /* crypto */,
+			);
+			name = "apple-x86_64";
+			sourceTree = "<group>";
+		};
+		78F88F472A80CAC100F19292 /* cipher_extra */ = {
+			isa = PBXGroup;
+			children = (
+				78E0627F2A823825002E9727 /* aes128gcmsiv-x86_64-apple.S */,
+				78E0627E2A823825002E9727 /* chacha20_poly1305_x86_64-apple.S */,
+			);
+			name = cipher_extra;
+			sourceTree = "<group>";
+		};
+		78F88F662A80CAED00F19292 /* fipsmodule */ = {
+			isa = PBXGroup;
+			children = (
+				78E062612A823811002E9727 /* aesni-gcm-x86_64-apple.S */,
+				78E0626C2A823813002E9727 /* aesni-x86_64-apple.S */,
+				78E062642A823811002E9727 /* ghash-ssse3-x86_64-apple.S */,
+				78E062672A823812002E9727 /* ghash-x86_64-apple.S */,
+				78E0626B2A823813002E9727 /* md5-x86_64-apple.S */,
+				78E0626A2A823812002E9727 /* p256_beeu-x86_64-asm-apple.S */,
+				78E062692A823812002E9727 /* p256-x86_64-asm-apple.S */,
+				78E0626E2A823814002E9727 /* rdrand-x86_64-apple.S */,
+				78E062632A823811002E9727 /* rsaz-avx2-apple.S */,
+				78E0626D2A823814002E9727 /* sha1-x86_64-apple.S */,
+				78E062662A823812002E9727 /* sha256-x86_64-apple.S */,
+				78E062602A823811002E9727 /* sha512-x86_64-apple.S */,
+				78E062622A823811002E9727 /* vpaes-x86_64-apple.S */,
+				78E062682A823812002E9727 /* x86_64-mont-apple.S */,
+				78E062652A823811002E9727 /* x86_64-mont5-apple.S */,
+			);
+			name = fipsmodule;
+			sourceTree = "<group>";
+		};
+		78F88F692A80CB0400F19292 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				78E0625E2A8237F1002E9727 /* trampoline-x86_64-apple.S */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* boringssl_x86 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "boringssl_x86" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = boringssl_x86;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libboringssl_x86.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "boringssl_x86" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* boringssl_x86 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78E062792A823814002E9727 /* p256_beeu-x86_64-asm-apple.S in Sources */,
+				78E0626F2A823814002E9727 /* sha512-x86_64-apple.S in Sources */,
+				78E062782A823814002E9727 /* p256-x86_64-asm-apple.S in Sources */,
+				78E0627A2A823814002E9727 /* md5-x86_64-apple.S in Sources */,
+				78E062702A823814002E9727 /* aesni-gcm-x86_64-apple.S in Sources */,
+				78E062832A823832002E9727 /* chacha-x86_64-apple.S in Sources */,
+				78E0627D2A823814002E9727 /* rdrand-x86_64-apple.S in Sources */,
+				78E062732A823814002E9727 /* ghash-ssse3-x86_64-apple.S in Sources */,
+				78E062712A823814002E9727 /* vpaes-x86_64-apple.S in Sources */,
+				78E062802A823826002E9727 /* chacha20_poly1305_x86_64-apple.S in Sources */,
+				78E062752A823814002E9727 /* sha256-x86_64-apple.S in Sources */,
+				78E062772A823814002E9727 /* x86_64-mont-apple.S in Sources */,
+				78E062762A823814002E9727 /* ghash-x86_64-apple.S in Sources */,
+				78E0627C2A823814002E9727 /* sha1-x86_64-apple.S in Sources */,
+				78E0627B2A823814002E9727 /* aesni-x86_64-apple.S in Sources */,
+				78E062742A823814002E9727 /* x86_64-mont5-apple.S in Sources */,
+				78E0625F2A8237F1002E9727 /* trampoline-x86_64-apple.S in Sources */,
+				78E062722A823814002E9727 /* rsaz-avx2-apple.S in Sources */,
+				78E062812A823826002E9727 /* aes128gcmsiv-x86_64-apple.S in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					OPENSSL_SMALL,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/boringssl/src/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = OPENSSL_SMALL;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/boringssl/src/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "boringssl_x86" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "boringssl_x86" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

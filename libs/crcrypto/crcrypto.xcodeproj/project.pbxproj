@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78C659432A7A3EE200B7B63C /* openssl_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6593A2A7A3EE200B7B63C /* openssl_util.cc */; };
+		78C659442A7A3EE200B7B63C /* p224_spake.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6593D2A7A3EE200B7B63C /* p224_spake.cc */; };
+		78C659452A7A3EE200B7B63C /* hkdf.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6593E2A7A3EE200B7B63C /* hkdf.cc */; };
+		78C659462A7A3EE200B7B63C /* encryptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6593F2A7A3EE200B7B63C /* encryptor.cc */; };
+		78C659472A7A3EE200B7B63C /* hmac.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659402A7A3EE200B7B63C /* hmac.cc */; };
+		78C659522A7A3F0000B7B63C /* random.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659482A7A3F0000B7B63C /* random.cc */; };
+		78C659532A7A3F0000B7B63C /* secure_hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6594B2A7A3F0000B7B63C /* secure_hash.cc */; };
+		78C659542A7A3F0000B7B63C /* sha2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6594C2A7A3F0000B7B63C /* sha2.cc */; };
+		78C659552A7A3F0000B7B63C /* secure_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6594E2A7A3F0000B7B63C /* secure_util.cc */; };
+		78C659562A7A3F0000B7B63C /* rsa_private_key.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659502A7A3F0000B7B63C /* rsa_private_key.cc */; };
+		78C6595D2A7A3F1F00B7B63C /* signature_verifier.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659572A7A3F1F00B7B63C /* signature_verifier.cc */; };
+		78C6595E2A7A3F1F00B7B63C /* signature_creator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659592A7A3F1F00B7B63C /* signature_creator.cc */; };
+		78C6595F2A7A3F1F00B7B63C /* symmetric_key.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C6595C2A7A3F1F00B7B63C /* symmetric_key.cc */; };
+		78C659642A7A3F6500B7B63C /* apple_keychain_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78C659602A7A3F6500B7B63C /* apple_keychain_ios.mm */; };
+		78C659652A7A3F6500B7B63C /* mock_apple_keychain_ios.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659612A7A3F6500B7B63C /* mock_apple_keychain_ios.cc */; };
+		78C659662A7A3F6500B7B63C /* mock_apple_keychain.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C659622A7A3F6500B7B63C /* mock_apple_keychain.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		785BFE1C2A77A4750088C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		785BFE1E2A77A4750088C2FC /* libcrcrypto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcrcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C659392A7A3EE200B7B63C /* p224_spake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = p224_spake.h; path = ../../src/crypto/p224_spake.h; sourceTree = "<group>"; };
+		78C6593A2A7A3EE200B7B63C /* openssl_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = openssl_util.cc; path = ../../src/crypto/openssl_util.cc; sourceTree = "<group>"; };
+		78C6593B2A7A3EE200B7B63C /* hkdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hkdf.h; path = ../../src/crypto/hkdf.h; sourceTree = "<group>"; };
+		78C6593C2A7A3EE200B7B63C /* openssl_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = openssl_util.h; path = ../../src/crypto/openssl_util.h; sourceTree = "<group>"; };
+		78C6593D2A7A3EE200B7B63C /* p224_spake.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = p224_spake.cc; path = ../../src/crypto/p224_spake.cc; sourceTree = "<group>"; };
+		78C6593E2A7A3EE200B7B63C /* hkdf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hkdf.cc; path = ../../src/crypto/hkdf.cc; sourceTree = "<group>"; };
+		78C6593F2A7A3EE200B7B63C /* encryptor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = encryptor.cc; path = ../../src/crypto/encryptor.cc; sourceTree = "<group>"; };
+		78C659402A7A3EE200B7B63C /* hmac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hmac.cc; path = ../../src/crypto/hmac.cc; sourceTree = "<group>"; };
+		78C659412A7A3EE200B7B63C /* encryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encryptor.h; path = ../../src/crypto/encryptor.h; sourceTree = "<group>"; };
+		78C659422A7A3EE200B7B63C /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = ../../src/crypto/hmac.h; sourceTree = "<group>"; };
+		78C659482A7A3F0000B7B63C /* random.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = random.cc; path = ../../src/crypto/random.cc; sourceTree = "<group>"; };
+		78C659492A7A3F0000B7B63C /* secure_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = secure_util.h; path = ../../src/crypto/secure_util.h; sourceTree = "<group>"; };
+		78C6594A2A7A3F0000B7B63C /* random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = random.h; path = ../../src/crypto/random.h; sourceTree = "<group>"; };
+		78C6594B2A7A3F0000B7B63C /* secure_hash.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = secure_hash.cc; path = ../../src/crypto/secure_hash.cc; sourceTree = "<group>"; };
+		78C6594C2A7A3F0000B7B63C /* sha2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha2.cc; path = ../../src/crypto/sha2.cc; sourceTree = "<group>"; };
+		78C6594D2A7A3F0000B7B63C /* sha2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha2.h; path = ../../src/crypto/sha2.h; sourceTree = "<group>"; };
+		78C6594E2A7A3F0000B7B63C /* secure_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = secure_util.cc; path = ../../src/crypto/secure_util.cc; sourceTree = "<group>"; };
+		78C6594F2A7A3F0000B7B63C /* rsa_private_key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rsa_private_key.h; path = ../../src/crypto/rsa_private_key.h; sourceTree = "<group>"; };
+		78C659502A7A3F0000B7B63C /* rsa_private_key.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rsa_private_key.cc; path = ../../src/crypto/rsa_private_key.cc; sourceTree = "<group>"; };
+		78C659512A7A3F0000B7B63C /* secure_hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = secure_hash.h; path = ../../src/crypto/secure_hash.h; sourceTree = "<group>"; };
+		78C659572A7A3F1F00B7B63C /* signature_verifier.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = signature_verifier.cc; path = ../../src/crypto/signature_verifier.cc; sourceTree = "<group>"; };
+		78C659582A7A3F1F00B7B63C /* symmetric_key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = symmetric_key.h; path = ../../src/crypto/symmetric_key.h; sourceTree = "<group>"; };
+		78C659592A7A3F1F00B7B63C /* signature_creator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = signature_creator.cc; path = ../../src/crypto/signature_creator.cc; sourceTree = "<group>"; };
+		78C6595A2A7A3F1F00B7B63C /* signature_verifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = signature_verifier.h; path = ../../src/crypto/signature_verifier.h; sourceTree = "<group>"; };
+		78C6595B2A7A3F1F00B7B63C /* signature_creator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = signature_creator.h; path = ../../src/crypto/signature_creator.h; sourceTree = "<group>"; };
+		78C6595C2A7A3F1F00B7B63C /* symmetric_key.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = symmetric_key.cc; path = ../../src/crypto/symmetric_key.cc; sourceTree = "<group>"; };
+		78C659602A7A3F6500B7B63C /* apple_keychain_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = apple_keychain_ios.mm; path = ../../src/crypto/apple_keychain_ios.mm; sourceTree = "<group>"; };
+		78C659612A7A3F6500B7B63C /* mock_apple_keychain_ios.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mock_apple_keychain_ios.cc; path = ../../src/crypto/mock_apple_keychain_ios.cc; sourceTree = "<group>"; };
+		78C659622A7A3F6500B7B63C /* mock_apple_keychain.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mock_apple_keychain.cc; path = ../../src/crypto/mock_apple_keychain.cc; sourceTree = "<group>"; };
+		78C659632A7A3F6500B7B63C /* mock_apple_keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mock_apple_keychain.h; path = ../../src/crypto/mock_apple_keychain.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785BFE1B2A77A4750088C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE1E2A77A4750088C2FC /* libcrcrypto.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				78C659382A7A3EC200B7B63C /* crypto */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		78C659382A7A3EC200B7B63C /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				78C6593F2A7A3EE200B7B63C /* encryptor.cc */,
+				78C659412A7A3EE200B7B63C /* encryptor.h */,
+				78C6593E2A7A3EE200B7B63C /* hkdf.cc */,
+				78C6593B2A7A3EE200B7B63C /* hkdf.h */,
+				78C659402A7A3EE200B7B63C /* hmac.cc */,
+				78C659422A7A3EE200B7B63C /* hmac.h */,
+				78C6593A2A7A3EE200B7B63C /* openssl_util.cc */,
+				78C6593C2A7A3EE200B7B63C /* openssl_util.h */,
+				78C6593D2A7A3EE200B7B63C /* p224_spake.cc */,
+				78C659392A7A3EE200B7B63C /* p224_spake.h */,
+				78C659482A7A3F0000B7B63C /* random.cc */,
+				78C6594A2A7A3F0000B7B63C /* random.h */,
+				78C659502A7A3F0000B7B63C /* rsa_private_key.cc */,
+				78C6594F2A7A3F0000B7B63C /* rsa_private_key.h */,
+				78C6594B2A7A3F0000B7B63C /* secure_hash.cc */,
+				78C659512A7A3F0000B7B63C /* secure_hash.h */,
+				78C6594E2A7A3F0000B7B63C /* secure_util.cc */,
+				78C659492A7A3F0000B7B63C /* secure_util.h */,
+				78C6594C2A7A3F0000B7B63C /* sha2.cc */,
+				78C6594D2A7A3F0000B7B63C /* sha2.h */,
+				78C659592A7A3F1F00B7B63C /* signature_creator.cc */,
+				78C6595B2A7A3F1F00B7B63C /* signature_creator.h */,
+				78C659572A7A3F1F00B7B63C /* signature_verifier.cc */,
+				78C6595A2A7A3F1F00B7B63C /* signature_verifier.h */,
+				78C6595C2A7A3F1F00B7B63C /* symmetric_key.cc */,
+				78C659582A7A3F1F00B7B63C /* symmetric_key.h */,
+				78C659602A7A3F6500B7B63C /* apple_keychain_ios.mm */,
+				78C659612A7A3F6500B7B63C /* mock_apple_keychain_ios.cc */,
+				78C659622A7A3F6500B7B63C /* mock_apple_keychain.cc */,
+				78C659632A7A3F6500B7B63C /* mock_apple_keychain.h */,
+			);
+			name = crypto;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785BFE1D2A77A4750088C2FC /* crcrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "crcrypto" */;
+			buildPhases = (
+				785BFE1A2A77A4750088C2FC /* Sources */,
+				785BFE1B2A77A4750088C2FC /* Frameworks */,
+				785BFE1C2A77A4750088C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = crcrypto;
+			productName = prefs;
+			productReference = 785BFE1E2A77A4750088C2FC /* libcrcrypto.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					785BFE1D2A77A4750088C2FC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "crcrypto" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785BFE1D2A77A4750088C2FC /* crcrypto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785BFE1A2A77A4750088C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C659662A7A3F6500B7B63C /* mock_apple_keychain.cc in Sources */,
+				78C659452A7A3EE200B7B63C /* hkdf.cc in Sources */,
+				78C659542A7A3F0000B7B63C /* sha2.cc in Sources */,
+				78C659472A7A3EE200B7B63C /* hmac.cc in Sources */,
+				78C659532A7A3F0000B7B63C /* secure_hash.cc in Sources */,
+				78C659442A7A3EE200B7B63C /* p224_spake.cc in Sources */,
+				78C6595E2A7A3F1F00B7B63C /* signature_creator.cc in Sources */,
+				78C659652A7A3F6500B7B63C /* mock_apple_keychain_ios.cc in Sources */,
+				78C659642A7A3F6500B7B63C /* apple_keychain_ios.mm in Sources */,
+				78C659552A7A3F0000B7B63C /* secure_util.cc in Sources */,
+				78C6595F2A7A3F1F00B7B63C /* symmetric_key.cc in Sources */,
+				78C659562A7A3F0000B7B63C /* rsa_private_key.cc in Sources */,
+				78C6595D2A7A3F1F00B7B63C /* signature_verifier.cc in Sources */,
+				78C659462A7A3EE200B7B63C /* encryptor.cc in Sources */,
+				78C659522A7A3F0000B7B63C /* random.cc in Sources */,
+				78C659432A7A3EE200B7B63C /* openssl_util.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		785BFE282A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/boringssl/src/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		785BFE292A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ../../src/third_party/boringssl/src/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					../../src,
+					../../gen,
+					"../../src/third_party/abseil-cpp",
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "crcrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785BFE272A77A4750088C2FC /* Build configuration list for PBXNativeTarget "crcrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE282A77A4750088C2FC /* Debug */,
+				785BFE292A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

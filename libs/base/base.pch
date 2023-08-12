@@ -1,0 +1,24 @@
+//
+//  base.pch
+//  base
+//
+//  Created by Itghost Fan on 2023/8/10.
+//
+
+#ifndef base_pch
+#define base_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#if defined(__cplusplus)
+#include <ostream>
+#include <vector>
+namespace std {
+    std::ostream &operator <<(std::ostream &os, const std::basic_string<char16_t> &v) {
+        return os;
+    }
+}
+#endif
+
+
+#endif /* base_pch */

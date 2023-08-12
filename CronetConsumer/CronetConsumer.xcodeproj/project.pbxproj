@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		784A48042A7B574300ED0893 /* Cronet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65F322A7B563A00B7B63C /* Cronet.framework */; };
+		784A48052A7B574300ED0893 /* Cronet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65F322A7B563A00B7B63C /* Cronet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78C65F112A7B54B900B7B63C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C65F0F2A7B54B900B7B63C /* Main.storyboard */; };
+		78C65F132A7B54BB00B7B63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C65F122A7B54BB00B7B63C /* Assets.xcassets */; };
+		78C65F162A7B54BB00B7B63C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C65F142A7B54BB00B7B63C /* LaunchScreen.storyboard */; };
+		78C65F272A7B553F00B7B63C /* cronet_consumer_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C65F1F2A7B553F00B7B63C /* cronet_consumer_view_controller.m */; };
+		78C65F282A7B553F00B7B63C /* cronet-consumer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78C65F202A7B553F00B7B63C /* cronet-consumer-Info.plist */; };
+		78C65F2A2A7B553F00B7B63C /* cronet_consumer_app_delegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78C65F232A7B553F00B7B63C /* cronet_consumer_app_delegate.mm */; };
+		78C65F2C2A7B553F00B7B63C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78C65F262A7B553F00B7B63C /* main.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		784A48062A7B574300ED0893 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				784A48052A7B574300ED0893 /* Cronet.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		78C65F042A7B54B900B7B63C /* Consumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C65F102A7B54B900B7B63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78C65F122A7B54BB00B7B63C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78C65F152A7B54BB00B7B63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78C65F1D2A7B553F00B7B63C /* cronet_consumer_app_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_app_delegate.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_app_delegate.h; sourceTree = "<group>"; };
+		78C65F1E2A7B553F00B7B63C /* cronet_consumer_url_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_url_protocol.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_url_protocol.h; sourceTree = "<group>"; };
+		78C65F1F2A7B553F00B7B63C /* cronet_consumer_view_controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cronet_consumer_view_controller.m; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_view_controller.m; sourceTree = "<group>"; };
+		78C65F202A7B553F00B7B63C /* cronet-consumer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "cronet-consumer-Info.plist"; path = "../src/components/cronet/ios/cronet_consumer/cronet-consumer-Info.plist"; sourceTree = "<group>"; };
+		78C65F212A7B553F00B7B63C /* cronet_consumer_url_protocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_consumer_url_protocol.mm; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_url_protocol.mm; sourceTree = "<group>"; };
+		78C65F222A7B553F00B7B63C /* cronet_consumer_view_controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_view_controller.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_view_controller.h; sourceTree = "<group>"; };
+		78C65F232A7B553F00B7B63C /* cronet_consumer_app_delegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_consumer_app_delegate.mm; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_app_delegate.mm; sourceTree = "<group>"; };
+		78C65F242A7B553F00B7B63C /* cronet_consumer_host_reslover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_host_reslover.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_host_reslover.h; sourceTree = "<group>"; };
+		78C65F252A7B553F00B7B63C /* cronet_consumer_host_reslover.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_consumer_host_reslover.mm; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_host_reslover.mm; sourceTree = "<group>"; };
+		78C65F262A7B553F00B7B63C /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = ../src/components/cronet/ios/cronet_consumer/main.mm; sourceTree = "<group>"; };
+		78C65F322A7B563A00B7B63C /* Cronet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cronet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78C65F012A7B54B900B7B63C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784A48042A7B574300ED0893 /* Cronet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785BFE152A77A4750088C2FC = {
+			isa = PBXGroup;
+			children = (
+				785BFE362A77A4A80088C2FC /* src */,
+				78C65F052A7B54B900B7B63C /* Consumer */,
+				785BFE1F2A77A4750088C2FC /* Products */,
+				78C65F312A7B563A00B7B63C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		785BFE1F2A77A4750088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F042A7B54B900B7B63C /* Consumer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE362A77A4A80088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F302A7B557400B7B63C /* components */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		78C65F052A7B54B900B7B63C /* Consumer */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F0F2A7B54B900B7B63C /* Main.storyboard */,
+				78C65F122A7B54BB00B7B63C /* Assets.xcassets */,
+				78C65F142A7B54BB00B7B63C /* LaunchScreen.storyboard */,
+			);
+			path = Consumer;
+			sourceTree = "<group>";
+		};
+		78C65F2D2A7B554F00B7B63C /* cronet_consumer */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F1D2A7B553F00B7B63C /* cronet_consumer_app_delegate.h */,
+				78C65F232A7B553F00B7B63C /* cronet_consumer_app_delegate.mm */,
+				78C65F242A7B553F00B7B63C /* cronet_consumer_host_reslover.h */,
+				78C65F252A7B553F00B7B63C /* cronet_consumer_host_reslover.mm */,
+				78C65F1E2A7B553F00B7B63C /* cronet_consumer_url_protocol.h */,
+				78C65F212A7B553F00B7B63C /* cronet_consumer_url_protocol.mm */,
+				78C65F222A7B553F00B7B63C /* cronet_consumer_view_controller.h */,
+				78C65F1F2A7B553F00B7B63C /* cronet_consumer_view_controller.m */,
+				78C65F202A7B553F00B7B63C /* cronet-consumer-Info.plist */,
+				78C65F262A7B553F00B7B63C /* main.mm */,
+			);
+			name = cronet_consumer;
+			sourceTree = "<group>";
+		};
+		78C65F2E2A7B555E00B7B63C /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F2D2A7B554F00B7B63C /* cronet_consumer */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+		78C65F2F2A7B556B00B7B63C /* cronet */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F2E2A7B555E00B7B63C /* ios */,
+			);
+			name = cronet;
+			sourceTree = "<group>";
+		};
+		78C65F302A7B557400B7B63C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F2F2A7B556B00B7B63C /* cronet */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		78C65F312A7B563A00B7B63C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C65F322A7B563A00B7B63C /* Cronet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78C65F032A7B54B900B7B63C /* Consumer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78C65F1C2A7B54BB00B7B63C /* Build configuration list for PBXNativeTarget "Consumer" */;
+			buildPhases = (
+				78C65F002A7B54B900B7B63C /* Sources */,
+				78C65F012A7B54B900B7B63C /* Frameworks */,
+				78C65F022A7B54B900B7B63C /* Resources */,
+				784A48062A7B574300ED0893 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Consumer;
+			productName = Consumer;
+			productReference = 78C65F042A7B54B900B7B63C /* Consumer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BFE162A77A4750088C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					78C65F032A7B54B900B7B63C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "CronetConsumer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785BFE152A77A4750088C2FC;
+			productRefGroup = 785BFE1F2A77A4750088C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78C65F032A7B54B900B7B63C /* Consumer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78C65F022A7B54B900B7B63C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C65F162A7B54BB00B7B63C /* LaunchScreen.storyboard in Resources */,
+				78C65F282A7B553F00B7B63C /* cronet-consumer-Info.plist in Resources */,
+				78C65F132A7B54BB00B7B63C /* Assets.xcassets in Resources */,
+				78C65F112A7B54B900B7B63C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78C65F002A7B54B900B7B63C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C65F2A2A7B553F00B7B63C /* cronet_consumer_app_delegate.mm in Sources */,
+				78C65F272A7B553F00B7B63C /* cronet_consumer_view_controller.m in Sources */,
+				78C65F2C2A7B553F00B7B63C /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78C65F0F2A7B54B900B7B63C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C65F102A7B54B900B7B63C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78C65F142A7B54BB00B7B63C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C65F152A7B54BB00B7B63C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		785BFE252A77A4750088C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		785BFE262A77A4750088C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78C65F1A2A7B54BB00B7B63C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "../src/components/cronet/ios/cronet_consumer/cronet-consumer-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hago.cronet.Consumer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../src;
+			};
+			name = Debug;
+		};
+		78C65F1B2A7B54BB00B7B63C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "../src/components/cronet/ios/cronet_consumer/cronet-consumer-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hago.cronet.Consumer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../src;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785BFE192A77A4750088C2FC /* Build configuration list for PBXProject "CronetConsumer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785BFE252A77A4750088C2FC /* Debug */,
+				785BFE262A77A4750088C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78C65F1C2A7B54BB00B7B63C /* Build configuration list for PBXNativeTarget "Consumer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78C65F1A2A7B54BB00B7B63C /* Debug */,
+				78C65F1B2A7B54BB00B7B63C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 785BFE162A77A4750088C2FC /* Project object */;
+}

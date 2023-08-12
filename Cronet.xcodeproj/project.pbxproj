@@ -1,0 +1,1502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		785B06862A78F3630088C2FC /* Cronet.h in Headers */ = {isa = PBXBuildFile; fileRef = 785B06842A78F3630088C2FC /* Cronet.h */; };
+		785B06872A78F3630088C2FC /* Cronet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785B06852A78F3630088C2FC /* Cronet.mm */; };
+		785B06902A78F3C90088C2FC /* cronet_metrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 785B068B2A78F3C90088C2FC /* cronet_metrics.h */; };
+		785B06912A78F3C90088C2FC /* cronet_metrics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785B068C2A78F3C90088C2FC /* cronet_metrics.mm */; };
+		785B06922A78F3C90088C2FC /* cronet_environment.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785B068D2A78F3C90088C2FC /* cronet_environment.mm */; };
+		785B06932A78F3C90088C2FC /* cronet_global_state_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785B068E2A78F3C90088C2FC /* cronet_global_state_ios.mm */; };
+		785B06942A78F3C90088C2FC /* cronet_environment.h in Headers */ = {isa = PBXBuildFile; fileRef = 785B068F2A78F3C90088C2FC /* cronet_environment.h */; };
+		785B06992A78F4000088C2FC /* ios_global_state_configuration.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785B06962A78F4000088C2FC /* ios_global_state_configuration.cc */; };
+		785B06FF2A79028C0088C2FC /* libcronet_common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B06F72A78FDD70088C2FC /* libcronet_common.a */; };
+		785B07002A79028C0088C2FC /* libcronet_native_impl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B06FD2A78FDD70088C2FC /* libcronet_native_impl.a */; };
+		785B07022A7903E90088C2FC /* libboringssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B04372A78DC700088C2FC /* libboringssl.a */; };
+		785B07172A7906530088C2FC /* libdec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B07082A7904A30088C2FC /* libdec.a */; };
+		785B072D2A79074D0088C2FC /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B072C2A7907360088C2FC /* libcommon.a */; };
+		785B072F2A7907AD0088C2FC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B072E2A7907AD0088C2FC /* CFNetwork.framework */; };
+		785B07312A7907EC0088C2FC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B07302A7907EC0088C2FC /* CoreTelephony.framework */; };
+		785B07382A790A740088C2FC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B07372A790A730088C2FC /* SystemConfiguration.framework */; };
+		785B073A2A790AD80088C2FC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B07392A790AD70088C2FC /* Security.framework */; };
+		785B07672A790D4A0088C2FC /* libchrome_zlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B07662A790D3F0088C2FC /* libchrome_zlib.a */; };
+		785B077F2A791AFF0088C2FC /* libnetwork_protocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B077E2A791AF20088C2FC /* libnetwork_protocol.a */; };
+		785B07AA2A791DE20088C2FC /* libprefs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785BFE352A77A4800088C2FC /* libprefs.a */; };
+		785B07AB2A791EB20088C2FC /* liburl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B03EE2A78BA770088C2FC /* liburl.a */; };
+		785B082E2A7928F70088C2FC /* libabseil-cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B082D2A7928EA0088C2FC /* libabseil-cpp.a */; };
+		785B08BB2A79F1760088C2FC /* libglobal_state.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B08BA2A79F16C0088C2FC /* libglobal_state.a */; };
+		785B08BC2A79F2C60088C2FC /* libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785BFE142A7796540088C2FC /* libbase.a */; };
+		785B08BD2A79F2C70088C2FC /* libbase_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B042D2A78DB030088C2FC /* libbase_static.a */; };
+		785B08BF2A79F35B0088C2FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B08BE2A79F35B0088C2FC /* CoreGraphics.framework */; };
+		785B08C12A79F3920088C2FC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B08C02A79F3910088C2FC /* CoreText.framework */; };
+		785B08C32A79F3B60088C2FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B08C22A79F3B60088C2FC /* UIKit.framework */; };
+		785B08D42A79FAD30088C2FC /* libzlib_inflate_chunk_simd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B08D32A79FAC80088C2FC /* libzlib_inflate_chunk_simd.a */; };
+		785B09452A7A02120088C2FC /* libdns.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 785B09442A7A02070088C2FC /* libdns.a */; };
+		78C658EC2A7A375B00B7B63C /* libnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C658E72A7A374700B7B63C /* libnet.a */; };
+		78C658F82A7A3C5300B7B63C /* metrics_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C658F62A7A3C5300B7B63C /* metrics_util.cc */; };
+		78C658F92A7A3C5300B7B63C /* metrics_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C658F72A7A3C5300B7B63C /* metrics_util.h */; };
+		78C6596D2A7A416A00B7B63C /* libcrcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C6596C2A7A415B00B7B63C /* libcrcrypto.a */; };
+		78C659D22A7A45B900B7B63C /* libprotobuf_lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C659D12A7A45AD00B7B63C /* libprotobuf_lite.a */; };
+		78C659DF2A7A47AB00B7B63C /* libmetrics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C659DE2A7A47A200B7B63C /* libmetrics.a */; };
+		78C65AF12A7A4DEC00B7B63C /* libmetrics_proto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65AEA2A7A4DE200B7B63C /* libmetrics_proto.a */; };
+		78C65BD02A7A5F7F00B7B63C /* libperfetto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65BCF2A7A5F6B00B7B63C /* libperfetto.a */; };
+		78C65EC52A7A7A8300B7B63C /* libgrpc_support.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65EC42A7A7A7500B7B63C /* libgrpc_support.a */; };
+		78C65ED72A7A7C1300B7B63C /* libmodp_b64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65ED62A7A7C0700B7B63C /* libmodp_b64.a */; };
+		78C65EE12A7A7CAD00B7B63C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C65EE02A7A7C9C00B7B63C /* libresolv.tbd */; };
+		78C65EE32A7B41F500B7B63C /* cronet.idl_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C65EE22A7B41F500B7B63C /* cronet.idl_c.h */; };
+		78C65EE82A7B423500B7B63C /* cronet_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C65EE62A7B423500B7B63C /* cronet_c.h */; };
+		78C65EE92A7B423500B7B63C /* cronet_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C65EE72A7B423500B7B63C /* cronet_export.h */; };
+		78C65EEC2A7B42D800B7B63C /* bidirectional_stream_c.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C65EEB2A7B42D800B7B63C /* bidirectional_stream_c.h */; };
+		78C65EF02A7B4D6F00B7B63C /* bidirectional_stream_c.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C65EEB2A7B42D800B7B63C /* bidirectional_stream_c.h */; };
+		78C65EF12A7B4D6F00B7B63C /* cronet_c.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C65EE62A7B423500B7B63C /* cronet_c.h */; };
+		78C65EF22A7B4D6F00B7B63C /* cronet_export.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C65EE72A7B423500B7B63C /* cronet_export.h */; };
+		78C65EF32A7B4D6F00B7B63C /* cronet.idl_c.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C65EE22A7B41F500B7B63C /* cronet.idl_c.h */; };
+		78C65EF42A7B4D6F00B7B63C /* Cronet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 785B06842A78F3630088C2FC /* Cronet.h */; };
+		78C82AEE2A7360C0002ED78F /* Cronet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C82AE52A7360BF002ED78F /* Cronet.framework */; };
+		78C82AF32A7360C0002ED78F /* CronetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C82AF22A7360C0002ED78F /* CronetTests.m */; };
+		78C82AF42A7360C0002ED78F /* Cronet.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C82AE82A7360BF002ED78F /* Cronet.h */; };
+		78E062FF2A84C4A5002E9727 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E062FE2A84C4A5002E9727 /* UniformTypeIdentifiers.framework */; };
+		78E0630F2A84CCFC002E9727 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E0630E2A84CCFA002E9727 /* CoreServices.framework */; };
+		78F88F762A80CB9600F19292 /* libboringssl_asm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F88F752A80CB8300F19292 /* libboringssl_asm.a */; };
+		78F88F772A80CB9600F19292 /* libboringssl_x86.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F88F6F2A80CB7E00F19292 /* libboringssl_x86.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		784A48142A7B65F800ED0893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C65EFA2A7B549900B7B63C /* CronetConsumer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 78C65F042A7B54B900B7B63C;
+			remoteInfo = Consumer;
+		};
+		785B03ED2A78BA770088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B03E62A78BA770088C2FC /* url.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = url;
+		};
+		785B042C2A78DB030088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B04282A78DB020088C2FC /* base_static.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = base_static;
+		};
+		785B04362A78DC700088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B04322A78DC700088C2FC /* boringssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = boringssl;
+		};
+		785B06F62A78FDD70088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B06F22A78FDD70088C2FC /* cronet_common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = cronet_common;
+		};
+		785B06FC2A78FDD70088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B06F82A78FDD70088C2FC /* cronet_native_impl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = cronet_native_impl;
+		};
+		785B07072A7904A30088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B07032A7904A20088C2FC /* dec.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = dec;
+		};
+		785B072B2A7907360088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B07272A7907360088C2FC /* common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = common;
+		};
+		785B07652A790D3F0088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B07612A790D3F0088C2FC /* chrome_zlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = chrome_zlib;
+		};
+		785B077D2A791AF20088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B07792A791AF20088C2FC /* network_protocol.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = network_protocol;
+		};
+		785B082C2A7928EA0088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B08282A7928E90088C2FC /* abseil-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = "abseil-cpp";
+		};
+		785B08B92A79F16C0088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B08B52A79F16C0088C2FC /* global_state.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = global_state;
+		};
+		785B08D22A79FAC80088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B08CE2A79FAC80088C2FC /* zlib_inflate_chunk_simd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = zlib_inflate_chunk_simd;
+		};
+		785B09432A7A02070088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785B093F2A7A02070088C2FC /* dns.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = dns;
+		};
+		785BFE132A7796540088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785BFE0F2A7796540088C2FC /* base.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BF9C22A775CBE0088C2FC;
+			remoteInfo = base;
+		};
+		785BFE342A77A4800088C2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785BFE302A77A4800088C2FC /* prefs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = prefs;
+		};
+		78C658E62A7A374700B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C658D72A7A374700B7B63C /* net.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = net;
+		};
+		78C6596B2A7A415B00B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C659672A7A415B00B7B63C /* crcrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = crcrypto;
+		};
+		78C659D02A7A45AD00B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C659CC2A7A45AD00B7B63C /* protobuf_lite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = protobuf_lite;
+		};
+		78C659DD2A7A47A200B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C659D92A7A47A200B7B63C /* metrics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = metrics;
+		};
+		78C65AE92A7A4DE200B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C65AD82A7A4DE200B7B63C /* metrics_proto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = metrics_proto;
+		};
+		78C65BCE2A7A5F6B00B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C65BCA2A7A5F6B00B7B63C /* perfetto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = perfetto;
+		};
+		78C65EC32A7A7A7500B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C65EBF2A7A7A7500B7B63C /* grpc_support.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = grpc_support;
+		};
+		78C65ED52A7A7C0700B7B63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C65ED12A7A7C0600B7B63C /* modp_b64.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = modp_b64;
+		};
+		78C82AEF2A7360C0002ED78F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C82ADC2A7360BF002ED78F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78C82AE42A7360BF002ED78F;
+			remoteInfo = Cronet;
+		};
+		78F88F6E2A80CB7E00F19292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78F88F6A2A80CB7E00F19292 /* boringssl_x86.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = boringssl_x86;
+		};
+		78F88F742A80CB8300F19292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78F88F702A80CB8300F19292 /* boringssl_asm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 785BFE1E2A77A4750088C2FC;
+			remoteInfo = boringssl_asm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78C65EEF2A7B4CBF00B7B63C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Cronet.framework/Headers;
+			dstSubfolderSpec = 16;
+			files = (
+				78C65EF02A7B4D6F00B7B63C /* bidirectional_stream_c.h in CopyFiles */,
+				78C65EF12A7B4D6F00B7B63C /* cronet_c.h in CopyFiles */,
+				78C65EF22A7B4D6F00B7B63C /* cronet_export.h in CopyFiles */,
+				78C65EF32A7B4D6F00B7B63C /* cronet.idl_c.h in CopyFiles */,
+				78C65EF42A7B4D6F00B7B63C /* Cronet.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		784A48092A7B65F800ED0893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = src/components/cronet/ios/Info.plist; sourceTree = SOURCE_ROOT; };
+		785B03E62A78BA770088C2FC /* url.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = url.xcodeproj; path = url/url.xcodeproj; sourceTree = "<group>"; };
+		785B04282A78DB020088C2FC /* base_static.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base_static.xcodeproj; path = base_static/base_static.xcodeproj; sourceTree = "<group>"; };
+		785B04322A78DC700088C2FC /* boringssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boringssl.xcodeproj; path = boringssl/boringssl.xcodeproj; sourceTree = "<group>"; };
+		785B06842A78F3630088C2FC /* Cronet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cronet.h; path = src/components/cronet/ios/Cronet.h; sourceTree = SOURCE_ROOT; };
+		785B06852A78F3630088C2FC /* Cronet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Cronet.mm; path = src/components/cronet/ios/Cronet.mm; sourceTree = SOURCE_ROOT; };
+		785B068B2A78F3C90088C2FC /* cronet_metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_metrics.h; path = src/components/cronet/ios/cronet_metrics.h; sourceTree = SOURCE_ROOT; };
+		785B068C2A78F3C90088C2FC /* cronet_metrics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_metrics.mm; path = src/components/cronet/ios/cronet_metrics.mm; sourceTree = SOURCE_ROOT; };
+		785B068D2A78F3C90088C2FC /* cronet_environment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_environment.mm; path = src/components/cronet/ios/cronet_environment.mm; sourceTree = SOURCE_ROOT; };
+		785B068E2A78F3C90088C2FC /* cronet_global_state_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_global_state_ios.mm; path = src/components/cronet/ios/cronet_global_state_ios.mm; sourceTree = SOURCE_ROOT; };
+		785B068F2A78F3C90088C2FC /* cronet_environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_environment.h; path = src/components/cronet/ios/cronet_environment.h; sourceTree = SOURCE_ROOT; };
+		785B06962A78F4000088C2FC /* ios_global_state_configuration.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ios_global_state_configuration.cc; path = src/components/cronet/ios/ios_global_state_configuration.cc; sourceTree = SOURCE_ROOT; };
+		785B06F22A78FDD70088C2FC /* cronet_common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = cronet_common.xcodeproj; sourceTree = "<group>"; };
+		785B06F82A78FDD70088C2FC /* cronet_native_impl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = cronet_native_impl.xcodeproj; sourceTree = "<group>"; };
+		785B07032A7904A20088C2FC /* dec.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dec.xcodeproj; path = dec/dec.xcodeproj; sourceTree = "<group>"; };
+		785B07272A7907360088C2FC /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = common/common.xcodeproj; sourceTree = "<group>"; };
+		785B072E2A7907AD0088C2FC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		785B07302A7907EC0088C2FC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		785B07372A790A730088C2FC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		785B07392A790AD70088C2FC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		785B07612A790D3F0088C2FC /* chrome_zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = chrome_zlib.xcodeproj; path = chrome_zlib/chrome_zlib.xcodeproj; sourceTree = "<group>"; };
+		785B07792A791AF20088C2FC /* network_protocol.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = network_protocol.xcodeproj; path = network_protocol/network_protocol.xcodeproj; sourceTree = "<group>"; };
+		785B08282A7928E90088C2FC /* abseil-cpp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "abseil-cpp.xcodeproj"; path = "abseil-cpp/abseil-cpp.xcodeproj"; sourceTree = "<group>"; };
+		785B08B52A79F16C0088C2FC /* global_state.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = global_state.xcodeproj; path = global_state/global_state.xcodeproj; sourceTree = "<group>"; };
+		785B08BE2A79F35B0088C2FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		785B08C02A79F3910088C2FC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		785B08C22A79F3B60088C2FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		785B08CE2A79FAC80088C2FC /* zlib_inflate_chunk_simd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib_inflate_chunk_simd.xcodeproj; path = zlib_inflate_chunk_simd/zlib_inflate_chunk_simd.xcodeproj; sourceTree = "<group>"; };
+		785B093F2A7A02070088C2FC /* dns.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dns.xcodeproj; path = dns/dns.xcodeproj; sourceTree = "<group>"; };
+		785BFE0F2A7796540088C2FC /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = base/base.xcodeproj; sourceTree = "<group>"; };
+		785BFE302A77A4800088C2FC /* prefs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = prefs.xcodeproj; path = prefs/prefs.xcodeproj; sourceTree = "<group>"; };
+		78C658D72A7A374700B7B63C /* net.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = net.xcodeproj; path = net/net.xcodeproj; sourceTree = "<group>"; };
+		78C658F62A7A3C5300B7B63C /* metrics_util.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_util.cc; path = src/components/cronet/metrics_util.cc; sourceTree = SOURCE_ROOT; };
+		78C658F72A7A3C5300B7B63C /* metrics_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_util.h; path = src/components/cronet/metrics_util.h; sourceTree = SOURCE_ROOT; };
+		78C659672A7A415B00B7B63C /* crcrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crcrypto.xcodeproj; path = crcrypto/crcrypto.xcodeproj; sourceTree = "<group>"; };
+		78C659CC2A7A45AD00B7B63C /* protobuf_lite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = protobuf_lite.xcodeproj; path = protobuf_lite/protobuf_lite.xcodeproj; sourceTree = "<group>"; };
+		78C659D92A7A47A200B7B63C /* metrics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = metrics.xcodeproj; path = metrics/metrics.xcodeproj; sourceTree = "<group>"; };
+		78C65AD82A7A4DE200B7B63C /* metrics_proto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = metrics_proto.xcodeproj; path = metrics_proto/metrics_proto.xcodeproj; sourceTree = "<group>"; };
+		78C65BCA2A7A5F6B00B7B63C /* perfetto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = perfetto.xcodeproj; path = perfetto/perfetto.xcodeproj; sourceTree = "<group>"; };
+		78C65EBF2A7A7A7500B7B63C /* grpc_support.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = grpc_support.xcodeproj; path = grpc_support/grpc_support.xcodeproj; sourceTree = "<group>"; };
+		78C65ED12A7A7C0600B7B63C /* modp_b64.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = modp_b64.xcodeproj; path = modp_b64/modp_b64.xcodeproj; sourceTree = "<group>"; };
+		78C65EE02A7A7C9C00B7B63C /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libresolv.tbd; sourceTree = DEVELOPER_DIR; };
+		78C65EE22A7B41F500B7B63C /* cronet.idl_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet.idl_c.h; path = src/components/cronet/native/generated/cronet.idl_c.h; sourceTree = SOURCE_ROOT; };
+		78C65EE62A7B423500B7B63C /* cronet_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_c.h; path = src/components/cronet/native/include/cronet_c.h; sourceTree = SOURCE_ROOT; };
+		78C65EE72A7B423500B7B63C /* cronet_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_export.h; path = src/components/cronet/native/include/cronet_export.h; sourceTree = SOURCE_ROOT; };
+		78C65EEB2A7B42D800B7B63C /* bidirectional_stream_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bidirectional_stream_c.h; path = src/components/grpc_support/include/bidirectional_stream_c.h; sourceTree = SOURCE_ROOT; };
+		78C65EFA2A7B549900B7B63C /* CronetConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CronetConsumer.xcodeproj; path = CronetConsumer/CronetConsumer.xcodeproj; sourceTree = "<group>"; };
+		78C82AE52A7360BF002ED78F /* Cronet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cronet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C82AE82A7360BF002ED78F /* Cronet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cronet.h; sourceTree = "<group>"; };
+		78C82AED2A7360C0002ED78F /* CronetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CronetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C82AF22A7360C0002ED78F /* CronetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CronetTests.m; sourceTree = "<group>"; };
+		78C82B692A737321002ED78F /* Cronet.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cronet.pch; sourceTree = "<group>"; };
+		78E062FE2A84C4A5002E9727 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = DEVELOPER_DIR; };
+		78E0630E2A84CCFA002E9727 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		78F88F6A2A80CB7E00F19292 /* boringssl_x86.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boringssl_x86.xcodeproj; path = boringssl_x86/boringssl_x86.xcodeproj; sourceTree = "<group>"; };
+		78F88F702A80CB8300F19292 /* boringssl_asm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boringssl_asm.xcodeproj; path = boringssl_asm/boringssl_asm.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78C82AE22A7360BF002ED78F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C65ED72A7A7C1300B7B63C /* libmodp_b64.a in Frameworks */,
+				78C65AF12A7A4DEC00B7B63C /* libmetrics_proto.a in Frameworks */,
+				785B072D2A79074D0088C2FC /* libcommon.a in Frameworks */,
+				78C659DF2A7A47AB00B7B63C /* libmetrics.a in Frameworks */,
+				78F88F772A80CB9600F19292 /* libboringssl_x86.a in Frameworks */,
+				785B07AB2A791EB20088C2FC /* liburl.a in Frameworks */,
+				785B07382A790A740088C2FC /* SystemConfiguration.framework in Frameworks */,
+				78C659D22A7A45B900B7B63C /* libprotobuf_lite.a in Frameworks */,
+				785B06FF2A79028C0088C2FC /* libcronet_common.a in Frameworks */,
+				78C65EC52A7A7A8300B7B63C /* libgrpc_support.a in Frameworks */,
+				785B07AA2A791DE20088C2FC /* libprefs.a in Frameworks */,
+				785B08BC2A79F2C60088C2FC /* libbase.a in Frameworks */,
+				78F88F762A80CB9600F19292 /* libboringssl_asm.a in Frameworks */,
+				785B072F2A7907AD0088C2FC /* CFNetwork.framework in Frameworks */,
+				785B08BF2A79F35B0088C2FC /* CoreGraphics.framework in Frameworks */,
+				785B07312A7907EC0088C2FC /* CoreTelephony.framework in Frameworks */,
+				78C65BD02A7A5F7F00B7B63C /* libperfetto.a in Frameworks */,
+				78C6596D2A7A416A00B7B63C /* libcrcrypto.a in Frameworks */,
+				785B08BB2A79F1760088C2FC /* libglobal_state.a in Frameworks */,
+				785B08BD2A79F2C70088C2FC /* libbase_static.a in Frameworks */,
+				785B08C12A79F3920088C2FC /* CoreText.framework in Frameworks */,
+				785B07672A790D4A0088C2FC /* libchrome_zlib.a in Frameworks */,
+				78C65EE12A7A7CAD00B7B63C /* libresolv.tbd in Frameworks */,
+				785B073A2A790AD80088C2FC /* Security.framework in Frameworks */,
+				785B08D42A79FAD30088C2FC /* libzlib_inflate_chunk_simd.a in Frameworks */,
+				785B07002A79028C0088C2FC /* libcronet_native_impl.a in Frameworks */,
+				78E062FF2A84C4A5002E9727 /* UniformTypeIdentifiers.framework in Frameworks */,
+				785B082E2A7928F70088C2FC /* libabseil-cpp.a in Frameworks */,
+				785B07022A7903E90088C2FC /* libboringssl.a in Frameworks */,
+				785B077F2A791AFF0088C2FC /* libnetwork_protocol.a in Frameworks */,
+				785B08C32A79F3B60088C2FC /* UIKit.framework in Frameworks */,
+				785B07172A7906530088C2FC /* libdec.a in Frameworks */,
+				78C658EC2A7A375B00B7B63C /* libnet.a in Frameworks */,
+				78E0630F2A84CCFC002E9727 /* CoreServices.framework in Frameworks */,
+				785B09452A7A02120088C2FC /* libdns.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78C82AEA2A7360C0002ED78F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C82AEE2A7360C0002ED78F /* Cronet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785B03E72A78BA770088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B03EE2A78BA770088C2FC /* liburl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B04292A78DB020088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B042D2A78DB030088C2FC /* libbase_static.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B04332A78DC700088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B04372A78DC700088C2FC /* libboringssl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B06832A78F3550088C2FC /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				784A48092A7B65F800ED0893 /* Info.plist */,
+				785B06842A78F3630088C2FC /* Cronet.h */,
+				785B06852A78F3630088C2FC /* Cronet.mm */,
+				785B068F2A78F3C90088C2FC /* cronet_environment.h */,
+				785B068D2A78F3C90088C2FC /* cronet_environment.mm */,
+				785B068E2A78F3C90088C2FC /* cronet_global_state_ios.mm */,
+				785B068B2A78F3C90088C2FC /* cronet_metrics.h */,
+				785B068C2A78F3C90088C2FC /* cronet_metrics.mm */,
+				785B06962A78F4000088C2FC /* ios_global_state_configuration.cc */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+		785B06882A78F3660088C2FC /* cronet */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EE52A7B421300B7B63C /* native */,
+				78C658F62A7A3C5300B7B63C /* metrics_util.cc */,
+				78C658F72A7A3C5300B7B63C /* metrics_util.h */,
+				785B06832A78F3550088C2FC /* ios */,
+			);
+			name = cronet;
+			sourceTree = "<group>";
+		};
+		785B06892A78F37C0088C2FC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EEE2A7B42EB00B7B63C /* grpc_support */,
+				785B06882A78F3660088C2FC /* cronet */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		785B068A2A78F3840088C2FC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				785B06892A78F37C0088C2FC /* components */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		785B06F32A78FDD70088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B06F72A78FDD70088C2FC /* libcronet_common.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B06F92A78FDD70088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B06FD2A78FDD70088C2FC /* libcronet_native_impl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B06FE2A79028C0088C2FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78E0630E2A84CCFA002E9727 /* CoreServices.framework */,
+				78E062FE2A84C4A5002E9727 /* UniformTypeIdentifiers.framework */,
+				78C65EE02A7A7C9C00B7B63C /* libresolv.tbd */,
+				785B08C22A79F3B60088C2FC /* UIKit.framework */,
+				785B08C02A79F3910088C2FC /* CoreText.framework */,
+				785B08BE2A79F35B0088C2FC /* CoreGraphics.framework */,
+				785B07392A790AD70088C2FC /* Security.framework */,
+				785B07372A790A730088C2FC /* SystemConfiguration.framework */,
+				785B07302A7907EC0088C2FC /* CoreTelephony.framework */,
+				785B072E2A7907AD0088C2FC /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		785B07042A7904A20088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B07082A7904A30088C2FC /* libdec.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B07282A7907360088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B072C2A7907360088C2FC /* libcommon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B07622A790D3F0088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B07662A790D3F0088C2FC /* libchrome_zlib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B077A2A791AF20088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B077E2A791AF20088C2FC /* libnetwork_protocol.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B08292A7928E90088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B082D2A7928EA0088C2FC /* libabseil-cpp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B08B62A79F16C0088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B08BA2A79F16C0088C2FC /* libglobal_state.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B08CF2A79FAC80088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B08D32A79FAC80088C2FC /* libzlib_inflate_chunk_simd.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785B09402A7A02070088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785B09442A7A02070088C2FC /* libdns.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE0C2A77961D0088C2FC /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				785B08282A7928E90088C2FC /* abseil-cpp.xcodeproj */,
+				785B04282A78DB020088C2FC /* base_static.xcodeproj */,
+				785BFE0F2A7796540088C2FC /* base.xcodeproj */,
+				78F88F702A80CB8300F19292 /* boringssl_asm.xcodeproj */,
+				78F88F6A2A80CB7E00F19292 /* boringssl_x86.xcodeproj */,
+				785B04322A78DC700088C2FC /* boringssl.xcodeproj */,
+				785B07612A790D3F0088C2FC /* chrome_zlib.xcodeproj */,
+				785B07272A7907360088C2FC /* common.xcodeproj */,
+				78C659672A7A415B00B7B63C /* crcrypto.xcodeproj */,
+				785B07032A7904A20088C2FC /* dec.xcodeproj */,
+				785B093F2A7A02070088C2FC /* dns.xcodeproj */,
+				785B08B52A79F16C0088C2FC /* global_state.xcodeproj */,
+				78C65EBF2A7A7A7500B7B63C /* grpc_support.xcodeproj */,
+				78C65AD82A7A4DE200B7B63C /* metrics_proto.xcodeproj */,
+				78C659D92A7A47A200B7B63C /* metrics.xcodeproj */,
+				78C65ED12A7A7C0600B7B63C /* modp_b64.xcodeproj */,
+				78C658D72A7A374700B7B63C /* net.xcodeproj */,
+				785B07792A791AF20088C2FC /* network_protocol.xcodeproj */,
+				78C65BCA2A7A5F6B00B7B63C /* perfetto.xcodeproj */,
+				785BFE302A77A4800088C2FC /* prefs.xcodeproj */,
+				78C659CC2A7A45AD00B7B63C /* protobuf_lite.xcodeproj */,
+				785B03E62A78BA770088C2FC /* url.xcodeproj */,
+				785B08CE2A79FAC80088C2FC /* zlib_inflate_chunk_simd.xcodeproj */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		785BFE102A7796540088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE142A7796540088C2FC /* libbase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		785BFE312A77A4800088C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785BFE352A77A4800088C2FC /* libprefs.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C658D82A7A374700B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C658E72A7A374700B7B63C /* libnet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C659682A7A415B00B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C6596C2A7A415B00B7B63C /* libcrcrypto.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C659CD2A7A45AD00B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C659D12A7A45AD00B7B63C /* libprotobuf_lite.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C659DA2A7A47A200B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C659DE2A7A47A200B7B63C /* libmetrics.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C65AD92A7A4DE200B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C65AEA2A7A4DE200B7B63C /* libmetrics_proto.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C65BCB2A7A5F6B00B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C65BCF2A7A5F6B00B7B63C /* libperfetto.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C65EC02A7A7A7500B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EC42A7A7A7500B7B63C /* libgrpc_support.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C65ED22A7A7C0600B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C65ED62A7A7C0700B7B63C /* libmodp_b64.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C65EE42A7B420400B7B63C /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EE22A7B41F500B7B63C /* cronet.idl_c.h */,
+			);
+			name = generated;
+			sourceTree = "<group>";
+		};
+		78C65EE52A7B421300B7B63C /* native */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EEA2A7B423D00B7B63C /* include */,
+				78C65EE42A7B420400B7B63C /* generated */,
+			);
+			name = native;
+			sourceTree = "<group>";
+		};
+		78C65EEA2A7B423D00B7B63C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EE62A7B423500B7B63C /* cronet_c.h */,
+				78C65EE72A7B423500B7B63C /* cronet_export.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		78C65EED2A7B42E500B7B63C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EEB2A7B42D800B7B63C /* bidirectional_stream_c.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		78C65EEE2A7B42EB00B7B63C /* grpc_support */ = {
+			isa = PBXGroup;
+			children = (
+				78C65EED2A7B42E500B7B63C /* include */,
+			);
+			name = grpc_support;
+			sourceTree = "<group>";
+		};
+		78C65EFB2A7B549900B7B63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				784A48152A7B65F800ED0893 /* Consumer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C82ADB2A7360BF002ED78F = {
+			isa = PBXGroup;
+			children = (
+				78C65EFA2A7B549900B7B63C /* CronetConsumer.xcodeproj */,
+				785BFE0C2A77961D0088C2FC /* libs */,
+				78C82AE72A7360BF002ED78F /* Cronet */,
+				78C82AF12A7360C0002ED78F /* CronetTests */,
+				78C82AE62A7360BF002ED78F /* Products */,
+				785B06FE2A79028C0088C2FC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78C82AE62A7360BF002ED78F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C82AE52A7360BF002ED78F /* Cronet.framework */,
+				78C82AED2A7360C0002ED78F /* CronetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C82AE72A7360BF002ED78F /* Cronet */ = {
+			isa = PBXGroup;
+			children = (
+				785B06F22A78FDD70088C2FC /* cronet_common.xcodeproj */,
+				785B06F82A78FDD70088C2FC /* cronet_native_impl.xcodeproj */,
+				785B068A2A78F3840088C2FC /* src */,
+				78C82AE82A7360BF002ED78F /* Cronet.h */,
+				78C82B692A737321002ED78F /* Cronet.pch */,
+			);
+			path = Cronet;
+			sourceTree = "<group>";
+		};
+		78C82AF12A7360C0002ED78F /* CronetTests */ = {
+			isa = PBXGroup;
+			children = (
+				78C82AF22A7360C0002ED78F /* CronetTests.m */,
+			);
+			path = CronetTests;
+			sourceTree = "<group>";
+		};
+		78F88F6B2A80CB7E00F19292 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78F88F6F2A80CB7E00F19292 /* libboringssl_x86.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78F88F712A80CB8300F19292 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78F88F752A80CB8300F19292 /* libboringssl_asm.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		78C82AE02A7360BF002ED78F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C65EEC2A7B42D800B7B63C /* bidirectional_stream_c.h in Headers */,
+				78C65EE32A7B41F500B7B63C /* cronet.idl_c.h in Headers */,
+				78C65EE92A7B423500B7B63C /* cronet_export.h in Headers */,
+				785B06862A78F3630088C2FC /* Cronet.h in Headers */,
+				78C65EE82A7B423500B7B63C /* cronet_c.h in Headers */,
+				78C82AF42A7360C0002ED78F /* Cronet.h in Headers */,
+				785B06942A78F3C90088C2FC /* cronet_environment.h in Headers */,
+				785B06902A78F3C90088C2FC /* cronet_metrics.h in Headers */,
+				78C658F92A7A3C5300B7B63C /* metrics_util.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		78C82AE42A7360BF002ED78F /* Cronet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78C82AF72A7360C0002ED78F /* Build configuration list for PBXNativeTarget "Cronet" */;
+			buildPhases = (
+				78C82AE02A7360BF002ED78F /* Headers */,
+				78C82AE12A7360BF002ED78F /* Sources */,
+				78C82AE22A7360BF002ED78F /* Frameworks */,
+				78C82AE32A7360BF002ED78F /* Resources */,
+				78C65EEF2A7B4CBF00B7B63C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cronet;
+			productName = Cronet;
+			productReference = 78C82AE52A7360BF002ED78F /* Cronet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		78C82AEC2A7360C0002ED78F /* CronetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78C82AFA2A7360C0002ED78F /* Build configuration list for PBXNativeTarget "CronetTests" */;
+			buildPhases = (
+				78C82AE92A7360C0002ED78F /* Sources */,
+				78C82AEA2A7360C0002ED78F /* Frameworks */,
+				78C82AEB2A7360C0002ED78F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78C82AF02A7360C0002ED78F /* PBXTargetDependency */,
+			);
+			name = CronetTests;
+			productName = CronetTests;
+			productReference = 78C82AED2A7360C0002ED78F /* CronetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78C82ADC2A7360BF002ED78F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					78C82AE42A7360BF002ED78F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					78C82AEC2A7360C0002ED78F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 78C82ADF2A7360BF002ED78F /* Build configuration list for PBXProject "Cronet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78C82ADB2A7360BF002ED78F;
+			productRefGroup = 78C82AE62A7360BF002ED78F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 785B08292A7928E90088C2FC /* Products */;
+					ProjectRef = 785B08282A7928E90088C2FC /* abseil-cpp.xcodeproj */;
+				},
+				{
+					ProductGroup = 785BFE102A7796540088C2FC /* Products */;
+					ProjectRef = 785BFE0F2A7796540088C2FC /* base.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B04292A78DB020088C2FC /* Products */;
+					ProjectRef = 785B04282A78DB020088C2FC /* base_static.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B04332A78DC700088C2FC /* Products */;
+					ProjectRef = 785B04322A78DC700088C2FC /* boringssl.xcodeproj */;
+				},
+				{
+					ProductGroup = 78F88F712A80CB8300F19292 /* Products */;
+					ProjectRef = 78F88F702A80CB8300F19292 /* boringssl_asm.xcodeproj */;
+				},
+				{
+					ProductGroup = 78F88F6B2A80CB7E00F19292 /* Products */;
+					ProjectRef = 78F88F6A2A80CB7E00F19292 /* boringssl_x86.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B07622A790D3F0088C2FC /* Products */;
+					ProjectRef = 785B07612A790D3F0088C2FC /* chrome_zlib.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B07282A7907360088C2FC /* Products */;
+					ProjectRef = 785B07272A7907360088C2FC /* common.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C659682A7A415B00B7B63C /* Products */;
+					ProjectRef = 78C659672A7A415B00B7B63C /* crcrypto.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B06F32A78FDD70088C2FC /* Products */;
+					ProjectRef = 785B06F22A78FDD70088C2FC /* cronet_common.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B06F92A78FDD70088C2FC /* Products */;
+					ProjectRef = 785B06F82A78FDD70088C2FC /* cronet_native_impl.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C65EFB2A7B549900B7B63C /* Products */;
+					ProjectRef = 78C65EFA2A7B549900B7B63C /* CronetConsumer.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B07042A7904A20088C2FC /* Products */;
+					ProjectRef = 785B07032A7904A20088C2FC /* dec.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B09402A7A02070088C2FC /* Products */;
+					ProjectRef = 785B093F2A7A02070088C2FC /* dns.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B08B62A79F16C0088C2FC /* Products */;
+					ProjectRef = 785B08B52A79F16C0088C2FC /* global_state.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C65EC02A7A7A7500B7B63C /* Products */;
+					ProjectRef = 78C65EBF2A7A7A7500B7B63C /* grpc_support.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C659DA2A7A47A200B7B63C /* Products */;
+					ProjectRef = 78C659D92A7A47A200B7B63C /* metrics.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C65AD92A7A4DE200B7B63C /* Products */;
+					ProjectRef = 78C65AD82A7A4DE200B7B63C /* metrics_proto.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C65ED22A7A7C0600B7B63C /* Products */;
+					ProjectRef = 78C65ED12A7A7C0600B7B63C /* modp_b64.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C658D82A7A374700B7B63C /* Products */;
+					ProjectRef = 78C658D72A7A374700B7B63C /* net.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B077A2A791AF20088C2FC /* Products */;
+					ProjectRef = 785B07792A791AF20088C2FC /* network_protocol.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C65BCB2A7A5F6B00B7B63C /* Products */;
+					ProjectRef = 78C65BCA2A7A5F6B00B7B63C /* perfetto.xcodeproj */;
+				},
+				{
+					ProductGroup = 785BFE312A77A4800088C2FC /* Products */;
+					ProjectRef = 785BFE302A77A4800088C2FC /* prefs.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C659CD2A7A45AD00B7B63C /* Products */;
+					ProjectRef = 78C659CC2A7A45AD00B7B63C /* protobuf_lite.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B03E72A78BA770088C2FC /* Products */;
+					ProjectRef = 785B03E62A78BA770088C2FC /* url.xcodeproj */;
+				},
+				{
+					ProductGroup = 785B08CF2A79FAC80088C2FC /* Products */;
+					ProjectRef = 785B08CE2A79FAC80088C2FC /* zlib_inflate_chunk_simd.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				78C82AE42A7360BF002ED78F /* Cronet */,
+				78C82AEC2A7360C0002ED78F /* CronetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		784A48152A7B65F800ED0893 /* Consumer.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Consumer.app;
+			remoteRef = 784A48142A7B65F800ED0893 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B03EE2A78BA770088C2FC /* liburl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liburl.a;
+			remoteRef = 785B03ED2A78BA770088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B042D2A78DB030088C2FC /* libbase_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbase_static.a;
+			remoteRef = 785B042C2A78DB030088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B04372A78DC700088C2FC /* libboringssl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libboringssl.a;
+			remoteRef = 785B04362A78DC700088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B06F72A78FDD70088C2FC /* libcronet_common.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcronet_common.a;
+			remoteRef = 785B06F62A78FDD70088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B06FD2A78FDD70088C2FC /* libcronet_native_impl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcronet_native_impl.a;
+			remoteRef = 785B06FC2A78FDD70088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B07082A7904A30088C2FC /* libdec.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdec.a;
+			remoteRef = 785B07072A7904A30088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B072C2A7907360088C2FC /* libcommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcommon.a;
+			remoteRef = 785B072B2A7907360088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B07662A790D3F0088C2FC /* libchrome_zlib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libchrome_zlib.a;
+			remoteRef = 785B07652A790D3F0088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B077E2A791AF20088C2FC /* libnetwork_protocol.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnetwork_protocol.a;
+			remoteRef = 785B077D2A791AF20088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B082D2A7928EA0088C2FC /* libabseil-cpp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libabseil-cpp.a";
+			remoteRef = 785B082C2A7928EA0088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B08BA2A79F16C0088C2FC /* libglobal_state.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libglobal_state.a;
+			remoteRef = 785B08B92A79F16C0088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B08D32A79FAC80088C2FC /* libzlib_inflate_chunk_simd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libzlib_inflate_chunk_simd.a;
+			remoteRef = 785B08D22A79FAC80088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785B09442A7A02070088C2FC /* libdns.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdns.a;
+			remoteRef = 785B09432A7A02070088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785BFE142A7796540088C2FC /* libbase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbase.a;
+			remoteRef = 785BFE132A7796540088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		785BFE352A77A4800088C2FC /* libprefs.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprefs.a;
+			remoteRef = 785BFE342A77A4800088C2FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C658E72A7A374700B7B63C /* libnet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnet.a;
+			remoteRef = 78C658E62A7A374700B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C6596C2A7A415B00B7B63C /* libcrcrypto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcrcrypto.a;
+			remoteRef = 78C6596B2A7A415B00B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C659D12A7A45AD00B7B63C /* libprotobuf_lite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprotobuf_lite.a;
+			remoteRef = 78C659D02A7A45AD00B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C659DE2A7A47A200B7B63C /* libmetrics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmetrics.a;
+			remoteRef = 78C659DD2A7A47A200B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C65AEA2A7A4DE200B7B63C /* libmetrics_proto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmetrics_proto.a;
+			remoteRef = 78C65AE92A7A4DE200B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C65BCF2A7A5F6B00B7B63C /* libperfetto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libperfetto.a;
+			remoteRef = 78C65BCE2A7A5F6B00B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C65EC42A7A7A7500B7B63C /* libgrpc_support.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgrpc_support.a;
+			remoteRef = 78C65EC32A7A7A7500B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C65ED62A7A7C0700B7B63C /* libmodp_b64.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmodp_b64.a;
+			remoteRef = 78C65ED52A7A7C0700B7B63C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78F88F6F2A80CB7E00F19292 /* libboringssl_x86.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libboringssl_x86.a;
+			remoteRef = 78F88F6E2A80CB7E00F19292 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78F88F752A80CB8300F19292 /* libboringssl_asm.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libboringssl_asm.a;
+			remoteRef = 78F88F742A80CB8300F19292 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78C82AE32A7360BF002ED78F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78C82AEB2A7360C0002ED78F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78C82AE12A7360BF002ED78F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785B06922A78F3C90088C2FC /* cronet_environment.mm in Sources */,
+				785B06992A78F4000088C2FC /* ios_global_state_configuration.cc in Sources */,
+				785B06912A78F3C90088C2FC /* cronet_metrics.mm in Sources */,
+				785B06872A78F3630088C2FC /* Cronet.mm in Sources */,
+				785B06932A78F3C90088C2FC /* cronet_global_state_ios.mm in Sources */,
+				78C658F82A7A3C5300B7B63C /* metrics_util.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78C82AE92A7360C0002ED78F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C82AF32A7360C0002ED78F /* CronetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78C82AF02A7360C0002ED78F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78C82AE42A7360BF002ED78F /* Cronet */;
+			targetProxy = 78C82AEF2A7360C0002ED78F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		78C82AF52A7360C0002ED78F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		78C82AF62A7360C0002ED78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78C82AF82A7360C0002ED78F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREFIX_HEADER = ./Cronet/Cronet.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"XCODE_COMPILE_CRONET=1",
+				);
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = src/components/cronet/ios/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hago.cronet;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./src/third_party/boringssl/src/include,
+					./src/third_party/protobuf/src,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					./src/,
+					./gen/,
+					./src/components/grpc_support/include,
+					./src/base/third_party/symbolize,
+					"./src/third_party/abseil-cpp",
+					./src/components/cronet/native/generated,
+					./src/components/cronet/native/include,
+					./src/net/third_party/quiche/src,
+					./gen/net/third_party/quiche/src,
+					./src/net/third_party/quiche/src/quiche/common/platform/default,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Debug;
+		};
+		78C82AF92A7360C0002ED78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREFIX_HEADER = ./Cronet/Cronet.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "XCODE_COMPILE_CRONET=1";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = src/components/cronet/ios/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hago.cronet;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./src/third_party/boringssl/src/include,
+					./src/third_party/protobuf/src,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					./src/,
+					./gen/,
+					./src/components/grpc_support/include,
+					./src/base/third_party/symbolize,
+					"./src/third_party/abseil-cpp",
+					./src/components/cronet/native/generated,
+					./src/components/cronet/native/include,
+					./src/net/third_party/quiche/src,
+					./gen/net/third_party/quiche/src,
+					./src/net/third_party/quiche/src/quiche/common/platform/default,
+				);
+				VALID_ARCHS = "arm64 x86_64";
+			};
+			name = Release;
+		};
+		78C82AFB2A7360C0002ED78F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hago.CronetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78C82AFC2A7360C0002ED78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CWDVRPR444;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hago.CronetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78C82ADF2A7360BF002ED78F /* Build configuration list for PBXProject "Cronet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78C82AF52A7360C0002ED78F /* Debug */,
+				78C82AF62A7360C0002ED78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78C82AF72A7360C0002ED78F /* Build configuration list for PBXNativeTarget "Cronet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78C82AF82A7360C0002ED78F /* Debug */,
+				78C82AF92A7360C0002ED78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78C82AFA2A7360C0002ED78F /* Build configuration list for PBXNativeTarget "CronetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78C82AFB2A7360C0002ED78F /* Debug */,
+				78C82AFC2A7360C0002ED78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78C82ADC2A7360BF002ED78F /* Project object */;
+}
