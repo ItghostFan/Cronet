@@ -323,7 +323,7 @@
 		785BFE282A77A4750088C2FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -342,7 +342,7 @@
 		785BFE292A77A4750088C2FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

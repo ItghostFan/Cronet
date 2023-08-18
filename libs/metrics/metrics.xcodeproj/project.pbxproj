@@ -29,7 +29,6 @@
 		78C65A272A7A493000B7B63C /* metrics_log.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A202A7A492F00B7B63C /* metrics_log.cc */; };
 		78C65A282A7A493000B7B63C /* log_decoder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A212A7A492F00B7B63C /* log_decoder.cc */; };
 		78C65A292A7A493000B7B63C /* metrics_log_store.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A232A7A493000B7B63C /* metrics_log_store.cc */; };
-		78C65A2A2A7A493000B7B63C /* metrics_log_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A242A7A493000B7B63C /* metrics_log_manager.cc */; };
 		78C65A352A7A495300B7B63C /* metrics_scheduler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A2D2A7A495200B7B63C /* metrics_scheduler.cc */; };
 		78C65A362A7A495300B7B63C /* metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A2F2A7A495300B7B63C /* metrics_provider.cc */; };
 		78C65A372A7A495300B7B63C /* metrics_reporting_service.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A312A7A495300B7B63C /* metrics_reporting_service.cc */; };
@@ -51,6 +50,7 @@
 		78C65A702A7A4A2200B7B63C /* machine_id_provider_nonwin.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65A6F2A7A4A2200B7B63C /* machine_id_provider_nonwin.cc */; };
 		78E062972A82A7AE002E9727 /* clean_exit_beacon_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78E062962A82A7AE002E9727 /* clean_exit_beacon_ios.mm */; };
 		78E0629D2A82A93E002E9727 /* stability_metrics_provider.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E0629B2A82A93D002E9727 /* stability_metrics_provider.cc */; };
+		78EB50722A8F32D200265ED0 /* metrics_logs_event_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50702A8F32D200265ED0 /* metrics_logs_event_manager.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,7 +103,6 @@
 		78C65A142A7A490600B7B63C /* expired_histogram_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expired_histogram_util.h; path = ../../src/components/metrics/expired_histogram_util.h; sourceTree = "<group>"; };
 		78C65A152A7A490600B7B63C /* expired_histograms_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expired_histograms_checker.h; path = ../../src/components/metrics/expired_histograms_checker.h; sourceTree = "<group>"; };
 		78C65A162A7A490600B7B63C /* histogram_encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = histogram_encoder.h; path = ../../src/components/metrics/histogram_encoder.h; sourceTree = "<group>"; };
-		78C65A1C2A7A492F00B7B63C /* metrics_log_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_log_manager.h; path = ../../src/components/metrics/metrics_log_manager.h; sourceTree = "<group>"; };
 		78C65A1D2A7A492F00B7B63C /* log_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log_decoder.h; path = ../../src/components/metrics/log_decoder.h; sourceTree = "<group>"; };
 		78C65A1E2A7A492F00B7B63C /* metrics_pref_names.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_pref_names.cc; path = ../../src/components/metrics/metrics_pref_names.cc; sourceTree = "<group>"; };
 		78C65A1F2A7A492F00B7B63C /* metrics_pref_names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_pref_names.h; path = ../../src/components/metrics/metrics_pref_names.h; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 		78C65A212A7A492F00B7B63C /* log_decoder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log_decoder.cc; path = ../../src/components/metrics/log_decoder.cc; sourceTree = "<group>"; };
 		78C65A222A7A492F00B7B63C /* metrics_log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_log.h; path = ../../src/components/metrics/metrics_log.h; sourceTree = "<group>"; };
 		78C65A232A7A493000B7B63C /* metrics_log_store.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_log_store.cc; path = ../../src/components/metrics/metrics_log_store.cc; sourceTree = "<group>"; };
-		78C65A242A7A493000B7B63C /* metrics_log_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_log_manager.cc; path = ../../src/components/metrics/metrics_log_manager.cc; sourceTree = "<group>"; };
 		78C65A252A7A493000B7B63C /* metrics_log_store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_log_store.h; path = ../../src/components/metrics/metrics_log_store.h; sourceTree = "<group>"; };
 		78C65A2B2A7A495200B7B63C /* metrics_scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_scheduler.h; path = ../../src/components/metrics/metrics_scheduler.h; sourceTree = "<group>"; };
 		78C65A2C2A7A495200B7B63C /* metrics_reporting_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_reporting_service.h; path = ../../src/components/metrics/metrics_reporting_service.h; sourceTree = "<group>"; };
@@ -152,6 +150,8 @@
 		78E062962A82A7AE002E9727 /* clean_exit_beacon_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = clean_exit_beacon_ios.mm; path = ../../src/components/metrics/clean_exit_beacon_ios.mm; sourceTree = "<group>"; };
 		78E0629B2A82A93D002E9727 /* stability_metrics_provider.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stability_metrics_provider.cc; path = ../../src/components/metrics/stability_metrics_provider.cc; sourceTree = "<group>"; };
 		78E0629C2A82A93D002E9727 /* stability_metrics_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stability_metrics_provider.h; path = ../../src/components/metrics/stability_metrics_provider.h; sourceTree = "<group>"; };
+		78EB50702A8F32D200265ED0 /* metrics_logs_event_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metrics_logs_event_manager.cc; path = ../../src/components/metrics/metrics_logs_event_manager.cc; sourceTree = "<group>"; };
+		78EB50712A8F32D200265ED0 /* metrics_logs_event_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metrics_logs_event_manager.h; path = ../../src/components/metrics/metrics_logs_event_manager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +242,8 @@
 				78C65A2B2A7A495200B7B63C /* metrics_scheduler.h */,
 				78C65A212A7A492F00B7B63C /* log_decoder.cc */,
 				78C65A1D2A7A492F00B7B63C /* log_decoder.h */,
-				78C65A242A7A493000B7B63C /* metrics_log_manager.cc */,
-				78C65A1C2A7A492F00B7B63C /* metrics_log_manager.h */,
+				78EB50702A8F32D200265ED0 /* metrics_logs_event_manager.cc */,
+				78EB50712A8F32D200265ED0 /* metrics_logs_event_manager.h */,
 				78C65A232A7A493000B7B63C /* metrics_log_store.cc */,
 				78C65A252A7A493000B7B63C /* metrics_log_store.h */,
 				78C65A202A7A492F00B7B63C /* metrics_log.cc */,
@@ -394,10 +394,10 @@
 				78C65A542A7A499E00B7B63C /* persistent_system_profile.cc in Sources */,
 				78C65A082A7A48D800B7B63C /* enabled_state_provider.cc in Sources */,
 				78C65A552A7A499E00B7B63C /* reporting_service.cc in Sources */,
-				78C65A2A2A7A493000B7B63C /* metrics_log_manager.cc in Sources */,
 				78E0629D2A82A93E002E9727 /* stability_metrics_provider.cc in Sources */,
 				78E062972A82A7AE002E9727 /* clean_exit_beacon_ios.mm in Sources */,
 				78C65A662A7A49D800B7B63C /* unsent_log_store.cc in Sources */,
+				78EB50722A8F32D200265ED0 /* metrics_logs_event_manager.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +517,7 @@
 		785BFE282A77A4750088C2FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -550,7 +550,7 @@
 		785BFE292A77A4750088C2FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

@@ -259,41 +259,27 @@
 		785BFD312A778CEC0088C2FC /* process_stubs.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD2C2A778CEC0088C2FC /* process_stubs.cc */; };
 		785BFD322A778CEC0088C2FC /* process_handle_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD2D2A778CEC0088C2FC /* process_handle_posix.cc */; };
 		785BFD342A778D200088C2FC /* rand_util_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD332A778D200088C2FC /* rand_util_posix.cc */; };
-		785BFD382A778D740088C2FC /* waitable_event_mac.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD352A778D740088C2FC /* waitable_event_mac.cc */; };
 		785BFD392A778D740088C2FC /* lock_impl_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD362A778D740088C2FC /* lock_impl_posix.cc */; };
 		785BFD3A2A778D740088C2FC /* condition_variable_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD372A778D740088C2FC /* condition_variable_posix.cc */; };
 		785BFD3D2A778DB10088C2FC /* sys_info_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD3B2A778DB10088C2FC /* sys_info_ios.mm */; };
 		785BFD3E2A778DB10088C2FC /* sys_info_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD3C2A778DB10088C2FC /* sys_info_posix.cc */; };
 		785BFD482A778EB50088C2FC /* platform_thread_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD452A778EB50088C2FC /* platform_thread_posix.cc */; };
 		785BFD492A778EB50088C2FC /* thread_local_storage_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD462A778EB50088C2FC /* thread_local_storage_posix.cc */; };
-		785BFD4A2A778EB50088C2FC /* platform_thread_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD472A778EB50088C2FC /* platform_thread_mac.mm */; };
 		785BFD4C2A778EDB0088C2FC /* hi_res_timer_manager_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD4B2A778EDB0088C2FC /* hi_res_timer_manager_posix.cc */; };
 		785BFD4E2A778F2B0088C2FC /* critical_closure_internal_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD4D2A778F2B0088C2FC /* critical_closure_internal_ios.mm */; };
 		785BFD572A778F780088C2FC /* device_util.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD502A778F780088C2FC /* device_util.mm */; };
 		785BFD582A778F780088C2FC /* ns_error_util.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD522A778F780088C2FC /* ns_error_util.mm */; };
 		785BFD592A778F780088C2FC /* scoped_critical_action.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD542A778F780088C2FC /* scoped_critical_action.mm */; };
 		785BFD5A2A778F780088C2FC /* ios_util.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD552A778F780088C2FC /* ios_util.mm */; };
-		785BFD602A778FCA0088C2FC /* message_pump_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD5D2A778FCA0088C2FC /* message_pump_mac.mm */; };
 		785BFD612A778FCA0088C2FC /* message_pump_io_ios.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD5E2A778FCA0088C2FC /* message_pump_io_ios.cc */; };
 		785BFD632A778FE40088C2FC /* native_library_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD622A778FE40088C2FC /* native_library_ios.mm */; };
 		785BFD662A7790220088C2FC /* stack_sampler_ios.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD642A7790220088C2FC /* stack_sampler_ios.cc */; };
-		785BFD672A7790220088C2FC /* module_cache_mac.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD652A7790220088C2FC /* module_cache_mac.cc */; };
 		785BFD6A2A77904C0088C2FC /* base_paths.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD682A77904C0088C2FC /* base_paths.cc */; };
 		785BFD6D2A7790B90088C2FC /* persistent_histogram_storage.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD6B2A7790B90088C2FC /* persistent_histogram_storage.cc */; };
 		785BFD7E2A7791F30088C2FC /* md5_boringssl.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD7C2A7791F30088C2FC /* md5_boringssl.cc */; };
 		785BFD802A7791FE0088C2FC /* sha1_boringssl.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD7F2A7791FE0088C2FC /* sha1_boringssl.cc */; };
-		785BFD862A7792780088C2FC /* file_version_info_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD842A7792780088C2FC /* file_version_info_mac.mm */; };
-		785BFD882A7792A60088C2FC /* file_util_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD872A7792A60088C2FC /* file_util_mac.mm */; };
-		785BFD9E2A77936F0088C2FC /* mach_logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD8A2A77936E0088C2FC /* mach_logging.cc */; };
-		785BFDA02A77936F0088C2FC /* scoped_mach_vm.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD8C2A77936E0088C2FC /* scoped_mach_vm.cc */; };
-		785BFDA12A77936F0088C2FC /* scoped_mach_port.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD902A77936F0088C2FC /* scoped_mach_port.cc */; };
-		785BFDA22A77936F0088C2FC /* scoped_objc_class_swizzler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD912A77936F0088C2FC /* scoped_objc_class_swizzler.mm */; };
-		785BFDA32A77936F0088C2FC /* mac_logging.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD942A77936F0088C2FC /* mac_logging.mm */; };
-		785BFDA52A77936F0088C2FC /* call_with_eh_frame_asm.S in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD972A77936F0088C2FC /* call_with_eh_frame_asm.S */; };
-		785BFDA72A77936F0088C2FC /* call_with_eh_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD992A77936F0088C2FC /* call_with_eh_frame.cc */; };
 		785BFDA82A77936F0088C2FC /* foundation_util.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFD9B2A77936F0088C2FC /* foundation_util.mm */; };
 		785BFDAB2A7793AF0088C2FC /* power_monitor_device_source_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFDAA2A7793AF0088C2FC /* power_monitor_device_source_ios.mm */; };
-		785BFDAD2A7793DD0088C2FC /* sys_string_conversions_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 785BFDAC2A7793DD0088C2FC /* sys_string_conversions_mac.mm */; };
 		785BFDB12A7794250088C2FC /* time_exploded_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFDAE2A7794250088C2FC /* time_exploded_posix.cc */; };
 		785BFDB32A7794250088C2FC /* time_conversion_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFDB02A7794250088C2FC /* time_conversion_posix.cc */; };
 		785BFDF22A7795860088C2FC /* process_memory_dump.cc in Sources */ = {isa = PBXBuildFile; fileRef = 785BFDBD2A7795840088C2FC /* process_memory_dump.cc */; };
@@ -343,8 +329,6 @@
 		787AD40B2A85394800CBEF59 /* single_thread_task_runner.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD40A2A85394700CBEF59 /* single_thread_task_runner.cc */; };
 		787AD40E2A85396C00CBEF59 /* thread_checker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD40D2A85396C00CBEF59 /* thread_checker.cc */; };
 		787AD4112A85399400CBEF59 /* sequence_checker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD40F2A85399400CBEF59 /* sequence_checker.cc */; };
-		787AD4142A8539D200CBEF59 /* scoped_nsautorelease_pool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD4132A8539D100CBEF59 /* scoped_nsautorelease_pool.cc */; };
-		787AD4162A853A2700CBEF59 /* time_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787AD4152A853A2700CBEF59 /* time_mac.mm */; };
 		787AD41B2A853A8400CBEF59 /* bundle_locations.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787AD4192A853A8300CBEF59 /* bundle_locations.mm */; };
 		787AD41E2A853AD300CBEF59 /* lazy_now.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD41D2A853AD200CBEF59 /* lazy_now.cc */; };
 		787AD4202A853B3D00CBEF59 /* sys_info_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 787AD41F2A853B3D00CBEF59 /* sys_info_apple.mm */; };
@@ -354,9 +338,7 @@
 		787AD42C2A853C6E00CBEF59 /* check_is_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD42B2A853C6E00CBEF59 /* check_is_test.cc */; };
 		787AD42F2A853D2500CBEF59 /* default_delayed_task_handle_delegate.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD42D2A853D2500CBEF59 /* default_delayed_task_handle_delegate.cc */; };
 		787AD4322A853D6800CBEF59 /* base_paths_apple.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD4302A853D6700CBEF59 /* base_paths_apple.cc */; };
-		787AD4362A853EE800CBEF59 /* platform_shared_memory_region_mac.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD4352A853EE800CBEF59 /* platform_shared_memory_region_mac.cc */; };
 		787AD4392A8543EC00CBEF59 /* platform_thread_ref.cc in Sources */ = {isa = PBXBuildFile; fileRef = 787AD4372A8543EC00CBEF59 /* platform_thread_ref.cc */; };
-		788103A62A862847004A94DB /* platform_shared_memory_mapper_mac.cc in Sources */ = {isa = PBXBuildFile; fileRef = 788103A52A862847004A94DB /* platform_shared_memory_mapper_mac.cc */; };
 		78C65EAB2A7A722A00B7B63C /* cached-powers.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65E9C2A7A722A00B7B63C /* cached-powers.cc */; };
 		78C65EAC2A7A722A00B7B63C /* double-to-string.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65EA02A7A722A00B7B63C /* double-to-string.cc */; };
 		78C65EAD2A7A722A00B7B63C /* bignum.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C65EA22A7A722A00B7B63C /* bignum.cc */; };
@@ -368,6 +350,23 @@
 		78E063782A84D93B002E9727 /* oom.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E063762A84D93A002E9727 /* oom.cc */; };
 		78E063792A84D93B002E9727 /* oom_callback.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E063772A84D93A002E9727 /* oom_callback.cc */; };
 		78E063822A84D989002E9727 /* alias.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E063812A84D989002E9727 /* alias.cc */; };
+		78EB50482A8F150200265ED0 /* file_version_info_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50462A8F150100265ED0 /* file_version_info_apple.mm */; };
+		78EB504A2A8F152A00265ED0 /* platform_thread_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50492A8F152900265ED0 /* platform_thread_apple.mm */; };
+		78EB504C2A8F154900265ED0 /* waitable_event_apple.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB504B2A8F154800265ED0 /* waitable_event_apple.cc */; };
+		78EB504E2A8F156000265ED0 /* sys_string_conversions_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB504D2A8F156000265ED0 /* sys_string_conversions_apple.mm */; };
+		78EB50512A8F162A00265ED0 /* scoped_nsautorelease_pool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50502A8F162A00265ED0 /* scoped_nsautorelease_pool.cc */; };
+		78EB50532A8F167700265ED0 /* call_with_eh_frame_asm.S in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50522A8F167700265ED0 /* call_with_eh_frame_asm.S */; };
+		78EB50562A8F167D00265ED0 /* call_with_eh_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50552A8F167D00265ED0 /* call_with_eh_frame.cc */; };
+		78EB50592A8F169400265ED0 /* mach_logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50582A8F169300265ED0 /* mach_logging.cc */; };
+		78EB50602A8F16C800265ED0 /* scoped_mach_vm.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB505A2A8F16C500265ED0 /* scoped_mach_vm.cc */; };
+		78EB50612A8F16C800265ED0 /* scoped_objc_class_swizzler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB505C2A8F16C500265ED0 /* scoped_objc_class_swizzler.mm */; };
+		78EB50622A8F16C800265ED0 /* scoped_mach_port.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB505F2A8F16C600265ED0 /* scoped_mach_port.cc */; };
+		78EB50642A8F177200265ED0 /* time_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50632A8F177100265ED0 /* time_apple.mm */; };
+		78EB50672A8F184F00265ED0 /* platform_shared_memory_mapper_apple.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50652A8F184E00265ED0 /* platform_shared_memory_mapper_apple.cc */; };
+		78EB50682A8F184F00265ED0 /* platform_shared_memory_region_apple.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50662A8F184F00265ED0 /* platform_shared_memory_region_apple.cc */; };
+		78EB506A2A8F188B00265ED0 /* module_cache_apple.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50692A8F188A00265ED0 /* module_cache_apple.cc */; };
+		78EB506D2A8F18D300265ED0 /* message_pump_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB506B2A8F18D200265ED0 /* message_pump_apple.mm */; };
+		78EB506F2A8F18FB00265ED0 /* file_util_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB506E2A8F18FB00265ED0 /* file_util_apple.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -874,14 +873,12 @@
 		785BFD2C2A778CEC0088C2FC /* process_stubs.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_stubs.cc; path = ../../src/base/process/process_stubs.cc; sourceTree = "<group>"; };
 		785BFD2D2A778CEC0088C2FC /* process_handle_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_handle_posix.cc; path = ../../src/base/process/process_handle_posix.cc; sourceTree = "<group>"; };
 		785BFD332A778D200088C2FC /* rand_util_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rand_util_posix.cc; path = ../../src/base/rand_util_posix.cc; sourceTree = "<group>"; };
-		785BFD352A778D740088C2FC /* waitable_event_mac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = waitable_event_mac.cc; path = ../../src/base/synchronization/waitable_event_mac.cc; sourceTree = "<group>"; };
 		785BFD362A778D740088C2FC /* lock_impl_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lock_impl_posix.cc; path = ../../src/base/synchronization/lock_impl_posix.cc; sourceTree = "<group>"; };
 		785BFD372A778D740088C2FC /* condition_variable_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = condition_variable_posix.cc; path = ../../src/base/synchronization/condition_variable_posix.cc; sourceTree = "<group>"; };
 		785BFD3B2A778DB10088C2FC /* sys_info_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sys_info_ios.mm; path = ../../src/base/system/sys_info_ios.mm; sourceTree = "<group>"; };
 		785BFD3C2A778DB10088C2FC /* sys_info_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sys_info_posix.cc; path = ../../src/base/system/sys_info_posix.cc; sourceTree = "<group>"; };
 		785BFD452A778EB50088C2FC /* platform_thread_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platform_thread_posix.cc; path = ../../src/base/threading/platform_thread_posix.cc; sourceTree = "<group>"; };
 		785BFD462A778EB50088C2FC /* thread_local_storage_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = thread_local_storage_posix.cc; path = ../../src/base/threading/thread_local_storage_posix.cc; sourceTree = "<group>"; };
-		785BFD472A778EB50088C2FC /* platform_thread_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = platform_thread_mac.mm; path = ../../src/base/threading/platform_thread_mac.mm; sourceTree = "<group>"; };
 		785BFD4B2A778EDB0088C2FC /* hi_res_timer_manager_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hi_res_timer_manager_posix.cc; path = ../../src/base/timer/hi_res_timer_manager_posix.cc; sourceTree = "<group>"; };
 		785BFD4D2A778F2B0088C2FC /* critical_closure_internal_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = critical_closure_internal_ios.mm; path = ../../src/base/critical_closure_internal_ios.mm; sourceTree = "<group>"; };
 		785BFD4F2A778F770088C2FC /* scoped_critical_action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_critical_action.h; path = ../../src/base/ios/scoped_critical_action.h; sourceTree = "<group>"; };
@@ -892,13 +889,10 @@
 		785BFD542A778F780088C2FC /* scoped_critical_action.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = scoped_critical_action.mm; path = ../../src/base/ios/scoped_critical_action.mm; sourceTree = "<group>"; };
 		785BFD552A778F780088C2FC /* ios_util.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ios_util.mm; path = ../../src/base/ios/ios_util.mm; sourceTree = "<group>"; };
 		785BFD562A778F780088C2FC /* ns_error_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ns_error_util.h; path = ../../src/base/ios/ns_error_util.h; sourceTree = "<group>"; };
-		785BFD5C2A778FCA0088C2FC /* message_pump_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = message_pump_mac.h; path = ../../src/base/message_loop/message_pump_mac.h; sourceTree = "<group>"; };
-		785BFD5D2A778FCA0088C2FC /* message_pump_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = message_pump_mac.mm; path = ../../src/base/message_loop/message_pump_mac.mm; sourceTree = "<group>"; };
 		785BFD5E2A778FCA0088C2FC /* message_pump_io_ios.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = message_pump_io_ios.cc; path = ../../src/base/message_loop/message_pump_io_ios.cc; sourceTree = "<group>"; };
 		785BFD5F2A778FCA0088C2FC /* message_pump_io_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = message_pump_io_ios.h; path = ../../src/base/message_loop/message_pump_io_ios.h; sourceTree = "<group>"; };
 		785BFD622A778FE40088C2FC /* native_library_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = native_library_ios.mm; path = ../../src/base/native_library_ios.mm; sourceTree = "<group>"; };
 		785BFD642A7790220088C2FC /* stack_sampler_ios.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stack_sampler_ios.cc; path = ../../src/base/profiler/stack_sampler_ios.cc; sourceTree = "<group>"; };
-		785BFD652A7790220088C2FC /* module_cache_mac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = module_cache_mac.cc; path = ../../src/base/profiler/module_cache_mac.cc; sourceTree = "<group>"; };
 		785BFD682A77904C0088C2FC /* base_paths.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base_paths.cc; path = ../../src/base/base_paths.cc; sourceTree = "<group>"; };
 		785BFD692A77904C0088C2FC /* base_paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base_paths.h; path = ../../src/base/base_paths.h; sourceTree = "<group>"; };
 		785BFD6B2A7790B90088C2FC /* persistent_histogram_storage.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = persistent_histogram_storage.cc; path = ../../src/base/metrics/persistent_histogram_storage.cc; sourceTree = "<group>"; };
@@ -906,26 +900,9 @@
 		785BFD7C2A7791F30088C2FC /* md5_boringssl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = md5_boringssl.cc; path = ../../src/base/hash/md5_boringssl.cc; sourceTree = "<group>"; };
 		785BFD7D2A7791F30088C2FC /* md5_boringssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5_boringssl.h; path = ../../src/base/hash/md5_boringssl.h; sourceTree = "<group>"; };
 		785BFD7F2A7791FE0088C2FC /* sha1_boringssl.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha1_boringssl.cc; path = ../../src/base/hash/sha1_boringssl.cc; sourceTree = "<group>"; };
-		785BFD842A7792780088C2FC /* file_version_info_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = file_version_info_mac.mm; path = ../../src/base/file_version_info_mac.mm; sourceTree = "<group>"; };
-		785BFD852A7792780088C2FC /* file_version_info_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_version_info_mac.h; path = ../../src/base/file_version_info_mac.h; sourceTree = "<group>"; };
-		785BFD872A7792A60088C2FC /* file_util_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = file_util_mac.mm; path = ../../src/base/files/file_util_mac.mm; sourceTree = "<group>"; };
-		785BFD892A77936E0088C2FC /* scoped_objc_class_swizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_objc_class_swizzler.h; path = ../../src/base/mac/scoped_objc_class_swizzler.h; sourceTree = "<group>"; };
-		785BFD8A2A77936E0088C2FC /* mach_logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mach_logging.cc; path = ../../src/base/mac/mach_logging.cc; sourceTree = "<group>"; };
-		785BFD8C2A77936E0088C2FC /* scoped_mach_vm.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scoped_mach_vm.cc; path = ../../src/base/mac/scoped_mach_vm.cc; sourceTree = "<group>"; };
-		785BFD8D2A77936E0088C2FC /* mach_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mach_logging.h; path = ../../src/base/mac/mach_logging.h; sourceTree = "<group>"; };
 		785BFD8F2A77936E0088C2FC /* foundation_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = foundation_util.h; path = ../../src/base/mac/foundation_util.h; sourceTree = "<group>"; };
-		785BFD902A77936F0088C2FC /* scoped_mach_port.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scoped_mach_port.cc; path = ../../src/base/mac/scoped_mach_port.cc; sourceTree = "<group>"; };
-		785BFD912A77936F0088C2FC /* scoped_objc_class_swizzler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = scoped_objc_class_swizzler.mm; path = ../../src/base/mac/scoped_objc_class_swizzler.mm; sourceTree = "<group>"; };
-		785BFD922A77936F0088C2FC /* scoped_mach_port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_mach_port.h; path = ../../src/base/mac/scoped_mach_port.h; sourceTree = "<group>"; };
-		785BFD932A77936F0088C2FC /* mac_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mac_logging.h; path = ../../src/base/mac/mac_logging.h; sourceTree = "<group>"; };
-		785BFD942A77936F0088C2FC /* mac_logging.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = mac_logging.mm; path = ../../src/base/mac/mac_logging.mm; sourceTree = "<group>"; };
-		785BFD972A77936F0088C2FC /* call_with_eh_frame_asm.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = call_with_eh_frame_asm.S; path = ../../src/base/mac/call_with_eh_frame_asm.S; sourceTree = "<group>"; };
-		785BFD992A77936F0088C2FC /* call_with_eh_frame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = call_with_eh_frame.cc; path = ../../src/base/mac/call_with_eh_frame.cc; sourceTree = "<group>"; };
-		785BFD9A2A77936F0088C2FC /* scoped_mach_vm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_mach_vm.h; path = ../../src/base/mac/scoped_mach_vm.h; sourceTree = "<group>"; };
 		785BFD9B2A77936F0088C2FC /* foundation_util.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = foundation_util.mm; path = ../../src/base/mac/foundation_util.mm; sourceTree = "<group>"; };
-		785BFD9D2A77936F0088C2FC /* call_with_eh_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = call_with_eh_frame.h; path = ../../src/base/mac/call_with_eh_frame.h; sourceTree = "<group>"; };
 		785BFDAA2A7793AF0088C2FC /* power_monitor_device_source_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = power_monitor_device_source_ios.mm; path = ../../src/base/power_monitor/power_monitor_device_source_ios.mm; sourceTree = "<group>"; };
-		785BFDAC2A7793DD0088C2FC /* sys_string_conversions_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sys_string_conversions_mac.mm; path = ../../src/base/strings/sys_string_conversions_mac.mm; sourceTree = "<group>"; };
 		785BFDAE2A7794250088C2FC /* time_exploded_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = time_exploded_posix.cc; path = ../../src/base/time/time_exploded_posix.cc; sourceTree = "<group>"; };
 		785BFDB02A7794250088C2FC /* time_conversion_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = time_conversion_posix.cc; path = ../../src/base/time/time_conversion_posix.cc; sourceTree = "<group>"; };
 		785BFDBA2A7795840088C2FC /* interned_args_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interned_args_helper.h; path = ../../src/base/trace_event/interned_args_helper.h; sourceTree = "<group>"; };
@@ -1019,9 +996,6 @@
 		787AD40D2A85396C00CBEF59 /* thread_checker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = thread_checker.cc; path = ../../src/base/threading/thread_checker.cc; sourceTree = "<group>"; };
 		787AD40F2A85399400CBEF59 /* sequence_checker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sequence_checker.cc; path = ../../src/base/sequence_checker.cc; sourceTree = "<group>"; };
 		787AD4102A85399400CBEF59 /* sequence_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sequence_checker.h; path = ../../src/base/sequence_checker.h; sourceTree = "<group>"; };
-		787AD4122A8539D100CBEF59 /* scoped_nsautorelease_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_nsautorelease_pool.h; path = ../../src/base/mac/scoped_nsautorelease_pool.h; sourceTree = "<group>"; };
-		787AD4132A8539D100CBEF59 /* scoped_nsautorelease_pool.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scoped_nsautorelease_pool.cc; path = ../../src/base/mac/scoped_nsautorelease_pool.cc; sourceTree = "<group>"; };
-		787AD4152A853A2700CBEF59 /* time_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = time_mac.mm; path = ../../src/base/time/time_mac.mm; sourceTree = "<group>"; };
 		787AD4192A853A8300CBEF59 /* bundle_locations.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = bundle_locations.mm; path = ../../src/base/apple/bundle_locations.mm; sourceTree = "<group>"; };
 		787AD41A2A853A8300CBEF59 /* bundle_locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bundle_locations.h; path = ../../src/base/apple/bundle_locations.h; sourceTree = "<group>"; };
 		787AD41C2A853AD200CBEF59 /* lazy_now.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lazy_now.h; path = ../../src/base/task/common/lazy_now.h; sourceTree = "<group>"; };
@@ -1039,10 +1013,8 @@
 		787AD42E2A853D2500CBEF59 /* default_delayed_task_handle_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = default_delayed_task_handle_delegate.h; path = ../../src/base/task/default_delayed_task_handle_delegate.h; sourceTree = "<group>"; };
 		787AD4302A853D6700CBEF59 /* base_paths_apple.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base_paths_apple.cc; path = ../../src/base/base_paths_apple.cc; sourceTree = "<group>"; };
 		787AD4312A853D6800CBEF59 /* base_paths_apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base_paths_apple.h; path = ../../src/base/base_paths_apple.h; sourceTree = "<group>"; };
-		787AD4352A853EE800CBEF59 /* platform_shared_memory_region_mac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platform_shared_memory_region_mac.cc; path = ../../src/base/memory/platform_shared_memory_region_mac.cc; sourceTree = "<group>"; };
 		787AD4372A8543EC00CBEF59 /* platform_thread_ref.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platform_thread_ref.cc; path = ../../src/base/threading/platform_thread_ref.cc; sourceTree = "<group>"; };
 		787AD4382A8543EC00CBEF59 /* platform_thread_ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_thread_ref.h; path = ../../src/base/threading/platform_thread_ref.h; sourceTree = "<group>"; };
-		788103A52A862847004A94DB /* platform_shared_memory_mapper_mac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platform_shared_memory_mapper_mac.cc; path = ../../src/base/memory/platform_shared_memory_mapper_mac.cc; sourceTree = "<group>"; };
 		78C65E9B2A7A722900B7B63C /* strtod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = strtod.h; path = "../../src/base/third_party/double_conversion/double-conversion/strtod.h"; sourceTree = "<group>"; };
 		78C65E9C2A7A722A00B7B63C /* cached-powers.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "cached-powers.cc"; path = "../../src/base/third_party/double_conversion/double-conversion/cached-powers.cc"; sourceTree = "<group>"; };
 		78C65E9D2A7A722A00B7B63C /* fast-dtoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fast-dtoa.h"; path = "../../src/base/third_party/double_conversion/double-conversion/fast-dtoa.h"; sourceTree = "<group>"; };
@@ -1066,6 +1038,31 @@
 		78E063772A84D93A002E9727 /* oom_callback.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oom_callback.cc; path = ../../src/base/allocator/partition_allocator/oom_callback.cc; sourceTree = "<group>"; };
 		78E063802A84D989002E9727 /* alias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = alias.h; path = ../../src/base/allocator/partition_allocator/partition_alloc_base/debug/alias.h; sourceTree = "<group>"; };
 		78E063812A84D989002E9727 /* alias.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = alias.cc; path = ../../src/base/allocator/partition_allocator/partition_alloc_base/debug/alias.cc; sourceTree = "<group>"; };
+		78EB50462A8F150100265ED0 /* file_version_info_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = file_version_info_apple.mm; path = ../../src/base/file_version_info_apple.mm; sourceTree = "<group>"; };
+		78EB50472A8F150200265ED0 /* file_version_info_apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_version_info_apple.h; path = ../../src/base/file_version_info_apple.h; sourceTree = "<group>"; };
+		78EB50492A8F152900265ED0 /* platform_thread_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = platform_thread_apple.mm; path = ../../src/base/threading/platform_thread_apple.mm; sourceTree = "<group>"; };
+		78EB504B2A8F154800265ED0 /* waitable_event_apple.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = waitable_event_apple.cc; path = ../../src/base/synchronization/waitable_event_apple.cc; sourceTree = "<group>"; };
+		78EB504D2A8F156000265ED0 /* sys_string_conversions_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sys_string_conversions_apple.mm; path = ../../src/base/strings/sys_string_conversions_apple.mm; sourceTree = "<group>"; };
+		78EB504F2A8F162900265ED0 /* scoped_nsautorelease_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_nsautorelease_pool.h; path = ../../src/base/apple/scoped_nsautorelease_pool.h; sourceTree = "<group>"; };
+		78EB50502A8F162A00265ED0 /* scoped_nsautorelease_pool.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scoped_nsautorelease_pool.cc; path = ../../src/base/apple/scoped_nsautorelease_pool.cc; sourceTree = "<group>"; };
+		78EB50522A8F167700265ED0 /* call_with_eh_frame_asm.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = call_with_eh_frame_asm.S; path = ../../src/base/apple/call_with_eh_frame_asm.S; sourceTree = "<group>"; };
+		78EB50542A8F167D00265ED0 /* call_with_eh_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = call_with_eh_frame.h; path = ../../src/base/apple/call_with_eh_frame.h; sourceTree = "<group>"; };
+		78EB50552A8F167D00265ED0 /* call_with_eh_frame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = call_with_eh_frame.cc; path = ../../src/base/apple/call_with_eh_frame.cc; sourceTree = "<group>"; };
+		78EB50572A8F169300265ED0 /* mach_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mach_logging.h; path = ../../src/base/apple/mach_logging.h; sourceTree = "<group>"; };
+		78EB50582A8F169300265ED0 /* mach_logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mach_logging.cc; path = ../../src/base/apple/mach_logging.cc; sourceTree = "<group>"; };
+		78EB505A2A8F16C500265ED0 /* scoped_mach_vm.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scoped_mach_vm.cc; path = ../../src/base/apple/scoped_mach_vm.cc; sourceTree = "<group>"; };
+		78EB505B2A8F16C500265ED0 /* scoped_objc_class_swizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_objc_class_swizzler.h; path = ../../src/base/apple/scoped_objc_class_swizzler.h; sourceTree = "<group>"; };
+		78EB505C2A8F16C500265ED0 /* scoped_objc_class_swizzler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = scoped_objc_class_swizzler.mm; path = ../../src/base/apple/scoped_objc_class_swizzler.mm; sourceTree = "<group>"; };
+		78EB505D2A8F16C600265ED0 /* scoped_mach_vm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_mach_vm.h; path = ../../src/base/apple/scoped_mach_vm.h; sourceTree = "<group>"; };
+		78EB505E2A8F16C600265ED0 /* scoped_mach_port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_mach_port.h; path = ../../src/base/apple/scoped_mach_port.h; sourceTree = "<group>"; };
+		78EB505F2A8F16C600265ED0 /* scoped_mach_port.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scoped_mach_port.cc; path = ../../src/base/apple/scoped_mach_port.cc; sourceTree = "<group>"; };
+		78EB50632A8F177100265ED0 /* time_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = time_apple.mm; path = ../../src/base/time/time_apple.mm; sourceTree = "<group>"; };
+		78EB50652A8F184E00265ED0 /* platform_shared_memory_mapper_apple.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platform_shared_memory_mapper_apple.cc; path = ../../src/base/memory/platform_shared_memory_mapper_apple.cc; sourceTree = "<group>"; };
+		78EB50662A8F184F00265ED0 /* platform_shared_memory_region_apple.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platform_shared_memory_region_apple.cc; path = ../../src/base/memory/platform_shared_memory_region_apple.cc; sourceTree = "<group>"; };
+		78EB50692A8F188A00265ED0 /* module_cache_apple.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = module_cache_apple.cc; path = ../../src/base/profiler/module_cache_apple.cc; sourceTree = "<group>"; };
+		78EB506B2A8F18D200265ED0 /* message_pump_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = message_pump_apple.mm; path = ../../src/base/message_loop/message_pump_apple.mm; sourceTree = "<group>"; };
+		78EB506C2A8F18D200265ED0 /* message_pump_apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = message_pump_apple.h; path = ../../src/base/message_loop/message_pump_apple.h; sourceTree = "<group>"; };
+		78EB506E2A8F18FB00265ED0 /* file_util_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = file_util_apple.mm; path = ../../src/base/files/file_util_apple.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1210,8 +1207,8 @@
 				785BFD622A778FE40088C2FC /* native_library_ios.mm */,
 				785BFD682A77904C0088C2FC /* base_paths.cc */,
 				785BFD692A77904C0088C2FC /* base_paths.h */,
-				785BFD852A7792780088C2FC /* file_version_info_mac.h */,
-				785BFD842A7792780088C2FC /* file_version_info_mac.mm */,
+				78EB50472A8F150200265ED0 /* file_version_info_apple.h */,
+				78EB50462A8F150100265ED0 /* file_version_info_apple.mm */,
 				787AD4172A853A7600CBEF59 /* apple */,
 				787AD3FF2A85387600CBEF59 /* functional */,
 				785BFA0B2A77600A0088C2FC /* containers */,
@@ -1286,7 +1283,7 @@
 			children = (
 				787AD3BF2A852B8200CBEF59 /* safe_base_name.cc */,
 				787AD3BE2A852B8200CBEF59 /* safe_base_name.h */,
-				785BFD872A7792A60088C2FC /* file_util_mac.mm */,
+				78EB506E2A8F18FB00265ED0 /* file_util_apple.mm */,
 				785BFD0C2A778B710088C2FC /* file_descriptor_watcher_posix.cc */,
 				785BFD0B2A778B710088C2FC /* file_descriptor_watcher_posix.h */,
 				785BFD0D2A778B710088C2FC /* file_enumerator_posix.cc */,
@@ -1359,8 +1356,8 @@
 		785BFABD2A7764CA0088C2FC /* memory */ = {
 			isa = PBXGroup;
 			children = (
-				788103A52A862847004A94DB /* platform_shared_memory_mapper_mac.cc */,
-				787AD4352A853EE800CBEF59 /* platform_shared_memory_region_mac.cc */,
+				78EB50652A8F184E00265ED0 /* platform_shared_memory_mapper_apple.cc */,
+				78EB50662A8F184F00265ED0 /* platform_shared_memory_region_apple.cc */,
 				787AD3F92A85375D00CBEF59 /* shared_memory_mapper.cc */,
 				787AD3FA2A85375D00CBEF59 /* shared_memory_mapper.h */,
 				787AD3B52A852AE300CBEF59 /* page_size_posix.cc */,
@@ -1408,8 +1405,8 @@
 			children = (
 				785BFD5E2A778FCA0088C2FC /* message_pump_io_ios.cc */,
 				785BFD5F2A778FCA0088C2FC /* message_pump_io_ios.h */,
-				785BFD5C2A778FCA0088C2FC /* message_pump_mac.h */,
-				785BFD5D2A778FCA0088C2FC /* message_pump_mac.mm */,
+				78EB506C2A8F18D200265ED0 /* message_pump_apple.h */,
+				78EB506B2A8F18D200265ED0 /* message_pump_apple.mm */,
 				785BFABE2A7765150088C2FC /* message_pump_default.cc */,
 				785BFAC02A7765150088C2FC /* message_pump_default.h */,
 				785BFAC12A7765150088C2FC /* message_pump.cc */,
@@ -1534,7 +1531,7 @@
 				785BFB472A77680D0088C2FC /* stack_sampler.h */,
 				785BFB4B2A77680D0088C2FC /* stack_sampling_profiler.cc */,
 				785BFB432A77680D0088C2FC /* stack_sampling_profiler.h */,
-				785BFD652A7790220088C2FC /* module_cache_mac.cc */,
+				78EB50692A8F188A00265ED0 /* module_cache_apple.cc */,
 				785BFD642A7790220088C2FC /* stack_sampler_ios.cc */,
 				785BFB422A77680D0088C2FC /* unwinder.cc */,
 				785BFB3A2A77680D0088C2FC /* unwinder.h */,
@@ -1583,7 +1580,7 @@
 				785BFB952A77751D0088C2FC /* utf_string_conversion_utils.h */,
 				785BFB8E2A77751C0088C2FC /* utf_string_conversions.cc */,
 				785BFB8B2A77751C0088C2FC /* utf_string_conversions.h */,
-				785BFDAC2A7793DD0088C2FC /* sys_string_conversions_mac.mm */,
+				78EB504D2A8F156000265ED0 /* sys_string_conversions_apple.mm */,
 			);
 			name = strings;
 			sourceTree = "<group>";
@@ -1599,7 +1596,7 @@
 				787AD3C52A852BDC00CBEF59 /* waitable_event.h */,
 				785BFD372A778D740088C2FC /* condition_variable_posix.cc */,
 				785BFD362A778D740088C2FC /* lock_impl_posix.cc */,
-				785BFD352A778D740088C2FC /* waitable_event_mac.cc */,
+				78EB504B2A8F154800265ED0 /* waitable_event_apple.cc */,
 			);
 			name = synchronization;
 			sourceTree = "<group>";
@@ -1867,7 +1864,7 @@
 				785BFC9A2A7789190088C2FC /* thread.h */,
 				785BFCA82A77891A0088C2FC /* watchdog.cc */,
 				785BFC942A7789180088C2FC /* watchdog.h */,
-				785BFD472A778EB50088C2FC /* platform_thread_mac.mm */,
+				78EB50492A8F152900265ED0 /* platform_thread_apple.mm */,
 				785BFD452A778EB50088C2FC /* platform_thread_posix.cc */,
 				785BFD462A778EB50088C2FC /* thread_local_storage_posix.cc */,
 			);
@@ -1893,7 +1890,7 @@
 				785BFCC82A77897A0088C2FC /* time_override.h */,
 				785BFCD12A77897B0088C2FC /* time_to_iso8601.cc */,
 				785BFCCA2A77897A0088C2FC /* time_to_iso8601.h */,
-				787AD4152A853A2700CBEF59 /* time_mac.mm */,
+				78EB50632A8F177100265ED0 /* time_apple.mm */,
 				785BFCCB2A77897A0088C2FC /* time.cc */,
 				785BFCCC2A77897A0088C2FC /* time.h */,
 			);
@@ -2011,23 +2008,8 @@
 		785BFDA92A7793760088C2FC /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				787AD4132A8539D100CBEF59 /* scoped_nsautorelease_pool.cc */,
-				787AD4122A8539D100CBEF59 /* scoped_nsautorelease_pool.h */,
-				785BFD972A77936F0088C2FC /* call_with_eh_frame_asm.S */,
-				785BFD992A77936F0088C2FC /* call_with_eh_frame.cc */,
-				785BFD9D2A77936F0088C2FC /* call_with_eh_frame.h */,
 				785BFD8F2A77936E0088C2FC /* foundation_util.h */,
 				785BFD9B2A77936F0088C2FC /* foundation_util.mm */,
-				785BFD932A77936F0088C2FC /* mac_logging.h */,
-				785BFD942A77936F0088C2FC /* mac_logging.mm */,
-				785BFD8A2A77936E0088C2FC /* mach_logging.cc */,
-				785BFD8D2A77936E0088C2FC /* mach_logging.h */,
-				785BFD902A77936F0088C2FC /* scoped_mach_port.cc */,
-				785BFD922A77936F0088C2FC /* scoped_mach_port.h */,
-				785BFD8C2A77936E0088C2FC /* scoped_mach_vm.cc */,
-				785BFD9A2A77936F0088C2FC /* scoped_mach_vm.h */,
-				785BFD892A77936E0088C2FC /* scoped_objc_class_swizzler.h */,
-				785BFD912A77936F0088C2FC /* scoped_objc_class_swizzler.mm */,
 			);
 			name = mac;
 			sourceTree = "<group>";
@@ -2048,6 +2030,19 @@
 			children = (
 				787AD41A2A853A8300CBEF59 /* bundle_locations.h */,
 				787AD4192A853A8300CBEF59 /* bundle_locations.mm */,
+				78EB50502A8F162A00265ED0 /* scoped_nsautorelease_pool.cc */,
+				78EB504F2A8F162900265ED0 /* scoped_nsautorelease_pool.h */,
+				78EB50522A8F167700265ED0 /* call_with_eh_frame_asm.S */,
+				78EB50552A8F167D00265ED0 /* call_with_eh_frame.cc */,
+				78EB50542A8F167D00265ED0 /* call_with_eh_frame.h */,
+				78EB50582A8F169300265ED0 /* mach_logging.cc */,
+				78EB50572A8F169300265ED0 /* mach_logging.h */,
+				78EB505F2A8F16C600265ED0 /* scoped_mach_port.cc */,
+				78EB505E2A8F16C600265ED0 /* scoped_mach_port.h */,
+				78EB505A2A8F16C500265ED0 /* scoped_mach_vm.cc */,
+				78EB505D2A8F16C600265ED0 /* scoped_mach_vm.h */,
+				78EB505B2A8F16C500265ED0 /* scoped_objc_class_swizzler.h */,
+				78EB505C2A8F16C500265ED0 /* scoped_objc_class_swizzler.mm */,
 			);
 			name = apple;
 			sourceTree = "<group>";
@@ -2186,6 +2181,7 @@
 				785BFB5B2A77680D0088C2FC /* sampling_profiler_thread_token.cc in Sources */,
 				785BFB062A7766660088C2FC /* histogram_base.cc in Sources */,
 				785BFC1E2A7777C50088C2FC /* associated_thread_id.cc in Sources */,
+				78EB50482A8F150200265ED0 /* file_version_info_apple.mm in Sources */,
 				785BFB012A7766660088C2FC /* user_metrics.cc in Sources */,
 				787AD4062A8538DA00CBEF59 /* time_delta_from_string.cc in Sources */,
 				785BFC662A7786F20088C2FC /* priority_queue.cc in Sources */,
@@ -2198,6 +2194,7 @@
 				785BFC6F2A7786F20088C2FC /* job_task_source.cc in Sources */,
 				785BFCB22A77891A0088C2FC /* scoped_blocking_call_internal.cc in Sources */,
 				785BFC332A7778370088C2FC /* task_features.cc in Sources */,
+				78EB50612A8F16C800265ED0 /* scoped_objc_class_swizzler.mm in Sources */,
 				787AD41B2A853A8400CBEF59 /* bundle_locations.mm in Sources */,
 				785BFB592A77680D0088C2FC /* module_cache.cc in Sources */,
 				785BFBA82A77751D0088C2FC /* stringprintf.cc in Sources */,
@@ -2227,20 +2224,17 @@
 				785BF9D82A775EFC0088C2FC /* allocator_extension.cc in Sources */,
 				785BFB5C2A77680D0088C2FC /* stack_sampling_profiler.cc in Sources */,
 				785BFA882A7763D00088C2FC /* location.cc in Sources */,
-				785BFD882A7792A60088C2FC /* file_util_mac.mm in Sources */,
 				785BFCF32A778A5B0088C2FC /* heap_profiler_allocation_context_tracker.cc in Sources */,
 				785BFA592A7762370088C2FC /* scoped_temp_dir.cc in Sources */,
 				78C65EB02A7A722A00B7B63C /* string-to-double.cc in Sources */,
 				785BFA7C2A7763790088C2FC /* json_writer.cc in Sources */,
-				787AD4362A853EE800CBEF59 /* platform_shared_memory_region_mac.cc in Sources */,
-				785BFD862A7792780088C2FC /* file_version_info_mac.mm in Sources */,
+				78EB504E2A8F156000265ED0 /* sys_string_conversions_apple.mm in Sources */,
 				785BFC762A7786F20088C2FC /* task_source_sort_key.cc in Sources */,
 				785BFD0E2A778B710088C2FC /* file_posix.cc in Sources */,
 				785BFBA62A77751D0088C2FC /* string_util.cc in Sources */,
 				785BFAFF2A7766660088C2FC /* sample_vector.cc in Sources */,
 				787AD3C02A852B8200CBEF59 /* safe_base_name.cc in Sources */,
 				787AD3F52A8536A200CBEF59 /* task_order.cc in Sources */,
-				787AD4162A853A2700CBEF59 /* time_mac.mm in Sources */,
 				785BFC1D2A7777C50088C2FC /* sequence_manager.cc in Sources */,
 				785BFCD32A77897B0088C2FC /* time_override.cc in Sources */,
 				787AD3F82A85372500CBEF59 /* delayed_task_handle.cc in Sources */,
@@ -2250,10 +2244,9 @@
 				785BFD662A7790220088C2FC /* stack_sampler_ios.cc in Sources */,
 				785BFA272A7760DA0088C2FC /* asan_invalid_access.cc in Sources */,
 				785BFD122A778B710088C2FC /* file_enumerator_posix.cc in Sources */,
-				787AD4142A8539D200CBEF59 /* scoped_nsautorelease_pool.cc in Sources */,
+				78EB50672A8F184F00265ED0 /* platform_shared_memory_mapper_apple.cc in Sources */,
 				785BFCE12A7789B60088C2FC /* elapsed_timer.cc in Sources */,
 				785BFAF82A7766660088C2FC /* field_trial_param_associator.cc in Sources */,
-				785BFD9E2A77936F0088C2FC /* mach_logging.cc in Sources */,
 				785BFC352A7778370088C2FC /* task_traits.cc in Sources */,
 				785BFC182A7777C50088C2FC /* atomic_flag_set.cc in Sources */,
 				785BFBDB2A7776B40088C2FC /* operations_controller.cc in Sources */,
@@ -2278,9 +2271,8 @@
 				785BFA0A2A7760010088C2FC /* flat_tree.cc in Sources */,
 				785BFB672A7768A20088C2FC /* rand_util.cc in Sources */,
 				787AD42F2A853D2500CBEF59 /* default_delayed_task_handle_delegate.cc in Sources */,
-				785BFDA72A77936F0088C2FC /* call_with_eh_frame.cc in Sources */,
-				785BFDA02A77936F0088C2FC /* scoped_mach_vm.cc in Sources */,
 				787AD3F22A85368400CBEF59 /* fence.cc in Sources */,
+				78EB50602A8F16C800265ED0 /* scoped_mach_vm.cc in Sources */,
 				785BFBDC2A7776B40088C2FC /* checked_lock_impl.cc in Sources */,
 				785BFC232A7777C50088C2FC /* time_domain.cc in Sources */,
 				785BFAB62A7764C20088C2FC /* shared_memory_tracker.cc in Sources */,
@@ -2292,7 +2284,6 @@
 				78C65EAC2A7A722A00B7B63C /* double-to-string.cc in Sources */,
 				785BFC6E2A7786F20088C2FC /* task.cc in Sources */,
 				785BFAB12A7764C20088C2FC /* shared_memory_security_policy.cc in Sources */,
-				785BFD602A778FCA0088C2FC /* message_pump_mac.mm in Sources */,
 				785BFB2C2A77672D0088C2FC /* power_monitor_source.cc in Sources */,
 				785BFDF22A7795860088C2FC /* process_memory_dump.cc in Sources */,
 				785BFA292A7760DA0088C2FC /* profiler.cc in Sources */,
@@ -2310,15 +2301,16 @@
 				787AD3E62A85356B00CBEF59 /* base_paths_ios.mm in Sources */,
 				785BFABC2A7764C20088C2FC /* discardable_memory.cc in Sources */,
 				785BFBB42A77751D0088C2FC /* safe_sprintf.cc in Sources */,
+				78EB504A2A8F152A00265ED0 /* platform_thread_apple.mm in Sources */,
 				785BFA392A77613F0088C2FC /* feature_list.cc in Sources */,
 				785BFAB72A7764C20088C2FC /* memory_pressure_listener.cc in Sources */,
+				78EB50642A8F177200265ED0 /* time_apple.mm in Sources */,
 				787AD3EF2A85366E00CBEF59 /* delayed_task_handle_delegate.cc in Sources */,
 				785BFB562A77680D0088C2FC /* stack_buffer.cc in Sources */,
+				78EB50622A8F16C800265ED0 /* scoped_mach_port.cc in Sources */,
 				785BFE082A7795870088C2FC /* interned_args_helper.cc in Sources */,
 				785BFD262A778C500088C2FC /* unix_domain_socket.cc in Sources */,
-				785BFDA12A77936F0088C2FC /* scoped_mach_port.cc in Sources */,
 				785BFBC12A7775A30088C2FC /* lock.cc in Sources */,
-				785BFDA52A77936F0088C2FC /* call_with_eh_frame_asm.S in Sources */,
 				785BFBC62A7775C20088C2FC /* syslog_logging.cc in Sources */,
 				785BF9F72A775F9B0088C2FC /* base64.cc in Sources */,
 				785BFC322A7778370088C2FC /* single_thread_task_executor.cc in Sources */,
@@ -2336,6 +2328,7 @@
 				785BFDFF2A7795870088C2FC /* trace_log_constants.cc in Sources */,
 				785BF9FF2A775F9B0088C2FC /* command_line.cc in Sources */,
 				78E063782A84D93B002E9727 /* oom.cc in Sources */,
+				78EB504C2A8F154900265ED0 /* waitable_event_apple.cc in Sources */,
 				785BFBB32A77751D0088C2FC /* utf_string_conversion_utils.cc in Sources */,
 				785BF9F92A775F9B0088C2FC /* barrier_closure.cc in Sources */,
 				785BFC142A7777C50088C2FC /* work_queue_sets.cc in Sources */,
@@ -2344,12 +2337,14 @@
 				785BFD3E2A778DB10088C2FC /* sys_info_posix.cc in Sources */,
 				785BFDF32A7795860088C2FC /* memory_allocator_dump.cc in Sources */,
 				787AD3BD2A852B5000CBEF59 /* memory_pressure_level_proto.cc in Sources */,
+				78EB506D2A8F18D300265ED0 /* message_pump_apple.mm in Sources */,
 				785BFBA72A77751D0088C2FC /* strcat.cc in Sources */,
 				785BFBAB2A77751D0088C2FC /* utf_offset_string_conversions.cc in Sources */,
 				785BFB372A7767890088C2FC /* environment_internal.cc in Sources */,
 				785BFD032A778AA30088C2FC /* vlog.cc in Sources */,
 				785BFDF72A7795860088C2FC /* memory_dump_manager.cc in Sources */,
 				785BFA082A7760010088C2FC /* intrusive_heap.cc in Sources */,
+				78EB506F2A8F18FB00265ED0 /* file_util_apple.mm in Sources */,
 				785BFD022A778AA30088C2FC /* value_iterators.cc in Sources */,
 				785BFBAF2A77751D0088C2FC /* string_split.cc in Sources */,
 				785BFBAD2A77751D0088C2FC /* pattern.cc in Sources */,
@@ -2358,6 +2353,7 @@
 				785BFCBD2A77891A0088C2FC /* watchdog.cc in Sources */,
 				785BFA832A7763BA0088C2FC /* lazy_instance_helpers.cc in Sources */,
 				785BFBCC2A7775E20088C2FC /* system_monitor.cc in Sources */,
+				78EB506A2A8F188B00265ED0 /* module_cache_apple.cc in Sources */,
 				785BFD1B2A778C110088C2FC /* watchable_io_message_pump_posix.cc in Sources */,
 				785BFB5F2A77680D0088C2FC /* metadata_recorder.cc in Sources */,
 				785BFA892A7763D00088C2FC /* logging.cc in Sources */,
@@ -2378,7 +2374,7 @@
 				785BFC6C2A7786F20088C2FC /* thread_pool_impl.cc in Sources */,
 				785BFBE82A7777030088C2FC /* lazy_thread_pool_task_runner.cc in Sources */,
 				785BFBEA2A7777030088C2FC /* current_thread.cc in Sources */,
-				788103A62A862847004A94DB /* platform_shared_memory_mapper_mac.cc in Sources */,
+				78EB50562A8F167D00265ED0 /* call_with_eh_frame.cc in Sources */,
 				785BFB092A7766660088C2FC /* field_trial.cc in Sources */,
 				785BFA012A775F9B0088C2FC /* at_exit.cc in Sources */,
 				785BFC642A7786F20088C2FC /* sequence.cc in Sources */,
@@ -2394,12 +2390,11 @@
 				785BFD3A2A778D740088C2FC /* condition_variable_posix.cc in Sources */,
 				785BFA7E2A7763790088C2FC /* json_string_value_serializer.cc in Sources */,
 				785BFB202A7766EF0088C2FC /* path_service.cc in Sources */,
-				785BFDA22A77936F0088C2FC /* scoped_objc_class_swizzler.mm in Sources */,
 				787AD4032A85389600CBEF59 /* callback_helpers.cc in Sources */,
+				78EB50592A8F169400265ED0 /* mach_logging.cc in Sources */,
 				785BFE032A7795870088C2FC /* memory_infra_background_allowlist.cc in Sources */,
 				78C65EB12A7A722A00B7B63C /* strtod.cc in Sources */,
 				785BFBE92A7777030088C2FC /* scoped_set_task_priority_for_current_thread.cc in Sources */,
-				785BFDAD2A7793DD0088C2FC /* sys_string_conversions_mac.mm in Sources */,
 				785BFB382A7767890088C2FC /* process_metrics.cc in Sources */,
 				78C65EAE2A7A722A00B7B63C /* fixed-dtoa.cc in Sources */,
 				785BFAFE2A7766660088C2FC /* persistent_sample_map.cc in Sources */,
@@ -2408,6 +2403,7 @@
 				785BF9F82A775F9B0088C2FC /* base64url.cc in Sources */,
 				785BFBAA2A77751D0088C2FC /* utf_string_conversions.cc in Sources */,
 				785BFACE2A7765CD0088C2FC /* crc32.cc in Sources */,
+				78EB50512A8F162A00265ED0 /* scoped_nsautorelease_pool.cc in Sources */,
 				785BFDFE2A7795870088C2FC /* typed_macros_internal.cc in Sources */,
 				785BFB212A7766EF0088C2FC /* one_shot_event.cc in Sources */,
 				785BFC202A7777C50088C2FC /* task_queue.cc in Sources */,
@@ -2419,7 +2415,6 @@
 				785BFB242A7766EF0088C2FC /* native_library.cc in Sources */,
 				785BFA372A77613F0088C2FC /* environment.cc in Sources */,
 				785BFC682A7786F20088C2FC /* task_tracker.cc in Sources */,
-				785BFD4A2A778EB50088C2FC /* platform_thread_mac.mm in Sources */,
 				787AD4202A853B3D00CBEF59 /* sys_info_apple.mm in Sources */,
 				787AD3C62A852BDC00CBEF59 /* waitable_event.cc in Sources */,
 				785BFCB42A77891A0088C2FC /* scoped_thread_priority.cc in Sources */,
@@ -2430,7 +2425,6 @@
 				78C65EAF2A7A722A00B7B63C /* bignum-dtoa.cc in Sources */,
 				785BFB252A7766EF0088C2FC /* pending_task.cc in Sources */,
 				785BFBC22A7775A30088C2FC /* atomic_flag.cc in Sources */,
-				785BFD672A7790220088C2FC /* module_cache_mac.cc in Sources */,
 				785BFAF92A7766660088C2FC /* statistics_recorder.cc in Sources */,
 				785BFB5E2A77680D0088C2FC /* frame.cc in Sources */,
 				785BFBB02A77751D0088C2FC /* latin1_string_conversions.cc in Sources */,
@@ -2441,6 +2435,7 @@
 				785BFCB52A77891A0088C2FC /* hang_watcher.cc in Sources */,
 				785BFAB32A7764C20088C2FC /* discardable_memory_allocator.cc in Sources */,
 				785BFD2E2A778CEC0088C2FC /* memory_stubs.cc in Sources */,
+				78EB50682A8F184F00265ED0 /* platform_shared_memory_region_apple.cc in Sources */,
 				785BFA582A7762370088C2FC /* file_proxy.cc in Sources */,
 				785BFBCB2A7775E20088C2FC /* sys_info.cc in Sources */,
 				785BFA282A7760DA0088C2FC /* dump_without_crashing.cc in Sources */,
@@ -2452,7 +2447,6 @@
 				785BFDF62A7795860088C2FC /* tracing_agent.cc in Sources */,
 				785BFE072A7795870088C2FC /* trace_buffer.cc in Sources */,
 				785BFAFB2A7766660088C2FC /* persistent_memory_allocator.cc in Sources */,
-				785BFDA32A77936F0088C2FC /* mac_logging.mm in Sources */,
 				785BFBB12A77751D0088C2FC /* escape.cc in Sources */,
 				785BFE042A7795870088C2FC /* memory_dump_request_args.cc in Sources */,
 				787AD4112A85399400CBEF59 /* sequence_checker.cc in Sources */,
@@ -2506,6 +2500,7 @@
 				785BFC222A7777C50088C2FC /* work_queue.cc in Sources */,
 				785BFA7F2A7763790088C2FC /* json_value_converter.cc in Sources */,
 				785BFC1B2A7777C50088C2FC /* thread_controller_impl.cc in Sources */,
+				78EB50532A8F167700265ED0 /* call_with_eh_frame_asm.S in Sources */,
 				785BFE052A7795870088C2FC /* memory_dump_provider_info.cc in Sources */,
 				787AD41E2A853AD300CBEF59 /* lazy_now.cc in Sources */,
 				785BFAB52A7764C20088C2FC /* memory_pressure_monitor.cc in Sources */,
@@ -2523,7 +2518,6 @@
 				785BFD392A778D740088C2FC /* lock_impl_posix.cc in Sources */,
 				785BFC752A7786F20088C2FC /* pooled_task_runner_delegate.cc in Sources */,
 				785BFB362A7767890088C2FC /* process_handle.cc in Sources */,
-				785BFD382A778D740088C2FC /* waitable_event_mac.cc in Sources */,
 				785BFD6D2A7790B90088C2FC /* persistent_histogram_storage.cc in Sources */,
 				787AD4292A853C2100CBEF59 /* worker_thread_set.cc in Sources */,
 				785BFD002A778AA30088C2FC /* version.cc in Sources */,
@@ -2649,7 +2643,7 @@
 		785BF9CC2A775CBE0088C2FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -2677,7 +2671,7 @@
 		785BF9CD2A775CBE0088C2FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;

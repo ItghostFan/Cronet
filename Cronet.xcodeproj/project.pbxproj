@@ -556,9 +556,11 @@
 		785BFE0C2A77961D0088C2FC /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				78C658D72A7A374700B7B63C /* net.xcodeproj */,
+				78C65BCA2A7A5F6B00B7B63C /* perfetto.xcodeproj */,
+				785BFE0F2A7796540088C2FC /* base.xcodeproj */,
 				785B08282A7928E90088C2FC /* abseil-cpp.xcodeproj */,
 				785B04282A78DB020088C2FC /* base_static.xcodeproj */,
-				785BFE0F2A7796540088C2FC /* base.xcodeproj */,
 				78F88F702A80CB8300F19292 /* boringssl_asm.xcodeproj */,
 				78F88F6A2A80CB7E00F19292 /* boringssl_x86.xcodeproj */,
 				785B04322A78DC700088C2FC /* boringssl.xcodeproj */,
@@ -572,9 +574,7 @@
 				78C65AD82A7A4DE200B7B63C /* metrics_proto.xcodeproj */,
 				78C659D92A7A47A200B7B63C /* metrics.xcodeproj */,
 				78C65ED12A7A7C0600B7B63C /* modp_b64.xcodeproj */,
-				78C658D72A7A374700B7B63C /* net.xcodeproj */,
 				785B07792A791AF20088C2FC /* network_protocol.xcodeproj */,
-				78C65BCA2A7A5F6B00B7B63C /* perfetto.xcodeproj */,
 				785BFE302A77A4800088C2FC /* prefs.xcodeproj */,
 				78C659CC2A7A45AD00B7B63C /* protobuf_lite.xcodeproj */,
 				785B03E62A78BA770088C2FC /* url.xcodeproj */,

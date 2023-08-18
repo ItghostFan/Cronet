@@ -66,7 +66,6 @@
 		785B04C02A78E0090088C2FC /* e_tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04B52A78E0090088C2FC /* e_tls.c */; };
 		785B04C72A78E0520088C2FC /* conf.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04C62A78E0520088C2FC /* conf.c */; };
 		785B04D22A78E0C40088C2FC /* cpu_aarch64_fuchsia.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04C92A78E0C30088C2FC /* cpu_aarch64_fuchsia.c */; };
-		785B04D32A78E0C40088C2FC /* cpu_arm.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04CA2A78E0C30088C2FC /* cpu_arm.c */; };
 		785B04D42A78E0C40088C2FC /* cpu_intel.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04CB2A78E0C30088C2FC /* cpu_intel.c */; };
 		785B04D52A78E0C40088C2FC /* cpu_arm_linux.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04CC2A78E0C30088C2FC /* cpu_arm_linux.c */; };
 		785B04D72A78E0C40088C2FC /* cpu_aarch64_linux.c in Sources */ = {isa = PBXBuildFile; fileRef = 785B04CF2A78E0C40088C2FC /* cpu_aarch64_linux.c */; };
@@ -340,7 +339,6 @@
 		785B04B52A78E0090088C2FC /* e_tls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = e_tls.c; path = ../../src/third_party/boringssl/src/crypto/cipher_extra/e_tls.c; sourceTree = "<group>"; };
 		785B04C62A78E0520088C2FC /* conf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = conf.c; path = ../../src/third_party/boringssl/src/crypto/conf/conf.c; sourceTree = "<group>"; };
 		785B04C92A78E0C30088C2FC /* cpu_aarch64_fuchsia.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu_aarch64_fuchsia.c; path = ../../src/third_party/boringssl/src/crypto/cpu_aarch64_fuchsia.c; sourceTree = "<group>"; };
-		785B04CA2A78E0C30088C2FC /* cpu_arm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu_arm.c; path = ../../src/third_party/boringssl/src/crypto/cpu_arm.c; sourceTree = "<group>"; };
 		785B04CB2A78E0C30088C2FC /* cpu_intel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu_intel.c; path = ../../src/third_party/boringssl/src/crypto/cpu_intel.c; sourceTree = "<group>"; };
 		785B04CC2A78E0C30088C2FC /* cpu_arm_linux.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu_arm_linux.c; path = ../../src/third_party/boringssl/src/crypto/cpu_arm_linux.c; sourceTree = "<group>"; };
 		785B04CD2A78E0C30088C2FC /* cpu_arm_linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpu_arm_linux.h; path = ../../src/third_party/boringssl/src/crypto/cpu_arm_linux.h; sourceTree = "<group>"; };
@@ -625,7 +623,6 @@
 				785B04D02A78E0C40088C2FC /* cpu_aarch64_win.c */,
 				785B04CC2A78E0C30088C2FC /* cpu_arm_linux.c */,
 				785B04CD2A78E0C30088C2FC /* cpu_arm_linux.h */,
-				785B04CA2A78E0C30088C2FC /* cpu_arm.c */,
 				785B04CB2A78E0C30088C2FC /* cpu_intel.c */,
 				785B04D12A78E0C40088C2FC /* crypto.c */,
 				785B04DE2A78E0E20088C2FC /* curve25519 */,
@@ -1433,7 +1430,6 @@
 				785B04BD2A78E0090088C2FC /* e_rc4.c in Sources */,
 				785B056B2A78E5050088C2FC /* forkunsafe.c in Sources */,
 				785B04992A78DF300088C2FC /* convert.c in Sources */,
-				785B04D32A78E0C40088C2FC /* cpu_arm.c in Sources */,
 				785B04D42A78E0C40088C2FC /* cpu_intel.c in Sources */,
 				788103852A85E84E004A94DB /* errno.c in Sources */,
 				785B05B52A78E6BB0088C2FC /* x509_cmp.c in Sources */,
@@ -1633,7 +1629,7 @@
 		785BFE282A77A4750088C2FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				EXCLUDED_ARCHS = "";
@@ -1661,7 +1657,7 @@
 		785BFE292A77A4750088C2FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWDVRPR444;
 				EXCLUDED_ARCHS = "";
