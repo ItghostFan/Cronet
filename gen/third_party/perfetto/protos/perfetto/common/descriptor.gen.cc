@@ -22,7 +22,7 @@ OneofOptions::OneofOptions(OneofOptions&&) noexcept = default;
 OneofOptions& OneofOptions::operator=(OneofOptions&&) = default;
 
 bool OneofOptions::operator==(const OneofOptions& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool OneofOptions::ParseFromArray(const void* raw, size_t size) {
@@ -68,9 +68,9 @@ EnumValueDescriptorProto::EnumValueDescriptorProto(EnumValueDescriptorProto&&) n
 EnumValueDescriptorProto& EnumValueDescriptorProto::operator=(EnumValueDescriptorProto&&) = default;
 
 bool EnumValueDescriptorProto::operator==(const EnumValueDescriptorProto& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && number_ == other.number_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(number_, other.number_);
 }
 
 bool EnumValueDescriptorProto::ParseFromArray(const void* raw, size_t size) {
@@ -132,10 +132,10 @@ EnumDescriptorProto::EnumDescriptorProto(EnumDescriptorProto&&) noexcept = defau
 EnumDescriptorProto& EnumDescriptorProto::operator=(EnumDescriptorProto&&) = default;
 
 bool EnumDescriptorProto::operator==(const EnumDescriptorProto& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && value_ == other.value_
-   && reserved_name_ == other.reserved_name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(value_, other.value_)
+   && ::protozero::internal::gen_helpers::EqualsField(reserved_name_, other.reserved_name_);
 }
 
 int EnumDescriptorProto::value_size() const { return static_cast<int>(value_.size()); }
@@ -212,9 +212,9 @@ OneofDescriptorProto::OneofDescriptorProto(OneofDescriptorProto&&) noexcept = de
 OneofDescriptorProto& OneofDescriptorProto::operator=(OneofDescriptorProto&&) = default;
 
 bool OneofDescriptorProto::operator==(const OneofDescriptorProto& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && options_ == other.options_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(options_, other.options_);
 }
 
 bool OneofDescriptorProto::ParseFromArray(const void* raw, size_t size) {
@@ -276,16 +276,16 @@ FieldDescriptorProto::FieldDescriptorProto(FieldDescriptorProto&&) noexcept = de
 FieldDescriptorProto& FieldDescriptorProto::operator=(FieldDescriptorProto&&) = default;
 
 bool FieldDescriptorProto::operator==(const FieldDescriptorProto& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && number_ == other.number_
-   && label_ == other.label_
-   && type_ == other.type_
-   && type_name_ == other.type_name_
-   && extendee_ == other.extendee_
-   && default_value_ == other.default_value_
-   && options_ == other.options_
-   && oneof_index_ == other.oneof_index_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(number_, other.number_)
+   && ::protozero::internal::gen_helpers::EqualsField(label_, other.label_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_name_, other.type_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(extendee_, other.extendee_)
+   && ::protozero::internal::gen_helpers::EqualsField(default_value_, other.default_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(options_, other.options_)
+   && ::protozero::internal::gen_helpers::EqualsField(oneof_index_, other.oneof_index_);
 }
 
 bool FieldDescriptorProto::ParseFromArray(const void* raw, size_t size) {
@@ -403,8 +403,8 @@ FieldOptions::FieldOptions(FieldOptions&&) noexcept = default;
 FieldOptions& FieldOptions::operator=(FieldOptions&&) = default;
 
 bool FieldOptions::operator==(const FieldOptions& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && packed_ == other.packed_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(packed_, other.packed_);
 }
 
 bool FieldOptions::ParseFromArray(const void* raw, size_t size) {
@@ -458,15 +458,15 @@ DescriptorProto::DescriptorProto(DescriptorProto&&) noexcept = default;
 DescriptorProto& DescriptorProto::operator=(DescriptorProto&&) = default;
 
 bool DescriptorProto::operator==(const DescriptorProto& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && field_ == other.field_
-   && extension_ == other.extension_
-   && nested_type_ == other.nested_type_
-   && enum_type_ == other.enum_type_
-   && oneof_decl_ == other.oneof_decl_
-   && reserved_range_ == other.reserved_range_
-   && reserved_name_ == other.reserved_name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_, other.field_)
+   && ::protozero::internal::gen_helpers::EqualsField(extension_, other.extension_)
+   && ::protozero::internal::gen_helpers::EqualsField(nested_type_, other.nested_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(enum_type_, other.enum_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(oneof_decl_, other.oneof_decl_)
+   && ::protozero::internal::gen_helpers::EqualsField(reserved_range_, other.reserved_range_)
+   && ::protozero::internal::gen_helpers::EqualsField(reserved_name_, other.reserved_name_);
 }
 
 int DescriptorProto::field_size() const { return static_cast<int>(field_.size()); }
@@ -608,9 +608,9 @@ DescriptorProto_ReservedRange::DescriptorProto_ReservedRange(DescriptorProto_Res
 DescriptorProto_ReservedRange& DescriptorProto_ReservedRange::operator=(DescriptorProto_ReservedRange&&) = default;
 
 bool DescriptorProto_ReservedRange::operator==(const DescriptorProto_ReservedRange& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && start_ == other.start_
-   && end_ == other.end_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_, other.start_)
+   && ::protozero::internal::gen_helpers::EqualsField(end_, other.end_);
 }
 
 bool DescriptorProto_ReservedRange::ParseFromArray(const void* raw, size_t size) {
@@ -672,15 +672,15 @@ FileDescriptorProto::FileDescriptorProto(FileDescriptorProto&&) noexcept = defau
 FileDescriptorProto& FileDescriptorProto::operator=(FileDescriptorProto&&) = default;
 
 bool FileDescriptorProto::operator==(const FileDescriptorProto& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && package_ == other.package_
-   && dependency_ == other.dependency_
-   && public_dependency_ == other.public_dependency_
-   && weak_dependency_ == other.weak_dependency_
-   && message_type_ == other.message_type_
-   && enum_type_ == other.enum_type_
-   && extension_ == other.extension_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(package_, other.package_)
+   && ::protozero::internal::gen_helpers::EqualsField(dependency_, other.dependency_)
+   && ::protozero::internal::gen_helpers::EqualsField(public_dependency_, other.public_dependency_)
+   && ::protozero::internal::gen_helpers::EqualsField(weak_dependency_, other.weak_dependency_)
+   && ::protozero::internal::gen_helpers::EqualsField(message_type_, other.message_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(enum_type_, other.enum_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(extension_, other.extension_);
 }
 
 int FileDescriptorProto::message_type_size() const { return static_cast<int>(message_type_.size()); }
@@ -811,8 +811,8 @@ FileDescriptorSet::FileDescriptorSet(FileDescriptorSet&&) noexcept = default;
 FileDescriptorSet& FileDescriptorSet::operator=(FileDescriptorSet&&) = default;
 
 bool FileDescriptorSet::operator==(const FileDescriptorSet& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && file_ == other.file_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(file_, other.file_);
 }
 
 int FileDescriptorSet::file_size() const { return static_cast<int>(file_.size()); }

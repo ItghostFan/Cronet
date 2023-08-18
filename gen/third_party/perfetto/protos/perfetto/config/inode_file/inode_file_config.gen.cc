@@ -22,13 +22,13 @@ InodeFileConfig::InodeFileConfig(InodeFileConfig&&) noexcept = default;
 InodeFileConfig& InodeFileConfig::operator=(InodeFileConfig&&) = default;
 
 bool InodeFileConfig::operator==(const InodeFileConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && scan_interval_ms_ == other.scan_interval_ms_
-   && scan_delay_ms_ == other.scan_delay_ms_
-   && scan_batch_size_ == other.scan_batch_size_
-   && do_not_scan_ == other.do_not_scan_
-   && scan_mount_points_ == other.scan_mount_points_
-   && mount_point_mapping_ == other.mount_point_mapping_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_interval_ms_, other.scan_interval_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_delay_ms_, other.scan_delay_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_batch_size_, other.scan_batch_size_)
+   && ::protozero::internal::gen_helpers::EqualsField(do_not_scan_, other.do_not_scan_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_mount_points_, other.scan_mount_points_)
+   && ::protozero::internal::gen_helpers::EqualsField(mount_point_mapping_, other.mount_point_mapping_);
 }
 
 int InodeFileConfig::mount_point_mapping_size() const { return static_cast<int>(mount_point_mapping_.size()); }
@@ -129,9 +129,9 @@ InodeFileConfig_MountPointMappingEntry::InodeFileConfig_MountPointMappingEntry(I
 InodeFileConfig_MountPointMappingEntry& InodeFileConfig_MountPointMappingEntry::operator=(InodeFileConfig_MountPointMappingEntry&&) = default;
 
 bool InodeFileConfig_MountPointMappingEntry::operator==(const InodeFileConfig_MountPointMappingEntry& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && mountpoint_ == other.mountpoint_
-   && scan_roots_ == other.scan_roots_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(mountpoint_, other.mountpoint_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_roots_, other.scan_roots_);
 }
 
 bool InodeFileConfig_MountPointMappingEntry::ParseFromArray(const void* raw, size_t size) {

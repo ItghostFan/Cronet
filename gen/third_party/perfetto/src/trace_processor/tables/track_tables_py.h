@@ -158,7 +158,8 @@ class TrackTable : public macros_internal::MacroTable {
 
    private:
     friend class TrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, TrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -512,7 +513,8 @@ class CounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class CounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -945,7 +947,8 @@ class CpuCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class CpuCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CpuCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1341,7 +1344,8 @@ class CpuTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class CpuTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CpuTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1771,7 +1775,8 @@ class EnergyCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class EnergyCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, EnergyCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2275,7 +2280,8 @@ class UidCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class UidCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, UidCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2716,7 +2722,8 @@ class EnergyPerUidCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class EnergyPerUidCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, EnergyPerUidCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3158,7 +3165,8 @@ class GpuCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class GpuCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, GpuCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3590,7 +3598,8 @@ class GpuTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class GpuTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, GpuTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -4062,7 +4071,8 @@ class IrqCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class IrqCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, IrqCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -4524,7 +4534,8 @@ class PerfCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class PerfCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, PerfCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5028,7 +5039,8 @@ class ProcessCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class ProcessCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ProcessCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5424,7 +5436,8 @@ class ProcessTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class ProcessTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ProcessTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5818,7 +5831,8 @@ class SoftirqCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class SoftirqCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SoftirqCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -6244,7 +6258,8 @@ class ThreadCounterTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class ThreadCounterTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ThreadCounterTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -6640,7 +6655,8 @@ class ThreadTrackTable : public macros_internal::MacroTable {
 
    private:
     friend class ThreadTrackTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ThreadTrackTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

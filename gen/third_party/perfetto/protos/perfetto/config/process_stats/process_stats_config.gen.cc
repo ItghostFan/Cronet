@@ -22,14 +22,14 @@ ProcessStatsConfig::ProcessStatsConfig(ProcessStatsConfig&&) noexcept = default;
 ProcessStatsConfig& ProcessStatsConfig::operator=(ProcessStatsConfig&&) = default;
 
 bool ProcessStatsConfig::operator==(const ProcessStatsConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && quirks_ == other.quirks_
-   && scan_all_processes_on_start_ == other.scan_all_processes_on_start_
-   && record_thread_names_ == other.record_thread_names_
-   && proc_stats_poll_ms_ == other.proc_stats_poll_ms_
-   && proc_stats_cache_ttl_ms_ == other.proc_stats_cache_ttl_ms_
-   && resolve_process_fds_ == other.resolve_process_fds_
-   && scan_smaps_rollup_ == other.scan_smaps_rollup_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(quirks_, other.quirks_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_all_processes_on_start_, other.scan_all_processes_on_start_)
+   && ::protozero::internal::gen_helpers::EqualsField(record_thread_names_, other.record_thread_names_)
+   && ::protozero::internal::gen_helpers::EqualsField(proc_stats_poll_ms_, other.proc_stats_poll_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(proc_stats_cache_ttl_ms_, other.proc_stats_cache_ttl_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(resolve_process_fds_, other.resolve_process_fds_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_smaps_rollup_, other.scan_smaps_rollup_);
 }
 
 bool ProcessStatsConfig::ParseFromArray(const void* raw, size_t size) {

@@ -22,9 +22,9 @@ ChromeThreadDescriptor::ChromeThreadDescriptor(ChromeThreadDescriptor&&) noexcep
 ChromeThreadDescriptor& ChromeThreadDescriptor::operator=(ChromeThreadDescriptor&&) = default;
 
 bool ChromeThreadDescriptor::operator==(const ChromeThreadDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && thread_type_ == other.thread_type_
-   && legacy_sort_index_ == other.legacy_sort_index_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_type_, other.thread_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_sort_index_, other.legacy_sort_index_);
 }
 
 bool ChromeThreadDescriptor::ParseFromArray(const void* raw, size_t size) {

@@ -22,15 +22,15 @@ ProcessDescriptor::ProcessDescriptor(ProcessDescriptor&&) noexcept = default;
 ProcessDescriptor& ProcessDescriptor::operator=(ProcessDescriptor&&) = default;
 
 bool ProcessDescriptor::operator==(const ProcessDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && pid_ == other.pid_
-   && cmdline_ == other.cmdline_
-   && process_name_ == other.process_name_
-   && process_priority_ == other.process_priority_
-   && start_timestamp_ns_ == other.start_timestamp_ns_
-   && chrome_process_type_ == other.chrome_process_type_
-   && legacy_sort_index_ == other.legacy_sort_index_
-   && process_labels_ == other.process_labels_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_, other.pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(cmdline_, other.cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_name_, other.process_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_priority_, other.process_priority_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_timestamp_ns_, other.start_timestamp_ns_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_process_type_, other.chrome_process_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_sort_index_, other.legacy_sort_index_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_labels_, other.process_labels_);
 }
 
 bool ProcessDescriptor::ParseFromArray(const void* raw, size_t size) {

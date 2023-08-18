@@ -22,9 +22,9 @@ ChromeUserEvent::ChromeUserEvent(ChromeUserEvent&&) noexcept = default;
 ChromeUserEvent& ChromeUserEvent::operator=(ChromeUserEvent&&) = default;
 
 bool ChromeUserEvent::operator==(const ChromeUserEvent& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && action_ == other.action_
-   && action_hash_ == other.action_hash_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(action_, other.action_)
+   && ::protozero::internal::gen_helpers::EqualsField(action_hash_, other.action_hash_);
 }
 
 bool ChromeUserEvent::ParseFromArray(const void* raw, size_t size) {

@@ -22,10 +22,10 @@ ChromeRendererSchedulerState::ChromeRendererSchedulerState(ChromeRendererSchedul
 ChromeRendererSchedulerState& ChromeRendererSchedulerState::operator=(ChromeRendererSchedulerState&&) = default;
 
 bool ChromeRendererSchedulerState::operator==(const ChromeRendererSchedulerState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && rail_mode_ == other.rail_mode_
-   && is_backgrounded_ == other.is_backgrounded_
-   && is_hidden_ == other.is_hidden_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(rail_mode_, other.rail_mode_)
+   && ::protozero::internal::gen_helpers::EqualsField(is_backgrounded_, other.is_backgrounded_)
+   && ::protozero::internal::gen_helpers::EqualsField(is_hidden_, other.is_hidden_);
 }
 
 bool ChromeRendererSchedulerState::ParseFromArray(const void* raw, size_t size) {

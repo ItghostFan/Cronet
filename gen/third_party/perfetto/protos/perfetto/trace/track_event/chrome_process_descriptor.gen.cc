@@ -22,12 +22,12 @@ ChromeProcessDescriptor::ChromeProcessDescriptor(ChromeProcessDescriptor&&) noex
 ChromeProcessDescriptor& ChromeProcessDescriptor::operator=(ChromeProcessDescriptor&&) = default;
 
 bool ChromeProcessDescriptor::operator==(const ChromeProcessDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && process_type_ == other.process_type_
-   && process_priority_ == other.process_priority_
-   && legacy_sort_index_ == other.legacy_sort_index_
-   && host_app_package_name_ == other.host_app_package_name_
-   && crash_trace_id_ == other.crash_trace_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_type_, other.process_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_priority_, other.process_priority_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_sort_index_, other.legacy_sort_index_)
+   && ::protozero::internal::gen_helpers::EqualsField(host_app_package_name_, other.host_app_package_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(crash_trace_id_, other.crash_trace_id_);
 }
 
 bool ChromeProcessDescriptor::ParseFromArray(const void* raw, size_t size) {

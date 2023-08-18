@@ -22,11 +22,11 @@ GpuCounterConfig::GpuCounterConfig(GpuCounterConfig&&) noexcept = default;
 GpuCounterConfig& GpuCounterConfig::operator=(GpuCounterConfig&&) = default;
 
 bool GpuCounterConfig::operator==(const GpuCounterConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && counter_period_ns_ == other.counter_period_ns_
-   && counter_ids_ == other.counter_ids_
-   && instrumented_sampling_ == other.instrumented_sampling_
-   && fix_gpu_clock_ == other.fix_gpu_clock_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_period_ns_, other.counter_period_ns_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_ids_, other.counter_ids_)
+   && ::protozero::internal::gen_helpers::EqualsField(instrumented_sampling_, other.instrumented_sampling_)
+   && ::protozero::internal::gen_helpers::EqualsField(fix_gpu_clock_, other.fix_gpu_clock_);
 }
 
 bool GpuCounterConfig::ParseFromArray(const void* raw, size_t size) {

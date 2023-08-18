@@ -22,10 +22,10 @@ CommitDataRequest::CommitDataRequest(CommitDataRequest&&) noexcept = default;
 CommitDataRequest& CommitDataRequest::operator=(CommitDataRequest&&) = default;
 
 bool CommitDataRequest::operator==(const CommitDataRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && chunks_to_move_ == other.chunks_to_move_
-   && chunks_to_patch_ == other.chunks_to_patch_
-   && flush_request_id_ == other.flush_request_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_to_move_, other.chunks_to_move_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_to_patch_, other.chunks_to_patch_)
+   && ::protozero::internal::gen_helpers::EqualsField(flush_request_id_, other.flush_request_id_);
 }
 
 int CommitDataRequest::chunks_to_move_size() const { return static_cast<int>(chunks_to_move_.size()); }
@@ -105,12 +105,12 @@ CommitDataRequest_ChunkToPatch::CommitDataRequest_ChunkToPatch(CommitDataRequest
 CommitDataRequest_ChunkToPatch& CommitDataRequest_ChunkToPatch::operator=(CommitDataRequest_ChunkToPatch&&) = default;
 
 bool CommitDataRequest_ChunkToPatch::operator==(const CommitDataRequest_ChunkToPatch& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && target_buffer_ == other.target_buffer_
-   && writer_id_ == other.writer_id_
-   && chunk_id_ == other.chunk_id_
-   && patches_ == other.patches_
-   && has_more_patches_ == other.has_more_patches_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_buffer_, other.target_buffer_)
+   && ::protozero::internal::gen_helpers::EqualsField(writer_id_, other.writer_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunk_id_, other.chunk_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(patches_, other.patches_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_more_patches_, other.has_more_patches_);
 }
 
 int CommitDataRequest_ChunkToPatch::patches_size() const { return static_cast<int>(patches_.size()); }
@@ -201,9 +201,9 @@ CommitDataRequest_ChunkToPatch_Patch::CommitDataRequest_ChunkToPatch_Patch(Commi
 CommitDataRequest_ChunkToPatch_Patch& CommitDataRequest_ChunkToPatch_Patch::operator=(CommitDataRequest_ChunkToPatch_Patch&&) = default;
 
 bool CommitDataRequest_ChunkToPatch_Patch::operator==(const CommitDataRequest_ChunkToPatch_Patch& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && offset_ == other.offset_
-   && data_ == other.data_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(offset_, other.offset_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_, other.data_);
 }
 
 bool CommitDataRequest_ChunkToPatch_Patch::ParseFromArray(const void* raw, size_t size) {
@@ -265,10 +265,11 @@ CommitDataRequest_ChunksToMove::CommitDataRequest_ChunksToMove(CommitDataRequest
 CommitDataRequest_ChunksToMove& CommitDataRequest_ChunksToMove::operator=(CommitDataRequest_ChunksToMove&&) = default;
 
 bool CommitDataRequest_ChunksToMove::operator==(const CommitDataRequest_ChunksToMove& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && page_ == other.page_
-   && chunk_ == other.chunk_
-   && target_buffer_ == other.target_buffer_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(page_, other.page_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunk_, other.chunk_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_buffer_, other.target_buffer_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_, other.data_);
 }
 
 bool CommitDataRequest_ChunksToMove::ParseFromArray(const void* raw, size_t size) {
@@ -289,6 +290,9 @@ bool CommitDataRequest_ChunksToMove::ParseFromArray(const void* raw, size_t size
         break;
       case 3 /* target_buffer */:
         field.get(&target_buffer_);
+        break;
+      case 4 /* data */:
+        field.get(&data_);
         break;
       default:
         field.SerializeAndAppendTo(&unknown_fields_);
@@ -324,6 +328,11 @@ void CommitDataRequest_ChunksToMove::Serialize(::protozero::Message* msg) const 
   // Field 3: target_buffer
   if (_has_field_[3]) {
     ::protozero::internal::gen_helpers::SerializeVarInt(3, target_buffer_, msg);
+  }
+
+  // Field 4: data
+  if (_has_field_[4]) {
+    ::protozero::internal::gen_helpers::SerializeString(4, data_, msg);
   }
 
   protozero::internal::gen_helpers::SerializeUnknownFields(unknown_fields_, msg);

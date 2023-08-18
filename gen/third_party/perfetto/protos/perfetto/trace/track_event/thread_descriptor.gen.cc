@@ -22,15 +22,15 @@ ThreadDescriptor::ThreadDescriptor(ThreadDescriptor&&) noexcept = default;
 ThreadDescriptor& ThreadDescriptor::operator=(ThreadDescriptor&&) = default;
 
 bool ThreadDescriptor::operator==(const ThreadDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && pid_ == other.pid_
-   && tid_ == other.tid_
-   && thread_name_ == other.thread_name_
-   && chrome_thread_type_ == other.chrome_thread_type_
-   && reference_timestamp_us_ == other.reference_timestamp_us_
-   && reference_thread_time_us_ == other.reference_thread_time_us_
-   && reference_thread_instruction_count_ == other.reference_thread_instruction_count_
-   && legacy_sort_index_ == other.legacy_sort_index_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_, other.pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(tid_, other.tid_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_name_, other.thread_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_thread_type_, other.chrome_thread_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(reference_timestamp_us_, other.reference_timestamp_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(reference_thread_time_us_, other.reference_thread_time_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(reference_thread_instruction_count_, other.reference_thread_instruction_count_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_sort_index_, other.legacy_sort_index_);
 }
 
 bool ThreadDescriptor::ParseFromArray(const void* raw, size_t size) {

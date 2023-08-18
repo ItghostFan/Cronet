@@ -22,10 +22,10 @@ ChromeWindowHandleEventInfo::ChromeWindowHandleEventInfo(ChromeWindowHandleEvent
 ChromeWindowHandleEventInfo& ChromeWindowHandleEventInfo::operator=(ChromeWindowHandleEventInfo&&) = default;
 
 bool ChromeWindowHandleEventInfo::operator==(const ChromeWindowHandleEventInfo& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && dpi_ == other.dpi_
-   && message_id_ == other.message_id_
-   && hwnd_ptr_ == other.hwnd_ptr_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(dpi_, other.dpi_)
+   && ::protozero::internal::gen_helpers::EqualsField(message_id_, other.message_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(hwnd_ptr_, other.hwnd_ptr_);
 }
 
 bool ChromeWindowHandleEventInfo::ParseFromArray(const void* raw, size_t size) {

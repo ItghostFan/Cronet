@@ -158,7 +158,8 @@ class FlowTable : public macros_internal::MacroTable {
 
    private:
     friend class FlowTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, FlowTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

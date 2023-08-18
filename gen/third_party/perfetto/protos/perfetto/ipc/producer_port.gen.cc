@@ -34,9 +34,11 @@
 #include "protos/perfetto/config/gpu/gpu_counter_config.gen.h"
 #include "protos/perfetto/config/ftrace/ftrace_config.gen.h"
 #include "protos/perfetto/config/chrome/chrome_config.gen.h"
+#include "protos/perfetto/config/android/surfaceflinger_transactions_config.gen.h"
 #include "protos/perfetto/config/android/surfaceflinger_layers_config.gen.h"
 #include "protos/perfetto/config/android/packages_list_config.gen.h"
 #include "protos/perfetto/config/android/network_trace_config.gen.h"
+#include "protos/perfetto/config/android/android_sdk_sysprop_guard_config.gen.h"
 #include "protos/perfetto/config/android/android_system_property_config.gen.h"
 #include "protos/perfetto/config/android/android_polled_state_config.gen.h"
 #include "protos/perfetto/config/android/android_log_config.gen.h"
@@ -56,7 +58,7 @@ SyncResponse::SyncResponse(SyncResponse&&) noexcept = default;
 SyncResponse& SyncResponse::operator=(SyncResponse&&) = default;
 
 bool SyncResponse::operator==(const SyncResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool SyncResponse::ParseFromArray(const void* raw, size_t size) {
@@ -102,7 +104,7 @@ SyncRequest::SyncRequest(SyncRequest&&) noexcept = default;
 SyncRequest& SyncRequest::operator=(SyncRequest&&) = default;
 
 bool SyncRequest::operator==(const SyncRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool SyncRequest::ParseFromArray(const void* raw, size_t size) {
@@ -148,13 +150,13 @@ GetAsyncCommandResponse::GetAsyncCommandResponse(GetAsyncCommandResponse&&) noex
 GetAsyncCommandResponse& GetAsyncCommandResponse::operator=(GetAsyncCommandResponse&&) = default;
 
 bool GetAsyncCommandResponse::operator==(const GetAsyncCommandResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && setup_tracing_ == other.setup_tracing_
-   && setup_data_source_ == other.setup_data_source_
-   && start_data_source_ == other.start_data_source_
-   && stop_data_source_ == other.stop_data_source_
-   && flush_ == other.flush_
-   && clear_incremental_state_ == other.clear_incremental_state_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(setup_tracing_, other.setup_tracing_)
+   && ::protozero::internal::gen_helpers::EqualsField(setup_data_source_, other.setup_data_source_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_data_source_, other.start_data_source_)
+   && ::protozero::internal::gen_helpers::EqualsField(stop_data_source_, other.stop_data_source_)
+   && ::protozero::internal::gen_helpers::EqualsField(flush_, other.flush_)
+   && ::protozero::internal::gen_helpers::EqualsField(clear_incremental_state_, other.clear_incremental_state_);
 }
 
 bool GetAsyncCommandResponse::ParseFromArray(const void* raw, size_t size) {
@@ -248,8 +250,8 @@ GetAsyncCommandResponse_ClearIncrementalState::GetAsyncCommandResponse_ClearIncr
 GetAsyncCommandResponse_ClearIncrementalState& GetAsyncCommandResponse_ClearIncrementalState::operator=(GetAsyncCommandResponse_ClearIncrementalState&&) = default;
 
 bool GetAsyncCommandResponse_ClearIncrementalState::operator==(const GetAsyncCommandResponse_ClearIncrementalState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_ids_ == other.data_source_ids_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_ids_, other.data_source_ids_);
 }
 
 bool GetAsyncCommandResponse_ClearIncrementalState::ParseFromArray(const void* raw, size_t size) {
@@ -305,9 +307,9 @@ GetAsyncCommandResponse_Flush::GetAsyncCommandResponse_Flush(GetAsyncCommandResp
 GetAsyncCommandResponse_Flush& GetAsyncCommandResponse_Flush::operator=(GetAsyncCommandResponse_Flush&&) = default;
 
 bool GetAsyncCommandResponse_Flush::operator==(const GetAsyncCommandResponse_Flush& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_ids_ == other.data_source_ids_
-   && request_id_ == other.request_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_ids_, other.data_source_ids_)
+   && ::protozero::internal::gen_helpers::EqualsField(request_id_, other.request_id_);
 }
 
 bool GetAsyncCommandResponse_Flush::ParseFromArray(const void* raw, size_t size) {
@@ -371,8 +373,8 @@ GetAsyncCommandResponse_StopDataSource::GetAsyncCommandResponse_StopDataSource(G
 GetAsyncCommandResponse_StopDataSource& GetAsyncCommandResponse_StopDataSource::operator=(GetAsyncCommandResponse_StopDataSource&&) = default;
 
 bool GetAsyncCommandResponse_StopDataSource::operator==(const GetAsyncCommandResponse_StopDataSource& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && instance_id_ == other.instance_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(instance_id_, other.instance_id_);
 }
 
 bool GetAsyncCommandResponse_StopDataSource::ParseFromArray(const void* raw, size_t size) {
@@ -426,9 +428,9 @@ GetAsyncCommandResponse_StartDataSource::GetAsyncCommandResponse_StartDataSource
 GetAsyncCommandResponse_StartDataSource& GetAsyncCommandResponse_StartDataSource::operator=(GetAsyncCommandResponse_StartDataSource&&) = default;
 
 bool GetAsyncCommandResponse_StartDataSource::operator==(const GetAsyncCommandResponse_StartDataSource& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && new_instance_id_ == other.new_instance_id_
-   && config_ == other.config_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(new_instance_id_, other.new_instance_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(config_, other.config_);
 }
 
 bool GetAsyncCommandResponse_StartDataSource::ParseFromArray(const void* raw, size_t size) {
@@ -490,9 +492,9 @@ GetAsyncCommandResponse_SetupDataSource::GetAsyncCommandResponse_SetupDataSource
 GetAsyncCommandResponse_SetupDataSource& GetAsyncCommandResponse_SetupDataSource::operator=(GetAsyncCommandResponse_SetupDataSource&&) = default;
 
 bool GetAsyncCommandResponse_SetupDataSource::operator==(const GetAsyncCommandResponse_SetupDataSource& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && new_instance_id_ == other.new_instance_id_
-   && config_ == other.config_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(new_instance_id_, other.new_instance_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(config_, other.config_);
 }
 
 bool GetAsyncCommandResponse_SetupDataSource::ParseFromArray(const void* raw, size_t size) {
@@ -554,9 +556,9 @@ GetAsyncCommandResponse_SetupTracing::GetAsyncCommandResponse_SetupTracing(GetAs
 GetAsyncCommandResponse_SetupTracing& GetAsyncCommandResponse_SetupTracing::operator=(GetAsyncCommandResponse_SetupTracing&&) = default;
 
 bool GetAsyncCommandResponse_SetupTracing::operator==(const GetAsyncCommandResponse_SetupTracing& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && shared_buffer_page_size_kb_ == other.shared_buffer_page_size_kb_
-   && shm_key_windows_ == other.shm_key_windows_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(shared_buffer_page_size_kb_, other.shared_buffer_page_size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(shm_key_windows_, other.shm_key_windows_);
 }
 
 bool GetAsyncCommandResponse_SetupTracing::ParseFromArray(const void* raw, size_t size) {
@@ -618,7 +620,7 @@ GetAsyncCommandRequest::GetAsyncCommandRequest(GetAsyncCommandRequest&&) noexcep
 GetAsyncCommandRequest& GetAsyncCommandRequest::operator=(GetAsyncCommandRequest&&) = default;
 
 bool GetAsyncCommandRequest::operator==(const GetAsyncCommandRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool GetAsyncCommandRequest::ParseFromArray(const void* raw, size_t size) {
@@ -664,7 +666,7 @@ ActivateTriggersResponse::ActivateTriggersResponse(ActivateTriggersResponse&&) n
 ActivateTriggersResponse& ActivateTriggersResponse::operator=(ActivateTriggersResponse&&) = default;
 
 bool ActivateTriggersResponse::operator==(const ActivateTriggersResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool ActivateTriggersResponse::ParseFromArray(const void* raw, size_t size) {
@@ -710,8 +712,8 @@ ActivateTriggersRequest::ActivateTriggersRequest(ActivateTriggersRequest&&) noex
 ActivateTriggersRequest& ActivateTriggersRequest::operator=(ActivateTriggersRequest&&) = default;
 
 bool ActivateTriggersRequest::operator==(const ActivateTriggersRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trigger_names_ == other.trigger_names_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trigger_names_, other.trigger_names_);
 }
 
 bool ActivateTriggersRequest::ParseFromArray(const void* raw, size_t size) {
@@ -767,7 +769,7 @@ NotifyDataSourceStoppedResponse::NotifyDataSourceStoppedResponse(NotifyDataSourc
 NotifyDataSourceStoppedResponse& NotifyDataSourceStoppedResponse::operator=(NotifyDataSourceStoppedResponse&&) = default;
 
 bool NotifyDataSourceStoppedResponse::operator==(const NotifyDataSourceStoppedResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool NotifyDataSourceStoppedResponse::ParseFromArray(const void* raw, size_t size) {
@@ -813,8 +815,8 @@ NotifyDataSourceStoppedRequest::NotifyDataSourceStoppedRequest(NotifyDataSourceS
 NotifyDataSourceStoppedRequest& NotifyDataSourceStoppedRequest::operator=(NotifyDataSourceStoppedRequest&&) = default;
 
 bool NotifyDataSourceStoppedRequest::operator==(const NotifyDataSourceStoppedRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_id_ == other.data_source_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_id_, other.data_source_id_);
 }
 
 bool NotifyDataSourceStoppedRequest::ParseFromArray(const void* raw, size_t size) {
@@ -868,7 +870,7 @@ NotifyDataSourceStartedResponse::NotifyDataSourceStartedResponse(NotifyDataSourc
 NotifyDataSourceStartedResponse& NotifyDataSourceStartedResponse::operator=(NotifyDataSourceStartedResponse&&) = default;
 
 bool NotifyDataSourceStartedResponse::operator==(const NotifyDataSourceStartedResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool NotifyDataSourceStartedResponse::ParseFromArray(const void* raw, size_t size) {
@@ -914,8 +916,8 @@ NotifyDataSourceStartedRequest::NotifyDataSourceStartedRequest(NotifyDataSourceS
 NotifyDataSourceStartedRequest& NotifyDataSourceStartedRequest::operator=(NotifyDataSourceStartedRequest&&) = default;
 
 bool NotifyDataSourceStartedRequest::operator==(const NotifyDataSourceStartedRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_id_ == other.data_source_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_id_, other.data_source_id_);
 }
 
 bool NotifyDataSourceStartedRequest::ParseFromArray(const void* raw, size_t size) {
@@ -969,7 +971,7 @@ CommitDataResponse::CommitDataResponse(CommitDataResponse&&) noexcept = default;
 CommitDataResponse& CommitDataResponse::operator=(CommitDataResponse&&) = default;
 
 bool CommitDataResponse::operator==(const CommitDataResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool CommitDataResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1015,7 +1017,7 @@ UnregisterTraceWriterResponse::UnregisterTraceWriterResponse(UnregisterTraceWrit
 UnregisterTraceWriterResponse& UnregisterTraceWriterResponse::operator=(UnregisterTraceWriterResponse&&) = default;
 
 bool UnregisterTraceWriterResponse::operator==(const UnregisterTraceWriterResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool UnregisterTraceWriterResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1061,8 +1063,8 @@ UnregisterTraceWriterRequest::UnregisterTraceWriterRequest(UnregisterTraceWriter
 UnregisterTraceWriterRequest& UnregisterTraceWriterRequest::operator=(UnregisterTraceWriterRequest&&) = default;
 
 bool UnregisterTraceWriterRequest::operator==(const UnregisterTraceWriterRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_writer_id_ == other.trace_writer_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_writer_id_, other.trace_writer_id_);
 }
 
 bool UnregisterTraceWriterRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1116,7 +1118,7 @@ RegisterTraceWriterResponse::RegisterTraceWriterResponse(RegisterTraceWriterResp
 RegisterTraceWriterResponse& RegisterTraceWriterResponse::operator=(RegisterTraceWriterResponse&&) = default;
 
 bool RegisterTraceWriterResponse::operator==(const RegisterTraceWriterResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool RegisterTraceWriterResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1162,9 +1164,9 @@ RegisterTraceWriterRequest::RegisterTraceWriterRequest(RegisterTraceWriterReques
 RegisterTraceWriterRequest& RegisterTraceWriterRequest::operator=(RegisterTraceWriterRequest&&) = default;
 
 bool RegisterTraceWriterRequest::operator==(const RegisterTraceWriterRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_writer_id_ == other.trace_writer_id_
-   && target_buffer_ == other.target_buffer_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_writer_id_, other.trace_writer_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_buffer_, other.target_buffer_);
 }
 
 bool RegisterTraceWriterRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1226,7 +1228,7 @@ UnregisterDataSourceResponse::UnregisterDataSourceResponse(UnregisterDataSourceR
 UnregisterDataSourceResponse& UnregisterDataSourceResponse::operator=(UnregisterDataSourceResponse&&) = default;
 
 bool UnregisterDataSourceResponse::operator==(const UnregisterDataSourceResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool UnregisterDataSourceResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1272,8 +1274,8 @@ UnregisterDataSourceRequest::UnregisterDataSourceRequest(UnregisterDataSourceReq
 UnregisterDataSourceRequest& UnregisterDataSourceRequest::operator=(UnregisterDataSourceRequest&&) = default;
 
 bool UnregisterDataSourceRequest::operator==(const UnregisterDataSourceRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_name_ == other.data_source_name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_name_, other.data_source_name_);
 }
 
 bool UnregisterDataSourceRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1327,7 +1329,7 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(UpdateDataSourceResponse&&) n
 UpdateDataSourceResponse& UpdateDataSourceResponse::operator=(UpdateDataSourceResponse&&) = default;
 
 bool UpdateDataSourceResponse::operator==(const UpdateDataSourceResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool UpdateDataSourceResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1373,8 +1375,8 @@ UpdateDataSourceRequest::UpdateDataSourceRequest(UpdateDataSourceRequest&&) noex
 UpdateDataSourceRequest& UpdateDataSourceRequest::operator=(UpdateDataSourceRequest&&) = default;
 
 bool UpdateDataSourceRequest::operator==(const UpdateDataSourceRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_descriptor_ == other.data_source_descriptor_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_descriptor_, other.data_source_descriptor_);
 }
 
 bool UpdateDataSourceRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1428,8 +1430,8 @@ RegisterDataSourceResponse::RegisterDataSourceResponse(RegisterDataSourceRespons
 RegisterDataSourceResponse& RegisterDataSourceResponse::operator=(RegisterDataSourceResponse&&) = default;
 
 bool RegisterDataSourceResponse::operator==(const RegisterDataSourceResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && error_ == other.error_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(error_, other.error_);
 }
 
 bool RegisterDataSourceResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1483,8 +1485,8 @@ RegisterDataSourceRequest::RegisterDataSourceRequest(RegisterDataSourceRequest&&
 RegisterDataSourceRequest& RegisterDataSourceRequest::operator=(RegisterDataSourceRequest&&) = default;
 
 bool RegisterDataSourceRequest::operator==(const RegisterDataSourceRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_source_descriptor_ == other.data_source_descriptor_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_descriptor_, other.data_source_descriptor_);
 }
 
 bool RegisterDataSourceRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1538,9 +1540,10 @@ InitializeConnectionResponse::InitializeConnectionResponse(InitializeConnectionR
 InitializeConnectionResponse& InitializeConnectionResponse::operator=(InitializeConnectionResponse&&) = default;
 
 bool InitializeConnectionResponse::operator==(const InitializeConnectionResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && using_shmem_provided_by_producer_ == other.using_shmem_provided_by_producer_
-   && direct_smb_patching_supported_ == other.direct_smb_patching_supported_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(using_shmem_provided_by_producer_, other.using_shmem_provided_by_producer_)
+   && ::protozero::internal::gen_helpers::EqualsField(direct_smb_patching_supported_, other.direct_smb_patching_supported_)
+   && ::protozero::internal::gen_helpers::EqualsField(use_shmem_emulation_, other.use_shmem_emulation_);
 }
 
 bool InitializeConnectionResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1558,6 +1561,9 @@ bool InitializeConnectionResponse::ParseFromArray(const void* raw, size_t size) 
         break;
       case 2 /* direct_smb_patching_supported */:
         field.get(&direct_smb_patching_supported_);
+        break;
+      case 3 /* use_shmem_emulation */:
+        field.get(&use_shmem_emulation_);
         break;
       default:
         field.SerializeAndAppendTo(&unknown_fields_);
@@ -1590,6 +1596,11 @@ void InitializeConnectionResponse::Serialize(::protozero::Message* msg) const {
     ::protozero::internal::gen_helpers::SerializeTinyVarInt(2, direct_smb_patching_supported_, msg);
   }
 
+  // Field 3: use_shmem_emulation
+  if (_has_field_[3]) {
+    ::protozero::internal::gen_helpers::SerializeTinyVarInt(3, use_shmem_emulation_, msg);
+  }
+
   protozero::internal::gen_helpers::SerializeUnknownFields(unknown_fields_, msg);
 }
 
@@ -1602,14 +1613,14 @@ InitializeConnectionRequest::InitializeConnectionRequest(InitializeConnectionReq
 InitializeConnectionRequest& InitializeConnectionRequest::operator=(InitializeConnectionRequest&&) = default;
 
 bool InitializeConnectionRequest::operator==(const InitializeConnectionRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && shared_memory_page_size_hint_bytes_ == other.shared_memory_page_size_hint_bytes_
-   && shared_memory_size_hint_bytes_ == other.shared_memory_size_hint_bytes_
-   && producer_name_ == other.producer_name_
-   && smb_scraping_mode_ == other.smb_scraping_mode_
-   && producer_provided_shmem_ == other.producer_provided_shmem_
-   && sdk_version_ == other.sdk_version_
-   && shm_key_windows_ == other.shm_key_windows_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(shared_memory_page_size_hint_bytes_, other.shared_memory_page_size_hint_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(shared_memory_size_hint_bytes_, other.shared_memory_size_hint_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_name_, other.producer_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(smb_scraping_mode_, other.smb_scraping_mode_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_provided_shmem_, other.producer_provided_shmem_)
+   && ::protozero::internal::gen_helpers::EqualsField(sdk_version_, other.sdk_version_)
+   && ::protozero::internal::gen_helpers::EqualsField(shm_key_windows_, other.shm_key_windows_);
 }
 
 bool InitializeConnectionRequest::ParseFromArray(const void* raw, size_t size) {

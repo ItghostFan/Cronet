@@ -27,39 +27,41 @@ DataSourceConfig::DataSourceConfig(DataSourceConfig&&) noexcept = default;
 DataSourceConfig& DataSourceConfig::operator=(DataSourceConfig&&) = default;
 
 bool DataSourceConfig::operator==(const DataSourceConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && target_buffer_ == other.target_buffer_
-   && trace_duration_ms_ == other.trace_duration_ms_
-   && prefer_suspend_clock_for_duration_ == other.prefer_suspend_clock_for_duration_
-   && stop_timeout_ms_ == other.stop_timeout_ms_
-   && enable_extra_guardrails_ == other.enable_extra_guardrails_
-   && session_initiator_ == other.session_initiator_
-   && tracing_session_id_ == other.tracing_session_id_
-   && ftrace_config_ == other.ftrace_config_
-   && inode_file_config_ == other.inode_file_config_
-   && process_stats_config_ == other.process_stats_config_
-   && sys_stats_config_ == other.sys_stats_config_
-   && heapprofd_config_ == other.heapprofd_config_
-   && java_hprof_config_ == other.java_hprof_config_
-   && android_power_config_ == other.android_power_config_
-   && android_log_config_ == other.android_log_config_
-   && gpu_counter_config_ == other.gpu_counter_config_
-   && android_game_intervention_list_config_ == other.android_game_intervention_list_config_
-   && packages_list_config_ == other.packages_list_config_
-   && perf_event_config_ == other.perf_event_config_
-   && vulkan_memory_config_ == other.vulkan_memory_config_
-   && track_event_config_ == other.track_event_config_
-   && android_polled_state_config_ == other.android_polled_state_config_
-   && android_system_property_config_ == other.android_system_property_config_
-   && statsd_tracing_config_ == other.statsd_tracing_config_
-   && system_info_config_ == other.system_info_config_
-   && chrome_config_ == other.chrome_config_
-   && interceptor_config_ == other.interceptor_config_
-   && network_packet_trace_config_ == other.network_packet_trace_config_
-   && surfaceflinger_layers_config_ == other.surfaceflinger_layers_config_
-   && legacy_config_ == other.legacy_config_
-   && for_testing_ == other.for_testing_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_buffer_, other.target_buffer_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_duration_ms_, other.trace_duration_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(prefer_suspend_clock_for_duration_, other.prefer_suspend_clock_for_duration_)
+   && ::protozero::internal::gen_helpers::EqualsField(stop_timeout_ms_, other.stop_timeout_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(enable_extra_guardrails_, other.enable_extra_guardrails_)
+   && ::protozero::internal::gen_helpers::EqualsField(session_initiator_, other.session_initiator_)
+   && ::protozero::internal::gen_helpers::EqualsField(tracing_session_id_, other.tracing_session_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(ftrace_config_, other.ftrace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(inode_file_config_, other.inode_file_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_stats_config_, other.process_stats_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(sys_stats_config_, other.sys_stats_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(heapprofd_config_, other.heapprofd_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(java_hprof_config_, other.java_hprof_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_power_config_, other.android_power_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_log_config_, other.android_log_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(gpu_counter_config_, other.gpu_counter_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_game_intervention_list_config_, other.android_game_intervention_list_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(packages_list_config_, other.packages_list_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(perf_event_config_, other.perf_event_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(vulkan_memory_config_, other.vulkan_memory_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(track_event_config_, other.track_event_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_polled_state_config_, other.android_polled_state_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_system_property_config_, other.android_system_property_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(statsd_tracing_config_, other.statsd_tracing_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(system_info_config_, other.system_info_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_config_, other.chrome_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(interceptor_config_, other.interceptor_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(network_packet_trace_config_, other.network_packet_trace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(surfaceflinger_layers_config_, other.surfaceflinger_layers_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(surfaceflinger_transactions_config_, other.surfaceflinger_transactions_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_sdk_sysprop_guard_config_, other.android_sdk_sysprop_guard_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_config_, other.legacy_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(for_testing_, other.for_testing_);
 }
 
 bool DataSourceConfig::ParseFromArray(const void* raw, size_t size) {
@@ -161,6 +163,12 @@ bool DataSourceConfig::ParseFromArray(const void* raw, size_t size) {
         break;
       case 121 /* surfaceflinger_layers_config */:
         ::protozero::internal::gen_helpers::DeserializeString(field, &surfaceflinger_layers_config_);
+        break;
+      case 123 /* surfaceflinger_transactions_config */:
+        ::protozero::internal::gen_helpers::DeserializeString(field, &surfaceflinger_transactions_config_);
+        break;
+      case 124 /* android_sdk_sysprop_guard_config */:
+        ::protozero::internal::gen_helpers::DeserializeString(field, &android_sdk_sysprop_guard_config_);
         break;
       case 1000 /* legacy_config */:
         ::protozero::internal::gen_helpers::DeserializeString(field, &legacy_config_);
@@ -337,6 +345,16 @@ void DataSourceConfig::Serialize(::protozero::Message* msg) const {
   // Field 121: surfaceflinger_layers_config
   if (_has_field_[121]) {
     msg->AppendString(121, surfaceflinger_layers_config_);
+  }
+
+  // Field 123: surfaceflinger_transactions_config
+  if (_has_field_[123]) {
+    msg->AppendString(123, surfaceflinger_transactions_config_);
+  }
+
+  // Field 124: android_sdk_sysprop_guard_config
+  if (_has_field_[124]) {
+    msg->AppendString(124, android_sdk_sysprop_guard_config_);
   }
 
   // Field 1000: legacy_config

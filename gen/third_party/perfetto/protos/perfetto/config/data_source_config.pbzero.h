@@ -20,6 +20,7 @@ class AndroidGameInterventionListConfig;
 class AndroidLogConfig;
 class AndroidPolledStateConfig;
 class AndroidPowerConfig;
+class AndroidSdkSyspropGuardConfig;
 class AndroidSystemPropertyConfig;
 class ChromeConfig;
 class FtraceConfig;
@@ -34,6 +35,7 @@ class PerfEventConfig;
 class ProcessStatsConfig;
 class StatsdTracingConfig;
 class SurfaceFlingerLayersConfig;
+class SurfaceFlingerTransactionsConfig;
 class SysStatsConfig;
 class SystemInfoConfig;
 class TestConfig;
@@ -69,7 +71,7 @@ const char* DataSourceConfig_SessionInitiator_Name(::perfetto::protos::pbzero::D
   return "PBZERO_UNKNOWN_ENUM_VALUE";
 }
 
-class DataSourceConfig_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/122, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+class DataSourceConfig_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/124, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
  public:
   DataSourceConfig_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
   explicit DataSourceConfig_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
@@ -134,6 +136,10 @@ class DataSourceConfig_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIE
   ::protozero::ConstBytes network_packet_trace_config() const { return at<120>().as_bytes(); }
   bool has_surfaceflinger_layers_config() const { return at<121>().valid(); }
   ::protozero::ConstBytes surfaceflinger_layers_config() const { return at<121>().as_bytes(); }
+  bool has_surfaceflinger_transactions_config() const { return at<123>().valid(); }
+  ::protozero::ConstBytes surfaceflinger_transactions_config() const { return at<123>().as_bytes(); }
+  bool has_android_sdk_sysprop_guard_config() const { return at<124>().valid(); }
+  ::protozero::ConstBytes android_sdk_sysprop_guard_config() const { return at<124>().as_bytes(); }
   // field legacy_config omitted because its id is too high
   // field for_testing omitted because its id is too high
 };
@@ -172,6 +178,8 @@ class DataSourceConfig : public ::protozero::Message {
     kInterceptorConfigFieldNumber = 115,
     kNetworkPacketTraceConfigFieldNumber = 120,
     kSurfaceflingerLayersConfigFieldNumber = 121,
+    kSurfaceflingerTransactionsConfigFieldNumber = 123,
+    kAndroidSdkSyspropGuardConfigFieldNumber = 124,
     kLegacyConfigFieldNumber = 1000,
     kForTestingFieldNumber = 1001,
   };
@@ -716,6 +724,42 @@ class DataSourceConfig : public ::protozero::Message {
 
   void set_surfaceflinger_layers_config_raw(const std::string& raw) {
     return AppendBytes(121, raw.data(), raw.size());
+  }
+
+
+  using FieldMetadata_SurfaceflingerTransactionsConfig =
+    ::protozero::proto_utils::FieldMetadata<
+      123,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kMessage,
+      SurfaceFlingerTransactionsConfig,
+      DataSourceConfig>;
+
+  static constexpr FieldMetadata_SurfaceflingerTransactionsConfig kSurfaceflingerTransactionsConfig{};
+  template <typename T = SurfaceFlingerTransactionsConfig> T* set_surfaceflinger_transactions_config() {
+    return BeginNestedMessage<T>(123);
+  }
+
+  void set_surfaceflinger_transactions_config_raw(const std::string& raw) {
+    return AppendBytes(123, raw.data(), raw.size());
+  }
+
+
+  using FieldMetadata_AndroidSdkSyspropGuardConfig =
+    ::protozero::proto_utils::FieldMetadata<
+      124,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kMessage,
+      AndroidSdkSyspropGuardConfig,
+      DataSourceConfig>;
+
+  static constexpr FieldMetadata_AndroidSdkSyspropGuardConfig kAndroidSdkSyspropGuardConfig{};
+  template <typename T = AndroidSdkSyspropGuardConfig> T* set_android_sdk_sysprop_guard_config() {
+    return BeginNestedMessage<T>(124);
+  }
+
+  void set_android_sdk_sysprop_guard_config_raw(const std::string& raw) {
+    return AppendBytes(124, raw.data(), raw.size());
   }
 
 

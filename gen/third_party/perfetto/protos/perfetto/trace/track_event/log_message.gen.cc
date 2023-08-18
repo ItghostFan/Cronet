@@ -22,9 +22,9 @@ LogMessageBody::LogMessageBody(LogMessageBody&&) noexcept = default;
 LogMessageBody& LogMessageBody::operator=(LogMessageBody&&) = default;
 
 bool LogMessageBody::operator==(const LogMessageBody& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && body_ == other.body_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(body_, other.body_);
 }
 
 bool LogMessageBody::ParseFromArray(const void* raw, size_t size) {
@@ -86,10 +86,10 @@ LogMessage::LogMessage(LogMessage&&) noexcept = default;
 LogMessage& LogMessage::operator=(LogMessage&&) = default;
 
 bool LogMessage::operator==(const LogMessage& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && source_location_iid_ == other.source_location_iid_
-   && body_iid_ == other.body_iid_
-   && prio_ == other.prio_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_location_iid_, other.source_location_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(body_iid_, other.body_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(prio_, other.prio_);
 }
 
 bool LogMessage::ParseFromArray(const void* raw, size_t size) {

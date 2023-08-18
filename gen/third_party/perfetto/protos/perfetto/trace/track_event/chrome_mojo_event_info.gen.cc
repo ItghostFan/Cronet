@@ -22,14 +22,14 @@ ChromeMojoEventInfo::ChromeMojoEventInfo(ChromeMojoEventInfo&&) noexcept = defau
 ChromeMojoEventInfo& ChromeMojoEventInfo::operator=(ChromeMojoEventInfo&&) = default;
 
 bool ChromeMojoEventInfo::operator==(const ChromeMojoEventInfo& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && watcher_notify_interface_tag_ == other.watcher_notify_interface_tag_
-   && ipc_hash_ == other.ipc_hash_
-   && mojo_interface_tag_ == other.mojo_interface_tag_
-   && mojo_interface_method_iid_ == other.mojo_interface_method_iid_
-   && is_reply_ == other.is_reply_
-   && payload_size_ == other.payload_size_
-   && data_num_bytes_ == other.data_num_bytes_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(watcher_notify_interface_tag_, other.watcher_notify_interface_tag_)
+   && ::protozero::internal::gen_helpers::EqualsField(ipc_hash_, other.ipc_hash_)
+   && ::protozero::internal::gen_helpers::EqualsField(mojo_interface_tag_, other.mojo_interface_tag_)
+   && ::protozero::internal::gen_helpers::EqualsField(mojo_interface_method_iid_, other.mojo_interface_method_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(is_reply_, other.is_reply_)
+   && ::protozero::internal::gen_helpers::EqualsField(payload_size_, other.payload_size_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_num_bytes_, other.data_num_bytes_);
 }
 
 bool ChromeMojoEventInfo::ParseFromArray(const void* raw, size_t size) {

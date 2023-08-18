@@ -22,9 +22,9 @@ ChromeLegacyIpc::ChromeLegacyIpc(ChromeLegacyIpc&&) noexcept = default;
 ChromeLegacyIpc& ChromeLegacyIpc::operator=(ChromeLegacyIpc&&) = default;
 
 bool ChromeLegacyIpc::operator==(const ChromeLegacyIpc& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && message_class_ == other.message_class_
-   && message_line_ == other.message_line_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(message_class_, other.message_class_)
+   && ::protozero::internal::gen_helpers::EqualsField(message_line_, other.message_line_);
 }
 
 bool ChromeLegacyIpc::ParseFromArray(const void* raw, size_t size) {

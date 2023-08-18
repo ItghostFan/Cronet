@@ -22,8 +22,8 @@ TrackEventRangeOfInterest::TrackEventRangeOfInterest(TrackEventRangeOfInterest&&
 TrackEventRangeOfInterest& TrackEventRangeOfInterest::operator=(TrackEventRangeOfInterest&&) = default;
 
 bool TrackEventRangeOfInterest::operator==(const TrackEventRangeOfInterest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && start_us_ == other.start_us_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_us_, other.start_us_);
 }
 
 bool TrackEventRangeOfInterest::ParseFromArray(const void* raw, size_t size) {

@@ -31,9 +31,11 @@
 #include "protos/perfetto/config/gpu/gpu_counter_config.gen.h"
 #include "protos/perfetto/config/ftrace/ftrace_config.gen.h"
 #include "protos/perfetto/config/chrome/chrome_config.gen.h"
+#include "protos/perfetto/config/android/surfaceflinger_transactions_config.gen.h"
 #include "protos/perfetto/config/android/surfaceflinger_layers_config.gen.h"
 #include "protos/perfetto/config/android/packages_list_config.gen.h"
 #include "protos/perfetto/config/android/network_trace_config.gen.h"
+#include "protos/perfetto/config/android/android_sdk_sysprop_guard_config.gen.h"
 #include "protos/perfetto/config/android/android_system_property_config.gen.h"
 #include "protos/perfetto/config/android/android_polled_state_config.gen.h"
 #include "protos/perfetto/config/android/android_log_config.gen.h"
@@ -53,18 +55,18 @@ StressTestConfig::StressTestConfig(StressTestConfig&&) noexcept = default;
 StressTestConfig& StressTestConfig::operator=(StressTestConfig&&) = default;
 
 bool StressTestConfig::operator==(const StressTestConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_config_ == other.trace_config_
-   && shmem_size_kb_ == other.shmem_size_kb_
-   && shmem_page_size_kb_ == other.shmem_page_size_kb_
-   && num_processes_ == other.num_processes_
-   && num_threads_ == other.num_threads_
-   && max_events_ == other.max_events_
-   && nesting_ == other.nesting_
-   && steady_state_timings_ == other.steady_state_timings_
-   && burst_period_ms_ == other.burst_period_ms_
-   && burst_duration_ms_ == other.burst_duration_ms_
-   && burst_timings_ == other.burst_timings_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_config_, other.trace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(shmem_size_kb_, other.shmem_size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(shmem_page_size_kb_, other.shmem_page_size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(num_processes_, other.num_processes_)
+   && ::protozero::internal::gen_helpers::EqualsField(num_threads_, other.num_threads_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_events_, other.max_events_)
+   && ::protozero::internal::gen_helpers::EqualsField(nesting_, other.nesting_)
+   && ::protozero::internal::gen_helpers::EqualsField(steady_state_timings_, other.steady_state_timings_)
+   && ::protozero::internal::gen_helpers::EqualsField(burst_period_ms_, other.burst_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(burst_duration_ms_, other.burst_duration_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(burst_timings_, other.burst_timings_);
 }
 
 bool StressTestConfig::ParseFromArray(const void* raw, size_t size) {
@@ -198,12 +200,12 @@ StressTestConfig_WriterTiming::StressTestConfig_WriterTiming(StressTestConfig_Wr
 StressTestConfig_WriterTiming& StressTestConfig_WriterTiming::operator=(StressTestConfig_WriterTiming&&) = default;
 
 bool StressTestConfig_WriterTiming::operator==(const StressTestConfig_WriterTiming& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && payload_mean_ == other.payload_mean_
-   && payload_stddev_ == other.payload_stddev_
-   && rate_mean_ == other.rate_mean_
-   && rate_stddev_ == other.rate_stddev_
-   && payload_write_time_ms_ == other.payload_write_time_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(payload_mean_, other.payload_mean_)
+   && ::protozero::internal::gen_helpers::EqualsField(payload_stddev_, other.payload_stddev_)
+   && ::protozero::internal::gen_helpers::EqualsField(rate_mean_, other.rate_mean_)
+   && ::protozero::internal::gen_helpers::EqualsField(rate_stddev_, other.rate_stddev_)
+   && ::protozero::internal::gen_helpers::EqualsField(payload_write_time_ms_, other.payload_write_time_ms_);
 }
 
 bool StressTestConfig_WriterTiming::ParseFromArray(const void* raw, size_t size) {

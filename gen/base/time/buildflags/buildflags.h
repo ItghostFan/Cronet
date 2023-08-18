@@ -6,6 +6,6 @@
 
 #include "build/buildflag.h" // IWYU pragma: export
 
-#define BUILDFLAG_INTERNAL_ENABLE_MACH_ABSOLUTE_TIME_TICKS() (0)
+#define BUILDFLAG_INTERNAL_ENABLE_MACH_ABSOLUTE_TIME_TICKS() (1)
 
 #endif  // BASE_TIME_BUILDFLAGS_BUILDFLAGS_H_

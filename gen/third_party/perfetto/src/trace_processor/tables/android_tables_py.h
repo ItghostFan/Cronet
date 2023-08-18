@@ -194,7 +194,8 @@ class AndroidLogTable : public macros_internal::MacroTable {
 
    private:
     friend class AndroidLogTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, AndroidLogTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -580,7 +581,8 @@ class AndroidDumpstateTable : public macros_internal::MacroTable {
 
    private:
     friend class AndroidDumpstateTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, AndroidDumpstateTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1128,7 +1130,8 @@ class AndroidGameInterventionListTable : public macros_internal::MacroTable {
 
    private:
     friend class AndroidGameInterventionListTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, AndroidGameInterventionListTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

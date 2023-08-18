@@ -22,11 +22,11 @@ SourceLocation::SourceLocation(SourceLocation&&) noexcept = default;
 SourceLocation& SourceLocation::operator=(SourceLocation&&) = default;
 
 bool SourceLocation::operator==(const SourceLocation& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && file_name_ == other.file_name_
-   && function_name_ == other.function_name_
-   && line_number_ == other.line_number_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(file_name_, other.file_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(function_name_, other.function_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(line_number_, other.line_number_);
 }
 
 bool SourceLocation::ParseFromArray(const void* raw, size_t size) {
@@ -104,10 +104,10 @@ UnsymbolizedSourceLocation::UnsymbolizedSourceLocation(UnsymbolizedSourceLocatio
 UnsymbolizedSourceLocation& UnsymbolizedSourceLocation::operator=(UnsymbolizedSourceLocation&&) = default;
 
 bool UnsymbolizedSourceLocation::operator==(const UnsymbolizedSourceLocation& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && mapping_id_ == other.mapping_id_
-   && rel_pc_ == other.rel_pc_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(mapping_id_, other.mapping_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(rel_pc_, other.rel_pc_);
 }
 
 bool UnsymbolizedSourceLocation::ParseFromArray(const void* raw, size_t size) {

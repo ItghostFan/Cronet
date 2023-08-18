@@ -22,32 +22,32 @@ HeapprofdConfig::HeapprofdConfig(HeapprofdConfig&&) noexcept = default;
 HeapprofdConfig& HeapprofdConfig::operator=(HeapprofdConfig&&) = default;
 
 bool HeapprofdConfig::operator==(const HeapprofdConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && sampling_interval_bytes_ == other.sampling_interval_bytes_
-   && adaptive_sampling_shmem_threshold_ == other.adaptive_sampling_shmem_threshold_
-   && adaptive_sampling_max_sampling_interval_bytes_ == other.adaptive_sampling_max_sampling_interval_bytes_
-   && process_cmdline_ == other.process_cmdline_
-   && pid_ == other.pid_
-   && target_installed_by_ == other.target_installed_by_
-   && heaps_ == other.heaps_
-   && exclude_heaps_ == other.exclude_heaps_
-   && stream_allocations_ == other.stream_allocations_
-   && heap_sampling_intervals_ == other.heap_sampling_intervals_
-   && all_heaps_ == other.all_heaps_
-   && all_ == other.all_
-   && min_anonymous_memory_kb_ == other.min_anonymous_memory_kb_
-   && max_heapprofd_memory_kb_ == other.max_heapprofd_memory_kb_
-   && max_heapprofd_cpu_secs_ == other.max_heapprofd_cpu_secs_
-   && skip_symbol_prefix_ == other.skip_symbol_prefix_
-   && continuous_dump_config_ == other.continuous_dump_config_
-   && shmem_size_bytes_ == other.shmem_size_bytes_
-   && block_client_ == other.block_client_
-   && block_client_timeout_us_ == other.block_client_timeout_us_
-   && no_startup_ == other.no_startup_
-   && no_running_ == other.no_running_
-   && dump_at_max_ == other.dump_at_max_
-   && disable_fork_teardown_ == other.disable_fork_teardown_
-   && disable_vfork_detection_ == other.disable_vfork_detection_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(sampling_interval_bytes_, other.sampling_interval_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(adaptive_sampling_shmem_threshold_, other.adaptive_sampling_shmem_threshold_)
+   && ::protozero::internal::gen_helpers::EqualsField(adaptive_sampling_max_sampling_interval_bytes_, other.adaptive_sampling_max_sampling_interval_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_cmdline_, other.process_cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_, other.pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_installed_by_, other.target_installed_by_)
+   && ::protozero::internal::gen_helpers::EqualsField(heaps_, other.heaps_)
+   && ::protozero::internal::gen_helpers::EqualsField(exclude_heaps_, other.exclude_heaps_)
+   && ::protozero::internal::gen_helpers::EqualsField(stream_allocations_, other.stream_allocations_)
+   && ::protozero::internal::gen_helpers::EqualsField(heap_sampling_intervals_, other.heap_sampling_intervals_)
+   && ::protozero::internal::gen_helpers::EqualsField(all_heaps_, other.all_heaps_)
+   && ::protozero::internal::gen_helpers::EqualsField(all_, other.all_)
+   && ::protozero::internal::gen_helpers::EqualsField(min_anonymous_memory_kb_, other.min_anonymous_memory_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_heapprofd_memory_kb_, other.max_heapprofd_memory_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_heapprofd_cpu_secs_, other.max_heapprofd_cpu_secs_)
+   && ::protozero::internal::gen_helpers::EqualsField(skip_symbol_prefix_, other.skip_symbol_prefix_)
+   && ::protozero::internal::gen_helpers::EqualsField(continuous_dump_config_, other.continuous_dump_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(shmem_size_bytes_, other.shmem_size_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(block_client_, other.block_client_)
+   && ::protozero::internal::gen_helpers::EqualsField(block_client_timeout_us_, other.block_client_timeout_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(no_startup_, other.no_startup_)
+   && ::protozero::internal::gen_helpers::EqualsField(no_running_, other.no_running_)
+   && ::protozero::internal::gen_helpers::EqualsField(dump_at_max_, other.dump_at_max_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_fork_teardown_, other.disable_fork_teardown_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_vfork_detection_, other.disable_vfork_detection_);
 }
 
 bool HeapprofdConfig::ParseFromArray(const void* raw, size_t size) {
@@ -307,9 +307,9 @@ HeapprofdConfig_ContinuousDumpConfig::HeapprofdConfig_ContinuousDumpConfig(Heapp
 HeapprofdConfig_ContinuousDumpConfig& HeapprofdConfig_ContinuousDumpConfig::operator=(HeapprofdConfig_ContinuousDumpConfig&&) = default;
 
 bool HeapprofdConfig_ContinuousDumpConfig::operator==(const HeapprofdConfig_ContinuousDumpConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && dump_phase_ms_ == other.dump_phase_ms_
-   && dump_interval_ms_ == other.dump_interval_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(dump_phase_ms_, other.dump_phase_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(dump_interval_ms_, other.dump_interval_ms_);
 }
 
 bool HeapprofdConfig_ContinuousDumpConfig::ParseFromArray(const void* raw, size_t size) {

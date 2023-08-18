@@ -22,9 +22,9 @@ ChromeMessagePump::ChromeMessagePump(ChromeMessagePump&&) noexcept = default;
 ChromeMessagePump& ChromeMessagePump::operator=(ChromeMessagePump&&) = default;
 
 bool ChromeMessagePump::operator==(const ChromeMessagePump& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && sent_messages_in_queue_ == other.sent_messages_in_queue_
-   && io_handler_location_iid_ == other.io_handler_location_iid_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(sent_messages_in_queue_, other.sent_messages_in_queue_)
+   && ::protozero::internal::gen_helpers::EqualsField(io_handler_location_iid_, other.io_handler_location_iid_);
 }
 
 bool ChromeMessagePump::ParseFromArray(const void* raw, size_t size) {

@@ -22,14 +22,14 @@ ChromeLatencyInfo::ChromeLatencyInfo(ChromeLatencyInfo&&) noexcept = default;
 ChromeLatencyInfo& ChromeLatencyInfo::operator=(ChromeLatencyInfo&&) = default;
 
 bool ChromeLatencyInfo::operator==(const ChromeLatencyInfo& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_id_ == other.trace_id_
-   && step_ == other.step_
-   && frame_tree_node_id_ == other.frame_tree_node_id_
-   && component_info_ == other.component_info_
-   && is_coalesced_ == other.is_coalesced_
-   && gesture_scroll_id_ == other.gesture_scroll_id_
-   && touch_id_ == other.touch_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_id_, other.trace_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(step_, other.step_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_tree_node_id_, other.frame_tree_node_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(component_info_, other.component_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(is_coalesced_, other.is_coalesced_)
+   && ::protozero::internal::gen_helpers::EqualsField(gesture_scroll_id_, other.gesture_scroll_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(touch_id_, other.touch_id_);
 }
 
 int ChromeLatencyInfo::component_info_size() const { return static_cast<int>(component_info_.size()); }
@@ -136,9 +136,9 @@ ChromeLatencyInfo_ComponentInfo::ChromeLatencyInfo_ComponentInfo(ChromeLatencyIn
 ChromeLatencyInfo_ComponentInfo& ChromeLatencyInfo_ComponentInfo::operator=(ChromeLatencyInfo_ComponentInfo&&) = default;
 
 bool ChromeLatencyInfo_ComponentInfo::operator==(const ChromeLatencyInfo_ComponentInfo& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && component_type_ == other.component_type_
-   && time_us_ == other.time_us_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(component_type_, other.component_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(time_us_, other.time_us_);
 }
 
 bool ChromeLatencyInfo_ComponentInfo::ParseFromArray(const void* raw, size_t size) {

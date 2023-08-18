@@ -176,7 +176,8 @@ class ExperimentalProtoPathTable : public macros_internal::MacroTable {
 
    private:
     friend class ExperimentalProtoPathTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ExperimentalProtoPathTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -571,7 +572,8 @@ class ExperimentalProtoContentTable : public macros_internal::MacroTable {
 
    private:
     friend class ExperimentalProtoContentTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ExperimentalProtoContentTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

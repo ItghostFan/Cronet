@@ -749,6 +749,26 @@ inline const std::string& SystemProfileProto_ClientSideSamplingStatus_Name(T enu
 }
 bool SystemProfileProto_ClientSideSamplingStatus_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SystemProfileProto_ClientSideSamplingStatus* value);
+enum SystemProfileProto_MetricsFilteringStatus : int {
+  SystemProfileProto_MetricsFilteringStatus_METRICS_UNKNOWN = 0,
+  SystemProfileProto_MetricsFilteringStatus_METRICS_ALL = 1,
+  SystemProfileProto_MetricsFilteringStatus_METRICS_ONLY_CRITICAL = 2
+};
+bool SystemProfileProto_MetricsFilteringStatus_IsValid(int value);
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_MIN = SystemProfileProto_MetricsFilteringStatus_METRICS_UNKNOWN;
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_MAX = SystemProfileProto_MetricsFilteringStatus_METRICS_ONLY_CRITICAL;
+constexpr int SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_ARRAYSIZE = SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_MAX + 1;
+
+const std::string& SystemProfileProto_MetricsFilteringStatus_Name(SystemProfileProto_MetricsFilteringStatus value);
+template<typename T>
+inline const std::string& SystemProfileProto_MetricsFilteringStatus_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, SystemProfileProto_MetricsFilteringStatus>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function SystemProfileProto_MetricsFilteringStatus_Name.");
+  return SystemProfileProto_MetricsFilteringStatus_Name(static_cast<SystemProfileProto_MetricsFilteringStatus>(enum_t_value));
+}
+bool SystemProfileProto_MetricsFilteringStatus_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SystemProfileProto_MetricsFilteringStatus* value);
 enum SystemProfileProto_InstallerPackage : int {
   SystemProfileProto_InstallerPackage_INSTALLER_PACKAGE_UNKNOWN = 0,
   SystemProfileProto_InstallerPackage_INSTALLER_PACKAGE_NONE = 1,
@@ -770,6 +790,27 @@ inline const std::string& SystemProfileProto_InstallerPackage_Name(T enum_t_valu
 }
 bool SystemProfileProto_InstallerPackage_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SystemProfileProto_InstallerPackage* value);
+enum SystemProfileProto_LTSChannel : int {
+  SystemProfileProto_LTSChannel_LTS_CHANNEL_UNKNOWN = 0,
+  SystemProfileProto_LTSChannel_LTS_CHANNEL_STABLE = 1,
+  SystemProfileProto_LTSChannel_LTS_CHANNEL_LTC = 2,
+  SystemProfileProto_LTSChannel_LTS_CHANNEL_LTS = 3
+};
+bool SystemProfileProto_LTSChannel_IsValid(int value);
+constexpr SystemProfileProto_LTSChannel SystemProfileProto_LTSChannel_LTSChannel_MIN = SystemProfileProto_LTSChannel_LTS_CHANNEL_UNKNOWN;
+constexpr SystemProfileProto_LTSChannel SystemProfileProto_LTSChannel_LTSChannel_MAX = SystemProfileProto_LTSChannel_LTS_CHANNEL_LTS;
+constexpr int SystemProfileProto_LTSChannel_LTSChannel_ARRAYSIZE = SystemProfileProto_LTSChannel_LTSChannel_MAX + 1;
+
+const std::string& SystemProfileProto_LTSChannel_Name(SystemProfileProto_LTSChannel value);
+template<typename T>
+inline const std::string& SystemProfileProto_LTSChannel_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, SystemProfileProto_LTSChannel>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function SystemProfileProto_LTSChannel_Name.");
+  return SystemProfileProto_LTSChannel_Name(static_cast<SystemProfileProto_LTSChannel>(enum_t_value));
+}
+bool SystemProfileProto_LTSChannel_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SystemProfileProto_LTSChannel* value);
 // ===================================================================
 
 class SystemProfileProto_ClonedInstallInfo final :
@@ -2808,6 +2849,7 @@ class SystemProfileProto_Hardware final :
     kFullHardwareClassFieldNumber = 18,
     kAppCpuArchitectureFieldNumber = 21,
     kCellularDeviceVariantFieldNumber = 24,
+    kTpmRwFirmwareVersionFieldNumber = 27,
     kGpuFieldNumber = 8,
     kCpuFieldNumber = 13,
     kAppDriveFieldNumber = 16,
@@ -2932,6 +2974,24 @@ class SystemProfileProto_Hardware final :
   const std::string& _internal_cellular_device_variant() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_cellular_device_variant(const std::string& value);
   std::string* _internal_mutable_cellular_device_variant();
+  public:
+
+  // optional string tpm_rw_firmware_version = 27;
+  bool has_tpm_rw_firmware_version() const;
+  private:
+  bool _internal_has_tpm_rw_firmware_version() const;
+  public:
+  void clear_tpm_rw_firmware_version();
+  const std::string& tpm_rw_firmware_version() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_tpm_rw_firmware_version(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_tpm_rw_firmware_version();
+  PROTOBUF_NODISCARD std::string* release_tpm_rw_firmware_version();
+  void set_allocated_tpm_rw_firmware_version(std::string* tpm_rw_firmware_version);
+  private:
+  const std::string& _internal_tpm_rw_firmware_version() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_tpm_rw_firmware_version(const std::string& value);
+  std::string* _internal_mutable_tpm_rw_firmware_version();
   public:
 
   // optional .metrics.SystemProfileProto.Hardware.Graphics gpu = 8;
@@ -3195,6 +3255,7 @@ class SystemProfileProto_Hardware final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr full_hardware_class_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr app_cpu_architecture_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cellular_device_variant_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tpm_rw_firmware_version_;
   ::metrics::SystemProfileProto_Hardware_Graphics* gpu_;
   ::metrics::SystemProfileProto_Hardware_CPU* cpu_;
   ::metrics::SystemProfileProto_Hardware_Drive* app_drive_;
@@ -7148,6 +7209,34 @@ class SystemProfileProto final :
     return SystemProfileProto_ClientSideSamplingStatus_Parse(name, value);
   }
 
+  typedef SystemProfileProto_MetricsFilteringStatus MetricsFilteringStatus;
+  static constexpr MetricsFilteringStatus METRICS_UNKNOWN =
+    SystemProfileProto_MetricsFilteringStatus_METRICS_UNKNOWN;
+  static constexpr MetricsFilteringStatus METRICS_ALL =
+    SystemProfileProto_MetricsFilteringStatus_METRICS_ALL;
+  static constexpr MetricsFilteringStatus METRICS_ONLY_CRITICAL =
+    SystemProfileProto_MetricsFilteringStatus_METRICS_ONLY_CRITICAL;
+  static inline bool MetricsFilteringStatus_IsValid(int value) {
+    return SystemProfileProto_MetricsFilteringStatus_IsValid(value);
+  }
+  static constexpr MetricsFilteringStatus MetricsFilteringStatus_MIN =
+    SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_MIN;
+  static constexpr MetricsFilteringStatus MetricsFilteringStatus_MAX =
+    SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_MAX;
+  static constexpr int MetricsFilteringStatus_ARRAYSIZE =
+    SystemProfileProto_MetricsFilteringStatus_MetricsFilteringStatus_ARRAYSIZE;
+  template<typename T>
+  static inline const std::string& MetricsFilteringStatus_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, MetricsFilteringStatus>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function MetricsFilteringStatus_Name.");
+    return SystemProfileProto_MetricsFilteringStatus_Name(enum_t_value);
+  }
+  static inline bool MetricsFilteringStatus_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      MetricsFilteringStatus* value) {
+    return SystemProfileProto_MetricsFilteringStatus_Parse(name, value);
+  }
+
   typedef SystemProfileProto_InstallerPackage InstallerPackage;
   static constexpr InstallerPackage INSTALLER_PACKAGE_UNKNOWN =
     SystemProfileProto_InstallerPackage_INSTALLER_PACKAGE_UNKNOWN;
@@ -7176,6 +7265,36 @@ class SystemProfileProto final :
   static inline bool InstallerPackage_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
       InstallerPackage* value) {
     return SystemProfileProto_InstallerPackage_Parse(name, value);
+  }
+
+  typedef SystemProfileProto_LTSChannel LTSChannel;
+  static constexpr LTSChannel LTS_CHANNEL_UNKNOWN =
+    SystemProfileProto_LTSChannel_LTS_CHANNEL_UNKNOWN;
+  static constexpr LTSChannel LTS_CHANNEL_STABLE =
+    SystemProfileProto_LTSChannel_LTS_CHANNEL_STABLE;
+  static constexpr LTSChannel LTS_CHANNEL_LTC =
+    SystemProfileProto_LTSChannel_LTS_CHANNEL_LTC;
+  static constexpr LTSChannel LTS_CHANNEL_LTS =
+    SystemProfileProto_LTSChannel_LTS_CHANNEL_LTS;
+  static inline bool LTSChannel_IsValid(int value) {
+    return SystemProfileProto_LTSChannel_IsValid(value);
+  }
+  static constexpr LTSChannel LTSChannel_MIN =
+    SystemProfileProto_LTSChannel_LTSChannel_MIN;
+  static constexpr LTSChannel LTSChannel_MAX =
+    SystemProfileProto_LTSChannel_LTSChannel_MAX;
+  static constexpr int LTSChannel_ARRAYSIZE =
+    SystemProfileProto_LTSChannel_LTSChannel_ARRAYSIZE;
+  template<typename T>
+  static inline const std::string& LTSChannel_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, LTSChannel>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function LTSChannel_Name.");
+    return SystemProfileProto_LTSChannel_Name(enum_t_value);
+  }
+  static inline bool LTSChannel_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      LTSChannel* value) {
+    return SystemProfileProto_LTSChannel_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
@@ -7220,6 +7339,8 @@ class SystemProfileProto final :
     kPseudoLowEntropySourceFieldNumber = 37,
     kAppPackageNameAllowlistFilterFieldNumber = 42,
     kClientSideSamplingStatusFieldNumber = 43,
+    kMetricsFilteringStatusFieldNumber = 44,
+    kLtsChannelFieldNumber = 45,
   };
   // repeated .metrics.SystemProfileProto.FieldTrial field_trial = 9;
   int field_trial_size() const;
@@ -7851,6 +7972,32 @@ class SystemProfileProto final :
   void _internal_set_client_side_sampling_status(::metrics::SystemProfileProto_ClientSideSamplingStatus value);
   public:
 
+  // optional .metrics.SystemProfileProto.MetricsFilteringStatus metrics_filtering_status = 44;
+  bool has_metrics_filtering_status() const;
+  private:
+  bool _internal_has_metrics_filtering_status() const;
+  public:
+  void clear_metrics_filtering_status();
+  ::metrics::SystemProfileProto_MetricsFilteringStatus metrics_filtering_status() const;
+  void set_metrics_filtering_status(::metrics::SystemProfileProto_MetricsFilteringStatus value);
+  private:
+  ::metrics::SystemProfileProto_MetricsFilteringStatus _internal_metrics_filtering_status() const;
+  void _internal_set_metrics_filtering_status(::metrics::SystemProfileProto_MetricsFilteringStatus value);
+  public:
+
+  // optional .metrics.SystemProfileProto.LTSChannel lts_channel = 45;
+  bool has_lts_channel() const;
+  private:
+  bool _internal_has_lts_channel() const;
+  public:
+  void clear_lts_channel();
+  ::metrics::SystemProfileProto_LTSChannel lts_channel() const;
+  void set_lts_channel(::metrics::SystemProfileProto_LTSChannel value);
+  private:
+  ::metrics::SystemProfileProto_LTSChannel _internal_lts_channel() const;
+  void _internal_set_lts_channel(::metrics::SystemProfileProto_LTSChannel value);
+  public:
+
   // @@protoc_insertion_point(class_scope:metrics.SystemProfileProto)
  private:
   class _Internal;
@@ -7858,7 +8005,7 @@ class SystemProfileProto final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<2> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::metrics::SystemProfileProto_FieldTrial > field_trial_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::metrics::SystemProfileProto_ExternalAudioVideoDevice > external_audio_video_device_;
@@ -7899,6 +8046,8 @@ class SystemProfileProto final :
   int32_t pseudo_low_entropy_source_;
   int app_package_name_allowlist_filter_;
   int client_side_sampling_status_;
+  int metrics_filtering_status_;
+  int lts_channel_;
   friend struct ::TableStruct_system_5fprofile_2eproto;
 };
 // ===================================================================
@@ -9814,7 +9963,7 @@ inline void SystemProfileProto_Hardware::set_allocated_app_cpu_architecture(std:
 
 // optional int64 system_ram_mb = 2;
 inline bool SystemProfileProto_Hardware::_internal_has_system_ram_mb() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_system_ram_mb() const {
@@ -9822,7 +9971,7 @@ inline bool SystemProfileProto_Hardware::has_system_ram_mb() const {
 }
 inline void SystemProfileProto_Hardware::clear_system_ram_mb() {
   system_ram_mb_ = int64_t{0};
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline int64_t SystemProfileProto_Hardware::_internal_system_ram_mb() const {
   return system_ram_mb_;
@@ -9832,7 +9981,7 @@ inline int64_t SystemProfileProto_Hardware::system_ram_mb() const {
   return _internal_system_ram_mb();
 }
 inline void SystemProfileProto_Hardware::_internal_set_system_ram_mb(int64_t value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000800u;
   system_ram_mb_ = value;
 }
 inline void SystemProfileProto_Hardware::set_system_ram_mb(int64_t value) {
@@ -9842,7 +9991,7 @@ inline void SystemProfileProto_Hardware::set_system_ram_mb(int64_t value) {
 
 // optional int64 dll_base = 3;
 inline bool SystemProfileProto_Hardware::_internal_has_dll_base() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_dll_base() const {
@@ -9850,7 +9999,7 @@ inline bool SystemProfileProto_Hardware::has_dll_base() const {
 }
 inline void SystemProfileProto_Hardware::clear_dll_base() {
   dll_base_ = int64_t{0};
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline int64_t SystemProfileProto_Hardware::_internal_dll_base() const {
   return dll_base_;
@@ -9860,7 +10009,7 @@ inline int64_t SystemProfileProto_Hardware::dll_base() const {
   return _internal_dll_base();
 }
 inline void SystemProfileProto_Hardware::_internal_set_dll_base(int64_t value) {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00001000u;
   dll_base_ = value;
 }
 inline void SystemProfileProto_Hardware::set_dll_base(int64_t value) {
@@ -10074,7 +10223,7 @@ inline void SystemProfileProto_Hardware::set_allocated_cellular_device_variant(s
 
 // optional int32 screen_count = 5;
 inline bool SystemProfileProto_Hardware::_internal_has_screen_count() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_screen_count() const {
@@ -10082,7 +10231,7 @@ inline bool SystemProfileProto_Hardware::has_screen_count() const {
 }
 inline void SystemProfileProto_Hardware::clear_screen_count() {
   screen_count_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline int32_t SystemProfileProto_Hardware::_internal_screen_count() const {
   return screen_count_;
@@ -10092,7 +10241,7 @@ inline int32_t SystemProfileProto_Hardware::screen_count() const {
   return _internal_screen_count();
 }
 inline void SystemProfileProto_Hardware::_internal_set_screen_count(int32_t value) {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00002000u;
   screen_count_ = value;
 }
 inline void SystemProfileProto_Hardware::set_screen_count(int32_t value) {
@@ -10102,7 +10251,7 @@ inline void SystemProfileProto_Hardware::set_screen_count(int32_t value) {
 
 // optional int32 primary_screen_width = 6;
 inline bool SystemProfileProto_Hardware::_internal_has_primary_screen_width() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_primary_screen_width() const {
@@ -10110,7 +10259,7 @@ inline bool SystemProfileProto_Hardware::has_primary_screen_width() const {
 }
 inline void SystemProfileProto_Hardware::clear_primary_screen_width() {
   primary_screen_width_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00004000u;
 }
 inline int32_t SystemProfileProto_Hardware::_internal_primary_screen_width() const {
   return primary_screen_width_;
@@ -10120,7 +10269,7 @@ inline int32_t SystemProfileProto_Hardware::primary_screen_width() const {
   return _internal_primary_screen_width();
 }
 inline void SystemProfileProto_Hardware::_internal_set_primary_screen_width(int32_t value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00004000u;
   primary_screen_width_ = value;
 }
 inline void SystemProfileProto_Hardware::set_primary_screen_width(int32_t value) {
@@ -10130,7 +10279,7 @@ inline void SystemProfileProto_Hardware::set_primary_screen_width(int32_t value)
 
 // optional int32 primary_screen_height = 7;
 inline bool SystemProfileProto_Hardware::_internal_has_primary_screen_height() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_primary_screen_height() const {
@@ -10138,7 +10287,7 @@ inline bool SystemProfileProto_Hardware::has_primary_screen_height() const {
 }
 inline void SystemProfileProto_Hardware::clear_primary_screen_height() {
   primary_screen_height_ = 0;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00008000u;
 }
 inline int32_t SystemProfileProto_Hardware::_internal_primary_screen_height() const {
   return primary_screen_height_;
@@ -10148,7 +10297,7 @@ inline int32_t SystemProfileProto_Hardware::primary_screen_height() const {
   return _internal_primary_screen_height();
 }
 inline void SystemProfileProto_Hardware::_internal_set_primary_screen_height(int32_t value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00008000u;
   primary_screen_height_ = value;
 }
 inline void SystemProfileProto_Hardware::set_primary_screen_height(int32_t value) {
@@ -10158,7 +10307,7 @@ inline void SystemProfileProto_Hardware::set_primary_screen_height(int32_t value
 
 // optional float primary_screen_scale_factor = 12;
 inline bool SystemProfileProto_Hardware::_internal_has_primary_screen_scale_factor() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_primary_screen_scale_factor() const {
@@ -10166,7 +10315,7 @@ inline bool SystemProfileProto_Hardware::has_primary_screen_scale_factor() const
 }
 inline void SystemProfileProto_Hardware::clear_primary_screen_scale_factor() {
   primary_screen_scale_factor_ = 0;
-  _has_bits_[0] &= ~0x00020000u;
+  _has_bits_[0] &= ~0x00040000u;
 }
 inline float SystemProfileProto_Hardware::_internal_primary_screen_scale_factor() const {
   return primary_screen_scale_factor_;
@@ -10176,7 +10325,7 @@ inline float SystemProfileProto_Hardware::primary_screen_scale_factor() const {
   return _internal_primary_screen_scale_factor();
 }
 inline void SystemProfileProto_Hardware::_internal_set_primary_screen_scale_factor(float value) {
-  _has_bits_[0] |= 0x00020000u;
+  _has_bits_[0] |= 0x00040000u;
   primary_screen_scale_factor_ = value;
 }
 inline void SystemProfileProto_Hardware::set_primary_screen_scale_factor(float value) {
@@ -10186,7 +10335,7 @@ inline void SystemProfileProto_Hardware::set_primary_screen_scale_factor(float v
 
 // optional float max_dpi_x = 9;
 inline bool SystemProfileProto_Hardware::_internal_has_max_dpi_x() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_max_dpi_x() const {
@@ -10194,7 +10343,7 @@ inline bool SystemProfileProto_Hardware::has_max_dpi_x() const {
 }
 inline void SystemProfileProto_Hardware::clear_max_dpi_x() {
   max_dpi_x_ = 0;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00010000u;
 }
 inline float SystemProfileProto_Hardware::_internal_max_dpi_x() const {
   return max_dpi_x_;
@@ -10204,7 +10353,7 @@ inline float SystemProfileProto_Hardware::max_dpi_x() const {
   return _internal_max_dpi_x();
 }
 inline void SystemProfileProto_Hardware::_internal_set_max_dpi_x(float value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00010000u;
   max_dpi_x_ = value;
 }
 inline void SystemProfileProto_Hardware::set_max_dpi_x(float value) {
@@ -10214,7 +10363,7 @@ inline void SystemProfileProto_Hardware::set_max_dpi_x(float value) {
 
 // optional float max_dpi_y = 10;
 inline bool SystemProfileProto_Hardware::_internal_has_max_dpi_y() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_max_dpi_y() const {
@@ -10222,7 +10371,7 @@ inline bool SystemProfileProto_Hardware::has_max_dpi_y() const {
 }
 inline void SystemProfileProto_Hardware::clear_max_dpi_y() {
   max_dpi_y_ = 0;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00020000u;
 }
 inline float SystemProfileProto_Hardware::_internal_max_dpi_y() const {
   return max_dpi_y_;
@@ -10232,7 +10381,7 @@ inline float SystemProfileProto_Hardware::max_dpi_y() const {
   return _internal_max_dpi_y();
 }
 inline void SystemProfileProto_Hardware::_internal_set_max_dpi_y(float value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00020000u;
   max_dpi_y_ = value;
 }
 inline void SystemProfileProto_Hardware::set_max_dpi_y(float value) {
@@ -10242,7 +10391,7 @@ inline void SystemProfileProto_Hardware::set_max_dpi_y(float value) {
 
 // optional .metrics.SystemProfileProto.Hardware.FormFactor form_factor = 22;
 inline bool SystemProfileProto_Hardware::_internal_has_form_factor() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_form_factor() const {
@@ -10250,7 +10399,7 @@ inline bool SystemProfileProto_Hardware::has_form_factor() const {
 }
 inline void SystemProfileProto_Hardware::clear_form_factor() {
   form_factor_ = 0;
-  _has_bits_[0] &= ~0x00080000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline ::metrics::SystemProfileProto_Hardware_FormFactor SystemProfileProto_Hardware::_internal_form_factor() const {
   return static_cast< ::metrics::SystemProfileProto_Hardware_FormFactor >(form_factor_);
@@ -10261,7 +10410,7 @@ inline ::metrics::SystemProfileProto_Hardware_FormFactor SystemProfileProto_Hard
 }
 inline void SystemProfileProto_Hardware::_internal_set_form_factor(::metrics::SystemProfileProto_Hardware_FormFactor value) {
   assert(::metrics::SystemProfileProto_Hardware_FormFactor_IsValid(value));
-  _has_bits_[0] |= 0x00080000u;
+  _has_bits_[0] |= 0x00100000u;
   form_factor_ = value;
 }
 inline void SystemProfileProto_Hardware::set_form_factor(::metrics::SystemProfileProto_Hardware_FormFactor value) {
@@ -10271,7 +10420,7 @@ inline void SystemProfileProto_Hardware::set_form_factor(::metrics::SystemProfil
 
 // optional .metrics.SystemProfileProto.Hardware.CPU cpu = 13;
 inline bool SystemProfileProto_Hardware::_internal_has_cpu() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   PROTOBUF_ASSUME(!value || cpu_ != nullptr);
   return value;
 }
@@ -10280,7 +10429,7 @@ inline bool SystemProfileProto_Hardware::has_cpu() const {
 }
 inline void SystemProfileProto_Hardware::clear_cpu() {
   if (cpu_ != nullptr) cpu_->Clear();
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline const ::metrics::SystemProfileProto_Hardware_CPU& SystemProfileProto_Hardware::_internal_cpu() const {
   const ::metrics::SystemProfileProto_Hardware_CPU* p = cpu_;
@@ -10298,14 +10447,14 @@ inline void SystemProfileProto_Hardware::unsafe_arena_set_allocated_cpu(
   }
   cpu_ = cpu;
   if (cpu) {
-    _has_bits_[0] |= 0x00000040u;
+    _has_bits_[0] |= 0x00000080u;
   } else {
-    _has_bits_[0] &= ~0x00000040u;
+    _has_bits_[0] &= ~0x00000080u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:metrics.SystemProfileProto.Hardware.cpu)
 }
 inline ::metrics::SystemProfileProto_Hardware_CPU* SystemProfileProto_Hardware::release_cpu() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
   ::metrics::SystemProfileProto_Hardware_CPU* temp = cpu_;
   cpu_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -10321,13 +10470,13 @@ inline ::metrics::SystemProfileProto_Hardware_CPU* SystemProfileProto_Hardware::
 }
 inline ::metrics::SystemProfileProto_Hardware_CPU* SystemProfileProto_Hardware::unsafe_arena_release_cpu() {
   // @@protoc_insertion_point(field_release:metrics.SystemProfileProto.Hardware.cpu)
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000080u;
   ::metrics::SystemProfileProto_Hardware_CPU* temp = cpu_;
   cpu_ = nullptr;
   return temp;
 }
 inline ::metrics::SystemProfileProto_Hardware_CPU* SystemProfileProto_Hardware::_internal_mutable_cpu() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000080u;
   if (cpu_ == nullptr) {
     auto* p = CreateMaybeMessage<::metrics::SystemProfileProto_Hardware_CPU>(GetArenaForAllocation());
     cpu_ = p;
@@ -10351,9 +10500,9 @@ inline void SystemProfileProto_Hardware::set_allocated_cpu(::metrics::SystemProf
       cpu = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, cpu, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000040u;
+    _has_bits_[0] |= 0x00000080u;
   } else {
-    _has_bits_[0] &= ~0x00000040u;
+    _has_bits_[0] &= ~0x00000080u;
   }
   cpu_ = cpu;
   // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.Hardware.cpu)
@@ -10361,7 +10510,7 @@ inline void SystemProfileProto_Hardware::set_allocated_cpu(::metrics::SystemProf
 
 // optional .metrics.SystemProfileProto.Hardware.Motherboard motherboard = 25;
 inline bool SystemProfileProto_Hardware::_internal_has_motherboard() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   PROTOBUF_ASSUME(!value || motherboard_ != nullptr);
   return value;
 }
@@ -10370,7 +10519,7 @@ inline bool SystemProfileProto_Hardware::has_motherboard() const {
 }
 inline void SystemProfileProto_Hardware::clear_motherboard() {
   if (motherboard_ != nullptr) motherboard_->Clear();
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline const ::metrics::SystemProfileProto_Hardware_Motherboard& SystemProfileProto_Hardware::_internal_motherboard() const {
   const ::metrics::SystemProfileProto_Hardware_Motherboard* p = motherboard_;
@@ -10388,14 +10537,14 @@ inline void SystemProfileProto_Hardware::unsafe_arena_set_allocated_motherboard(
   }
   motherboard_ = motherboard;
   if (motherboard) {
-    _has_bits_[0] |= 0x00000200u;
+    _has_bits_[0] |= 0x00000400u;
   } else {
-    _has_bits_[0] &= ~0x00000200u;
+    _has_bits_[0] &= ~0x00000400u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:metrics.SystemProfileProto.Hardware.motherboard)
 }
 inline ::metrics::SystemProfileProto_Hardware_Motherboard* SystemProfileProto_Hardware::release_motherboard() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
   ::metrics::SystemProfileProto_Hardware_Motherboard* temp = motherboard_;
   motherboard_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -10411,13 +10560,13 @@ inline ::metrics::SystemProfileProto_Hardware_Motherboard* SystemProfileProto_Ha
 }
 inline ::metrics::SystemProfileProto_Hardware_Motherboard* SystemProfileProto_Hardware::unsafe_arena_release_motherboard() {
   // @@protoc_insertion_point(field_release:metrics.SystemProfileProto.Hardware.motherboard)
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
   ::metrics::SystemProfileProto_Hardware_Motherboard* temp = motherboard_;
   motherboard_ = nullptr;
   return temp;
 }
 inline ::metrics::SystemProfileProto_Hardware_Motherboard* SystemProfileProto_Hardware::_internal_mutable_motherboard() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   if (motherboard_ == nullptr) {
     auto* p = CreateMaybeMessage<::metrics::SystemProfileProto_Hardware_Motherboard>(GetArenaForAllocation());
     motherboard_ = p;
@@ -10441,9 +10590,9 @@ inline void SystemProfileProto_Hardware::set_allocated_motherboard(::metrics::Sy
       motherboard = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, motherboard, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000200u;
+    _has_bits_[0] |= 0x00000400u;
   } else {
-    _has_bits_[0] &= ~0x00000200u;
+    _has_bits_[0] &= ~0x00000400u;
   }
   motherboard_ = motherboard;
   // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.Hardware.motherboard)
@@ -10451,7 +10600,7 @@ inline void SystemProfileProto_Hardware::set_allocated_motherboard(::metrics::Sy
 
 // optional .metrics.SystemProfileProto.Hardware.Graphics gpu = 8;
 inline bool SystemProfileProto_Hardware::_internal_has_gpu() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
   PROTOBUF_ASSUME(!value || gpu_ != nullptr);
   return value;
 }
@@ -10460,7 +10609,7 @@ inline bool SystemProfileProto_Hardware::has_gpu() const {
 }
 inline void SystemProfileProto_Hardware::clear_gpu() {
   if (gpu_ != nullptr) gpu_->Clear();
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 inline const ::metrics::SystemProfileProto_Hardware_Graphics& SystemProfileProto_Hardware::_internal_gpu() const {
   const ::metrics::SystemProfileProto_Hardware_Graphics* p = gpu_;
@@ -10478,14 +10627,14 @@ inline void SystemProfileProto_Hardware::unsafe_arena_set_allocated_gpu(
   }
   gpu_ = gpu;
   if (gpu) {
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:metrics.SystemProfileProto.Hardware.gpu)
 }
 inline ::metrics::SystemProfileProto_Hardware_Graphics* SystemProfileProto_Hardware::release_gpu() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   ::metrics::SystemProfileProto_Hardware_Graphics* temp = gpu_;
   gpu_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -10501,13 +10650,13 @@ inline ::metrics::SystemProfileProto_Hardware_Graphics* SystemProfileProto_Hardw
 }
 inline ::metrics::SystemProfileProto_Hardware_Graphics* SystemProfileProto_Hardware::unsafe_arena_release_gpu() {
   // @@protoc_insertion_point(field_release:metrics.SystemProfileProto.Hardware.gpu)
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000040u;
   ::metrics::SystemProfileProto_Hardware_Graphics* temp = gpu_;
   gpu_ = nullptr;
   return temp;
 }
 inline ::metrics::SystemProfileProto_Hardware_Graphics* SystemProfileProto_Hardware::_internal_mutable_gpu() {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000040u;
   if (gpu_ == nullptr) {
     auto* p = CreateMaybeMessage<::metrics::SystemProfileProto_Hardware_Graphics>(GetArenaForAllocation());
     gpu_ = p;
@@ -10531,9 +10680,9 @@ inline void SystemProfileProto_Hardware::set_allocated_gpu(::metrics::SystemProf
       gpu = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, gpu, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000020u;
+    _has_bits_[0] |= 0x00000040u;
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    _has_bits_[0] &= ~0x00000040u;
   }
   gpu_ = gpu;
   // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.Hardware.gpu)
@@ -10541,7 +10690,7 @@ inline void SystemProfileProto_Hardware::set_allocated_gpu(::metrics::SystemProf
 
 // optional bool internal_display_supports_touch = 14;
 inline bool SystemProfileProto_Hardware::_internal_has_internal_display_supports_touch() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_internal_display_supports_touch() const {
@@ -10549,7 +10698,7 @@ inline bool SystemProfileProto_Hardware::has_internal_display_supports_touch() c
 }
 inline void SystemProfileProto_Hardware::clear_internal_display_supports_touch() {
   internal_display_supports_touch_ = false;
-  _has_bits_[0] &= ~0x00040000u;
+  _has_bits_[0] &= ~0x00080000u;
 }
 inline bool SystemProfileProto_Hardware::_internal_internal_display_supports_touch() const {
   return internal_display_supports_touch_;
@@ -10559,7 +10708,7 @@ inline bool SystemProfileProto_Hardware::internal_display_supports_touch() const
   return _internal_internal_display_supports_touch();
 }
 inline void SystemProfileProto_Hardware::_internal_set_internal_display_supports_touch(bool value) {
-  _has_bits_[0] |= 0x00040000u;
+  _has_bits_[0] |= 0x00080000u;
   internal_display_supports_touch_ = value;
 }
 inline void SystemProfileProto_Hardware::set_internal_display_supports_touch(bool value) {
@@ -10609,7 +10758,7 @@ SystemProfileProto_Hardware::internal_storage_devices() const {
 
 // optional .metrics.SystemProfileProto.Hardware.Drive app_drive = 16;
 inline bool SystemProfileProto_Hardware::_internal_has_app_drive() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   PROTOBUF_ASSUME(!value || app_drive_ != nullptr);
   return value;
 }
@@ -10618,7 +10767,7 @@ inline bool SystemProfileProto_Hardware::has_app_drive() const {
 }
 inline void SystemProfileProto_Hardware::clear_app_drive() {
   if (app_drive_ != nullptr) app_drive_->Clear();
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline const ::metrics::SystemProfileProto_Hardware_Drive& SystemProfileProto_Hardware::_internal_app_drive() const {
   const ::metrics::SystemProfileProto_Hardware_Drive* p = app_drive_;
@@ -10636,14 +10785,14 @@ inline void SystemProfileProto_Hardware::unsafe_arena_set_allocated_app_drive(
   }
   app_drive_ = app_drive;
   if (app_drive) {
-    _has_bits_[0] |= 0x00000080u;
+    _has_bits_[0] |= 0x00000100u;
   } else {
-    _has_bits_[0] &= ~0x00000080u;
+    _has_bits_[0] &= ~0x00000100u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:metrics.SystemProfileProto.Hardware.app_drive)
 }
 inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware::release_app_drive() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
   ::metrics::SystemProfileProto_Hardware_Drive* temp = app_drive_;
   app_drive_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -10659,13 +10808,13 @@ inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware
 }
 inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware::unsafe_arena_release_app_drive() {
   // @@protoc_insertion_point(field_release:metrics.SystemProfileProto.Hardware.app_drive)
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
   ::metrics::SystemProfileProto_Hardware_Drive* temp = app_drive_;
   app_drive_ = nullptr;
   return temp;
 }
 inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware::_internal_mutable_app_drive() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   if (app_drive_ == nullptr) {
     auto* p = CreateMaybeMessage<::metrics::SystemProfileProto_Hardware_Drive>(GetArenaForAllocation());
     app_drive_ = p;
@@ -10689,9 +10838,9 @@ inline void SystemProfileProto_Hardware::set_allocated_app_drive(::metrics::Syst
       app_drive = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, app_drive, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000080u;
+    _has_bits_[0] |= 0x00000100u;
   } else {
-    _has_bits_[0] &= ~0x00000080u;
+    _has_bits_[0] &= ~0x00000100u;
   }
   app_drive_ = app_drive;
   // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.Hardware.app_drive)
@@ -10699,7 +10848,7 @@ inline void SystemProfileProto_Hardware::set_allocated_app_drive(::metrics::Syst
 
 // optional .metrics.SystemProfileProto.Hardware.Drive user_data_drive = 17;
 inline bool SystemProfileProto_Hardware::_internal_has_user_data_drive() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   PROTOBUF_ASSUME(!value || user_data_drive_ != nullptr);
   return value;
 }
@@ -10708,7 +10857,7 @@ inline bool SystemProfileProto_Hardware::has_user_data_drive() const {
 }
 inline void SystemProfileProto_Hardware::clear_user_data_drive() {
   if (user_data_drive_ != nullptr) user_data_drive_->Clear();
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline const ::metrics::SystemProfileProto_Hardware_Drive& SystemProfileProto_Hardware::_internal_user_data_drive() const {
   const ::metrics::SystemProfileProto_Hardware_Drive* p = user_data_drive_;
@@ -10726,14 +10875,14 @@ inline void SystemProfileProto_Hardware::unsafe_arena_set_allocated_user_data_dr
   }
   user_data_drive_ = user_data_drive;
   if (user_data_drive) {
-    _has_bits_[0] |= 0x00000100u;
+    _has_bits_[0] |= 0x00000200u;
   } else {
-    _has_bits_[0] &= ~0x00000100u;
+    _has_bits_[0] &= ~0x00000200u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:metrics.SystemProfileProto.Hardware.user_data_drive)
 }
 inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware::release_user_data_drive() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
   ::metrics::SystemProfileProto_Hardware_Drive* temp = user_data_drive_;
   user_data_drive_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -10749,13 +10898,13 @@ inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware
 }
 inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware::unsafe_arena_release_user_data_drive() {
   // @@protoc_insertion_point(field_release:metrics.SystemProfileProto.Hardware.user_data_drive)
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
   ::metrics::SystemProfileProto_Hardware_Drive* temp = user_data_drive_;
   user_data_drive_ = nullptr;
   return temp;
 }
 inline ::metrics::SystemProfileProto_Hardware_Drive* SystemProfileProto_Hardware::_internal_mutable_user_data_drive() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   if (user_data_drive_ == nullptr) {
     auto* p = CreateMaybeMessage<::metrics::SystemProfileProto_Hardware_Drive>(GetArenaForAllocation());
     user_data_drive_ = p;
@@ -10779,9 +10928,9 @@ inline void SystemProfileProto_Hardware::set_allocated_user_data_drive(::metrics
       user_data_drive = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, user_data_drive, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000100u;
+    _has_bits_[0] |= 0x00000200u;
   } else {
-    _has_bits_[0] &= ~0x00000100u;
+    _has_bits_[0] &= ~0x00000200u;
   }
   user_data_drive_ = user_data_drive;
   // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.Hardware.user_data_drive)
@@ -10789,7 +10938,7 @@ inline void SystemProfileProto_Hardware::set_allocated_user_data_drive(::metrics
 
 // optional .metrics.SystemProfileProto.Hardware.TpmType tpm_type = 23;
 inline bool SystemProfileProto_Hardware::_internal_has_tpm_type() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_tpm_type() const {
@@ -10797,7 +10946,7 @@ inline bool SystemProfileProto_Hardware::has_tpm_type() const {
 }
 inline void SystemProfileProto_Hardware::clear_tpm_type() {
   tpm_type_ = 0;
-  _has_bits_[0] &= ~0x00200000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline ::metrics::SystemProfileProto_Hardware_TpmType SystemProfileProto_Hardware::_internal_tpm_type() const {
   return static_cast< ::metrics::SystemProfileProto_Hardware_TpmType >(tpm_type_);
@@ -10808,7 +10957,7 @@ inline ::metrics::SystemProfileProto_Hardware_TpmType SystemProfileProto_Hardwar
 }
 inline void SystemProfileProto_Hardware::_internal_set_tpm_type(::metrics::SystemProfileProto_Hardware_TpmType value) {
   assert(::metrics::SystemProfileProto_Hardware_TpmType_IsValid(value));
-  _has_bits_[0] |= 0x00200000u;
+  _has_bits_[0] |= 0x00400000u;
   tpm_type_ = value;
 }
 inline void SystemProfileProto_Hardware::set_tpm_type(::metrics::SystemProfileProto_Hardware_TpmType value) {
@@ -10818,7 +10967,7 @@ inline void SystemProfileProto_Hardware::set_tpm_type(::metrics::SystemProfilePr
 
 // optional uint64 tpm_firmware_version = 26;
 inline bool SystemProfileProto_Hardware::_internal_has_tpm_firmware_version() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool SystemProfileProto_Hardware::has_tpm_firmware_version() const {
@@ -10826,7 +10975,7 @@ inline bool SystemProfileProto_Hardware::has_tpm_firmware_version() const {
 }
 inline void SystemProfileProto_Hardware::clear_tpm_firmware_version() {
   tpm_firmware_version_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00100000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline uint64_t SystemProfileProto_Hardware::_internal_tpm_firmware_version() const {
   return tpm_firmware_version_;
@@ -10836,12 +10985,80 @@ inline uint64_t SystemProfileProto_Hardware::tpm_firmware_version() const {
   return _internal_tpm_firmware_version();
 }
 inline void SystemProfileProto_Hardware::_internal_set_tpm_firmware_version(uint64_t value) {
-  _has_bits_[0] |= 0x00100000u;
+  _has_bits_[0] |= 0x00200000u;
   tpm_firmware_version_ = value;
 }
 inline void SystemProfileProto_Hardware::set_tpm_firmware_version(uint64_t value) {
   _internal_set_tpm_firmware_version(value);
   // @@protoc_insertion_point(field_set:metrics.SystemProfileProto.Hardware.tpm_firmware_version)
+}
+
+// optional string tpm_rw_firmware_version = 27;
+inline bool SystemProfileProto_Hardware::_internal_has_tpm_rw_firmware_version() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool SystemProfileProto_Hardware::has_tpm_rw_firmware_version() const {
+  return _internal_has_tpm_rw_firmware_version();
+}
+inline void SystemProfileProto_Hardware::clear_tpm_rw_firmware_version() {
+  tpm_rw_firmware_version_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const std::string& SystemProfileProto_Hardware::tpm_rw_firmware_version() const {
+  // @@protoc_insertion_point(field_get:metrics.SystemProfileProto.Hardware.tpm_rw_firmware_version)
+  return _internal_tpm_rw_firmware_version();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SystemProfileProto_Hardware::set_tpm_rw_firmware_version(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000020u;
+ tpm_rw_firmware_version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:metrics.SystemProfileProto.Hardware.tpm_rw_firmware_version)
+}
+inline std::string* SystemProfileProto_Hardware::mutable_tpm_rw_firmware_version() {
+  std::string* _s = _internal_mutable_tpm_rw_firmware_version();
+  // @@protoc_insertion_point(field_mutable:metrics.SystemProfileProto.Hardware.tpm_rw_firmware_version)
+  return _s;
+}
+inline const std::string& SystemProfileProto_Hardware::_internal_tpm_rw_firmware_version() const {
+  return tpm_rw_firmware_version_.Get();
+}
+inline void SystemProfileProto_Hardware::_internal_set_tpm_rw_firmware_version(const std::string& value) {
+  _has_bits_[0] |= 0x00000020u;
+  tpm_rw_firmware_version_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SystemProfileProto_Hardware::_internal_mutable_tpm_rw_firmware_version() {
+  _has_bits_[0] |= 0x00000020u;
+  return tpm_rw_firmware_version_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SystemProfileProto_Hardware::release_tpm_rw_firmware_version() {
+  // @@protoc_insertion_point(field_release:metrics.SystemProfileProto.Hardware.tpm_rw_firmware_version)
+  if (!_internal_has_tpm_rw_firmware_version()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000020u;
+  auto* p = tpm_rw_firmware_version_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (tpm_rw_firmware_version_.IsDefault()) {
+    tpm_rw_firmware_version_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void SystemProfileProto_Hardware::set_allocated_tpm_rw_firmware_version(std::string* tpm_rw_firmware_version) {
+  if (tpm_rw_firmware_version != nullptr) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  tpm_rw_firmware_version_.SetAllocated(tpm_rw_firmware_version, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (tpm_rw_firmware_version_.IsDefault()) {
+    tpm_rw_firmware_version_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.Hardware.tpm_rw_firmware_version)
 }
 
 // -------------------------------------------------------------------
@@ -15995,6 +16212,35 @@ inline void SystemProfileProto::set_client_side_sampling_status(::metrics::Syste
   // @@protoc_insertion_point(field_set:metrics.SystemProfileProto.client_side_sampling_status)
 }
 
+// optional .metrics.SystemProfileProto.MetricsFilteringStatus metrics_filtering_status = 44;
+inline bool SystemProfileProto::_internal_has_metrics_filtering_status() const {
+  bool value = (_has_bits_[1] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SystemProfileProto::has_metrics_filtering_status() const {
+  return _internal_has_metrics_filtering_status();
+}
+inline void SystemProfileProto::clear_metrics_filtering_status() {
+  metrics_filtering_status_ = 0;
+  _has_bits_[1] &= ~0x00000001u;
+}
+inline ::metrics::SystemProfileProto_MetricsFilteringStatus SystemProfileProto::_internal_metrics_filtering_status() const {
+  return static_cast< ::metrics::SystemProfileProto_MetricsFilteringStatus >(metrics_filtering_status_);
+}
+inline ::metrics::SystemProfileProto_MetricsFilteringStatus SystemProfileProto::metrics_filtering_status() const {
+  // @@protoc_insertion_point(field_get:metrics.SystemProfileProto.metrics_filtering_status)
+  return _internal_metrics_filtering_status();
+}
+inline void SystemProfileProto::_internal_set_metrics_filtering_status(::metrics::SystemProfileProto_MetricsFilteringStatus value) {
+  assert(::metrics::SystemProfileProto_MetricsFilteringStatus_IsValid(value));
+  _has_bits_[1] |= 0x00000001u;
+  metrics_filtering_status_ = value;
+}
+inline void SystemProfileProto::set_metrics_filtering_status(::metrics::SystemProfileProto_MetricsFilteringStatus value) {
+  _internal_set_metrics_filtering_status(value);
+  // @@protoc_insertion_point(field_set:metrics.SystemProfileProto.metrics_filtering_status)
+}
+
 // optional .metrics.SystemProfileProto.InstallerPackage installer_package = 35;
 inline bool SystemProfileProto::_internal_has_installer_package() const {
   bool value = (_has_bits_[0] & 0x10000000u) != 0;
@@ -16204,6 +16450,35 @@ inline void SystemProfileProto::set_allocated_demo_mode_dimensions(::metrics::Sy
   // @@protoc_insertion_point(field_set_allocated:metrics.SystemProfileProto.demo_mode_dimensions)
 }
 
+// optional .metrics.SystemProfileProto.LTSChannel lts_channel = 45;
+inline bool SystemProfileProto::_internal_has_lts_channel() const {
+  bool value = (_has_bits_[1] & 0x00000002u) != 0;
+  return value;
+}
+inline bool SystemProfileProto::has_lts_channel() const {
+  return _internal_has_lts_channel();
+}
+inline void SystemProfileProto::clear_lts_channel() {
+  lts_channel_ = 0;
+  _has_bits_[1] &= ~0x00000002u;
+}
+inline ::metrics::SystemProfileProto_LTSChannel SystemProfileProto::_internal_lts_channel() const {
+  return static_cast< ::metrics::SystemProfileProto_LTSChannel >(lts_channel_);
+}
+inline ::metrics::SystemProfileProto_LTSChannel SystemProfileProto::lts_channel() const {
+  // @@protoc_insertion_point(field_get:metrics.SystemProfileProto.lts_channel)
+  return _internal_lts_channel();
+}
+inline void SystemProfileProto::_internal_set_lts_channel(::metrics::SystemProfileProto_LTSChannel value) {
+  assert(::metrics::SystemProfileProto_LTSChannel_IsValid(value));
+  _has_bits_[1] |= 0x00000002u;
+  lts_channel_ = value;
+}
+inline void SystemProfileProto::set_lts_channel(::metrics::SystemProfileProto_LTSChannel value) {
+  _internal_set_lts_channel(value);
+  // @@protoc_insertion_point(field_set:metrics.SystemProfileProto.lts_channel)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -16284,7 +16559,9 @@ template <> struct is_proto_enum< ::metrics::SystemProfileProto_AntiVirusState> 
 template <> struct is_proto_enum< ::metrics::SystemProfileProto_ComponentId> : ::std::true_type {};
 template <> struct is_proto_enum< ::metrics::SystemProfileProto_AppPackageNameAllowlistFilter> : ::std::true_type {};
 template <> struct is_proto_enum< ::metrics::SystemProfileProto_ClientSideSamplingStatus> : ::std::true_type {};
+template <> struct is_proto_enum< ::metrics::SystemProfileProto_MetricsFilteringStatus> : ::std::true_type {};
 template <> struct is_proto_enum< ::metrics::SystemProfileProto_InstallerPackage> : ::std::true_type {};
+template <> struct is_proto_enum< ::metrics::SystemProfileProto_LTSChannel> : ::std::true_type {};
 
 PROTOBUF_NAMESPACE_CLOSE
 

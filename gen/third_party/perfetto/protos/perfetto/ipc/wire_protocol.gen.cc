@@ -22,14 +22,14 @@ IPCFrame::IPCFrame(IPCFrame&&) noexcept = default;
 IPCFrame& IPCFrame::operator=(IPCFrame&&) = default;
 
 bool IPCFrame::operator==(const IPCFrame& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && request_id_ == other.request_id_
-   && msg_bind_service_ == other.msg_bind_service_
-   && msg_bind_service_reply_ == other.msg_bind_service_reply_
-   && msg_invoke_method_ == other.msg_invoke_method_
-   && msg_invoke_method_reply_ == other.msg_invoke_method_reply_
-   && msg_request_error_ == other.msg_request_error_
-   && data_for_testing_ == other.data_for_testing_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(request_id_, other.request_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(msg_bind_service_, other.msg_bind_service_)
+   && ::protozero::internal::gen_helpers::EqualsField(msg_bind_service_reply_, other.msg_bind_service_reply_)
+   && ::protozero::internal::gen_helpers::EqualsField(msg_invoke_method_, other.msg_invoke_method_)
+   && ::protozero::internal::gen_helpers::EqualsField(msg_invoke_method_reply_, other.msg_invoke_method_reply_)
+   && ::protozero::internal::gen_helpers::EqualsField(msg_request_error_, other.msg_request_error_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_for_testing_, other.data_for_testing_);
 }
 
 bool IPCFrame::ParseFromArray(const void* raw, size_t size) {
@@ -133,8 +133,8 @@ IPCFrame_RequestError::IPCFrame_RequestError(IPCFrame_RequestError&&) noexcept =
 IPCFrame_RequestError& IPCFrame_RequestError::operator=(IPCFrame_RequestError&&) = default;
 
 bool IPCFrame_RequestError::operator==(const IPCFrame_RequestError& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && error_ == other.error_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(error_, other.error_);
 }
 
 bool IPCFrame_RequestError::ParseFromArray(const void* raw, size_t size) {
@@ -188,10 +188,10 @@ IPCFrame_InvokeMethodReply::IPCFrame_InvokeMethodReply(IPCFrame_InvokeMethodRepl
 IPCFrame_InvokeMethodReply& IPCFrame_InvokeMethodReply::operator=(IPCFrame_InvokeMethodReply&&) = default;
 
 bool IPCFrame_InvokeMethodReply::operator==(const IPCFrame_InvokeMethodReply& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && success_ == other.success_
-   && has_more_ == other.has_more_
-   && reply_proto_ == other.reply_proto_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(success_, other.success_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_more_, other.has_more_)
+   && ::protozero::internal::gen_helpers::EqualsField(reply_proto_, other.reply_proto_);
 }
 
 bool IPCFrame_InvokeMethodReply::ParseFromArray(const void* raw, size_t size) {
@@ -261,11 +261,11 @@ IPCFrame_InvokeMethod::IPCFrame_InvokeMethod(IPCFrame_InvokeMethod&&) noexcept =
 IPCFrame_InvokeMethod& IPCFrame_InvokeMethod::operator=(IPCFrame_InvokeMethod&&) = default;
 
 bool IPCFrame_InvokeMethod::operator==(const IPCFrame_InvokeMethod& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && service_id_ == other.service_id_
-   && method_id_ == other.method_id_
-   && args_proto_ == other.args_proto_
-   && drop_reply_ == other.drop_reply_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(service_id_, other.service_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(method_id_, other.method_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(args_proto_, other.args_proto_)
+   && ::protozero::internal::gen_helpers::EqualsField(drop_reply_, other.drop_reply_);
 }
 
 bool IPCFrame_InvokeMethod::ParseFromArray(const void* raw, size_t size) {
@@ -343,10 +343,10 @@ IPCFrame_BindServiceReply::IPCFrame_BindServiceReply(IPCFrame_BindServiceReply&&
 IPCFrame_BindServiceReply& IPCFrame_BindServiceReply::operator=(IPCFrame_BindServiceReply&&) = default;
 
 bool IPCFrame_BindServiceReply::operator==(const IPCFrame_BindServiceReply& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && success_ == other.success_
-   && service_id_ == other.service_id_
-   && methods_ == other.methods_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(success_, other.success_)
+   && ::protozero::internal::gen_helpers::EqualsField(service_id_, other.service_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(methods_, other.methods_);
 }
 
 int IPCFrame_BindServiceReply::methods_size() const { return static_cast<int>(methods_.size()); }
@@ -421,9 +421,9 @@ IPCFrame_BindServiceReply_MethodInfo::IPCFrame_BindServiceReply_MethodInfo(IPCFr
 IPCFrame_BindServiceReply_MethodInfo& IPCFrame_BindServiceReply_MethodInfo::operator=(IPCFrame_BindServiceReply_MethodInfo&&) = default;
 
 bool IPCFrame_BindServiceReply_MethodInfo::operator==(const IPCFrame_BindServiceReply_MethodInfo& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && id_ == other.id_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(id_, other.id_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool IPCFrame_BindServiceReply_MethodInfo::ParseFromArray(const void* raw, size_t size) {
@@ -485,8 +485,8 @@ IPCFrame_BindService::IPCFrame_BindService(IPCFrame_BindService&&) noexcept = de
 IPCFrame_BindService& IPCFrame_BindService::operator=(IPCFrame_BindService&&) = default;
 
 bool IPCFrame_BindService::operator==(const IPCFrame_BindService& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && service_name_ == other.service_name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(service_name_, other.service_name_);
 }
 
 bool IPCFrame_BindService::ParseFromArray(const void* raw, size_t size) {

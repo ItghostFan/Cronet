@@ -22,12 +22,12 @@ ChromeConfig::ChromeConfig(ChromeConfig&&) noexcept = default;
 ChromeConfig& ChromeConfig::operator=(ChromeConfig&&) = default;
 
 bool ChromeConfig::operator==(const ChromeConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_config_ == other.trace_config_
-   && privacy_filtering_enabled_ == other.privacy_filtering_enabled_
-   && convert_to_legacy_json_ == other.convert_to_legacy_json_
-   && client_priority_ == other.client_priority_
-   && json_agent_label_filter_ == other.json_agent_label_filter_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_config_, other.trace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(privacy_filtering_enabled_, other.privacy_filtering_enabled_)
+   && ::protozero::internal::gen_helpers::EqualsField(convert_to_legacy_json_, other.convert_to_legacy_json_)
+   && ::protozero::internal::gen_helpers::EqualsField(client_priority_, other.client_priority_)
+   && ::protozero::internal::gen_helpers::EqualsField(json_agent_label_filter_, other.json_agent_label_filter_);
 }
 
 bool ChromeConfig::ParseFromArray(const void* raw, size_t size) {

@@ -22,9 +22,9 @@ ConsoleConfig::ConsoleConfig(ConsoleConfig&&) noexcept = default;
 ConsoleConfig& ConsoleConfig::operator=(ConsoleConfig&&) = default;
 
 bool ConsoleConfig::operator==(const ConsoleConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && output_ == other.output_
-   && enable_colors_ == other.enable_colors_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(output_, other.output_)
+   && ::protozero::internal::gen_helpers::EqualsField(enable_colors_, other.enable_colors_);
 }
 
 bool ConsoleConfig::ParseFromArray(const void* raw, size_t size) {

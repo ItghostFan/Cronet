@@ -31,9 +31,11 @@
 #include "protos/perfetto/config/gpu/gpu_counter_config.gen.h"
 #include "protos/perfetto/config/ftrace/ftrace_config.gen.h"
 #include "protos/perfetto/config/chrome/chrome_config.gen.h"
+#include "protos/perfetto/config/android/surfaceflinger_transactions_config.gen.h"
 #include "protos/perfetto/config/android/surfaceflinger_layers_config.gen.h"
 #include "protos/perfetto/config/android/packages_list_config.gen.h"
 #include "protos/perfetto/config/android/network_trace_config.gen.h"
+#include "protos/perfetto/config/android/android_sdk_sysprop_guard_config.gen.h"
 #include "protos/perfetto/config/android/android_system_property_config.gen.h"
 #include "protos/perfetto/config/android/android_polled_state_config.gen.h"
 #include "protos/perfetto/config/android/android_log_config.gen.h"
@@ -53,8 +55,8 @@ ChromeFieldTracingConfig::ChromeFieldTracingConfig(ChromeFieldTracingConfig&&) n
 ChromeFieldTracingConfig& ChromeFieldTracingConfig::operator=(ChromeFieldTracingConfig&&) = default;
 
 bool ChromeFieldTracingConfig::operator==(const ChromeFieldTracingConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && scenarios_ == other.scenarios_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(scenarios_, other.scenarios_);
 }
 
 int ChromeFieldTracingConfig::scenarios_size() const { return static_cast<int>(scenarios_.size()); }
@@ -113,14 +115,14 @@ ScenarioConfig::ScenarioConfig(ScenarioConfig&&) noexcept = default;
 ScenarioConfig& ScenarioConfig::operator=(ScenarioConfig&&) = default;
 
 bool ScenarioConfig::operator==(const ScenarioConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && scenario_name_ == other.scenario_name_
-   && start_rules_ == other.start_rules_
-   && stop_rules_ == other.stop_rules_
-   && upload_rules_ == other.upload_rules_
-   && setup_rules_ == other.setup_rules_
-   && trace_config_ == other.trace_config_
-   && nested_scenarios_ == other.nested_scenarios_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(scenario_name_, other.scenario_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_rules_, other.start_rules_)
+   && ::protozero::internal::gen_helpers::EqualsField(stop_rules_, other.stop_rules_)
+   && ::protozero::internal::gen_helpers::EqualsField(upload_rules_, other.upload_rules_)
+   && ::protozero::internal::gen_helpers::EqualsField(setup_rules_, other.setup_rules_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_config_, other.trace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(nested_scenarios_, other.nested_scenarios_);
 }
 
 int ScenarioConfig::start_rules_size() const { return static_cast<int>(start_rules_.size()); }
@@ -247,11 +249,11 @@ NestedScenarioConfig::NestedScenarioConfig(NestedScenarioConfig&&) noexcept = de
 NestedScenarioConfig& NestedScenarioConfig::operator=(NestedScenarioConfig&&) = default;
 
 bool NestedScenarioConfig::operator==(const NestedScenarioConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && scenario_name_ == other.scenario_name_
-   && start_rules_ == other.start_rules_
-   && stop_rules_ == other.stop_rules_
-   && upload_rules_ == other.upload_rules_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(scenario_name_, other.scenario_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_rules_, other.start_rules_)
+   && ::protozero::internal::gen_helpers::EqualsField(stop_rules_, other.stop_rules_)
+   && ::protozero::internal::gen_helpers::EqualsField(upload_rules_, other.upload_rules_);
 }
 
 int NestedScenarioConfig::start_rules_size() const { return static_cast<int>(start_rules_.size()); }
@@ -344,13 +346,13 @@ TriggerRule::TriggerRule(TriggerRule&&) noexcept = default;
 TriggerRule& TriggerRule::operator=(TriggerRule&&) = default;
 
 bool TriggerRule::operator==(const TriggerRule& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && trigger_chance_ == other.trigger_chance_
-   && delay_ms_ == other.delay_ms_
-   && manual_trigger_name_ == other.manual_trigger_name_
-   && histogram_ == other.histogram_
-   && repeating_interval_ == other.repeating_interval_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(trigger_chance_, other.trigger_chance_)
+   && ::protozero::internal::gen_helpers::EqualsField(delay_ms_, other.delay_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(manual_trigger_name_, other.manual_trigger_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(histogram_, other.histogram_)
+   && ::protozero::internal::gen_helpers::EqualsField(repeating_interval_, other.repeating_interval_);
 }
 
 bool TriggerRule::ParseFromArray(const void* raw, size_t size) {
@@ -444,9 +446,9 @@ TriggerRule_RepeatingInterval::TriggerRule_RepeatingInterval(TriggerRule_Repeati
 TriggerRule_RepeatingInterval& TriggerRule_RepeatingInterval::operator=(TriggerRule_RepeatingInterval&&) = default;
 
 bool TriggerRule_RepeatingInterval::operator==(const TriggerRule_RepeatingInterval& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && period_ms_ == other.period_ms_
-   && randomized_ == other.randomized_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(period_ms_, other.period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(randomized_, other.randomized_);
 }
 
 bool TriggerRule_RepeatingInterval::ParseFromArray(const void* raw, size_t size) {
@@ -508,10 +510,10 @@ TriggerRule_HistogramTrigger::TriggerRule_HistogramTrigger(TriggerRule_Histogram
 TriggerRule_HistogramTrigger& TriggerRule_HistogramTrigger::operator=(TriggerRule_HistogramTrigger&&) = default;
 
 bool TriggerRule_HistogramTrigger::operator==(const TriggerRule_HistogramTrigger& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && histogram_name_ == other.histogram_name_
-   && min_value_ == other.min_value_
-   && max_value_ == other.max_value_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(histogram_name_, other.histogram_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(min_value_, other.min_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_value_, other.max_value_);
 }
 
 bool TriggerRule_HistogramTrigger::ParseFromArray(const void* raw, size_t size) {

@@ -1645,7 +1645,7 @@ class LayerProto_MetadataEntry : public ::protozero::Message {
   }
 };
 
-class DisplayProto_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/7, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+class DisplayProto_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/9, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
  public:
   DisplayProto_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
   explicit DisplayProto_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
@@ -1664,6 +1664,10 @@ class DisplayProto_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_I
   ::protozero::ConstBytes transform() const { return at<6>().as_bytes(); }
   bool has_is_virtual() const { return at<7>().valid(); }
   bool is_virtual() const { return at<7>().as_bool(); }
+  bool has_dpi_x() const { return at<8>().valid(); }
+  double dpi_x() const { return at<8>().as_double(); }
+  bool has_dpi_y() const { return at<9>().valid(); }
+  double dpi_y() const { return at<9>().as_double(); }
 };
 
 class DisplayProto : public ::protozero::Message {
@@ -1677,6 +1681,8 @@ class DisplayProto : public ::protozero::Message {
     kLayerStackSpaceRectFieldNumber = 5,
     kTransformFieldNumber = 6,
     kIsVirtualFieldNumber = 7,
+    kDpiXFieldNumber = 8,
+    kDpiYFieldNumber = 9,
   };
   static constexpr const char* GetName() { return ".perfetto.protos.DisplayProto"; }
 
@@ -1798,6 +1804,42 @@ class DisplayProto : public ::protozero::Message {
     // method based on the type of the field.
     ::protozero::internal::FieldWriter<
       ::protozero::proto_utils::ProtoSchemaType::kBool>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_DpiX =
+    ::protozero::proto_utils::FieldMetadata<
+      8,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kDouble,
+      double,
+      DisplayProto>;
+
+  static constexpr FieldMetadata_DpiX kDpiX{};
+  void set_dpi_x(double value) {
+    static constexpr uint32_t field_id = FieldMetadata_DpiX::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kDouble>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_DpiY =
+    ::protozero::proto_utils::FieldMetadata<
+      9,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kDouble,
+      double,
+      DisplayProto>;
+
+  static constexpr FieldMetadata_DpiY kDpiY{};
+  void set_dpi_y(double value) {
+    static constexpr uint32_t field_id = FieldMetadata_DpiY::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kDouble>
         ::Append(*this, field_id, value);
   }
 };

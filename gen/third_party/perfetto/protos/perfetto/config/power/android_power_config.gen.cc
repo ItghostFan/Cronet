@@ -22,12 +22,12 @@ AndroidPowerConfig::AndroidPowerConfig(AndroidPowerConfig&&) noexcept = default;
 AndroidPowerConfig& AndroidPowerConfig::operator=(AndroidPowerConfig&&) = default;
 
 bool AndroidPowerConfig::operator==(const AndroidPowerConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && battery_poll_ms_ == other.battery_poll_ms_
-   && battery_counters_ == other.battery_counters_
-   && collect_power_rails_ == other.collect_power_rails_
-   && collect_energy_estimation_breakdown_ == other.collect_energy_estimation_breakdown_
-   && collect_entity_state_residency_ == other.collect_entity_state_residency_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(battery_poll_ms_, other.battery_poll_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(battery_counters_, other.battery_counters_)
+   && ::protozero::internal::gen_helpers::EqualsField(collect_power_rails_, other.collect_power_rails_)
+   && ::protozero::internal::gen_helpers::EqualsField(collect_energy_estimation_breakdown_, other.collect_energy_estimation_breakdown_)
+   && ::protozero::internal::gen_helpers::EqualsField(collect_entity_state_residency_, other.collect_entity_state_residency_);
 }
 
 bool AndroidPowerConfig::ParseFromArray(const void* raw, size_t size) {

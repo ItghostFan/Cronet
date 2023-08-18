@@ -26,14 +26,14 @@ TracingServiceState::TracingServiceState(TracingServiceState&&) noexcept = defau
 TracingServiceState& TracingServiceState::operator=(TracingServiceState&&) = default;
 
 bool TracingServiceState::operator==(const TracingServiceState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && producers_ == other.producers_
-   && data_sources_ == other.data_sources_
-   && tracing_sessions_ == other.tracing_sessions_
-   && supports_tracing_sessions_ == other.supports_tracing_sessions_
-   && num_sessions_ == other.num_sessions_
-   && num_sessions_started_ == other.num_sessions_started_
-   && tracing_service_version_ == other.tracing_service_version_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(producers_, other.producers_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_sources_, other.data_sources_)
+   && ::protozero::internal::gen_helpers::EqualsField(tracing_sessions_, other.tracing_sessions_)
+   && ::protozero::internal::gen_helpers::EqualsField(supports_tracing_sessions_, other.supports_tracing_sessions_)
+   && ::protozero::internal::gen_helpers::EqualsField(num_sessions_, other.num_sessions_)
+   && ::protozero::internal::gen_helpers::EqualsField(num_sessions_started_, other.num_sessions_started_)
+   && ::protozero::internal::gen_helpers::EqualsField(tracing_service_version_, other.tracing_service_version_);
 }
 
 int TracingServiceState::producers_size() const { return static_cast<int>(producers_.size()); }
@@ -150,15 +150,15 @@ TracingServiceState_TracingSession::TracingServiceState_TracingSession(TracingSe
 TracingServiceState_TracingSession& TracingServiceState_TracingSession::operator=(TracingServiceState_TracingSession&&) = default;
 
 bool TracingServiceState_TracingSession::operator==(const TracingServiceState_TracingSession& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && id_ == other.id_
-   && consumer_uid_ == other.consumer_uid_
-   && state_ == other.state_
-   && unique_session_name_ == other.unique_session_name_
-   && buffer_size_kb_ == other.buffer_size_kb_
-   && duration_ms_ == other.duration_ms_
-   && num_data_sources_ == other.num_data_sources_
-   && start_realtime_ns_ == other.start_realtime_ns_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(id_, other.id_)
+   && ::protozero::internal::gen_helpers::EqualsField(consumer_uid_, other.consumer_uid_)
+   && ::protozero::internal::gen_helpers::EqualsField(state_, other.state_)
+   && ::protozero::internal::gen_helpers::EqualsField(unique_session_name_, other.unique_session_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(buffer_size_kb_, other.buffer_size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(duration_ms_, other.duration_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(num_data_sources_, other.num_data_sources_)
+   && ::protozero::internal::gen_helpers::EqualsField(start_realtime_ns_, other.start_realtime_ns_);
 }
 
 bool TracingServiceState_TracingSession::ParseFromArray(const void* raw, size_t size) {
@@ -270,9 +270,9 @@ TracingServiceState_DataSource::TracingServiceState_DataSource(TracingServiceSta
 TracingServiceState_DataSource& TracingServiceState_DataSource::operator=(TracingServiceState_DataSource&&) = default;
 
 bool TracingServiceState_DataSource::operator==(const TracingServiceState_DataSource& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && ds_descriptor_ == other.ds_descriptor_
-   && producer_id_ == other.producer_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(ds_descriptor_, other.ds_descriptor_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_id_, other.producer_id_);
 }
 
 bool TracingServiceState_DataSource::ParseFromArray(const void* raw, size_t size) {
@@ -334,12 +334,12 @@ TracingServiceState_Producer::TracingServiceState_Producer(TracingServiceState_P
 TracingServiceState_Producer& TracingServiceState_Producer::operator=(TracingServiceState_Producer&&) = default;
 
 bool TracingServiceState_Producer::operator==(const TracingServiceState_Producer& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && id_ == other.id_
-   && name_ == other.name_
-   && pid_ == other.pid_
-   && uid_ == other.uid_
-   && sdk_version_ == other.sdk_version_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(id_, other.id_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_, other.pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(uid_, other.uid_)
+   && ::protozero::internal::gen_helpers::EqualsField(sdk_version_, other.sdk_version_);
 }
 
 bool TracingServiceState_Producer::ParseFromArray(const void* raw, size_t size) {

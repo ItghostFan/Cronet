@@ -22,8 +22,8 @@ ChromeActiveProcesses::ChromeActiveProcesses(ChromeActiveProcesses&&) noexcept =
 ChromeActiveProcesses& ChromeActiveProcesses::operator=(ChromeActiveProcesses&&) = default;
 
 bool ChromeActiveProcesses::operator==(const ChromeActiveProcesses& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && pid_ == other.pid_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_, other.pid_);
 }
 
 bool ChromeActiveProcesses::ParseFromArray(const void* raw, size_t size) {

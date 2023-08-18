@@ -194,6 +194,7 @@ class PERFETTO_EXPORT_COMPONENT CommitDataRequest_ChunksToMove : public ::protoz
     kPageFieldNumber = 1,
     kChunkFieldNumber = 2,
     kTargetBufferFieldNumber = 3,
+    kDataFieldNumber = 4,
   };
 
   CommitDataRequest_ChunksToMove();
@@ -222,16 +223,22 @@ class PERFETTO_EXPORT_COMPONENT CommitDataRequest_ChunksToMove : public ::protoz
   uint32_t target_buffer() const { return target_buffer_; }
   void set_target_buffer(uint32_t value) { target_buffer_ = value; _has_field_.set(3); }
 
+  bool has_data() const { return _has_field_[4]; }
+  const std::string& data() const { return data_; }
+  void set_data(const std::string& value) { data_ = value; _has_field_.set(4); }
+  void set_data(const void* p, size_t s) { data_.assign(reinterpret_cast<const char*>(p), s); _has_field_.set(4); }
+
  private:
   uint32_t page_{};
   uint32_t chunk_{};
   uint32_t target_buffer_{};
+  std::string data_{};
 
   // Allows to preserve unknown protobuf fields for compatibility
   // with future versions of .proto files.
   std::string unknown_fields_;
 
-  std::bitset<4> _has_field_{};
+  std::bitset<5> _has_field_{};
 };
 
 }  // namespace perfetto

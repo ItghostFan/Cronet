@@ -22,10 +22,10 @@ ObservableEvents::ObservableEvents(ObservableEvents&&) noexcept = default;
 ObservableEvents& ObservableEvents::operator=(ObservableEvents&&) = default;
 
 bool ObservableEvents::operator==(const ObservableEvents& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && instance_state_changes_ == other.instance_state_changes_
-   && all_data_sources_started_ == other.all_data_sources_started_
-   && clone_trigger_hit_ == other.clone_trigger_hit_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(instance_state_changes_, other.instance_state_changes_)
+   && ::protozero::internal::gen_helpers::EqualsField(all_data_sources_started_, other.all_data_sources_started_)
+   && ::protozero::internal::gen_helpers::EqualsField(clone_trigger_hit_, other.clone_trigger_hit_);
 }
 
 int ObservableEvents::instance_state_changes_size() const { return static_cast<int>(instance_state_changes_.size()); }
@@ -100,8 +100,8 @@ ObservableEvents_CloneTriggerHit::ObservableEvents_CloneTriggerHit(ObservableEve
 ObservableEvents_CloneTriggerHit& ObservableEvents_CloneTriggerHit::operator=(ObservableEvents_CloneTriggerHit&&) = default;
 
 bool ObservableEvents_CloneTriggerHit::operator==(const ObservableEvents_CloneTriggerHit& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && tracing_session_id_ == other.tracing_session_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(tracing_session_id_, other.tracing_session_id_);
 }
 
 bool ObservableEvents_CloneTriggerHit::ParseFromArray(const void* raw, size_t size) {
@@ -155,10 +155,10 @@ ObservableEvents_DataSourceInstanceStateChange::ObservableEvents_DataSourceInsta
 ObservableEvents_DataSourceInstanceStateChange& ObservableEvents_DataSourceInstanceStateChange::operator=(ObservableEvents_DataSourceInstanceStateChange&&) = default;
 
 bool ObservableEvents_DataSourceInstanceStateChange::operator==(const ObservableEvents_DataSourceInstanceStateChange& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && producer_name_ == other.producer_name_
-   && data_source_name_ == other.data_source_name_
-   && state_ == other.state_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_name_, other.producer_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_name_, other.data_source_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(state_, other.state_);
 }
 
 bool ObservableEvents_DataSourceInstanceStateChange::ParseFromArray(const void* raw, size_t size) {

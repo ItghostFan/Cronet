@@ -22,8 +22,8 @@ AndroidEnergyConsumerDescriptor::AndroidEnergyConsumerDescriptor(AndroidEnergyCo
 AndroidEnergyConsumerDescriptor& AndroidEnergyConsumerDescriptor::operator=(AndroidEnergyConsumerDescriptor&&) = default;
 
 bool AndroidEnergyConsumerDescriptor::operator==(const AndroidEnergyConsumerDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && energy_consumers_ == other.energy_consumers_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(energy_consumers_, other.energy_consumers_);
 }
 
 int AndroidEnergyConsumerDescriptor::energy_consumers_size() const { return static_cast<int>(energy_consumers_.size()); }
@@ -82,11 +82,11 @@ AndroidEnergyConsumer::AndroidEnergyConsumer(AndroidEnergyConsumer&&) noexcept =
 AndroidEnergyConsumer& AndroidEnergyConsumer::operator=(AndroidEnergyConsumer&&) = default;
 
 bool AndroidEnergyConsumer::operator==(const AndroidEnergyConsumer& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && energy_consumer_id_ == other.energy_consumer_id_
-   && ordinal_ == other.ordinal_
-   && type_ == other.type_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(energy_consumer_id_, other.energy_consumer_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(ordinal_, other.ordinal_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool AndroidEnergyConsumer::ParseFromArray(const void* raw, size_t size) {

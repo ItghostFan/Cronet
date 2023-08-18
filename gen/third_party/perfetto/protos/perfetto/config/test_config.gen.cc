@@ -22,13 +22,13 @@ TestConfig::TestConfig(TestConfig&&) noexcept = default;
 TestConfig& TestConfig::operator=(TestConfig&&) = default;
 
 bool TestConfig::operator==(const TestConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && message_count_ == other.message_count_
-   && max_messages_per_second_ == other.max_messages_per_second_
-   && seed_ == other.seed_
-   && message_size_ == other.message_size_
-   && send_batch_on_register_ == other.send_batch_on_register_
-   && dummy_fields_ == other.dummy_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(message_count_, other.message_count_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_messages_per_second_, other.max_messages_per_second_)
+   && ::protozero::internal::gen_helpers::EqualsField(seed_, other.seed_)
+   && ::protozero::internal::gen_helpers::EqualsField(message_size_, other.message_size_)
+   && ::protozero::internal::gen_helpers::EqualsField(send_batch_on_register_, other.send_batch_on_register_)
+   && ::protozero::internal::gen_helpers::EqualsField(dummy_fields_, other.dummy_fields_);
 }
 
 bool TestConfig::ParseFromArray(const void* raw, size_t size) {
@@ -122,21 +122,21 @@ TestConfig_DummyFields::TestConfig_DummyFields(TestConfig_DummyFields&&) noexcep
 TestConfig_DummyFields& TestConfig_DummyFields::operator=(TestConfig_DummyFields&&) = default;
 
 bool TestConfig_DummyFields::operator==(const TestConfig_DummyFields& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && field_uint32_ == other.field_uint32_
-   && field_int32_ == other.field_int32_
-   && field_uint64_ == other.field_uint64_
-   && field_int64_ == other.field_int64_
-   && field_fixed64_ == other.field_fixed64_
-   && field_sfixed64_ == other.field_sfixed64_
-   && field_fixed32_ == other.field_fixed32_
-   && field_sfixed32_ == other.field_sfixed32_
-   && field_double_ == other.field_double_
-   && field_float_ == other.field_float_
-   && field_sint64_ == other.field_sint64_
-   && field_sint32_ == other.field_sint32_
-   && field_string_ == other.field_string_
-   && field_bytes_ == other.field_bytes_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_uint32_, other.field_uint32_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_int32_, other.field_int32_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_uint64_, other.field_uint64_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_int64_, other.field_int64_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_fixed64_, other.field_fixed64_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_sfixed64_, other.field_sfixed64_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_fixed32_, other.field_fixed32_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_sfixed32_, other.field_sfixed32_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_double_, other.field_double_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_float_, other.field_float_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_sint64_, other.field_sint64_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_sint32_, other.field_sint32_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_string_, other.field_string_)
+   && ::protozero::internal::gen_helpers::EqualsField(field_bytes_, other.field_bytes_);
 }
 
 bool TestConfig_DummyFields::ParseFromArray(const void* raw, size_t size) {

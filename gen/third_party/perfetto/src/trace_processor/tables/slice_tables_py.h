@@ -356,7 +356,8 @@ class SliceTable : public macros_internal::MacroTable {
 
    private:
     friend class SliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1316,7 +1317,8 @@ class ActualFrameTimelineSliceTable : public macros_internal::MacroTable {
 
    private:
     friend class ActualFrameTimelineSliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ActualFrameTimelineSliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2426,7 +2428,8 @@ class ExpectedFrameTimelineSliceTable : public macros_internal::MacroTable {
 
    private:
     friend class ExpectedFrameTimelineSliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ExpectedFrameTimelineSliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3187,7 +3190,8 @@ class ExperimentalFlatSliceTable : public macros_internal::MacroTable {
 
    private:
     friend class ExperimentalFlatSliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ExperimentalFlatSliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -4030,7 +4034,8 @@ class GpuSliceTable : public macros_internal::MacroTable {
 
    private:
     friend class GpuSliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, GpuSliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5197,7 +5202,8 @@ class GraphicsFrameSliceTable : public macros_internal::MacroTable {
 
    private:
     friend class GraphicsFrameSliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, GraphicsFrameSliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

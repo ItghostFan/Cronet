@@ -22,8 +22,8 @@ ChromeApplicationStateInfo::ChromeApplicationStateInfo(ChromeApplicationStateInf
 ChromeApplicationStateInfo& ChromeApplicationStateInfo::operator=(ChromeApplicationStateInfo&&) = default;
 
 bool ChromeApplicationStateInfo::operator==(const ChromeApplicationStateInfo& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && application_state_ == other.application_state_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(application_state_, other.application_state_);
 }
 
 bool ChromeApplicationStateInfo::ParseFromArray(const void* raw, size_t size) {

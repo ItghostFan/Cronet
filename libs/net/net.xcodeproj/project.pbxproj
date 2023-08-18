@@ -737,6 +737,7 @@
 		78E063A02A84E55C002E9727 /* set_quic_flag.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E0639E2A84E55C002E9727 /* set_quic_flag.cc */; };
 		78E063A32A84E685002E9727 /* cookie_partition_key.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E063A12A84E684002E9727 /* cookie_partition_key.cc */; };
 		78E063AF2A84E7C1002E9727 /* first_party_set_entry.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78E063AD2A84E7C0002E9727 /* first_party_set_entry.cc */; };
+		78EB50C32A8FC4EF00265ED0 /* cookie_notification_observer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50C12A8FC4EE00265ED0 /* cookie_notification_observer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -2198,6 +2199,8 @@
 		78E063B12A84E815002E9727 /* proxy_config_service.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = proxy_config_service.cc; path = ../../src/net/proxy_resolution/proxy_config_service.cc; sourceTree = "<group>"; };
 		78E063B22A84E8C6002E9727 /* first_party_set_metadata.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = first_party_set_metadata.cc; path = ../../src/net/first_party_sets/first_party_set_metadata.cc; sourceTree = "<group>"; };
 		78E063B32A84E8C6002E9727 /* first_party_set_metadata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = first_party_set_metadata.h; path = ../../src/net/first_party_sets/first_party_set_metadata.h; sourceTree = "<group>"; };
+		78EB50C12A8FC4EE00265ED0 /* cookie_notification_observer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cookie_notification_observer.mm; path = ../../src/ios/net/cookies/cookie_notification_observer.mm; sourceTree = "<group>"; };
+		78EB50C22A8FC4EF00265ED0 /* cookie_notification_observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cookie_notification_observer.h; path = ../../src/ios/net/cookies/cookie_notification_observer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3002,6 +3005,8 @@
 				785B078B2A791D040088C2FC /* cookie_store_ios_client.mm */,
 				785B07872A791D040088C2FC /* cookie_store_ios.h */,
 				785B07882A791D040088C2FC /* cookie_store_ios.mm */,
+				78EB50C22A8FC4EF00265ED0 /* cookie_notification_observer.h */,
+				78EB50C12A8FC4EE00265ED0 /* cookie_notification_observer.mm */,
 				785B078C2A791D050088C2FC /* ns_http_system_cookie_store.h */,
 				785B07862A791D040088C2FC /* ns_http_system_cookie_store.mm */,
 				785B07932A791D220088C2FC /* system_cookie_store.h */,
@@ -4734,6 +4739,7 @@
 				787AD50C2A85D00300CBEF59 /* quic_crypto_handshaker.cc in Sources */,
 				787AD5852A85D2A600CBEF59 /* aes_256_gcm_encrypter.cc in Sources */,
 				785B01EC2A77C4190088C2FC /* file_lock.cc in Sources */,
+				78EB50C32A8FC4EF00265ED0 /* cookie_notification_observer.mm in Sources */,
 				785B034C2A78A2C50088C2FC /* header_coalescer.cc in Sources */,
 				787AD60D2A85D51900CBEF59 /* http_encoder.cc in Sources */,
 				785B01202A77BF700088C2FC /* socket_descriptor.cc in Sources */,

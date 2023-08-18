@@ -30,9 +30,11 @@
 #include "protos/perfetto/config/gpu/gpu_counter_config.gen.h"
 #include "protos/perfetto/config/ftrace/ftrace_config.gen.h"
 #include "protos/perfetto/config/chrome/chrome_config.gen.h"
+#include "protos/perfetto/config/android/surfaceflinger_transactions_config.gen.h"
 #include "protos/perfetto/config/android/surfaceflinger_layers_config.gen.h"
 #include "protos/perfetto/config/android/packages_list_config.gen.h"
 #include "protos/perfetto/config/android/network_trace_config.gen.h"
+#include "protos/perfetto/config/android/android_sdk_sysprop_guard_config.gen.h"
 #include "protos/perfetto/config/android/android_system_property_config.gen.h"
 #include "protos/perfetto/config/android/android_polled_state_config.gen.h"
 #include "protos/perfetto/config/android/android_log_config.gen.h"
@@ -52,41 +54,41 @@ TraceConfig::TraceConfig(TraceConfig&&) noexcept = default;
 TraceConfig& TraceConfig::operator=(TraceConfig&&) = default;
 
 bool TraceConfig::operator==(const TraceConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && buffers_ == other.buffers_
-   && data_sources_ == other.data_sources_
-   && builtin_data_sources_ == other.builtin_data_sources_
-   && duration_ms_ == other.duration_ms_
-   && prefer_suspend_clock_for_duration_ == other.prefer_suspend_clock_for_duration_
-   && enable_extra_guardrails_ == other.enable_extra_guardrails_
-   && lockdown_mode_ == other.lockdown_mode_
-   && producers_ == other.producers_
-   && statsd_metadata_ == other.statsd_metadata_
-   && write_into_file_ == other.write_into_file_
-   && output_path_ == other.output_path_
-   && file_write_period_ms_ == other.file_write_period_ms_
-   && max_file_size_bytes_ == other.max_file_size_bytes_
-   && guardrail_overrides_ == other.guardrail_overrides_
-   && deferred_start_ == other.deferred_start_
-   && flush_period_ms_ == other.flush_period_ms_
-   && flush_timeout_ms_ == other.flush_timeout_ms_
-   && data_source_stop_timeout_ms_ == other.data_source_stop_timeout_ms_
-   && notify_traceur_ == other.notify_traceur_
-   && bugreport_score_ == other.bugreport_score_
-   && trigger_config_ == other.trigger_config_
-   && activate_triggers_ == other.activate_triggers_
-   && incremental_state_config_ == other.incremental_state_config_
-   && allow_user_build_tracing_ == other.allow_user_build_tracing_
-   && unique_session_name_ == other.unique_session_name_
-   && compression_type_ == other.compression_type_
-   && compress_from_cli_ == other.compress_from_cli_
-   && incident_report_config_ == other.incident_report_config_
-   && statsd_logging_ == other.statsd_logging_
-   && trace_uuid_msb_ == other.trace_uuid_msb_
-   && trace_uuid_lsb_ == other.trace_uuid_lsb_
-   && trace_filter_ == other.trace_filter_
-   && android_report_config_ == other.android_report_config_
-   && cmd_trace_start_delay_ == other.cmd_trace_start_delay_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(buffers_, other.buffers_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_sources_, other.data_sources_)
+   && ::protozero::internal::gen_helpers::EqualsField(builtin_data_sources_, other.builtin_data_sources_)
+   && ::protozero::internal::gen_helpers::EqualsField(duration_ms_, other.duration_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(prefer_suspend_clock_for_duration_, other.prefer_suspend_clock_for_duration_)
+   && ::protozero::internal::gen_helpers::EqualsField(enable_extra_guardrails_, other.enable_extra_guardrails_)
+   && ::protozero::internal::gen_helpers::EqualsField(lockdown_mode_, other.lockdown_mode_)
+   && ::protozero::internal::gen_helpers::EqualsField(producers_, other.producers_)
+   && ::protozero::internal::gen_helpers::EqualsField(statsd_metadata_, other.statsd_metadata_)
+   && ::protozero::internal::gen_helpers::EqualsField(write_into_file_, other.write_into_file_)
+   && ::protozero::internal::gen_helpers::EqualsField(output_path_, other.output_path_)
+   && ::protozero::internal::gen_helpers::EqualsField(file_write_period_ms_, other.file_write_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_file_size_bytes_, other.max_file_size_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(guardrail_overrides_, other.guardrail_overrides_)
+   && ::protozero::internal::gen_helpers::EqualsField(deferred_start_, other.deferred_start_)
+   && ::protozero::internal::gen_helpers::EqualsField(flush_period_ms_, other.flush_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(flush_timeout_ms_, other.flush_timeout_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_source_stop_timeout_ms_, other.data_source_stop_timeout_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(notify_traceur_, other.notify_traceur_)
+   && ::protozero::internal::gen_helpers::EqualsField(bugreport_score_, other.bugreport_score_)
+   && ::protozero::internal::gen_helpers::EqualsField(trigger_config_, other.trigger_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(activate_triggers_, other.activate_triggers_)
+   && ::protozero::internal::gen_helpers::EqualsField(incremental_state_config_, other.incremental_state_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(allow_user_build_tracing_, other.allow_user_build_tracing_)
+   && ::protozero::internal::gen_helpers::EqualsField(unique_session_name_, other.unique_session_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(compression_type_, other.compression_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(compress_from_cli_, other.compress_from_cli_)
+   && ::protozero::internal::gen_helpers::EqualsField(incident_report_config_, other.incident_report_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(statsd_logging_, other.statsd_logging_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_uuid_msb_, other.trace_uuid_msb_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_uuid_lsb_, other.trace_uuid_lsb_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_filter_, other.trace_filter_)
+   && ::protozero::internal::gen_helpers::EqualsField(android_report_config_, other.android_report_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(cmd_trace_start_delay_, other.cmd_trace_start_delay_);
 }
 
 int TraceConfig::buffers_size() const { return static_cast<int>(buffers_.size()); }
@@ -421,9 +423,9 @@ TraceConfig_CmdTraceStartDelay::TraceConfig_CmdTraceStartDelay(TraceConfig_CmdTr
 TraceConfig_CmdTraceStartDelay& TraceConfig_CmdTraceStartDelay::operator=(TraceConfig_CmdTraceStartDelay&&) = default;
 
 bool TraceConfig_CmdTraceStartDelay::operator==(const TraceConfig_CmdTraceStartDelay& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && min_delay_ms_ == other.min_delay_ms_
-   && max_delay_ms_ == other.max_delay_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(min_delay_ms_, other.min_delay_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_delay_ms_, other.max_delay_ms_);
 }
 
 bool TraceConfig_CmdTraceStartDelay::ParseFromArray(const void* raw, size_t size) {
@@ -485,11 +487,11 @@ TraceConfig_AndroidReportConfig::TraceConfig_AndroidReportConfig(TraceConfig_And
 TraceConfig_AndroidReportConfig& TraceConfig_AndroidReportConfig::operator=(TraceConfig_AndroidReportConfig&&) = default;
 
 bool TraceConfig_AndroidReportConfig::operator==(const TraceConfig_AndroidReportConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && reporter_service_package_ == other.reporter_service_package_
-   && reporter_service_class_ == other.reporter_service_class_
-   && skip_report_ == other.skip_report_
-   && use_pipe_in_framework_for_testing_ == other.use_pipe_in_framework_for_testing_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(reporter_service_package_, other.reporter_service_package_)
+   && ::protozero::internal::gen_helpers::EqualsField(reporter_service_class_, other.reporter_service_class_)
+   && ::protozero::internal::gen_helpers::EqualsField(skip_report_, other.skip_report_)
+   && ::protozero::internal::gen_helpers::EqualsField(use_pipe_in_framework_for_testing_, other.use_pipe_in_framework_for_testing_);
 }
 
 bool TraceConfig_AndroidReportConfig::ParseFromArray(const void* raw, size_t size) {
@@ -567,10 +569,10 @@ TraceConfig_TraceFilter::TraceConfig_TraceFilter(TraceConfig_TraceFilter&&) noex
 TraceConfig_TraceFilter& TraceConfig_TraceFilter::operator=(TraceConfig_TraceFilter&&) = default;
 
 bool TraceConfig_TraceFilter::operator==(const TraceConfig_TraceFilter& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && bytecode_ == other.bytecode_
-   && bytecode_v2_ == other.bytecode_v2_
-   && string_filter_chain_ == other.string_filter_chain_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(bytecode_, other.bytecode_)
+   && ::protozero::internal::gen_helpers::EqualsField(bytecode_v2_, other.bytecode_v2_)
+   && ::protozero::internal::gen_helpers::EqualsField(string_filter_chain_, other.string_filter_chain_);
 }
 
 bool TraceConfig_TraceFilter::ParseFromArray(const void* raw, size_t size) {
@@ -640,8 +642,8 @@ TraceConfig_TraceFilter_StringFilterChain::TraceConfig_TraceFilter_StringFilterC
 TraceConfig_TraceFilter_StringFilterChain& TraceConfig_TraceFilter_StringFilterChain::operator=(TraceConfig_TraceFilter_StringFilterChain&&) = default;
 
 bool TraceConfig_TraceFilter_StringFilterChain::operator==(const TraceConfig_TraceFilter_StringFilterChain& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && rules_ == other.rules_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(rules_, other.rules_);
 }
 
 int TraceConfig_TraceFilter_StringFilterChain::rules_size() const { return static_cast<int>(rules_.size()); }
@@ -700,10 +702,10 @@ TraceConfig_TraceFilter_StringFilterRule::TraceConfig_TraceFilter_StringFilterRu
 TraceConfig_TraceFilter_StringFilterRule& TraceConfig_TraceFilter_StringFilterRule::operator=(TraceConfig_TraceFilter_StringFilterRule&&) = default;
 
 bool TraceConfig_TraceFilter_StringFilterRule::operator==(const TraceConfig_TraceFilter_StringFilterRule& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && policy_ == other.policy_
-   && regex_pattern_ == other.regex_pattern_
-   && atrace_payload_starts_with_ == other.atrace_payload_starts_with_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(policy_, other.policy_)
+   && ::protozero::internal::gen_helpers::EqualsField(regex_pattern_, other.regex_pattern_)
+   && ::protozero::internal::gen_helpers::EqualsField(atrace_payload_starts_with_, other.atrace_payload_starts_with_);
 }
 
 bool TraceConfig_TraceFilter_StringFilterRule::ParseFromArray(const void* raw, size_t size) {
@@ -773,12 +775,12 @@ TraceConfig_IncidentReportConfig::TraceConfig_IncidentReportConfig(TraceConfig_I
 TraceConfig_IncidentReportConfig& TraceConfig_IncidentReportConfig::operator=(TraceConfig_IncidentReportConfig&&) = default;
 
 bool TraceConfig_IncidentReportConfig::operator==(const TraceConfig_IncidentReportConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && destination_package_ == other.destination_package_
-   && destination_class_ == other.destination_class_
-   && privacy_level_ == other.privacy_level_
-   && skip_incidentd_ == other.skip_incidentd_
-   && skip_dropbox_ == other.skip_dropbox_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(destination_package_, other.destination_package_)
+   && ::protozero::internal::gen_helpers::EqualsField(destination_class_, other.destination_class_)
+   && ::protozero::internal::gen_helpers::EqualsField(privacy_level_, other.privacy_level_)
+   && ::protozero::internal::gen_helpers::EqualsField(skip_incidentd_, other.skip_incidentd_)
+   && ::protozero::internal::gen_helpers::EqualsField(skip_dropbox_, other.skip_dropbox_);
 }
 
 bool TraceConfig_IncidentReportConfig::ParseFromArray(const void* raw, size_t size) {
@@ -864,8 +866,8 @@ TraceConfig_IncrementalStateConfig::TraceConfig_IncrementalStateConfig(TraceConf
 TraceConfig_IncrementalStateConfig& TraceConfig_IncrementalStateConfig::operator=(TraceConfig_IncrementalStateConfig&&) = default;
 
 bool TraceConfig_IncrementalStateConfig::operator==(const TraceConfig_IncrementalStateConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && clear_period_ms_ == other.clear_period_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(clear_period_ms_, other.clear_period_ms_);
 }
 
 bool TraceConfig_IncrementalStateConfig::ParseFromArray(const void* raw, size_t size) {
@@ -919,11 +921,11 @@ TraceConfig_TriggerConfig::TraceConfig_TriggerConfig(TraceConfig_TriggerConfig&&
 TraceConfig_TriggerConfig& TraceConfig_TriggerConfig::operator=(TraceConfig_TriggerConfig&&) = default;
 
 bool TraceConfig_TriggerConfig::operator==(const TraceConfig_TriggerConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trigger_mode_ == other.trigger_mode_
-   && use_clone_snapshot_if_available_ == other.use_clone_snapshot_if_available_
-   && triggers_ == other.triggers_
-   && trigger_timeout_ms_ == other.trigger_timeout_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trigger_mode_, other.trigger_mode_)
+   && ::protozero::internal::gen_helpers::EqualsField(use_clone_snapshot_if_available_, other.use_clone_snapshot_if_available_)
+   && ::protozero::internal::gen_helpers::EqualsField(triggers_, other.triggers_)
+   && ::protozero::internal::gen_helpers::EqualsField(trigger_timeout_ms_, other.trigger_timeout_ms_);
 }
 
 int TraceConfig_TriggerConfig::triggers_size() const { return static_cast<int>(triggers_.size()); }
@@ -1006,12 +1008,12 @@ TraceConfig_TriggerConfig_Trigger::TraceConfig_TriggerConfig_Trigger(TraceConfig
 TraceConfig_TriggerConfig_Trigger& TraceConfig_TriggerConfig_Trigger::operator=(TraceConfig_TriggerConfig_Trigger&&) = default;
 
 bool TraceConfig_TriggerConfig_Trigger::operator==(const TraceConfig_TriggerConfig_Trigger& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && producer_name_regex_ == other.producer_name_regex_
-   && stop_delay_ms_ == other.stop_delay_ms_
-   && max_per_24_h_ == other.max_per_24_h_
-   && skip_probability_ == other.skip_probability_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_name_regex_, other.producer_name_regex_)
+   && ::protozero::internal::gen_helpers::EqualsField(stop_delay_ms_, other.stop_delay_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_per_24_h_, other.max_per_24_h_)
+   && ::protozero::internal::gen_helpers::EqualsField(skip_probability_, other.skip_probability_);
 }
 
 bool TraceConfig_TriggerConfig_Trigger::ParseFromArray(const void* raw, size_t size) {
@@ -1097,9 +1099,9 @@ TraceConfig_GuardrailOverrides::TraceConfig_GuardrailOverrides(TraceConfig_Guard
 TraceConfig_GuardrailOverrides& TraceConfig_GuardrailOverrides::operator=(TraceConfig_GuardrailOverrides&&) = default;
 
 bool TraceConfig_GuardrailOverrides::operator==(const TraceConfig_GuardrailOverrides& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && max_upload_per_day_bytes_ == other.max_upload_per_day_bytes_
-   && max_tracing_buffer_size_kb_ == other.max_tracing_buffer_size_kb_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_upload_per_day_bytes_, other.max_upload_per_day_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_tracing_buffer_size_kb_, other.max_tracing_buffer_size_kb_);
 }
 
 bool TraceConfig_GuardrailOverrides::ParseFromArray(const void* raw, size_t size) {
@@ -1161,11 +1163,11 @@ TraceConfig_StatsdMetadata::TraceConfig_StatsdMetadata(TraceConfig_StatsdMetadat
 TraceConfig_StatsdMetadata& TraceConfig_StatsdMetadata::operator=(TraceConfig_StatsdMetadata&&) = default;
 
 bool TraceConfig_StatsdMetadata::operator==(const TraceConfig_StatsdMetadata& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && triggering_alert_id_ == other.triggering_alert_id_
-   && triggering_config_uid_ == other.triggering_config_uid_
-   && triggering_config_id_ == other.triggering_config_id_
-   && triggering_subscription_id_ == other.triggering_subscription_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(triggering_alert_id_, other.triggering_alert_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(triggering_config_uid_, other.triggering_config_uid_)
+   && ::protozero::internal::gen_helpers::EqualsField(triggering_config_id_, other.triggering_config_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(triggering_subscription_id_, other.triggering_subscription_id_);
 }
 
 bool TraceConfig_StatsdMetadata::ParseFromArray(const void* raw, size_t size) {
@@ -1243,10 +1245,10 @@ TraceConfig_ProducerConfig::TraceConfig_ProducerConfig(TraceConfig_ProducerConfi
 TraceConfig_ProducerConfig& TraceConfig_ProducerConfig::operator=(TraceConfig_ProducerConfig&&) = default;
 
 bool TraceConfig_ProducerConfig::operator==(const TraceConfig_ProducerConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && producer_name_ == other.producer_name_
-   && shm_size_kb_ == other.shm_size_kb_
-   && page_size_kb_ == other.page_size_kb_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_name_, other.producer_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(shm_size_kb_, other.shm_size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(page_size_kb_, other.page_size_kb_);
 }
 
 bool TraceConfig_ProducerConfig::ParseFromArray(const void* raw, size_t size) {
@@ -1316,15 +1318,15 @@ TraceConfig_BuiltinDataSource::TraceConfig_BuiltinDataSource(TraceConfig_Builtin
 TraceConfig_BuiltinDataSource& TraceConfig_BuiltinDataSource::operator=(TraceConfig_BuiltinDataSource&&) = default;
 
 bool TraceConfig_BuiltinDataSource::operator==(const TraceConfig_BuiltinDataSource& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && disable_clock_snapshotting_ == other.disable_clock_snapshotting_
-   && disable_trace_config_ == other.disable_trace_config_
-   && disable_system_info_ == other.disable_system_info_
-   && disable_service_events_ == other.disable_service_events_
-   && primary_trace_clock_ == other.primary_trace_clock_
-   && snapshot_interval_ms_ == other.snapshot_interval_ms_
-   && prefer_suspend_clock_for_snapshot_ == other.prefer_suspend_clock_for_snapshot_
-   && disable_chunk_usage_histograms_ == other.disable_chunk_usage_histograms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_clock_snapshotting_, other.disable_clock_snapshotting_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_trace_config_, other.disable_trace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_system_info_, other.disable_system_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_service_events_, other.disable_service_events_)
+   && ::protozero::internal::gen_helpers::EqualsField(primary_trace_clock_, other.primary_trace_clock_)
+   && ::protozero::internal::gen_helpers::EqualsField(snapshot_interval_ms_, other.snapshot_interval_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(prefer_suspend_clock_for_snapshot_, other.prefer_suspend_clock_for_snapshot_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_chunk_usage_histograms_, other.disable_chunk_usage_histograms_);
 }
 
 bool TraceConfig_BuiltinDataSource::ParseFromArray(const void* raw, size_t size) {
@@ -1434,10 +1436,10 @@ TraceConfig_DataSource::TraceConfig_DataSource(TraceConfig_DataSource&&) noexcep
 TraceConfig_DataSource& TraceConfig_DataSource::operator=(TraceConfig_DataSource&&) = default;
 
 bool TraceConfig_DataSource::operator==(const TraceConfig_DataSource& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && config_ == other.config_
-   && producer_name_filter_ == other.producer_name_filter_
-   && producer_name_regex_filter_ == other.producer_name_regex_filter_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(config_, other.config_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_name_filter_, other.producer_name_filter_)
+   && ::protozero::internal::gen_helpers::EqualsField(producer_name_regex_filter_, other.producer_name_regex_filter_);
 }
 
 bool TraceConfig_DataSource::ParseFromArray(const void* raw, size_t size) {
@@ -1511,9 +1513,9 @@ TraceConfig_BufferConfig::TraceConfig_BufferConfig(TraceConfig_BufferConfig&&) n
 TraceConfig_BufferConfig& TraceConfig_BufferConfig::operator=(TraceConfig_BufferConfig&&) = default;
 
 bool TraceConfig_BufferConfig::operator==(const TraceConfig_BufferConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && size_kb_ == other.size_kb_
-   && fill_policy_ == other.fill_policy_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(size_kb_, other.size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(fill_policy_, other.fill_policy_);
 }
 
 bool TraceConfig_BufferConfig::ParseFromArray(const void* raw, size_t size) {

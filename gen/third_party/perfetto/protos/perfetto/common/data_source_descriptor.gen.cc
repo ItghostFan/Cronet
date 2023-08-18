@@ -22,15 +22,15 @@ DataSourceDescriptor::DataSourceDescriptor(DataSourceDescriptor&&) noexcept = de
 DataSourceDescriptor& DataSourceDescriptor::operator=(DataSourceDescriptor&&) = default;
 
 bool DataSourceDescriptor::operator==(const DataSourceDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && id_ == other.id_
-   && will_notify_on_stop_ == other.will_notify_on_stop_
-   && will_notify_on_start_ == other.will_notify_on_start_
-   && handles_incremental_state_clear_ == other.handles_incremental_state_clear_
-   && gpu_counter_descriptor_ == other.gpu_counter_descriptor_
-   && track_event_descriptor_ == other.track_event_descriptor_
-   && ftrace_descriptor_ == other.ftrace_descriptor_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(id_, other.id_)
+   && ::protozero::internal::gen_helpers::EqualsField(will_notify_on_stop_, other.will_notify_on_stop_)
+   && ::protozero::internal::gen_helpers::EqualsField(will_notify_on_start_, other.will_notify_on_start_)
+   && ::protozero::internal::gen_helpers::EqualsField(handles_incremental_state_clear_, other.handles_incremental_state_clear_)
+   && ::protozero::internal::gen_helpers::EqualsField(gpu_counter_descriptor_, other.gpu_counter_descriptor_)
+   && ::protozero::internal::gen_helpers::EqualsField(track_event_descriptor_, other.track_event_descriptor_)
+   && ::protozero::internal::gen_helpers::EqualsField(ftrace_descriptor_, other.ftrace_descriptor_);
 }
 
 bool DataSourceDescriptor::ParseFromArray(const void* raw, size_t size) {

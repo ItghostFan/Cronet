@@ -278,6 +278,26 @@ inline const std::string& OmniboxEventProto_Feature_Name(T enum_t_value) {
 }
 bool OmniboxEventProto_Feature_Parse(
     ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, OmniboxEventProto_Feature* value);
+enum OmniboxEventProto_OmniboxPosition : int {
+  OmniboxEventProto_OmniboxPosition_UNKNOWN_POSITION = 0,
+  OmniboxEventProto_OmniboxPosition_TOP_POSITION = 1,
+  OmniboxEventProto_OmniboxPosition_BOTTOM_POSITION = 2
+};
+bool OmniboxEventProto_OmniboxPosition_IsValid(int value);
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto_OmniboxPosition_OmniboxPosition_MIN = OmniboxEventProto_OmniboxPosition_UNKNOWN_POSITION;
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto_OmniboxPosition_OmniboxPosition_MAX = OmniboxEventProto_OmniboxPosition_BOTTOM_POSITION;
+constexpr int OmniboxEventProto_OmniboxPosition_OmniboxPosition_ARRAYSIZE = OmniboxEventProto_OmniboxPosition_OmniboxPosition_MAX + 1;
+
+const std::string& OmniboxEventProto_OmniboxPosition_Name(OmniboxEventProto_OmniboxPosition value);
+template<typename T>
+inline const std::string& OmniboxEventProto_OmniboxPosition_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, OmniboxEventProto_OmniboxPosition>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function OmniboxEventProto_OmniboxPosition_Name.");
+  return OmniboxEventProto_OmniboxPosition_Name(static_cast<OmniboxEventProto_OmniboxPosition>(enum_t_value));
+}
+bool OmniboxEventProto_OmniboxPosition_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, OmniboxEventProto_OmniboxPosition* value);
 // ===================================================================
 
 class OmniboxEventProto_Suggestion_ScoringSignals final :
@@ -1903,6 +1923,34 @@ class OmniboxEventProto final :
     return OmniboxEventProto_Feature_Parse(name, value);
   }
 
+  typedef OmniboxEventProto_OmniboxPosition OmniboxPosition;
+  static constexpr OmniboxPosition UNKNOWN_POSITION =
+    OmniboxEventProto_OmniboxPosition_UNKNOWN_POSITION;
+  static constexpr OmniboxPosition TOP_POSITION =
+    OmniboxEventProto_OmniboxPosition_TOP_POSITION;
+  static constexpr OmniboxPosition BOTTOM_POSITION =
+    OmniboxEventProto_OmniboxPosition_BOTTOM_POSITION;
+  static inline bool OmniboxPosition_IsValid(int value) {
+    return OmniboxEventProto_OmniboxPosition_IsValid(value);
+  }
+  static constexpr OmniboxPosition OmniboxPosition_MIN =
+    OmniboxEventProto_OmniboxPosition_OmniboxPosition_MIN;
+  static constexpr OmniboxPosition OmniboxPosition_MAX =
+    OmniboxEventProto_OmniboxPosition_OmniboxPosition_MAX;
+  static constexpr int OmniboxPosition_ARRAYSIZE =
+    OmniboxEventProto_OmniboxPosition_OmniboxPosition_ARRAYSIZE;
+  template<typename T>
+  static inline const std::string& OmniboxPosition_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, OmniboxPosition>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function OmniboxPosition_Name.");
+    return OmniboxEventProto_OmniboxPosition_Name(enum_t_value);
+  }
+  static inline bool OmniboxPosition_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      OmniboxPosition* value) {
+    return OmniboxEventProto_OmniboxPosition_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
@@ -1932,6 +1980,7 @@ class OmniboxEventProto final :
     kInKeywordModeFieldNumber = 19,
     kIsQueryStartedFromTileFieldNumber = 21,
     kKeywordModeEntryMethodFieldNumber = 20,
+    kSteadyStateOmniboxPositionFieldNumber = 27,
   };
   // repeated .metrics.OmniboxEventProto.Suggestion suggestion = 9;
   int suggestion_size() const;
@@ -2312,6 +2361,19 @@ class OmniboxEventProto final :
   void _internal_set_keyword_mode_entry_method(::metrics::OmniboxEventProto_KeywordModeEntryMethod value);
   public:
 
+  // optional .metrics.OmniboxEventProto.OmniboxPosition steady_state_omnibox_position = 27;
+  bool has_steady_state_omnibox_position() const;
+  private:
+  bool _internal_has_steady_state_omnibox_position() const;
+  public:
+  void clear_steady_state_omnibox_position();
+  ::metrics::OmniboxEventProto_OmniboxPosition steady_state_omnibox_position() const;
+  void set_steady_state_omnibox_position(::metrics::OmniboxEventProto_OmniboxPosition value);
+  private:
+  ::metrics::OmniboxEventProto_OmniboxPosition _internal_steady_state_omnibox_position() const;
+  void _internal_set_steady_state_omnibox_position(::metrics::OmniboxEventProto_OmniboxPosition value);
+  public:
+
   // @@protoc_insertion_point(class_scope:metrics.OmniboxEventProto)
  private:
   class _Internal;
@@ -2347,6 +2409,7 @@ class OmniboxEventProto final :
   bool in_keyword_mode_;
   bool is_query_started_from_tile_;
   int keyword_mode_entry_method_;
+  int steady_state_omnibox_position_;
   friend struct ::TableStruct_omnibox_5fevent_2eproto;
 };
 // ===================================================================
@@ -4573,6 +4636,35 @@ inline void OmniboxEventProto::set_allocated_profile_data(::metrics::OmniboxEven
   // @@protoc_insertion_point(field_set_allocated:metrics.OmniboxEventProto.profile_data)
 }
 
+// optional .metrics.OmniboxEventProto.OmniboxPosition steady_state_omnibox_position = 27;
+inline bool OmniboxEventProto::_internal_has_steady_state_omnibox_position() const {
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
+  return value;
+}
+inline bool OmniboxEventProto::has_steady_state_omnibox_position() const {
+  return _internal_has_steady_state_omnibox_position();
+}
+inline void OmniboxEventProto::clear_steady_state_omnibox_position() {
+  steady_state_omnibox_position_ = 0;
+  _has_bits_[0] &= ~0x00100000u;
+}
+inline ::metrics::OmniboxEventProto_OmniboxPosition OmniboxEventProto::_internal_steady_state_omnibox_position() const {
+  return static_cast< ::metrics::OmniboxEventProto_OmniboxPosition >(steady_state_omnibox_position_);
+}
+inline ::metrics::OmniboxEventProto_OmniboxPosition OmniboxEventProto::steady_state_omnibox_position() const {
+  // @@protoc_insertion_point(field_get:metrics.OmniboxEventProto.steady_state_omnibox_position)
+  return _internal_steady_state_omnibox_position();
+}
+inline void OmniboxEventProto::_internal_set_steady_state_omnibox_position(::metrics::OmniboxEventProto_OmniboxPosition value) {
+  assert(::metrics::OmniboxEventProto_OmniboxPosition_IsValid(value));
+  _has_bits_[0] |= 0x00100000u;
+  steady_state_omnibox_position_ = value;
+}
+inline void OmniboxEventProto::set_steady_state_omnibox_position(::metrics::OmniboxEventProto_OmniboxPosition value) {
+  _internal_set_steady_state_omnibox_position(value);
+  // @@protoc_insertion_point(field_set:metrics.OmniboxEventProto.steady_state_omnibox_position)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -4597,6 +4689,7 @@ template <> struct is_proto_enum< ::metrics::OmniboxEventProto_ModeType> : ::std
 template <> struct is_proto_enum< ::metrics::OmniboxEventProto_ProviderType> : ::std::true_type {};
 template <> struct is_proto_enum< ::metrics::OmniboxEventProto_KeywordModeEntryMethod> : ::std::true_type {};
 template <> struct is_proto_enum< ::metrics::OmniboxEventProto_Feature> : ::std::true_type {};
+template <> struct is_proto_enum< ::metrics::OmniboxEventProto_OmniboxPosition> : ::std::true_type {};
 
 PROTOBUF_NAMESPACE_CLOSE
 

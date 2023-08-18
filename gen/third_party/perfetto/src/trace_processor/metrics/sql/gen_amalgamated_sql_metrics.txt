@@ -16,6 +16,8 @@
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_hwcomposer.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_hwui_metric.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_hwui_threads.sql
+../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_io.sql
+../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_io_unagg.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_ion.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_irq_runtime.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_jank_cuj.sql
@@ -39,11 +41,11 @@
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_task_names.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_trace_quality.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/android_trusty_workqueues.sql
+../../third_party/perfetto/src/trace_processor/metrics/sql/android/codec_metrics.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/composer_execution.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/composition_layers.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/counter_span_view_merged.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/cpu_info.sql
-../../third_party/perfetto/src/trace_processor/metrics/sql/android/codec_metrics.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/display_metrics.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/frame_missed.sql
 ../../third_party/perfetto/src/trace_processor/metrics/sql/android/g2d.sql

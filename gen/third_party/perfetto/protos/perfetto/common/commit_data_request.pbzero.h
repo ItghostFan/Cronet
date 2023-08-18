@@ -275,7 +275,7 @@ class CommitDataRequest_ChunkToPatch_Patch : public ::protozero::Message {
   }
 };
 
-class CommitDataRequest_ChunksToMove_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/3, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+class CommitDataRequest_ChunksToMove_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/4, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
  public:
   CommitDataRequest_ChunksToMove_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
   explicit CommitDataRequest_ChunksToMove_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
@@ -286,6 +286,8 @@ class CommitDataRequest_ChunksToMove_Decoder : public ::protozero::TypedProtoDec
   uint32_t chunk() const { return at<2>().as_uint32(); }
   bool has_target_buffer() const { return at<3>().valid(); }
   uint32_t target_buffer() const { return at<3>().as_uint32(); }
+  bool has_data() const { return at<4>().valid(); }
+  ::protozero::ConstBytes data() const { return at<4>().as_bytes(); }
 };
 
 class CommitDataRequest_ChunksToMove : public ::protozero::Message {
@@ -295,6 +297,7 @@ class CommitDataRequest_ChunksToMove : public ::protozero::Message {
     kPageFieldNumber = 1,
     kChunkFieldNumber = 2,
     kTargetBufferFieldNumber = 3,
+    kDataFieldNumber = 4,
   };
   static constexpr const char* GetName() { return ".perfetto.protos.CommitDataRequest.ChunksToMove"; }
 
@@ -350,6 +353,30 @@ class CommitDataRequest_ChunksToMove : public ::protozero::Message {
     // method based on the type of the field.
     ::protozero::internal::FieldWriter<
       ::protozero::proto_utils::ProtoSchemaType::kUint32>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_Data =
+    ::protozero::proto_utils::FieldMetadata<
+      4,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kBytes,
+      std::string,
+      CommitDataRequest_ChunksToMove>;
+
+  static constexpr FieldMetadata_Data kData{};
+  void set_data(const uint8_t* data, size_t size) {
+    AppendBytes(FieldMetadata_Data::kFieldId, data, size);
+  }
+  void set_data(::protozero::ConstBytes bytes) {
+    AppendBytes(FieldMetadata_Data::kFieldId, bytes.data, bytes.size);
+  }
+  void set_data(std::string value) {
+    static constexpr uint32_t field_id = FieldMetadata_Data::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kBytes>
         ::Append(*this, field_id, value);
   }
 };

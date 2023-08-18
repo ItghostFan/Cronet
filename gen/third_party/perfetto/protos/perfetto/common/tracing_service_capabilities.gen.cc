@@ -23,11 +23,11 @@ TracingServiceCapabilities::TracingServiceCapabilities(TracingServiceCapabilitie
 TracingServiceCapabilities& TracingServiceCapabilities::operator=(TracingServiceCapabilities&&) = default;
 
 bool TracingServiceCapabilities::operator==(const TracingServiceCapabilities& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && has_query_capabilities_ == other.has_query_capabilities_
-   && observable_events_ == other.observable_events_
-   && has_trace_config_output_path_ == other.has_trace_config_output_path_
-   && has_clone_session_ == other.has_clone_session_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_query_capabilities_, other.has_query_capabilities_)
+   && ::protozero::internal::gen_helpers::EqualsField(observable_events_, other.observable_events_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_trace_config_output_path_, other.has_trace_config_output_path_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_clone_session_, other.has_clone_session_);
 }
 
 bool TracingServiceCapabilities::ParseFromArray(const void* raw, size_t size) {

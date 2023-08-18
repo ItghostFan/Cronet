@@ -23,17 +23,17 @@ SysStatsConfig::SysStatsConfig(SysStatsConfig&&) noexcept = default;
 SysStatsConfig& SysStatsConfig::operator=(SysStatsConfig&&) = default;
 
 bool SysStatsConfig::operator==(const SysStatsConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && meminfo_period_ms_ == other.meminfo_period_ms_
-   && meminfo_counters_ == other.meminfo_counters_
-   && vmstat_period_ms_ == other.vmstat_period_ms_
-   && vmstat_counters_ == other.vmstat_counters_
-   && stat_period_ms_ == other.stat_period_ms_
-   && stat_counters_ == other.stat_counters_
-   && devfreq_period_ms_ == other.devfreq_period_ms_
-   && cpufreq_period_ms_ == other.cpufreq_period_ms_
-   && buddyinfo_period_ms_ == other.buddyinfo_period_ms_
-   && diskstat_period_ms_ == other.diskstat_period_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(meminfo_period_ms_, other.meminfo_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(meminfo_counters_, other.meminfo_counters_)
+   && ::protozero::internal::gen_helpers::EqualsField(vmstat_period_ms_, other.vmstat_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(vmstat_counters_, other.vmstat_counters_)
+   && ::protozero::internal::gen_helpers::EqualsField(stat_period_ms_, other.stat_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(stat_counters_, other.stat_counters_)
+   && ::protozero::internal::gen_helpers::EqualsField(devfreq_period_ms_, other.devfreq_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(cpufreq_period_ms_, other.cpufreq_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(buddyinfo_period_ms_, other.buddyinfo_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(diskstat_period_ms_, other.diskstat_period_ms_);
 }
 
 bool SysStatsConfig::ParseFromArray(const void* raw, size_t size) {

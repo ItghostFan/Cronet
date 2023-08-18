@@ -22,9 +22,9 @@ InterceptorConfig::InterceptorConfig(InterceptorConfig&&) noexcept = default;
 InterceptorConfig& InterceptorConfig::operator=(InterceptorConfig&&) = default;
 
 bool InterceptorConfig::operator==(const InterceptorConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && console_config_ == other.console_config_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(console_config_, other.console_config_);
 }
 
 bool InterceptorConfig::ParseFromArray(const void* raw, size_t size) {

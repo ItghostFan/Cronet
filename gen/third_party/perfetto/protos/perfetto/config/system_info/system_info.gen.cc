@@ -22,7 +22,7 @@ SystemInfoConfig::SystemInfoConfig(SystemInfoConfig&&) noexcept = default;
 SystemInfoConfig& SystemInfoConfig::operator=(SystemInfoConfig&&) = default;
 
 bool SystemInfoConfig::operator==(const SystemInfoConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool SystemInfoConfig::ParseFromArray(const void* raw, size_t size) {

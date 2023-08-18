@@ -22,24 +22,24 @@ TraceStats::TraceStats(TraceStats&&) noexcept = default;
 TraceStats& TraceStats::operator=(TraceStats&&) = default;
 
 bool TraceStats::operator==(const TraceStats& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && buffer_stats_ == other.buffer_stats_
-   && chunk_payload_histogram_def_ == other.chunk_payload_histogram_def_
-   && writer_stats_ == other.writer_stats_
-   && producers_connected_ == other.producers_connected_
-   && producers_seen_ == other.producers_seen_
-   && data_sources_registered_ == other.data_sources_registered_
-   && data_sources_seen_ == other.data_sources_seen_
-   && tracing_sessions_ == other.tracing_sessions_
-   && total_buffers_ == other.total_buffers_
-   && chunks_discarded_ == other.chunks_discarded_
-   && patches_discarded_ == other.patches_discarded_
-   && invalid_packets_ == other.invalid_packets_
-   && filter_stats_ == other.filter_stats_
-   && flushes_requested_ == other.flushes_requested_
-   && flushes_succeeded_ == other.flushes_succeeded_
-   && flushes_failed_ == other.flushes_failed_
-   && final_flush_outcome_ == other.final_flush_outcome_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(buffer_stats_, other.buffer_stats_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunk_payload_histogram_def_, other.chunk_payload_histogram_def_)
+   && ::protozero::internal::gen_helpers::EqualsField(writer_stats_, other.writer_stats_)
+   && ::protozero::internal::gen_helpers::EqualsField(producers_connected_, other.producers_connected_)
+   && ::protozero::internal::gen_helpers::EqualsField(producers_seen_, other.producers_seen_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_sources_registered_, other.data_sources_registered_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_sources_seen_, other.data_sources_seen_)
+   && ::protozero::internal::gen_helpers::EqualsField(tracing_sessions_, other.tracing_sessions_)
+   && ::protozero::internal::gen_helpers::EqualsField(total_buffers_, other.total_buffers_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_discarded_, other.chunks_discarded_)
+   && ::protozero::internal::gen_helpers::EqualsField(patches_discarded_, other.patches_discarded_)
+   && ::protozero::internal::gen_helpers::EqualsField(invalid_packets_, other.invalid_packets_)
+   && ::protozero::internal::gen_helpers::EqualsField(filter_stats_, other.filter_stats_)
+   && ::protozero::internal::gen_helpers::EqualsField(flushes_requested_, other.flushes_requested_)
+   && ::protozero::internal::gen_helpers::EqualsField(flushes_succeeded_, other.flushes_succeeded_)
+   && ::protozero::internal::gen_helpers::EqualsField(flushes_failed_, other.flushes_failed_)
+   && ::protozero::internal::gen_helpers::EqualsField(final_flush_outcome_, other.final_flush_outcome_);
 }
 
 int TraceStats::buffer_stats_size() const { return static_cast<int>(buffer_stats_.size()); }
@@ -233,12 +233,12 @@ TraceStats_FilterStats::TraceStats_FilterStats(TraceStats_FilterStats&&) noexcep
 TraceStats_FilterStats& TraceStats_FilterStats::operator=(TraceStats_FilterStats&&) = default;
 
 bool TraceStats_FilterStats::operator==(const TraceStats_FilterStats& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && input_packets_ == other.input_packets_
-   && input_bytes_ == other.input_bytes_
-   && output_bytes_ == other.output_bytes_
-   && errors_ == other.errors_
-   && time_taken_ns_ == other.time_taken_ns_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(input_packets_, other.input_packets_)
+   && ::protozero::internal::gen_helpers::EqualsField(input_bytes_, other.input_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(output_bytes_, other.output_bytes_)
+   && ::protozero::internal::gen_helpers::EqualsField(errors_, other.errors_)
+   && ::protozero::internal::gen_helpers::EqualsField(time_taken_ns_, other.time_taken_ns_);
 }
 
 bool TraceStats_FilterStats::ParseFromArray(const void* raw, size_t size) {
@@ -324,10 +324,10 @@ TraceStats_WriterStats::TraceStats_WriterStats(TraceStats_WriterStats&&) noexcep
 TraceStats_WriterStats& TraceStats_WriterStats::operator=(TraceStats_WriterStats&&) = default;
 
 bool TraceStats_WriterStats::operator==(const TraceStats_WriterStats& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && sequence_id_ == other.sequence_id_
-   && chunk_payload_histogram_counts_ == other.chunk_payload_histogram_counts_
-   && chunk_payload_histogram_sum_ == other.chunk_payload_histogram_sum_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(sequence_id_, other.sequence_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunk_payload_histogram_counts_, other.chunk_payload_histogram_counts_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunk_payload_histogram_sum_, other.chunk_payload_histogram_sum_);
 }
 
 bool TraceStats_WriterStats::ParseFromArray(const void* raw, size_t size) {
@@ -407,26 +407,26 @@ TraceStats_BufferStats::TraceStats_BufferStats(TraceStats_BufferStats&&) noexcep
 TraceStats_BufferStats& TraceStats_BufferStats::operator=(TraceStats_BufferStats&&) = default;
 
 bool TraceStats_BufferStats::operator==(const TraceStats_BufferStats& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && buffer_size_ == other.buffer_size_
-   && bytes_written_ == other.bytes_written_
-   && bytes_overwritten_ == other.bytes_overwritten_
-   && bytes_read_ == other.bytes_read_
-   && padding_bytes_written_ == other.padding_bytes_written_
-   && padding_bytes_cleared_ == other.padding_bytes_cleared_
-   && chunks_written_ == other.chunks_written_
-   && chunks_rewritten_ == other.chunks_rewritten_
-   && chunks_overwritten_ == other.chunks_overwritten_
-   && chunks_discarded_ == other.chunks_discarded_
-   && chunks_read_ == other.chunks_read_
-   && chunks_committed_out_of_order_ == other.chunks_committed_out_of_order_
-   && write_wrap_count_ == other.write_wrap_count_
-   && patches_succeeded_ == other.patches_succeeded_
-   && patches_failed_ == other.patches_failed_
-   && readaheads_succeeded_ == other.readaheads_succeeded_
-   && readaheads_failed_ == other.readaheads_failed_
-   && abi_violations_ == other.abi_violations_
-   && trace_writer_packet_loss_ == other.trace_writer_packet_loss_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(buffer_size_, other.buffer_size_)
+   && ::protozero::internal::gen_helpers::EqualsField(bytes_written_, other.bytes_written_)
+   && ::protozero::internal::gen_helpers::EqualsField(bytes_overwritten_, other.bytes_overwritten_)
+   && ::protozero::internal::gen_helpers::EqualsField(bytes_read_, other.bytes_read_)
+   && ::protozero::internal::gen_helpers::EqualsField(padding_bytes_written_, other.padding_bytes_written_)
+   && ::protozero::internal::gen_helpers::EqualsField(padding_bytes_cleared_, other.padding_bytes_cleared_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_written_, other.chunks_written_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_rewritten_, other.chunks_rewritten_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_overwritten_, other.chunks_overwritten_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_discarded_, other.chunks_discarded_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_read_, other.chunks_read_)
+   && ::protozero::internal::gen_helpers::EqualsField(chunks_committed_out_of_order_, other.chunks_committed_out_of_order_)
+   && ::protozero::internal::gen_helpers::EqualsField(write_wrap_count_, other.write_wrap_count_)
+   && ::protozero::internal::gen_helpers::EqualsField(patches_succeeded_, other.patches_succeeded_)
+   && ::protozero::internal::gen_helpers::EqualsField(patches_failed_, other.patches_failed_)
+   && ::protozero::internal::gen_helpers::EqualsField(readaheads_succeeded_, other.readaheads_succeeded_)
+   && ::protozero::internal::gen_helpers::EqualsField(readaheads_failed_, other.readaheads_failed_)
+   && ::protozero::internal::gen_helpers::EqualsField(abi_violations_, other.abi_violations_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_writer_packet_loss_, other.trace_writer_packet_loss_);
 }
 
 bool TraceStats_BufferStats::ParseFromArray(const void* raw, size_t size) {

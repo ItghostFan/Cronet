@@ -23,10 +23,10 @@ AndroidLogConfig::AndroidLogConfig(AndroidLogConfig&&) noexcept = default;
 AndroidLogConfig& AndroidLogConfig::operator=(AndroidLogConfig&&) = default;
 
 bool AndroidLogConfig::operator==(const AndroidLogConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && log_ids_ == other.log_ids_
-   && min_prio_ == other.min_prio_
-   && filter_tags_ == other.filter_tags_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(log_ids_, other.log_ids_)
+   && ::protozero::internal::gen_helpers::EqualsField(min_prio_, other.min_prio_)
+   && ::protozero::internal::gen_helpers::EqualsField(filter_tags_, other.filter_tags_);
 }
 
 bool AndroidLogConfig::ParseFromArray(const void* raw, size_t size) {

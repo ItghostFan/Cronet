@@ -230,7 +230,8 @@ class StackProfileMappingTable : public macros_internal::MacroTable {
 
    private:
     friend class StackProfileMappingTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, StackProfileMappingTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -706,7 +707,8 @@ class StackProfileFrameTable : public macros_internal::MacroTable {
 
    private:
     friend class StackProfileFrameTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, StackProfileFrameTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1092,7 +1094,8 @@ class StackProfileCallsiteTable : public macros_internal::MacroTable {
 
    private:
     friend class StackProfileCallsiteTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, StackProfileCallsiteTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1406,7 +1409,8 @@ class StackSampleTable : public macros_internal::MacroTable {
 
    private:
     friend class StackSampleTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, StackSampleTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1718,7 +1722,8 @@ class CpuProfileStackSampleTable : public macros_internal::MacroTable {
 
    private:
     friend class CpuProfileStackSampleTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CpuProfileStackSampleTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2389,7 +2394,8 @@ class ExperimentalFlamegraphNodesTable : public macros_internal::MacroTable {
 
    private:
     friend class ExperimentalFlamegraphNodesTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ExperimentalFlamegraphNodesTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3135,7 +3141,8 @@ class GpuCounterGroupTable : public macros_internal::MacroTable {
 
    private:
     friend class GpuCounterGroupTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, GpuCounterGroupTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3494,7 +3501,8 @@ class HeapGraphClassTable : public macros_internal::MacroTable {
 
    private:
     friend class HeapGraphClassTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, HeapGraphClassTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -4015,7 +4023,8 @@ class HeapGraphObjectTable : public macros_internal::MacroTable {
 
    private:
     friend class HeapGraphObjectTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, HeapGraphObjectTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -4563,7 +4572,8 @@ class HeapGraphReferenceTable : public macros_internal::MacroTable {
 
    private:
     friend class HeapGraphReferenceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, HeapGraphReferenceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5030,7 +5040,8 @@ class HeapProfileAllocationTable : public macros_internal::MacroTable {
 
    private:
     friend class HeapProfileAllocationTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, HeapProfileAllocationTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5479,7 +5490,8 @@ class PackageListTable : public macros_internal::MacroTable {
 
    private:
     friend class PackageListTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, PackageListTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -5937,7 +5949,8 @@ class PerfSampleTable : public macros_internal::MacroTable {
 
    private:
     friend class PerfSampleTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, PerfSampleTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -6629,7 +6642,8 @@ class ProfilerSmapsTable : public macros_internal::MacroTable {
 
    private:
     friend class ProfilerSmapsTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ProfilerSmapsTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -7357,7 +7371,8 @@ class SymbolTable : public macros_internal::MacroTable {
 
    private:
     friend class SymbolTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SymbolTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -7914,7 +7929,8 @@ class VulkanMemoryAllocationsTable : public macros_internal::MacroTable {
 
    private:
     friend class VulkanMemoryAllocationsTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, VulkanMemoryAllocationsTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

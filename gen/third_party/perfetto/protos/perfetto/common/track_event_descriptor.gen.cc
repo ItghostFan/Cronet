@@ -22,8 +22,8 @@ TrackEventDescriptor::TrackEventDescriptor(TrackEventDescriptor&&) noexcept = de
 TrackEventDescriptor& TrackEventDescriptor::operator=(TrackEventDescriptor&&) = default;
 
 bool TrackEventDescriptor::operator==(const TrackEventDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && available_categories_ == other.available_categories_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(available_categories_, other.available_categories_);
 }
 
 int TrackEventDescriptor::available_categories_size() const { return static_cast<int>(available_categories_.size()); }
@@ -82,10 +82,10 @@ TrackEventCategory::TrackEventCategory(TrackEventCategory&&) noexcept = default;
 TrackEventCategory& TrackEventCategory::operator=(TrackEventCategory&&) = default;
 
 bool TrackEventCategory::operator==(const TrackEventCategory& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && description_ == other.description_
-   && tags_ == other.tags_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(description_, other.description_)
+   && ::protozero::internal::gen_helpers::EqualsField(tags_, other.tags_);
 }
 
 bool TrackEventCategory::ParseFromArray(const void* raw, size_t size) {

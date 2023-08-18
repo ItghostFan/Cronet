@@ -38,14 +38,10 @@
 		78C65F122A7B54BB00B7B63C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78C65F152A7B54BB00B7B63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78C65F1D2A7B553F00B7B63C /* cronet_consumer_app_delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_app_delegate.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_app_delegate.h; sourceTree = "<group>"; };
-		78C65F1E2A7B553F00B7B63C /* cronet_consumer_url_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_url_protocol.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_url_protocol.h; sourceTree = "<group>"; };
 		78C65F1F2A7B553F00B7B63C /* cronet_consumer_view_controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cronet_consumer_view_controller.m; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_view_controller.m; sourceTree = "<group>"; };
 		78C65F202A7B553F00B7B63C /* cronet-consumer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "cronet-consumer-Info.plist"; path = "../src/components/cronet/ios/cronet_consumer/cronet-consumer-Info.plist"; sourceTree = "<group>"; };
-		78C65F212A7B553F00B7B63C /* cronet_consumer_url_protocol.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_consumer_url_protocol.mm; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_url_protocol.mm; sourceTree = "<group>"; };
 		78C65F222A7B553F00B7B63C /* cronet_consumer_view_controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_view_controller.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_view_controller.h; sourceTree = "<group>"; };
 		78C65F232A7B553F00B7B63C /* cronet_consumer_app_delegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_consumer_app_delegate.mm; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_app_delegate.mm; sourceTree = "<group>"; };
-		78C65F242A7B553F00B7B63C /* cronet_consumer_host_reslover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cronet_consumer_host_reslover.h; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_host_reslover.h; sourceTree = "<group>"; };
-		78C65F252A7B553F00B7B63C /* cronet_consumer_host_reslover.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cronet_consumer_host_reslover.mm; path = ../src/components/cronet/ios/cronet_consumer/cronet_consumer_host_reslover.mm; sourceTree = "<group>"; };
 		78C65F262A7B553F00B7B63C /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = ../src/components/cronet/ios/cronet_consumer/main.mm; sourceTree = "<group>"; };
 		78C65F322A7B563A00B7B63C /* Cronet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cronet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,10 +99,6 @@
 			children = (
 				78C65F1D2A7B553F00B7B63C /* cronet_consumer_app_delegate.h */,
 				78C65F232A7B553F00B7B63C /* cronet_consumer_app_delegate.mm */,
-				78C65F242A7B553F00B7B63C /* cronet_consumer_host_reslover.h */,
-				78C65F252A7B553F00B7B63C /* cronet_consumer_host_reslover.mm */,
-				78C65F1E2A7B553F00B7B63C /* cronet_consumer_url_protocol.h */,
-				78C65F212A7B553F00B7B63C /* cronet_consumer_url_protocol.mm */,
 				78C65F222A7B553F00B7B63C /* cronet_consumer_view_controller.h */,
 				78C65F1F2A7B553F00B7B63C /* cronet_consumer_view_controller.m */,
 				78C65F202A7B553F00B7B63C /* cronet-consumer-Info.plist */,

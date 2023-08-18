@@ -22,9 +22,9 @@ DebugAnnotationValueTypeName::DebugAnnotationValueTypeName(DebugAnnotationValueT
 DebugAnnotationValueTypeName& DebugAnnotationValueTypeName::operator=(DebugAnnotationValueTypeName&&) = default;
 
 bool DebugAnnotationValueTypeName::operator==(const DebugAnnotationValueTypeName& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool DebugAnnotationValueTypeName::ParseFromArray(const void* raw, size_t size) {
@@ -86,9 +86,9 @@ DebugAnnotationName::DebugAnnotationName(DebugAnnotationName&&) noexcept = defau
 DebugAnnotationName& DebugAnnotationName::operator=(DebugAnnotationName&&) = default;
 
 bool DebugAnnotationName::operator==(const DebugAnnotationName& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool DebugAnnotationName::ParseFromArray(const void* raw, size_t size) {
@@ -150,23 +150,23 @@ DebugAnnotation::DebugAnnotation(DebugAnnotation&&) noexcept = default;
 DebugAnnotation& DebugAnnotation::operator=(DebugAnnotation&&) = default;
 
 bool DebugAnnotation::operator==(const DebugAnnotation& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_iid_ == other.name_iid_
-   && name_ == other.name_
-   && bool_value_ == other.bool_value_
-   && uint_value_ == other.uint_value_
-   && int_value_ == other.int_value_
-   && double_value_ == other.double_value_
-   && pointer_value_ == other.pointer_value_
-   && nested_value_ == other.nested_value_
-   && legacy_json_value_ == other.legacy_json_value_
-   && string_value_ == other.string_value_
-   && string_value_iid_ == other.string_value_iid_
-   && proto_type_name_ == other.proto_type_name_
-   && proto_type_name_iid_ == other.proto_type_name_iid_
-   && proto_value_ == other.proto_value_
-   && dict_entries_ == other.dict_entries_
-   && array_values_ == other.array_values_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_iid_, other.name_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(bool_value_, other.bool_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(uint_value_, other.uint_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(int_value_, other.int_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(double_value_, other.double_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(pointer_value_, other.pointer_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(nested_value_, other.nested_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_json_value_, other.legacy_json_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(string_value_, other.string_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(string_value_iid_, other.string_value_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(proto_type_name_, other.proto_type_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(proto_type_name_iid_, other.proto_type_name_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(proto_value_, other.proto_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(dict_entries_, other.dict_entries_)
+   && ::protozero::internal::gen_helpers::EqualsField(array_values_, other.array_values_);
 }
 
 int DebugAnnotation::dict_entries_size() const { return static_cast<int>(dict_entries_.size()); }
@@ -350,15 +350,15 @@ DebugAnnotation_NestedValue::DebugAnnotation_NestedValue(DebugAnnotation_NestedV
 DebugAnnotation_NestedValue& DebugAnnotation_NestedValue::operator=(DebugAnnotation_NestedValue&&) = default;
 
 bool DebugAnnotation_NestedValue::operator==(const DebugAnnotation_NestedValue& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && nested_type_ == other.nested_type_
-   && dict_keys_ == other.dict_keys_
-   && dict_values_ == other.dict_values_
-   && array_values_ == other.array_values_
-   && int_value_ == other.int_value_
-   && double_value_ == other.double_value_
-   && bool_value_ == other.bool_value_
-   && string_value_ == other.string_value_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(nested_type_, other.nested_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(dict_keys_, other.dict_keys_)
+   && ::protozero::internal::gen_helpers::EqualsField(dict_values_, other.dict_values_)
+   && ::protozero::internal::gen_helpers::EqualsField(array_values_, other.array_values_)
+   && ::protozero::internal::gen_helpers::EqualsField(int_value_, other.int_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(double_value_, other.double_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(bool_value_, other.bool_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(string_value_, other.string_value_);
 }
 
 int DebugAnnotation_NestedValue::dict_values_size() const { return static_cast<int>(dict_values_.size()); }

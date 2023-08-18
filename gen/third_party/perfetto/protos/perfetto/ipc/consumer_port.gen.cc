@@ -31,9 +31,11 @@
 #include "protos/perfetto/config/gpu/gpu_counter_config.gen.h"
 #include "protos/perfetto/config/ftrace/ftrace_config.gen.h"
 #include "protos/perfetto/config/chrome/chrome_config.gen.h"
+#include "protos/perfetto/config/android/surfaceflinger_transactions_config.gen.h"
 #include "protos/perfetto/config/android/surfaceflinger_layers_config.gen.h"
 #include "protos/perfetto/config/android/packages_list_config.gen.h"
 #include "protos/perfetto/config/android/network_trace_config.gen.h"
+#include "protos/perfetto/config/android/android_sdk_sysprop_guard_config.gen.h"
 #include "protos/perfetto/config/android/android_system_property_config.gen.h"
 #include "protos/perfetto/config/android/android_polled_state_config.gen.h"
 #include "protos/perfetto/config/android/android_log_config.gen.h"
@@ -62,11 +64,11 @@ CloneSessionResponse::CloneSessionResponse(CloneSessionResponse&&) noexcept = de
 CloneSessionResponse& CloneSessionResponse::operator=(CloneSessionResponse&&) = default;
 
 bool CloneSessionResponse::operator==(const CloneSessionResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && success_ == other.success_
-   && error_ == other.error_
-   && uuid_msb_ == other.uuid_msb_
-   && uuid_lsb_ == other.uuid_lsb_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(success_, other.success_)
+   && ::protozero::internal::gen_helpers::EqualsField(error_, other.error_)
+   && ::protozero::internal::gen_helpers::EqualsField(uuid_msb_, other.uuid_msb_)
+   && ::protozero::internal::gen_helpers::EqualsField(uuid_lsb_, other.uuid_lsb_);
 }
 
 bool CloneSessionResponse::ParseFromArray(const void* raw, size_t size) {
@@ -144,8 +146,8 @@ CloneSessionRequest::CloneSessionRequest(CloneSessionRequest&&) noexcept = defau
 CloneSessionRequest& CloneSessionRequest::operator=(CloneSessionRequest&&) = default;
 
 bool CloneSessionRequest::operator==(const CloneSessionRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && session_id_ == other.session_id_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(session_id_, other.session_id_);
 }
 
 bool CloneSessionRequest::ParseFromArray(const void* raw, size_t size) {
@@ -199,9 +201,9 @@ SaveTraceForBugreportResponse::SaveTraceForBugreportResponse(SaveTraceForBugrepo
 SaveTraceForBugreportResponse& SaveTraceForBugreportResponse::operator=(SaveTraceForBugreportResponse&&) = default;
 
 bool SaveTraceForBugreportResponse::operator==(const SaveTraceForBugreportResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && success_ == other.success_
-   && msg_ == other.msg_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(success_, other.success_)
+   && ::protozero::internal::gen_helpers::EqualsField(msg_, other.msg_);
 }
 
 bool SaveTraceForBugreportResponse::ParseFromArray(const void* raw, size_t size) {
@@ -263,7 +265,7 @@ SaveTraceForBugreportRequest::SaveTraceForBugreportRequest(SaveTraceForBugreport
 SaveTraceForBugreportRequest& SaveTraceForBugreportRequest::operator=(SaveTraceForBugreportRequest&&) = default;
 
 bool SaveTraceForBugreportRequest::operator==(const SaveTraceForBugreportRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool SaveTraceForBugreportRequest::ParseFromArray(const void* raw, size_t size) {
@@ -309,8 +311,8 @@ QueryCapabilitiesResponse::QueryCapabilitiesResponse(QueryCapabilitiesResponse&&
 QueryCapabilitiesResponse& QueryCapabilitiesResponse::operator=(QueryCapabilitiesResponse&&) = default;
 
 bool QueryCapabilitiesResponse::operator==(const QueryCapabilitiesResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && capabilities_ == other.capabilities_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(capabilities_, other.capabilities_);
 }
 
 bool QueryCapabilitiesResponse::ParseFromArray(const void* raw, size_t size) {
@@ -364,7 +366,7 @@ QueryCapabilitiesRequest::QueryCapabilitiesRequest(QueryCapabilitiesRequest&&) n
 QueryCapabilitiesRequest& QueryCapabilitiesRequest::operator=(QueryCapabilitiesRequest&&) = default;
 
 bool QueryCapabilitiesRequest::operator==(const QueryCapabilitiesRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool QueryCapabilitiesRequest::ParseFromArray(const void* raw, size_t size) {
@@ -410,8 +412,8 @@ QueryServiceStateResponse::QueryServiceStateResponse(QueryServiceStateResponse&&
 QueryServiceStateResponse& QueryServiceStateResponse::operator=(QueryServiceStateResponse&&) = default;
 
 bool QueryServiceStateResponse::operator==(const QueryServiceStateResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && service_state_ == other.service_state_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(service_state_, other.service_state_);
 }
 
 bool QueryServiceStateResponse::ParseFromArray(const void* raw, size_t size) {
@@ -465,7 +467,7 @@ QueryServiceStateRequest::QueryServiceStateRequest(QueryServiceStateRequest&&) n
 QueryServiceStateRequest& QueryServiceStateRequest::operator=(QueryServiceStateRequest&&) = default;
 
 bool QueryServiceStateRequest::operator==(const QueryServiceStateRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool QueryServiceStateRequest::ParseFromArray(const void* raw, size_t size) {
@@ -511,8 +513,8 @@ ObserveEventsResponse::ObserveEventsResponse(ObserveEventsResponse&&) noexcept =
 ObserveEventsResponse& ObserveEventsResponse::operator=(ObserveEventsResponse&&) = default;
 
 bool ObserveEventsResponse::operator==(const ObserveEventsResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && events_ == other.events_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(events_, other.events_);
 }
 
 bool ObserveEventsResponse::ParseFromArray(const void* raw, size_t size) {
@@ -566,8 +568,8 @@ ObserveEventsRequest::ObserveEventsRequest(ObserveEventsRequest&&) noexcept = de
 ObserveEventsRequest& ObserveEventsRequest::operator=(ObserveEventsRequest&&) = default;
 
 bool ObserveEventsRequest::operator==(const ObserveEventsRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && events_to_observe_ == other.events_to_observe_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(events_to_observe_, other.events_to_observe_);
 }
 
 bool ObserveEventsRequest::ParseFromArray(const void* raw, size_t size) {
@@ -623,8 +625,8 @@ GetTraceStatsResponse::GetTraceStatsResponse(GetTraceStatsResponse&&) noexcept =
 GetTraceStatsResponse& GetTraceStatsResponse::operator=(GetTraceStatsResponse&&) = default;
 
 bool GetTraceStatsResponse::operator==(const GetTraceStatsResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_stats_ == other.trace_stats_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_stats_, other.trace_stats_);
 }
 
 bool GetTraceStatsResponse::ParseFromArray(const void* raw, size_t size) {
@@ -678,7 +680,7 @@ GetTraceStatsRequest::GetTraceStatsRequest(GetTraceStatsRequest&&) noexcept = de
 GetTraceStatsRequest& GetTraceStatsRequest::operator=(GetTraceStatsRequest&&) = default;
 
 bool GetTraceStatsRequest::operator==(const GetTraceStatsRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool GetTraceStatsRequest::ParseFromArray(const void* raw, size_t size) {
@@ -724,8 +726,8 @@ AttachResponse::AttachResponse(AttachResponse&&) noexcept = default;
 AttachResponse& AttachResponse::operator=(AttachResponse&&) = default;
 
 bool AttachResponse::operator==(const AttachResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_config_ == other.trace_config_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_config_, other.trace_config_);
 }
 
 bool AttachResponse::ParseFromArray(const void* raw, size_t size) {
@@ -779,8 +781,8 @@ AttachRequest::AttachRequest(AttachRequest&&) noexcept = default;
 AttachRequest& AttachRequest::operator=(AttachRequest&&) = default;
 
 bool AttachRequest::operator==(const AttachRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && key_ == other.key_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(key_, other.key_);
 }
 
 bool AttachRequest::ParseFromArray(const void* raw, size_t size) {
@@ -834,7 +836,7 @@ DetachResponse::DetachResponse(DetachResponse&&) noexcept = default;
 DetachResponse& DetachResponse::operator=(DetachResponse&&) = default;
 
 bool DetachResponse::operator==(const DetachResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool DetachResponse::ParseFromArray(const void* raw, size_t size) {
@@ -880,8 +882,8 @@ DetachRequest::DetachRequest(DetachRequest&&) noexcept = default;
 DetachRequest& DetachRequest::operator=(DetachRequest&&) = default;
 
 bool DetachRequest::operator==(const DetachRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && key_ == other.key_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(key_, other.key_);
 }
 
 bool DetachRequest::ParseFromArray(const void* raw, size_t size) {
@@ -935,7 +937,7 @@ FlushResponse::FlushResponse(FlushResponse&&) noexcept = default;
 FlushResponse& FlushResponse::operator=(FlushResponse&&) = default;
 
 bool FlushResponse::operator==(const FlushResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool FlushResponse::ParseFromArray(const void* raw, size_t size) {
@@ -981,8 +983,8 @@ FlushRequest::FlushRequest(FlushRequest&&) noexcept = default;
 FlushRequest& FlushRequest::operator=(FlushRequest&&) = default;
 
 bool FlushRequest::operator==(const FlushRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && timeout_ms_ == other.timeout_ms_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(timeout_ms_, other.timeout_ms_);
 }
 
 bool FlushRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1036,7 +1038,7 @@ FreeBuffersResponse::FreeBuffersResponse(FreeBuffersResponse&&) noexcept = defau
 FreeBuffersResponse& FreeBuffersResponse::operator=(FreeBuffersResponse&&) = default;
 
 bool FreeBuffersResponse::operator==(const FreeBuffersResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool FreeBuffersResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1082,8 +1084,8 @@ FreeBuffersRequest::FreeBuffersRequest(FreeBuffersRequest&&) noexcept = default;
 FreeBuffersRequest& FreeBuffersRequest::operator=(FreeBuffersRequest&&) = default;
 
 bool FreeBuffersRequest::operator==(const FreeBuffersRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && buffer_ids_ == other.buffer_ids_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(buffer_ids_, other.buffer_ids_);
 }
 
 bool FreeBuffersRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1139,8 +1141,8 @@ ReadBuffersResponse::ReadBuffersResponse(ReadBuffersResponse&&) noexcept = defau
 ReadBuffersResponse& ReadBuffersResponse::operator=(ReadBuffersResponse&&) = default;
 
 bool ReadBuffersResponse::operator==(const ReadBuffersResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && slices_ == other.slices_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(slices_, other.slices_);
 }
 
 int ReadBuffersResponse::slices_size() const { return static_cast<int>(slices_.size()); }
@@ -1199,9 +1201,9 @@ ReadBuffersResponse_Slice::ReadBuffersResponse_Slice(ReadBuffersResponse_Slice&&
 ReadBuffersResponse_Slice& ReadBuffersResponse_Slice::operator=(ReadBuffersResponse_Slice&&) = default;
 
 bool ReadBuffersResponse_Slice::operator==(const ReadBuffersResponse_Slice& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && data_ == other.data_
-   && last_slice_for_packet_ == other.last_slice_for_packet_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(data_, other.data_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_slice_for_packet_, other.last_slice_for_packet_);
 }
 
 bool ReadBuffersResponse_Slice::ParseFromArray(const void* raw, size_t size) {
@@ -1263,7 +1265,7 @@ ReadBuffersRequest::ReadBuffersRequest(ReadBuffersRequest&&) noexcept = default;
 ReadBuffersRequest& ReadBuffersRequest::operator=(ReadBuffersRequest&&) = default;
 
 bool ReadBuffersRequest::operator==(const ReadBuffersRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool ReadBuffersRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1309,7 +1311,7 @@ DisableTracingResponse::DisableTracingResponse(DisableTracingResponse&&) noexcep
 DisableTracingResponse& DisableTracingResponse::operator=(DisableTracingResponse&&) = default;
 
 bool DisableTracingResponse::operator==(const DisableTracingResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool DisableTracingResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1355,7 +1357,7 @@ DisableTracingRequest::DisableTracingRequest(DisableTracingRequest&&) noexcept =
 DisableTracingRequest& DisableTracingRequest::operator=(DisableTracingRequest&&) = default;
 
 bool DisableTracingRequest::operator==(const DisableTracingRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool DisableTracingRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1401,7 +1403,7 @@ ChangeTraceConfigResponse::ChangeTraceConfigResponse(ChangeTraceConfigResponse&&
 ChangeTraceConfigResponse& ChangeTraceConfigResponse::operator=(ChangeTraceConfigResponse&&) = default;
 
 bool ChangeTraceConfigResponse::operator==(const ChangeTraceConfigResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool ChangeTraceConfigResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1447,8 +1449,8 @@ ChangeTraceConfigRequest::ChangeTraceConfigRequest(ChangeTraceConfigRequest&&) n
 ChangeTraceConfigRequest& ChangeTraceConfigRequest::operator=(ChangeTraceConfigRequest&&) = default;
 
 bool ChangeTraceConfigRequest::operator==(const ChangeTraceConfigRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_config_ == other.trace_config_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_config_, other.trace_config_);
 }
 
 bool ChangeTraceConfigRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1502,7 +1504,7 @@ StartTracingResponse::StartTracingResponse(StartTracingResponse&&) noexcept = de
 StartTracingResponse& StartTracingResponse::operator=(StartTracingResponse&&) = default;
 
 bool StartTracingResponse::operator==(const StartTracingResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool StartTracingResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1548,7 +1550,7 @@ StartTracingRequest::StartTracingRequest(StartTracingRequest&&) noexcept = defau
 StartTracingRequest& StartTracingRequest::operator=(StartTracingRequest&&) = default;
 
 bool StartTracingRequest::operator==(const StartTracingRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool StartTracingRequest::ParseFromArray(const void* raw, size_t size) {
@@ -1594,9 +1596,9 @@ EnableTracingResponse::EnableTracingResponse(EnableTracingResponse&&) noexcept =
 EnableTracingResponse& EnableTracingResponse::operator=(EnableTracingResponse&&) = default;
 
 bool EnableTracingResponse::operator==(const EnableTracingResponse& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && disabled_ == other.disabled_
-   && error_ == other.error_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(disabled_, other.disabled_)
+   && ::protozero::internal::gen_helpers::EqualsField(error_, other.error_);
 }
 
 bool EnableTracingResponse::ParseFromArray(const void* raw, size_t size) {
@@ -1658,9 +1660,9 @@ EnableTracingRequest::EnableTracingRequest(EnableTracingRequest&&) noexcept = de
 EnableTracingRequest& EnableTracingRequest::operator=(EnableTracingRequest&&) = default;
 
 bool EnableTracingRequest::operator==(const EnableTracingRequest& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && trace_config_ == other.trace_config_
-   && attach_notification_only_ == other.attach_notification_only_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_config_, other.trace_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(attach_notification_only_, other.attach_notification_only_);
 }
 
 bool EnableTracingRequest::ParseFromArray(const void* raw, size_t size) {

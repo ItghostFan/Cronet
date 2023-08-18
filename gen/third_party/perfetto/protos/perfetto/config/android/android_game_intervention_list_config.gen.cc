@@ -22,8 +22,8 @@ AndroidGameInterventionListConfig::AndroidGameInterventionListConfig(AndroidGame
 AndroidGameInterventionListConfig& AndroidGameInterventionListConfig::operator=(AndroidGameInterventionListConfig&&) = default;
 
 bool AndroidGameInterventionListConfig::operator==(const AndroidGameInterventionListConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && package_name_filter_ == other.package_name_filter_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(package_name_filter_, other.package_name_filter_);
 }
 
 bool AndroidGameInterventionListConfig::ParseFromArray(const void* raw, size_t size) {

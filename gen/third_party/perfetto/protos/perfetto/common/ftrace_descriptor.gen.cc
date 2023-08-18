@@ -22,8 +22,8 @@ FtraceDescriptor::FtraceDescriptor(FtraceDescriptor&&) noexcept = default;
 FtraceDescriptor& FtraceDescriptor::operator=(FtraceDescriptor&&) = default;
 
 bool FtraceDescriptor::operator==(const FtraceDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && atrace_categories_ == other.atrace_categories_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(atrace_categories_, other.atrace_categories_);
 }
 
 int FtraceDescriptor::atrace_categories_size() const { return static_cast<int>(atrace_categories_.size()); }
@@ -82,9 +82,9 @@ FtraceDescriptor_AtraceCategory::FtraceDescriptor_AtraceCategory(FtraceDescripto
 FtraceDescriptor_AtraceCategory& FtraceDescriptor_AtraceCategory::operator=(FtraceDescriptor_AtraceCategory&&) = default;
 
 bool FtraceDescriptor_AtraceCategory::operator==(const FtraceDescriptor_AtraceCategory& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && description_ == other.description_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(description_, other.description_);
 }
 
 bool FtraceDescriptor_AtraceCategory::ParseFromArray(const void* raw, size_t size) {

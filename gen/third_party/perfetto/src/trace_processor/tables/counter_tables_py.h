@@ -176,7 +176,8 @@ class CounterTable : public macros_internal::MacroTable {
 
    private:
     friend class CounterTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CounterTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

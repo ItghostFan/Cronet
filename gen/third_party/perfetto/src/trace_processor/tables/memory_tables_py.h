@@ -158,7 +158,8 @@ class MemorySnapshotTable : public macros_internal::MacroTable {
 
    private:
     friend class MemorySnapshotTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, MemorySnapshotTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -472,7 +473,8 @@ class ProcessMemorySnapshotTable : public macros_internal::MacroTable {
 
    private:
     friend class ProcessMemorySnapshotTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ProcessMemorySnapshotTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -831,7 +833,8 @@ class MemorySnapshotNodeTable : public macros_internal::MacroTable {
 
    private:
     friend class MemorySnapshotNodeTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, MemorySnapshotNodeTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1244,7 +1247,8 @@ class MemorySnapshotEdgeTable : public macros_internal::MacroTable {
 
    private:
     friend class MemorySnapshotEdgeTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, MemorySnapshotEdgeTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

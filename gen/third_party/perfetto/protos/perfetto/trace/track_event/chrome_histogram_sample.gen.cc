@@ -22,11 +22,11 @@ ChromeHistogramSample::ChromeHistogramSample(ChromeHistogramSample&&) noexcept =
 ChromeHistogramSample& ChromeHistogramSample::operator=(ChromeHistogramSample&&) = default;
 
 bool ChromeHistogramSample::operator==(const ChromeHistogramSample& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_hash_ == other.name_hash_
-   && name_ == other.name_
-   && sample_ == other.sample_
-   && name_iid_ == other.name_iid_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_hash_, other.name_hash_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(sample_, other.sample_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_iid_, other.name_iid_);
 }
 
 bool ChromeHistogramSample::ParseFromArray(const void* raw, size_t size) {
@@ -104,9 +104,9 @@ HistogramName::HistogramName(HistogramName&&) noexcept = default;
 HistogramName& HistogramName::operator=(HistogramName&&) = default;
 
 bool HistogramName::operator==(const HistogramName& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool HistogramName::ParseFromArray(const void* raw, size_t size) {

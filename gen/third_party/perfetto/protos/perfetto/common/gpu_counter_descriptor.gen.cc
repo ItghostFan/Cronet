@@ -22,12 +22,12 @@ GpuCounterDescriptor::GpuCounterDescriptor(GpuCounterDescriptor&&) noexcept = de
 GpuCounterDescriptor& GpuCounterDescriptor::operator=(GpuCounterDescriptor&&) = default;
 
 bool GpuCounterDescriptor::operator==(const GpuCounterDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && specs_ == other.specs_
-   && blocks_ == other.blocks_
-   && min_sampling_period_ns_ == other.min_sampling_period_ns_
-   && max_sampling_period_ns_ == other.max_sampling_period_ns_
-   && supports_instrumented_sampling_ == other.supports_instrumented_sampling_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(specs_, other.specs_)
+   && ::protozero::internal::gen_helpers::EqualsField(blocks_, other.blocks_)
+   && ::protozero::internal::gen_helpers::EqualsField(min_sampling_period_ns_, other.min_sampling_period_ns_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_sampling_period_ns_, other.max_sampling_period_ns_)
+   && ::protozero::internal::gen_helpers::EqualsField(supports_instrumented_sampling_, other.supports_instrumented_sampling_);
 }
 
 int GpuCounterDescriptor::specs_size() const { return static_cast<int>(specs_.size()); }
@@ -123,12 +123,12 @@ GpuCounterDescriptor_GpuCounterBlock::GpuCounterDescriptor_GpuCounterBlock(GpuCo
 GpuCounterDescriptor_GpuCounterBlock& GpuCounterDescriptor_GpuCounterBlock::operator=(GpuCounterDescriptor_GpuCounterBlock&&) = default;
 
 bool GpuCounterDescriptor_GpuCounterBlock::operator==(const GpuCounterDescriptor_GpuCounterBlock& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && block_id_ == other.block_id_
-   && block_capacity_ == other.block_capacity_
-   && name_ == other.name_
-   && description_ == other.description_
-   && counter_ids_ == other.counter_ids_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(block_id_, other.block_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(block_capacity_, other.block_capacity_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(description_, other.description_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_ids_, other.counter_ids_);
 }
 
 bool GpuCounterDescriptor_GpuCounterBlock::ParseFromArray(const void* raw, size_t size) {
@@ -216,16 +216,16 @@ GpuCounterDescriptor_GpuCounterSpec::GpuCounterDescriptor_GpuCounterSpec(GpuCoun
 GpuCounterDescriptor_GpuCounterSpec& GpuCounterDescriptor_GpuCounterSpec::operator=(GpuCounterDescriptor_GpuCounterSpec&&) = default;
 
 bool GpuCounterDescriptor_GpuCounterSpec::operator==(const GpuCounterDescriptor_GpuCounterSpec& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && counter_id_ == other.counter_id_
-   && name_ == other.name_
-   && description_ == other.description_
-   && int_peak_value_ == other.int_peak_value_
-   && double_peak_value_ == other.double_peak_value_
-   && numerator_units_ == other.numerator_units_
-   && denominator_units_ == other.denominator_units_
-   && select_by_default_ == other.select_by_default_
-   && groups_ == other.groups_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_id_, other.counter_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(description_, other.description_)
+   && ::protozero::internal::gen_helpers::EqualsField(int_peak_value_, other.int_peak_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(double_peak_value_, other.double_peak_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(numerator_units_, other.numerator_units_)
+   && ::protozero::internal::gen_helpers::EqualsField(denominator_units_, other.denominator_units_)
+   && ::protozero::internal::gen_helpers::EqualsField(select_by_default_, other.select_by_default_)
+   && ::protozero::internal::gen_helpers::EqualsField(groups_, other.groups_);
 }
 
 bool GpuCounterDescriptor_GpuCounterSpec::ParseFromArray(const void* raw, size_t size) {

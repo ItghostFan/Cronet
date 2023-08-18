@@ -27,8 +27,11 @@ class BlinkHighEntropyAPI_JSFunctionArgument;
 class BlinkSourceLocation;
 class BrowsingContextState;
 class ChromeBrowserContext;
+class ChromeUnguessableToken;
+class FrameSinkId;
 class FrameTreeNodeInfo;
 class GlobalRenderFrameHostId;
+class LocalSurfaceId;
 class RenderFrameHost;
 class RenderProcessHost;
 class SiteInstance;
@@ -75,6 +78,14 @@ namespace perfetto_pbzero_enum_ChildProcessLauncherPriority {
 enum Importance : int32_t;
 }  // namespace perfetto_pbzero_enum_ChildProcessLauncherPriority
 using ChildProcessLauncherPriority_Importance = perfetto_pbzero_enum_ChildProcessLauncherPriority::Importance;
+namespace perfetto_pbzero_enum_ChromeGraphicsPipeline {
+enum FrameSkippedReason : int32_t;
+}  // namespace perfetto_pbzero_enum_ChromeGraphicsPipeline
+using ChromeGraphicsPipeline_FrameSkippedReason = perfetto_pbzero_enum_ChromeGraphicsPipeline::FrameSkippedReason;
+namespace perfetto_pbzero_enum_ChromeGraphicsPipeline {
+enum StepName : int32_t;
+}  // namespace perfetto_pbzero_enum_ChromeGraphicsPipeline
+using ChromeGraphicsPipeline_StepName = perfetto_pbzero_enum_ChromeGraphicsPipeline::StepName;
 namespace perfetto_pbzero_enum_ChromeSamplingProfilerSampleCollected {
 enum WriteStatus : int32_t;
 }  // namespace perfetto_pbzero_enum_ChromeSamplingProfilerSampleCollected
@@ -352,6 +363,104 @@ const char* DeviceThermalState_Name(::perfetto::protos::pbzero::DeviceThermalSta
   return "PBZERO_UNKNOWN_ENUM_VALUE";
 }
 
+namespace perfetto_pbzero_enum_ChromeGraphicsPipeline {
+enum StepName : int32_t {
+  STEP_UNKNOWN = 0,
+  STEP_DID_NOT_PRODUCE_FRAME = 1,
+  STEP_GENERATE_COMPOSITOR_FRAME = 2,
+  STEP_GENERATE_RENDER_PASS = 3,
+  STEP_ISSUE_BEGIN_FRAME = 4,
+  STEP_RECEIVE_COMPOSITOR_FRAME = 5,
+  STEP_RECEIVE_BEGIN_FRAME = 6,
+  STEP_RECEIVE_BEGIN_FRAME_DISCARD = 7,
+  STEP_SEND_BEGIN_MAIN_FRAME = 8,
+  STEP_SUBMIT_COMPOSITOR_FRAME = 9,
+  STEP_SURFACE_AGGREGATION = 10,
+};
+} // namespace perfetto_pbzero_enum_ChromeGraphicsPipeline
+using ChromeGraphicsPipeline_StepName = perfetto_pbzero_enum_ChromeGraphicsPipeline::StepName;
+
+
+constexpr ChromeGraphicsPipeline_StepName ChromeGraphicsPipeline_StepName_MIN = ChromeGraphicsPipeline_StepName::STEP_UNKNOWN;
+constexpr ChromeGraphicsPipeline_StepName ChromeGraphicsPipeline_StepName_MAX = ChromeGraphicsPipeline_StepName::STEP_SURFACE_AGGREGATION;
+
+
+PERFETTO_PROTOZERO_CONSTEXPR14_OR_INLINE
+const char* ChromeGraphicsPipeline_StepName_Name(::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName value) {
+  switch (value) {
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_UNKNOWN:
+    return "STEP_UNKNOWN";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_DID_NOT_PRODUCE_FRAME:
+    return "STEP_DID_NOT_PRODUCE_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_GENERATE_COMPOSITOR_FRAME:
+    return "STEP_GENERATE_COMPOSITOR_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_GENERATE_RENDER_PASS:
+    return "STEP_GENERATE_RENDER_PASS";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_ISSUE_BEGIN_FRAME:
+    return "STEP_ISSUE_BEGIN_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_RECEIVE_COMPOSITOR_FRAME:
+    return "STEP_RECEIVE_COMPOSITOR_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_RECEIVE_BEGIN_FRAME:
+    return "STEP_RECEIVE_BEGIN_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_RECEIVE_BEGIN_FRAME_DISCARD:
+    return "STEP_RECEIVE_BEGIN_FRAME_DISCARD";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_SEND_BEGIN_MAIN_FRAME:
+    return "STEP_SEND_BEGIN_MAIN_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_SUBMIT_COMPOSITOR_FRAME:
+    return "STEP_SUBMIT_COMPOSITOR_FRAME";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName::STEP_SURFACE_AGGREGATION:
+    return "STEP_SURFACE_AGGREGATION";
+  }
+  return "PBZERO_UNKNOWN_ENUM_VALUE";
+}
+
+namespace perfetto_pbzero_enum_ChromeGraphicsPipeline {
+enum FrameSkippedReason : int32_t {
+  SKIPPED_REASON_UNKNOWN = 0,
+  SKIPPED_REASON_RECOVER_LATENCY = 1,
+  SKIPPED_REASON_NO_DAMAGE = 2,
+  SKIPPED_REASON_WAITING_ON_MAIN = 3,
+  SKIPPED_REASON_DRAW_THROTTLED = 4,
+};
+} // namespace perfetto_pbzero_enum_ChromeGraphicsPipeline
+using ChromeGraphicsPipeline_FrameSkippedReason = perfetto_pbzero_enum_ChromeGraphicsPipeline::FrameSkippedReason;
+
+
+constexpr ChromeGraphicsPipeline_FrameSkippedReason ChromeGraphicsPipeline_FrameSkippedReason_MIN = ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_UNKNOWN;
+constexpr ChromeGraphicsPipeline_FrameSkippedReason ChromeGraphicsPipeline_FrameSkippedReason_MAX = ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_DRAW_THROTTLED;
+
+
+PERFETTO_PROTOZERO_CONSTEXPR14_OR_INLINE
+const char* ChromeGraphicsPipeline_FrameSkippedReason_Name(::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason value) {
+  switch (value) {
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_UNKNOWN:
+    return "SKIPPED_REASON_UNKNOWN";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_RECOVER_LATENCY:
+    return "SKIPPED_REASON_RECOVER_LATENCY";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_NO_DAMAGE:
+    return "SKIPPED_REASON_NO_DAMAGE";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_WAITING_ON_MAIN:
+    return "SKIPPED_REASON_WAITING_ON_MAIN";
+
+  case ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason::SKIPPED_REASON_DRAW_THROTTLED:
+    return "SKIPPED_REASON_DRAW_THROTTLED";
+  }
+  return "PBZERO_UNKNOWN_ENUM_VALUE";
+}
+
 namespace perfetto_pbzero_enum_TabSwitchMeasurement {
 enum Result : int32_t {
   RESULT_UNSPECIFIED = 0,
@@ -609,13 +718,14 @@ enum BlockCaptureReason : int32_t {
   BLOCKED_TAB_SWITCHER_MODE = 10,
   BLOCKED_COMPOSITOR_IN_MOTION = 11,
   BLOCKED_NTP_Y_TRANSLATION = 12,
+  BLOCKED_FULLSCREEN = 13,
 };
 } // namespace perfetto_pbzero_enum_AndroidToolbar
 using AndroidToolbar_BlockCaptureReason = perfetto_pbzero_enum_AndroidToolbar::BlockCaptureReason;
 
 
 constexpr AndroidToolbar_BlockCaptureReason AndroidToolbar_BlockCaptureReason_MIN = AndroidToolbar_BlockCaptureReason::BLOCKED_UNKNOWN;
-constexpr AndroidToolbar_BlockCaptureReason AndroidToolbar_BlockCaptureReason_MAX = AndroidToolbar_BlockCaptureReason::BLOCKED_NTP_Y_TRANSLATION;
+constexpr AndroidToolbar_BlockCaptureReason AndroidToolbar_BlockCaptureReason_MAX = AndroidToolbar_BlockCaptureReason::BLOCKED_FULLSCREEN;
 
 
 PERFETTO_PROTOZERO_CONSTEXPR14_OR_INLINE
@@ -659,6 +769,9 @@ const char* AndroidToolbar_BlockCaptureReason_Name(::perfetto::protos::pbzero::A
 
   case ::perfetto::protos::pbzero::AndroidToolbar_BlockCaptureReason::BLOCKED_NTP_Y_TRANSLATION:
     return "BLOCKED_NTP_Y_TRANSLATION";
+
+  case ::perfetto::protos::pbzero::AndroidToolbar_BlockCaptureReason::BLOCKED_FULLSCREEN:
+    return "BLOCKED_FULLSCREEN";
   }
   return "PBZERO_UNKNOWN_ENUM_VALUE";
 }
@@ -2269,6 +2382,357 @@ const char* BlinkTaskScope_TaskScopeType_Name(::perfetto::protos::pbzero::BlinkT
   }
   return "PBZERO_UNKNOWN_ENUM_VALUE";
 }
+
+class ChromeGraphicsPipeline_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/6, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+ public:
+  ChromeGraphicsPipeline_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
+  explicit ChromeGraphicsPipeline_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
+  explicit ChromeGraphicsPipeline_Decoder(const ::protozero::ConstBytes& raw) : TypedProtoDecoder(raw.data, raw.size) {}
+  bool has_step() const { return at<1>().valid(); }
+  int32_t step() const { return at<1>().as_int32(); }
+  bool has_frame_sink_id() const { return at<2>().valid(); }
+  ::protozero::ConstBytes frame_sink_id() const { return at<2>().as_bytes(); }
+  bool has_display_trace_id() const { return at<3>().valid(); }
+  int64_t display_trace_id() const { return at<3>().as_int64(); }
+  bool has_local_surface_id() const { return at<4>().valid(); }
+  ::protozero::ConstBytes local_surface_id() const { return at<4>().as_bytes(); }
+  bool has_frame_sequence() const { return at<5>().valid(); }
+  int64_t frame_sequence() const { return at<5>().as_int64(); }
+  bool has_frame_skipped_reason() const { return at<6>().valid(); }
+  int32_t frame_skipped_reason() const { return at<6>().as_int32(); }
+};
+
+class ChromeGraphicsPipeline : public ::protozero::Message {
+ public:
+  using Decoder = ChromeGraphicsPipeline_Decoder;
+  enum : int32_t {
+    kStepFieldNumber = 1,
+    kFrameSinkIdFieldNumber = 2,
+    kDisplayTraceIdFieldNumber = 3,
+    kLocalSurfaceIdFieldNumber = 4,
+    kFrameSequenceFieldNumber = 5,
+    kFrameSkippedReasonFieldNumber = 6,
+  };
+  static constexpr const char* GetName() { return ".perfetto.protos.ChromeGraphicsPipeline"; }
+
+
+  using StepName = ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName;
+  static inline const char* StepName_Name(StepName value) {
+    return ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName_Name(value);
+  }
+
+  using FrameSkippedReason = ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason;
+  static inline const char* FrameSkippedReason_Name(FrameSkippedReason value) {
+    return ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason_Name(value);
+  }
+  static inline const StepName STEP_UNKNOWN = StepName::STEP_UNKNOWN;
+  static inline const StepName STEP_DID_NOT_PRODUCE_FRAME = StepName::STEP_DID_NOT_PRODUCE_FRAME;
+  static inline const StepName STEP_GENERATE_COMPOSITOR_FRAME = StepName::STEP_GENERATE_COMPOSITOR_FRAME;
+  static inline const StepName STEP_GENERATE_RENDER_PASS = StepName::STEP_GENERATE_RENDER_PASS;
+  static inline const StepName STEP_ISSUE_BEGIN_FRAME = StepName::STEP_ISSUE_BEGIN_FRAME;
+  static inline const StepName STEP_RECEIVE_COMPOSITOR_FRAME = StepName::STEP_RECEIVE_COMPOSITOR_FRAME;
+  static inline const StepName STEP_RECEIVE_BEGIN_FRAME = StepName::STEP_RECEIVE_BEGIN_FRAME;
+  static inline const StepName STEP_RECEIVE_BEGIN_FRAME_DISCARD = StepName::STEP_RECEIVE_BEGIN_FRAME_DISCARD;
+  static inline const StepName STEP_SEND_BEGIN_MAIN_FRAME = StepName::STEP_SEND_BEGIN_MAIN_FRAME;
+  static inline const StepName STEP_SUBMIT_COMPOSITOR_FRAME = StepName::STEP_SUBMIT_COMPOSITOR_FRAME;
+  static inline const StepName STEP_SURFACE_AGGREGATION = StepName::STEP_SURFACE_AGGREGATION;
+  static inline const FrameSkippedReason SKIPPED_REASON_UNKNOWN = FrameSkippedReason::SKIPPED_REASON_UNKNOWN;
+  static inline const FrameSkippedReason SKIPPED_REASON_RECOVER_LATENCY = FrameSkippedReason::SKIPPED_REASON_RECOVER_LATENCY;
+  static inline const FrameSkippedReason SKIPPED_REASON_NO_DAMAGE = FrameSkippedReason::SKIPPED_REASON_NO_DAMAGE;
+  static inline const FrameSkippedReason SKIPPED_REASON_WAITING_ON_MAIN = FrameSkippedReason::SKIPPED_REASON_WAITING_ON_MAIN;
+  static inline const FrameSkippedReason SKIPPED_REASON_DRAW_THROTTLED = FrameSkippedReason::SKIPPED_REASON_DRAW_THROTTLED;
+
+  using FieldMetadata_Step =
+    ::protozero::proto_utils::FieldMetadata<
+      1,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kEnum,
+      ::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName,
+      ChromeGraphicsPipeline>;
+
+  static constexpr FieldMetadata_Step kStep{};
+  void set_step(::perfetto::protos::pbzero::ChromeGraphicsPipeline_StepName value) {
+    static constexpr uint32_t field_id = FieldMetadata_Step::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kEnum>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_FrameSinkId =
+    ::protozero::proto_utils::FieldMetadata<
+      2,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kMessage,
+      FrameSinkId,
+      ChromeGraphicsPipeline>;
+
+  static constexpr FieldMetadata_FrameSinkId kFrameSinkId{};
+  template <typename T = FrameSinkId> T* set_frame_sink_id() {
+    return BeginNestedMessage<T>(2);
+  }
+
+
+  using FieldMetadata_DisplayTraceId =
+    ::protozero::proto_utils::FieldMetadata<
+      3,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kInt64,
+      int64_t,
+      ChromeGraphicsPipeline>;
+
+  static constexpr FieldMetadata_DisplayTraceId kDisplayTraceId{};
+  void set_display_trace_id(int64_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_DisplayTraceId::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kInt64>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_LocalSurfaceId =
+    ::protozero::proto_utils::FieldMetadata<
+      4,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kMessage,
+      LocalSurfaceId,
+      ChromeGraphicsPipeline>;
+
+  static constexpr FieldMetadata_LocalSurfaceId kLocalSurfaceId{};
+  template <typename T = LocalSurfaceId> T* set_local_surface_id() {
+    return BeginNestedMessage<T>(4);
+  }
+
+
+  using FieldMetadata_FrameSequence =
+    ::protozero::proto_utils::FieldMetadata<
+      5,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kInt64,
+      int64_t,
+      ChromeGraphicsPipeline>;
+
+  static constexpr FieldMetadata_FrameSequence kFrameSequence{};
+  void set_frame_sequence(int64_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_FrameSequence::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kInt64>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_FrameSkippedReason =
+    ::protozero::proto_utils::FieldMetadata<
+      6,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kEnum,
+      ::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason,
+      ChromeGraphicsPipeline>;
+
+  static constexpr FieldMetadata_FrameSkippedReason kFrameSkippedReason{};
+  void set_frame_skipped_reason(::perfetto::protos::pbzero::ChromeGraphicsPipeline_FrameSkippedReason value) {
+    static constexpr uint32_t field_id = FieldMetadata_FrameSkippedReason::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kEnum>
+        ::Append(*this, field_id, value);
+  }
+};
+
+class LocalSurfaceId_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/3, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+ public:
+  LocalSurfaceId_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
+  explicit LocalSurfaceId_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
+  explicit LocalSurfaceId_Decoder(const ::protozero::ConstBytes& raw) : TypedProtoDecoder(raw.data, raw.size) {}
+  bool has_parent_sequence_number() const { return at<1>().valid(); }
+  uint32_t parent_sequence_number() const { return at<1>().as_uint32(); }
+  bool has_child_sequence_number() const { return at<2>().valid(); }
+  uint32_t child_sequence_number() const { return at<2>().as_uint32(); }
+  bool has_unguessable_token() const { return at<3>().valid(); }
+  ::protozero::ConstBytes unguessable_token() const { return at<3>().as_bytes(); }
+};
+
+class LocalSurfaceId : public ::protozero::Message {
+ public:
+  using Decoder = LocalSurfaceId_Decoder;
+  enum : int32_t {
+    kParentSequenceNumberFieldNumber = 1,
+    kChildSequenceNumberFieldNumber = 2,
+    kUnguessableTokenFieldNumber = 3,
+  };
+  static constexpr const char* GetName() { return ".perfetto.protos.LocalSurfaceId"; }
+
+
+  using FieldMetadata_ParentSequenceNumber =
+    ::protozero::proto_utils::FieldMetadata<
+      1,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kUint32,
+      uint32_t,
+      LocalSurfaceId>;
+
+  static constexpr FieldMetadata_ParentSequenceNumber kParentSequenceNumber{};
+  void set_parent_sequence_number(uint32_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_ParentSequenceNumber::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kUint32>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_ChildSequenceNumber =
+    ::protozero::proto_utils::FieldMetadata<
+      2,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kUint32,
+      uint32_t,
+      LocalSurfaceId>;
+
+  static constexpr FieldMetadata_ChildSequenceNumber kChildSequenceNumber{};
+  void set_child_sequence_number(uint32_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_ChildSequenceNumber::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kUint32>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_UnguessableToken =
+    ::protozero::proto_utils::FieldMetadata<
+      3,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kMessage,
+      ChromeUnguessableToken,
+      LocalSurfaceId>;
+
+  static constexpr FieldMetadata_UnguessableToken kUnguessableToken{};
+  template <typename T = ChromeUnguessableToken> T* set_unguessable_token() {
+    return BeginNestedMessage<T>(3);
+  }
+
+};
+
+class FrameSinkId_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/2, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+ public:
+  FrameSinkId_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
+  explicit FrameSinkId_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
+  explicit FrameSinkId_Decoder(const ::protozero::ConstBytes& raw) : TypedProtoDecoder(raw.data, raw.size) {}
+  bool has_frame_sink_client_id() const { return at<1>().valid(); }
+  uint32_t frame_sink_client_id() const { return at<1>().as_uint32(); }
+  bool has_frame_sink_id() const { return at<2>().valid(); }
+  uint32_t frame_sink_id() const { return at<2>().as_uint32(); }
+};
+
+class FrameSinkId : public ::protozero::Message {
+ public:
+  using Decoder = FrameSinkId_Decoder;
+  enum : int32_t {
+    kFrameSinkClientIdFieldNumber = 1,
+    kFrameSinkIdFieldNumber = 2,
+  };
+  static constexpr const char* GetName() { return ".perfetto.protos.FrameSinkId"; }
+
+
+  using FieldMetadata_FrameSinkClientId =
+    ::protozero::proto_utils::FieldMetadata<
+      1,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kUint32,
+      uint32_t,
+      FrameSinkId>;
+
+  static constexpr FieldMetadata_FrameSinkClientId kFrameSinkClientId{};
+  void set_frame_sink_client_id(uint32_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_FrameSinkClientId::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kUint32>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_FrameSinkId =
+    ::protozero::proto_utils::FieldMetadata<
+      2,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kUint32,
+      uint32_t,
+      FrameSinkId>;
+
+  static constexpr FieldMetadata_FrameSinkId kFrameSinkId{};
+  void set_frame_sink_id(uint32_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_FrameSinkId::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kUint32>
+        ::Append(*this, field_id, value);
+  }
+};
+
+class ChromeUnguessableToken_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/2, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
+ public:
+  ChromeUnguessableToken_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
+  explicit ChromeUnguessableToken_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
+  explicit ChromeUnguessableToken_Decoder(const ::protozero::ConstBytes& raw) : TypedProtoDecoder(raw.data, raw.size) {}
+  bool has_low_token() const { return at<1>().valid(); }
+  uint64_t low_token() const { return at<1>().as_uint64(); }
+  bool has_high_token() const { return at<2>().valid(); }
+  uint64_t high_token() const { return at<2>().as_uint64(); }
+};
+
+class ChromeUnguessableToken : public ::protozero::Message {
+ public:
+  using Decoder = ChromeUnguessableToken_Decoder;
+  enum : int32_t {
+    kLowTokenFieldNumber = 1,
+    kHighTokenFieldNumber = 2,
+  };
+  static constexpr const char* GetName() { return ".perfetto.protos.ChromeUnguessableToken"; }
+
+
+  using FieldMetadata_LowToken =
+    ::protozero::proto_utils::FieldMetadata<
+      1,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kUint64,
+      uint64_t,
+      ChromeUnguessableToken>;
+
+  static constexpr FieldMetadata_LowToken kLowToken{};
+  void set_low_token(uint64_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_LowToken::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kUint64>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_HighToken =
+    ::protozero::proto_utils::FieldMetadata<
+      2,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kUint64,
+      uint64_t,
+      ChromeUnguessableToken>;
+
+  static constexpr FieldMetadata_HighToken kHighToken{};
+  void set_high_token(uint64_t value) {
+    static constexpr uint32_t field_id = FieldMetadata_HighToken::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kUint64>
+        ::Append(*this, field_id, value);
+  }
+};
 
 class LinuxPulseOutput_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/5, /*HAS_NONPACKED_REPEATED_FIELDS=*/false> {
  public:
@@ -4549,6 +5013,7 @@ class AndroidToolbar : public ::protozero::Message {
   static inline const BlockCaptureReason BLOCKED_TAB_SWITCHER_MODE = BlockCaptureReason::BLOCKED_TAB_SWITCHER_MODE;
   static inline const BlockCaptureReason BLOCKED_COMPOSITOR_IN_MOTION = BlockCaptureReason::BLOCKED_COMPOSITOR_IN_MOTION;
   static inline const BlockCaptureReason BLOCKED_NTP_Y_TRANSLATION = BlockCaptureReason::BLOCKED_NTP_Y_TRANSLATION;
+  static inline const BlockCaptureReason BLOCKED_FULLSCREEN = BlockCaptureReason::BLOCKED_FULLSCREEN;
   static inline const AllowCaptureReason ALLOWED_UNKNOWN = AllowCaptureReason::ALLOWED_UNKNOWN;
   static inline const AllowCaptureReason ALLOWED_FORCE_CAPTURE = AllowCaptureReason::ALLOWED_FORCE_CAPTURE;
   static inline const AllowCaptureReason ALLOWED_SNAPSHOT_DIFFERENCE = AllowCaptureReason::ALLOWED_SNAPSHOT_DIFFERENCE;
@@ -5048,7 +5513,7 @@ class ProcessSingleton : public ::protozero::Message {
   }
 };
 
-class EventLatency_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/4, /*HAS_NONPACKED_REPEATED_FIELDS=*/true> {
+class EventLatency_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_ID=*/5, /*HAS_NONPACKED_REPEATED_FIELDS=*/true> {
  public:
   EventLatency_Decoder(const uint8_t* data, size_t len) : TypedProtoDecoder(data, len) {}
   explicit EventLatency_Decoder(const std::string& raw) : TypedProtoDecoder(reinterpret_cast<const uint8_t*>(raw.data()), raw.size()) {}
@@ -5061,6 +5526,8 @@ class EventLatency_Decoder : public ::protozero::TypedProtoDecoder</*MAX_FIELD_I
   ::protozero::RepeatedFieldIterator<::protozero::ConstChars> high_latency_stage() const { return GetRepeated<::protozero::ConstChars>(3); }
   bool has_event_latency_id() const { return at<4>().valid(); }
   int64_t event_latency_id() const { return at<4>().as_int64(); }
+  bool has_is_janky_scrolled_frame() const { return at<5>().valid(); }
+  bool is_janky_scrolled_frame() const { return at<5>().as_bool(); }
 };
 
 class EventLatency : public ::protozero::Message {
@@ -5071,6 +5538,7 @@ class EventLatency : public ::protozero::Message {
     kHasHighLatencyFieldNumber = 2,
     kHighLatencyStageFieldNumber = 3,
     kEventLatencyIdFieldNumber = 4,
+    kIsJankyScrolledFrameFieldNumber = 5,
   };
   static constexpr const char* GetName() { return ".perfetto.protos.EventLatency"; }
 
@@ -5183,6 +5651,24 @@ class EventLatency : public ::protozero::Message {
     // method based on the type of the field.
     ::protozero::internal::FieldWriter<
       ::protozero::proto_utils::ProtoSchemaType::kInt64>
+        ::Append(*this, field_id, value);
+  }
+
+  using FieldMetadata_IsJankyScrolledFrame =
+    ::protozero::proto_utils::FieldMetadata<
+      5,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kBool,
+      bool,
+      EventLatency>;
+
+  static constexpr FieldMetadata_IsJankyScrolledFrame kIsJankyScrolledFrame{};
+  void set_is_janky_scrolled_frame(bool value) {
+    static constexpr uint32_t field_id = FieldMetadata_IsJankyScrolledFrame::kFieldId;
+    // Call the appropriate protozero::Message::Append(field_id, ...)
+    // method based on the type of the field.
+    ::protozero::internal::FieldWriter<
+      ::protozero::proto_utils::ProtoSchemaType::kBool>
         ::Append(*this, field_id, value);
   }
 };
@@ -10068,6 +10554,20 @@ class ChromeTrackEvent : public ::perfetto::protos::pbzero::TrackEvent {
   static constexpr FieldMetadata_LinuxPulseOutput kLinuxPulseOutput{};
   template <typename T = LinuxPulseOutput> T* set_linux_pulse_output() {
     return BeginNestedMessage<T>(1051);
+  }
+
+
+  using FieldMetadata_ChromeGraphicsPipeline =
+    ::protozero::proto_utils::FieldMetadata<
+      1052,
+      ::protozero::proto_utils::RepetitionType::kNotRepeated,
+      ::protozero::proto_utils::ProtoSchemaType::kMessage,
+      ChromeGraphicsPipeline,
+      ChromeTrackEvent>;
+
+  static constexpr FieldMetadata_ChromeGraphicsPipeline kChromeGraphicsPipeline{};
+  template <typename T = ChromeGraphicsPipeline> T* set_chrome_graphics_pipeline() {
+    return BeginNestedMessage<T>(1052);
   }
 
 };

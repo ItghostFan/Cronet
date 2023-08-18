@@ -212,7 +212,8 @@ class SchedSliceTable : public macros_internal::MacroTable {
 
    private:
     friend class SchedSliceTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SchedSliceTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -661,7 +662,8 @@ class SpuriousSchedWakeupTable : public macros_internal::MacroTable {
 
    private:
     friend class SpuriousSchedWakeupTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SpuriousSchedWakeupTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1155,7 +1157,8 @@ class ThreadStateTable : public macros_internal::MacroTable {
 
    private:
     friend class ThreadStateTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ThreadStateTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

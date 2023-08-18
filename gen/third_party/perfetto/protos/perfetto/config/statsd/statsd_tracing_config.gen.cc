@@ -23,11 +23,11 @@ StatsdPullAtomConfig::StatsdPullAtomConfig(StatsdPullAtomConfig&&) noexcept = de
 StatsdPullAtomConfig& StatsdPullAtomConfig::operator=(StatsdPullAtomConfig&&) = default;
 
 bool StatsdPullAtomConfig::operator==(const StatsdPullAtomConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && pull_atom_id_ == other.pull_atom_id_
-   && raw_pull_atom_id_ == other.raw_pull_atom_id_
-   && pull_frequency_ms_ == other.pull_frequency_ms_
-   && packages_ == other.packages_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(pull_atom_id_, other.pull_atom_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(raw_pull_atom_id_, other.raw_pull_atom_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(pull_frequency_ms_, other.pull_frequency_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(packages_, other.packages_);
 }
 
 bool StatsdPullAtomConfig::ParseFromArray(const void* raw, size_t size) {
@@ -111,10 +111,10 @@ StatsdTracingConfig::StatsdTracingConfig(StatsdTracingConfig&&) noexcept = defau
 StatsdTracingConfig& StatsdTracingConfig::operator=(StatsdTracingConfig&&) = default;
 
 bool StatsdTracingConfig::operator==(const StatsdTracingConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && push_atom_id_ == other.push_atom_id_
-   && raw_push_atom_id_ == other.raw_push_atom_id_
-   && pull_config_ == other.pull_config_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(push_atom_id_, other.push_atom_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(raw_push_atom_id_, other.raw_push_atom_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(pull_config_, other.pull_config_);
 }
 
 int StatsdTracingConfig::pull_config_size() const { return static_cast<int>(pull_config_.size()); }

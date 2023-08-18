@@ -22,9 +22,9 @@ SurfaceFlingerLayersConfig::SurfaceFlingerLayersConfig(SurfaceFlingerLayersConfi
 SurfaceFlingerLayersConfig& SurfaceFlingerLayersConfig::operator=(SurfaceFlingerLayersConfig&&) = default;
 
 bool SurfaceFlingerLayersConfig::operator==(const SurfaceFlingerLayersConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && mode_ == other.mode_
-   && trace_flags_ == other.trace_flags_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(mode_, other.mode_)
+   && ::protozero::internal::gen_helpers::EqualsField(trace_flags_, other.trace_flags_);
 }
 
 bool SurfaceFlingerLayersConfig::ParseFromArray(const void* raw, size_t size) {

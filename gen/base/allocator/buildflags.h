@@ -6,7 +6,6 @@
 
 #include "build/buildflag.h" // IWYU pragma: export
 
-#define BUILDFLAG_INTERNAL_USE_ALLOCATOR_SHIM() (1)
 #define BUILDFLAG_INTERNAL_USE_PARTITION_ALLOC_AS_GWP_ASAN_STORE() (0)
 
 #endif  // BASE_ALLOCATOR_BUILDFLAGS_H_

@@ -22,26 +22,26 @@ FtraceConfig::FtraceConfig(FtraceConfig&&) noexcept = default;
 FtraceConfig& FtraceConfig::operator=(FtraceConfig&&) = default;
 
 bool FtraceConfig::operator==(const FtraceConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && ftrace_events_ == other.ftrace_events_
-   && atrace_categories_ == other.atrace_categories_
-   && atrace_apps_ == other.atrace_apps_
-   && buffer_size_kb_ == other.buffer_size_kb_
-   && drain_period_ms_ == other.drain_period_ms_
-   && compact_sched_ == other.compact_sched_
-   && print_filter_ == other.print_filter_
-   && symbolize_ksyms_ == other.symbolize_ksyms_
-   && ksyms_mem_policy_ == other.ksyms_mem_policy_
-   && initialize_ksyms_synchronously_for_testing_ == other.initialize_ksyms_synchronously_for_testing_
-   && throttle_rss_stat_ == other.throttle_rss_stat_
-   && disable_generic_events_ == other.disable_generic_events_
-   && syscall_events_ == other.syscall_events_
-   && enable_function_graph_ == other.enable_function_graph_
-   && function_filters_ == other.function_filters_
-   && function_graph_roots_ == other.function_graph_roots_
-   && preserve_ftrace_buffer_ == other.preserve_ftrace_buffer_
-   && use_monotonic_raw_clock_ == other.use_monotonic_raw_clock_
-   && instance_name_ == other.instance_name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(ftrace_events_, other.ftrace_events_)
+   && ::protozero::internal::gen_helpers::EqualsField(atrace_categories_, other.atrace_categories_)
+   && ::protozero::internal::gen_helpers::EqualsField(atrace_apps_, other.atrace_apps_)
+   && ::protozero::internal::gen_helpers::EqualsField(buffer_size_kb_, other.buffer_size_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(drain_period_ms_, other.drain_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(compact_sched_, other.compact_sched_)
+   && ::protozero::internal::gen_helpers::EqualsField(print_filter_, other.print_filter_)
+   && ::protozero::internal::gen_helpers::EqualsField(symbolize_ksyms_, other.symbolize_ksyms_)
+   && ::protozero::internal::gen_helpers::EqualsField(ksyms_mem_policy_, other.ksyms_mem_policy_)
+   && ::protozero::internal::gen_helpers::EqualsField(initialize_ksyms_synchronously_for_testing_, other.initialize_ksyms_synchronously_for_testing_)
+   && ::protozero::internal::gen_helpers::EqualsField(throttle_rss_stat_, other.throttle_rss_stat_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_generic_events_, other.disable_generic_events_)
+   && ::protozero::internal::gen_helpers::EqualsField(syscall_events_, other.syscall_events_)
+   && ::protozero::internal::gen_helpers::EqualsField(enable_function_graph_, other.enable_function_graph_)
+   && ::protozero::internal::gen_helpers::EqualsField(function_filters_, other.function_filters_)
+   && ::protozero::internal::gen_helpers::EqualsField(function_graph_roots_, other.function_graph_roots_)
+   && ::protozero::internal::gen_helpers::EqualsField(preserve_ftrace_buffer_, other.preserve_ftrace_buffer_)
+   && ::protozero::internal::gen_helpers::EqualsField(use_monotonic_raw_clock_, other.use_monotonic_raw_clock_)
+   && ::protozero::internal::gen_helpers::EqualsField(instance_name_, other.instance_name_);
 }
 
 bool FtraceConfig::ParseFromArray(const void* raw, size_t size) {
@@ -251,8 +251,8 @@ FtraceConfig_PrintFilter::FtraceConfig_PrintFilter(FtraceConfig_PrintFilter&&) n
 FtraceConfig_PrintFilter& FtraceConfig_PrintFilter::operator=(FtraceConfig_PrintFilter&&) = default;
 
 bool FtraceConfig_PrintFilter::operator==(const FtraceConfig_PrintFilter& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && rules_ == other.rules_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(rules_, other.rules_);
 }
 
 int FtraceConfig_PrintFilter::rules_size() const { return static_cast<int>(rules_.size()); }
@@ -311,10 +311,10 @@ FtraceConfig_PrintFilter_Rule::FtraceConfig_PrintFilter_Rule(FtraceConfig_PrintF
 FtraceConfig_PrintFilter_Rule& FtraceConfig_PrintFilter_Rule::operator=(FtraceConfig_PrintFilter_Rule&&) = default;
 
 bool FtraceConfig_PrintFilter_Rule::operator==(const FtraceConfig_PrintFilter_Rule& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && prefix_ == other.prefix_
-   && atrace_msg_ == other.atrace_msg_
-   && allow_ == other.allow_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(prefix_, other.prefix_)
+   && ::protozero::internal::gen_helpers::EqualsField(atrace_msg_, other.atrace_msg_)
+   && ::protozero::internal::gen_helpers::EqualsField(allow_, other.allow_);
 }
 
 bool FtraceConfig_PrintFilter_Rule::ParseFromArray(const void* raw, size_t size) {
@@ -384,9 +384,9 @@ FtraceConfig_PrintFilter_Rule_AtraceMessage::FtraceConfig_PrintFilter_Rule_Atrac
 FtraceConfig_PrintFilter_Rule_AtraceMessage& FtraceConfig_PrintFilter_Rule_AtraceMessage::operator=(FtraceConfig_PrintFilter_Rule_AtraceMessage&&) = default;
 
 bool FtraceConfig_PrintFilter_Rule_AtraceMessage::operator==(const FtraceConfig_PrintFilter_Rule_AtraceMessage& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && type_ == other.type_
-   && prefix_ == other.prefix_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(prefix_, other.prefix_);
 }
 
 bool FtraceConfig_PrintFilter_Rule_AtraceMessage::ParseFromArray(const void* raw, size_t size) {
@@ -448,8 +448,8 @@ FtraceConfig_CompactSchedConfig::FtraceConfig_CompactSchedConfig(FtraceConfig_Co
 FtraceConfig_CompactSchedConfig& FtraceConfig_CompactSchedConfig::operator=(FtraceConfig_CompactSchedConfig&&) = default;
 
 bool FtraceConfig_CompactSchedConfig::operator==(const FtraceConfig_CompactSchedConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && enabled_ == other.enabled_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(enabled_, other.enabled_);
 }
 
 bool FtraceConfig_CompactSchedConfig::ParseFromArray(const void* raw, size_t size) {

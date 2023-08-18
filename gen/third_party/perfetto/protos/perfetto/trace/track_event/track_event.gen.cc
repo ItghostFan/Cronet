@@ -40,9 +40,9 @@ EventName::EventName(EventName&&) noexcept = default;
 EventName& EventName::operator=(EventName&&) = default;
 
 bool EventName::operator==(const EventName& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool EventName::ParseFromArray(const void* raw, size_t size) {
@@ -104,9 +104,9 @@ EventCategory::EventCategory(EventCategory&&) noexcept = default;
 EventCategory& EventCategory::operator=(EventCategory&&) = default;
 
 bool EventCategory::operator==(const EventCategory& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && iid_ == other.iid_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(iid_, other.iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool EventCategory::ParseFromArray(const void* raw, size_t size) {
@@ -168,10 +168,10 @@ TrackEventDefaults::TrackEventDefaults(TrackEventDefaults&&) noexcept = default;
 TrackEventDefaults& TrackEventDefaults::operator=(TrackEventDefaults&&) = default;
 
 bool TrackEventDefaults::operator==(const TrackEventDefaults& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && track_uuid_ == other.track_uuid_
-   && extra_counter_track_uuids_ == other.extra_counter_track_uuids_
-   && extra_double_counter_track_uuids_ == other.extra_double_counter_track_uuids_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(track_uuid_, other.track_uuid_)
+   && ::protozero::internal::gen_helpers::EqualsField(extra_counter_track_uuids_, other.extra_counter_track_uuids_)
+   && ::protozero::internal::gen_helpers::EqualsField(extra_double_counter_track_uuids_, other.extra_double_counter_track_uuids_);
 }
 
 bool TrackEventDefaults::ParseFromArray(const void* raw, size_t size) {
@@ -245,49 +245,49 @@ TrackEvent::TrackEvent(TrackEvent&&) noexcept = default;
 TrackEvent& TrackEvent::operator=(TrackEvent&&) = default;
 
 bool TrackEvent::operator==(const TrackEvent& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && category_iids_ == other.category_iids_
-   && categories_ == other.categories_
-   && name_iid_ == other.name_iid_
-   && name_ == other.name_
-   && type_ == other.type_
-   && track_uuid_ == other.track_uuid_
-   && counter_value_ == other.counter_value_
-   && double_counter_value_ == other.double_counter_value_
-   && extra_counter_track_uuids_ == other.extra_counter_track_uuids_
-   && extra_counter_values_ == other.extra_counter_values_
-   && extra_double_counter_track_uuids_ == other.extra_double_counter_track_uuids_
-   && extra_double_counter_values_ == other.extra_double_counter_values_
-   && flow_ids_old_ == other.flow_ids_old_
-   && flow_ids_ == other.flow_ids_
-   && terminating_flow_ids_old_ == other.terminating_flow_ids_old_
-   && terminating_flow_ids_ == other.terminating_flow_ids_
-   && debug_annotations_ == other.debug_annotations_
-   && task_execution_ == other.task_execution_
-   && log_message_ == other.log_message_
-   && cc_scheduler_state_ == other.cc_scheduler_state_
-   && chrome_user_event_ == other.chrome_user_event_
-   && chrome_keyed_service_ == other.chrome_keyed_service_
-   && chrome_legacy_ipc_ == other.chrome_legacy_ipc_
-   && chrome_histogram_sample_ == other.chrome_histogram_sample_
-   && chrome_latency_info_ == other.chrome_latency_info_
-   && chrome_frame_reporter_ == other.chrome_frame_reporter_
-   && chrome_application_state_info_ == other.chrome_application_state_info_
-   && chrome_renderer_scheduler_state_ == other.chrome_renderer_scheduler_state_
-   && chrome_window_handle_event_info_ == other.chrome_window_handle_event_info_
-   && chrome_content_settings_event_info_ == other.chrome_content_settings_event_info_
-   && chrome_active_processes_ == other.chrome_active_processes_
-   && source_location_ == other.source_location_
-   && source_location_iid_ == other.source_location_iid_
-   && chrome_message_pump_ == other.chrome_message_pump_
-   && chrome_mojo_event_info_ == other.chrome_mojo_event_info_
-   && timestamp_delta_us_ == other.timestamp_delta_us_
-   && timestamp_absolute_us_ == other.timestamp_absolute_us_
-   && thread_time_delta_us_ == other.thread_time_delta_us_
-   && thread_time_absolute_us_ == other.thread_time_absolute_us_
-   && thread_instruction_count_delta_ == other.thread_instruction_count_delta_
-   && thread_instruction_count_absolute_ == other.thread_instruction_count_absolute_
-   && legacy_event_ == other.legacy_event_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(category_iids_, other.category_iids_)
+   && ::protozero::internal::gen_helpers::EqualsField(categories_, other.categories_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_iid_, other.name_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(track_uuid_, other.track_uuid_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_value_, other.counter_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(double_counter_value_, other.double_counter_value_)
+   && ::protozero::internal::gen_helpers::EqualsField(extra_counter_track_uuids_, other.extra_counter_track_uuids_)
+   && ::protozero::internal::gen_helpers::EqualsField(extra_counter_values_, other.extra_counter_values_)
+   && ::protozero::internal::gen_helpers::EqualsField(extra_double_counter_track_uuids_, other.extra_double_counter_track_uuids_)
+   && ::protozero::internal::gen_helpers::EqualsField(extra_double_counter_values_, other.extra_double_counter_values_)
+   && ::protozero::internal::gen_helpers::EqualsField(flow_ids_old_, other.flow_ids_old_)
+   && ::protozero::internal::gen_helpers::EqualsField(flow_ids_, other.flow_ids_)
+   && ::protozero::internal::gen_helpers::EqualsField(terminating_flow_ids_old_, other.terminating_flow_ids_old_)
+   && ::protozero::internal::gen_helpers::EqualsField(terminating_flow_ids_, other.terminating_flow_ids_)
+   && ::protozero::internal::gen_helpers::EqualsField(debug_annotations_, other.debug_annotations_)
+   && ::protozero::internal::gen_helpers::EqualsField(task_execution_, other.task_execution_)
+   && ::protozero::internal::gen_helpers::EqualsField(log_message_, other.log_message_)
+   && ::protozero::internal::gen_helpers::EqualsField(cc_scheduler_state_, other.cc_scheduler_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_user_event_, other.chrome_user_event_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_keyed_service_, other.chrome_keyed_service_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_legacy_ipc_, other.chrome_legacy_ipc_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_histogram_sample_, other.chrome_histogram_sample_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_latency_info_, other.chrome_latency_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_frame_reporter_, other.chrome_frame_reporter_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_application_state_info_, other.chrome_application_state_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_renderer_scheduler_state_, other.chrome_renderer_scheduler_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_window_handle_event_info_, other.chrome_window_handle_event_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_content_settings_event_info_, other.chrome_content_settings_event_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_active_processes_, other.chrome_active_processes_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_location_, other.source_location_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_location_iid_, other.source_location_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_message_pump_, other.chrome_message_pump_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_mojo_event_info_, other.chrome_mojo_event_info_)
+   && ::protozero::internal::gen_helpers::EqualsField(timestamp_delta_us_, other.timestamp_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(timestamp_absolute_us_, other.timestamp_absolute_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_time_delta_us_, other.thread_time_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_time_absolute_us_, other.thread_time_absolute_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_instruction_count_delta_, other.thread_instruction_count_delta_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_instruction_count_absolute_, other.thread_instruction_count_absolute_)
+   && ::protozero::internal::gen_helpers::EqualsField(legacy_event_, other.legacy_event_);
 }
 
 int TrackEvent::debug_annotations_size() const { return static_cast<int>(debug_annotations_.size()); }
@@ -694,23 +694,23 @@ TrackEvent_LegacyEvent::TrackEvent_LegacyEvent(TrackEvent_LegacyEvent&&) noexcep
 TrackEvent_LegacyEvent& TrackEvent_LegacyEvent::operator=(TrackEvent_LegacyEvent&&) = default;
 
 bool TrackEvent_LegacyEvent::operator==(const TrackEvent_LegacyEvent& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_iid_ == other.name_iid_
-   && phase_ == other.phase_
-   && duration_us_ == other.duration_us_
-   && thread_duration_us_ == other.thread_duration_us_
-   && thread_instruction_delta_ == other.thread_instruction_delta_
-   && unscoped_id_ == other.unscoped_id_
-   && local_id_ == other.local_id_
-   && global_id_ == other.global_id_
-   && id_scope_ == other.id_scope_
-   && use_async_tts_ == other.use_async_tts_
-   && bind_id_ == other.bind_id_
-   && bind_to_enclosing_ == other.bind_to_enclosing_
-   && flow_direction_ == other.flow_direction_
-   && instant_event_scope_ == other.instant_event_scope_
-   && pid_override_ == other.pid_override_
-   && tid_override_ == other.tid_override_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_iid_, other.name_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(phase_, other.phase_)
+   && ::protozero::internal::gen_helpers::EqualsField(duration_us_, other.duration_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_duration_us_, other.thread_duration_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_instruction_delta_, other.thread_instruction_delta_)
+   && ::protozero::internal::gen_helpers::EqualsField(unscoped_id_, other.unscoped_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(local_id_, other.local_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(global_id_, other.global_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(id_scope_, other.id_scope_)
+   && ::protozero::internal::gen_helpers::EqualsField(use_async_tts_, other.use_async_tts_)
+   && ::protozero::internal::gen_helpers::EqualsField(bind_id_, other.bind_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(bind_to_enclosing_, other.bind_to_enclosing_)
+   && ::protozero::internal::gen_helpers::EqualsField(flow_direction_, other.flow_direction_)
+   && ::protozero::internal::gen_helpers::EqualsField(instant_event_scope_, other.instant_event_scope_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_override_, other.pid_override_)
+   && ::protozero::internal::gen_helpers::EqualsField(tid_override_, other.tid_override_);
 }
 
 bool TrackEvent_LegacyEvent::ParseFromArray(const void* raw, size_t size) {

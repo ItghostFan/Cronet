@@ -22,14 +22,14 @@ JavaHprofConfig::JavaHprofConfig(JavaHprofConfig&&) noexcept = default;
 JavaHprofConfig& JavaHprofConfig::operator=(JavaHprofConfig&&) = default;
 
 bool JavaHprofConfig::operator==(const JavaHprofConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && process_cmdline_ == other.process_cmdline_
-   && pid_ == other.pid_
-   && target_installed_by_ == other.target_installed_by_
-   && continuous_dump_config_ == other.continuous_dump_config_
-   && min_anonymous_memory_kb_ == other.min_anonymous_memory_kb_
-   && dump_smaps_ == other.dump_smaps_
-   && ignored_types_ == other.ignored_types_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_cmdline_, other.process_cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(pid_, other.pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_installed_by_, other.target_installed_by_)
+   && ::protozero::internal::gen_helpers::EqualsField(continuous_dump_config_, other.continuous_dump_config_)
+   && ::protozero::internal::gen_helpers::EqualsField(min_anonymous_memory_kb_, other.min_anonymous_memory_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(dump_smaps_, other.dump_smaps_)
+   && ::protozero::internal::gen_helpers::EqualsField(ignored_types_, other.ignored_types_);
 }
 
 bool JavaHprofConfig::ParseFromArray(const void* raw, size_t size) {
@@ -139,10 +139,10 @@ JavaHprofConfig_ContinuousDumpConfig::JavaHprofConfig_ContinuousDumpConfig(JavaH
 JavaHprofConfig_ContinuousDumpConfig& JavaHprofConfig_ContinuousDumpConfig::operator=(JavaHprofConfig_ContinuousDumpConfig&&) = default;
 
 bool JavaHprofConfig_ContinuousDumpConfig::operator==(const JavaHprofConfig_ContinuousDumpConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && dump_phase_ms_ == other.dump_phase_ms_
-   && dump_interval_ms_ == other.dump_interval_ms_
-   && scan_pids_only_on_start_ == other.scan_pids_only_on_start_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(dump_phase_ms_, other.dump_phase_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(dump_interval_ms_, other.dump_interval_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(scan_pids_only_on_start_, other.scan_pids_only_on_start_);
 }
 
 bool JavaHprofConfig_ContinuousDumpConfig::ParseFromArray(const void* raw, size_t size) {

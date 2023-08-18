@@ -22,13 +22,13 @@ NetworkPacketTraceConfig::NetworkPacketTraceConfig(NetworkPacketTraceConfig&&) n
 NetworkPacketTraceConfig& NetworkPacketTraceConfig::operator=(NetworkPacketTraceConfig&&) = default;
 
 bool NetworkPacketTraceConfig::operator==(const NetworkPacketTraceConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && poll_ms_ == other.poll_ms_
-   && aggregation_threshold_ == other.aggregation_threshold_
-   && intern_limit_ == other.intern_limit_
-   && drop_local_port_ == other.drop_local_port_
-   && drop_remote_port_ == other.drop_remote_port_
-   && drop_tcp_flags_ == other.drop_tcp_flags_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(poll_ms_, other.poll_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(aggregation_threshold_, other.aggregation_threshold_)
+   && ::protozero::internal::gen_helpers::EqualsField(intern_limit_, other.intern_limit_)
+   && ::protozero::internal::gen_helpers::EqualsField(drop_local_port_, other.drop_local_port_)
+   && ::protozero::internal::gen_helpers::EqualsField(drop_remote_port_, other.drop_remote_port_)
+   && ::protozero::internal::gen_helpers::EqualsField(drop_tcp_flags_, other.drop_tcp_flags_);
 }
 
 bool NetworkPacketTraceConfig::ParseFromArray(const void* raw, size_t size) {

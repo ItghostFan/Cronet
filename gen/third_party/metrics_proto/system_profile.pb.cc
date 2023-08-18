@@ -158,6 +158,7 @@ PROTOBUF_CONSTEXPR SystemProfileProto_Hardware::SystemProfileProto_Hardware(
   , full_hardware_class_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
   , app_cpu_architecture_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
   , cellular_device_variant_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , tpm_rw_firmware_version_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
   , gpu_(nullptr)
   , cpu_(nullptr)
   , app_drive_(nullptr)
@@ -484,6 +485,10 @@ PROTOBUF_CONSTEXPR SystemProfileProto::SystemProfileProto(
   , app_package_name_allowlist_filter_(0)
 
   , client_side_sampling_status_(0)
+
+  , metrics_filtering_status_(0)
+
+  , lts_channel_(0)
 {}
 struct SystemProfileProtoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SystemProfileProtoDefaultTypeInternal()
@@ -2628,6 +2633,69 @@ constexpr SystemProfileProto_ClientSideSamplingStatus SystemProfileProto::Client
 constexpr SystemProfileProto_ClientSideSamplingStatus SystemProfileProto::ClientSideSamplingStatus_MAX;
 constexpr int SystemProfileProto::ClientSideSamplingStatus_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+bool SystemProfileProto_MetricsFilteringStatus_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+static ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<std::string> SystemProfileProto_MetricsFilteringStatus_strings[3] = {};
+
+static const char SystemProfileProto_MetricsFilteringStatus_names[] =
+  "METRICS_ALL"
+  "METRICS_ONLY_CRITICAL"
+  "METRICS_UNKNOWN";
+
+static const ::PROTOBUF_NAMESPACE_ID::internal::EnumEntry SystemProfileProto_MetricsFilteringStatus_entries[] = {
+  { {SystemProfileProto_MetricsFilteringStatus_names + 0, 11}, 1 },
+  { {SystemProfileProto_MetricsFilteringStatus_names + 11, 21}, 2 },
+  { {SystemProfileProto_MetricsFilteringStatus_names + 32, 15}, 0 },
+};
+
+static const int SystemProfileProto_MetricsFilteringStatus_entries_by_number[] = {
+  2, // 0 -> METRICS_UNKNOWN
+  0, // 1 -> METRICS_ALL
+  1, // 2 -> METRICS_ONLY_CRITICAL
+};
+
+const std::string& SystemProfileProto_MetricsFilteringStatus_Name(
+    SystemProfileProto_MetricsFilteringStatus value) {
+  static const bool dummy =
+      ::PROTOBUF_NAMESPACE_ID::internal::InitializeEnumStrings(
+          SystemProfileProto_MetricsFilteringStatus_entries,
+          SystemProfileProto_MetricsFilteringStatus_entries_by_number,
+          3, SystemProfileProto_MetricsFilteringStatus_strings);
+  (void) dummy;
+  int idx = ::PROTOBUF_NAMESPACE_ID::internal::LookUpEnumName(
+      SystemProfileProto_MetricsFilteringStatus_entries,
+      SystemProfileProto_MetricsFilteringStatus_entries_by_number,
+      3, value);
+  return idx == -1 ? ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString() :
+                     SystemProfileProto_MetricsFilteringStatus_strings[idx].get();
+}
+bool SystemProfileProto_MetricsFilteringStatus_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SystemProfileProto_MetricsFilteringStatus* value) {
+  int int_value;
+  bool success = ::PROTOBUF_NAMESPACE_ID::internal::LookUpEnumValue(
+      SystemProfileProto_MetricsFilteringStatus_entries, 3, name, &int_value);
+  if (success) {
+    *value = static_cast<SystemProfileProto_MetricsFilteringStatus>(int_value);
+  }
+  return success;
+}
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto::METRICS_UNKNOWN;
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto::METRICS_ALL;
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto::METRICS_ONLY_CRITICAL;
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto::MetricsFilteringStatus_MIN;
+constexpr SystemProfileProto_MetricsFilteringStatus SystemProfileProto::MetricsFilteringStatus_MAX;
+constexpr int SystemProfileProto::MetricsFilteringStatus_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 bool SystemProfileProto_InstallerPackage_IsValid(int value) {
   switch (value) {
     case 0:
@@ -2695,6 +2763,74 @@ constexpr SystemProfileProto_InstallerPackage SystemProfileProto::INSTALLER_PACK
 constexpr SystemProfileProto_InstallerPackage SystemProfileProto::InstallerPackage_MIN;
 constexpr SystemProfileProto_InstallerPackage SystemProfileProto::InstallerPackage_MAX;
 constexpr int SystemProfileProto::InstallerPackage_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+bool SystemProfileProto_LTSChannel_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+      return true;
+    default:
+      return false;
+  }
+}
+
+static ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<std::string> SystemProfileProto_LTSChannel_strings[4] = {};
+
+static const char SystemProfileProto_LTSChannel_names[] =
+  "LTS_CHANNEL_LTC"
+  "LTS_CHANNEL_LTS"
+  "LTS_CHANNEL_STABLE"
+  "LTS_CHANNEL_UNKNOWN";
+
+static const ::PROTOBUF_NAMESPACE_ID::internal::EnumEntry SystemProfileProto_LTSChannel_entries[] = {
+  { {SystemProfileProto_LTSChannel_names + 0, 15}, 2 },
+  { {SystemProfileProto_LTSChannel_names + 15, 15}, 3 },
+  { {SystemProfileProto_LTSChannel_names + 30, 18}, 1 },
+  { {SystemProfileProto_LTSChannel_names + 48, 19}, 0 },
+};
+
+static const int SystemProfileProto_LTSChannel_entries_by_number[] = {
+  3, // 0 -> LTS_CHANNEL_UNKNOWN
+  2, // 1 -> LTS_CHANNEL_STABLE
+  0, // 2 -> LTS_CHANNEL_LTC
+  1, // 3 -> LTS_CHANNEL_LTS
+};
+
+const std::string& SystemProfileProto_LTSChannel_Name(
+    SystemProfileProto_LTSChannel value) {
+  static const bool dummy =
+      ::PROTOBUF_NAMESPACE_ID::internal::InitializeEnumStrings(
+          SystemProfileProto_LTSChannel_entries,
+          SystemProfileProto_LTSChannel_entries_by_number,
+          4, SystemProfileProto_LTSChannel_strings);
+  (void) dummy;
+  int idx = ::PROTOBUF_NAMESPACE_ID::internal::LookUpEnumName(
+      SystemProfileProto_LTSChannel_entries,
+      SystemProfileProto_LTSChannel_entries_by_number,
+      4, value);
+  return idx == -1 ? ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString() :
+                     SystemProfileProto_LTSChannel_strings[idx].get();
+}
+bool SystemProfileProto_LTSChannel_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SystemProfileProto_LTSChannel* value) {
+  int int_value;
+  bool success = ::PROTOBUF_NAMESPACE_ID::internal::LookUpEnumValue(
+      SystemProfileProto_LTSChannel_entries, 4, name, &int_value);
+  if (success) {
+    *value = static_cast<SystemProfileProto_LTSChannel>(int_value);
+  }
+  return success;
+}
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr SystemProfileProto_LTSChannel SystemProfileProto::LTS_CHANNEL_UNKNOWN;
+constexpr SystemProfileProto_LTSChannel SystemProfileProto::LTS_CHANNEL_STABLE;
+constexpr SystemProfileProto_LTSChannel SystemProfileProto::LTS_CHANNEL_LTC;
+constexpr SystemProfileProto_LTSChannel SystemProfileProto::LTS_CHANNEL_LTS;
+constexpr SystemProfileProto_LTSChannel SystemProfileProto::LTSChannel_MIN;
+constexpr SystemProfileProto_LTSChannel SystemProfileProto::LTSChannel_MAX;
+constexpr int SystemProfileProto::LTSChannel_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
@@ -5449,10 +5585,10 @@ class SystemProfileProto_Hardware::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static void set_has_system_ram_mb(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
+    (*has_bits)[0] |= 2048u;
   }
   static void set_has_dll_base(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
+    (*has_bits)[0] |= 4096u;
   }
   static void set_has_hardware_class(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
@@ -5464,54 +5600,57 @@ class SystemProfileProto_Hardware::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static void set_has_screen_count(HasBits* has_bits) {
-    (*has_bits)[0] |= 4096u;
-  }
-  static void set_has_primary_screen_width(HasBits* has_bits) {
     (*has_bits)[0] |= 8192u;
   }
-  static void set_has_primary_screen_height(HasBits* has_bits) {
+  static void set_has_primary_screen_width(HasBits* has_bits) {
     (*has_bits)[0] |= 16384u;
   }
-  static void set_has_primary_screen_scale_factor(HasBits* has_bits) {
-    (*has_bits)[0] |= 131072u;
-  }
-  static void set_has_max_dpi_x(HasBits* has_bits) {
+  static void set_has_primary_screen_height(HasBits* has_bits) {
     (*has_bits)[0] |= 32768u;
   }
-  static void set_has_max_dpi_y(HasBits* has_bits) {
+  static void set_has_primary_screen_scale_factor(HasBits* has_bits) {
+    (*has_bits)[0] |= 262144u;
+  }
+  static void set_has_max_dpi_x(HasBits* has_bits) {
     (*has_bits)[0] |= 65536u;
   }
+  static void set_has_max_dpi_y(HasBits* has_bits) {
+    (*has_bits)[0] |= 131072u;
+  }
   static void set_has_form_factor(HasBits* has_bits) {
-    (*has_bits)[0] |= 524288u;
+    (*has_bits)[0] |= 1048576u;
   }
   static const ::metrics::SystemProfileProto_Hardware_CPU& cpu(const SystemProfileProto_Hardware* msg);
   static void set_has_cpu(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
+    (*has_bits)[0] |= 128u;
   }
   static const ::metrics::SystemProfileProto_Hardware_Motherboard& motherboard(const SystemProfileProto_Hardware* msg);
   static void set_has_motherboard(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
+    (*has_bits)[0] |= 1024u;
   }
   static const ::metrics::SystemProfileProto_Hardware_Graphics& gpu(const SystemProfileProto_Hardware* msg);
   static void set_has_gpu(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
+    (*has_bits)[0] |= 64u;
   }
   static void set_has_internal_display_supports_touch(HasBits* has_bits) {
-    (*has_bits)[0] |= 262144u;
+    (*has_bits)[0] |= 524288u;
   }
   static const ::metrics::SystemProfileProto_Hardware_Drive& app_drive(const SystemProfileProto_Hardware* msg);
   static void set_has_app_drive(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
+    (*has_bits)[0] |= 256u;
   }
   static const ::metrics::SystemProfileProto_Hardware_Drive& user_data_drive(const SystemProfileProto_Hardware* msg);
   static void set_has_user_data_drive(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
+    (*has_bits)[0] |= 512u;
   }
   static void set_has_tpm_type(HasBits* has_bits) {
-    (*has_bits)[0] |= 2097152u;
+    (*has_bits)[0] |= 4194304u;
   }
   static void set_has_tpm_firmware_version(HasBits* has_bits) {
-    (*has_bits)[0] |= 1048576u;
+    (*has_bits)[0] |= 2097152u;
+  }
+  static void set_has_tpm_rw_firmware_version(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
   }
 };
 
@@ -5587,6 +5726,14 @@ SystemProfileProto_Hardware::SystemProfileProto_Hardware(const SystemProfileProt
     cellular_device_variant_.Set(from._internal_cellular_device_variant(), 
       GetArenaForAllocation());
   }
+  tpm_rw_firmware_version_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    tpm_rw_firmware_version_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_tpm_rw_firmware_version()) {
+    tpm_rw_firmware_version_.Set(from._internal_tpm_rw_firmware_version(), 
+      GetArenaForAllocation());
+  }
   if (from._internal_has_gpu()) {
     gpu_ = new ::metrics::SystemProfileProto_Hardware_Graphics(*from.gpu_);
   } else {
@@ -5639,6 +5786,10 @@ cellular_device_variant_.InitDefault();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   cellular_device_variant_.Set("", GetArenaForAllocation());
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+tpm_rw_firmware_version_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  tpm_rw_firmware_version_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&gpu_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&tpm_type_) -
@@ -5661,6 +5812,7 @@ inline void SystemProfileProto_Hardware::SharedDtor() {
   full_hardware_class_.Destroy();
   app_cpu_architecture_.Destroy();
   cellular_device_variant_.Destroy();
+  tpm_rw_firmware_version_.Destroy();
   if (this != internal_default_instance()) delete gpu_;
   if (this != internal_default_instance()) delete cpu_;
   if (this != internal_default_instance()) delete app_drive_;
@@ -5697,37 +5849,40 @@ void SystemProfileProto_Hardware::Clear() {
       cellular_device_variant_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
+      tpm_rw_firmware_version_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000040u) {
       GOOGLE_DCHECK(gpu_ != nullptr);
       gpu_->Clear();
     }
-    if (cached_has_bits & 0x00000040u) {
+    if (cached_has_bits & 0x00000080u) {
       GOOGLE_DCHECK(cpu_ != nullptr);
       cpu_->Clear();
     }
-    if (cached_has_bits & 0x00000080u) {
+  }
+  if (cached_has_bits & 0x00000700u) {
+    if (cached_has_bits & 0x00000100u) {
       GOOGLE_DCHECK(app_drive_ != nullptr);
       app_drive_->Clear();
     }
-  }
-  if (cached_has_bits & 0x00000300u) {
-    if (cached_has_bits & 0x00000100u) {
+    if (cached_has_bits & 0x00000200u) {
       GOOGLE_DCHECK(user_data_drive_ != nullptr);
       user_data_drive_->Clear();
     }
-    if (cached_has_bits & 0x00000200u) {
+    if (cached_has_bits & 0x00000400u) {
       GOOGLE_DCHECK(motherboard_ != nullptr);
       motherboard_->Clear();
     }
   }
-  if (cached_has_bits & 0x0000fc00u) {
+  if (cached_has_bits & 0x0000f800u) {
     ::memset(&system_ram_mb_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&max_dpi_x_) -
-        reinterpret_cast<char*>(&system_ram_mb_)) + sizeof(max_dpi_x_));
+        reinterpret_cast<char*>(&primary_screen_height_) -
+        reinterpret_cast<char*>(&system_ram_mb_)) + sizeof(primary_screen_height_));
   }
-  if (cached_has_bits & 0x003f0000u) {
-    ::memset(&max_dpi_y_, 0, static_cast<size_t>(
+  if (cached_has_bits & 0x007f0000u) {
+    ::memset(&max_dpi_x_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&tpm_type_) -
-        reinterpret_cast<char*>(&max_dpi_y_)) + sizeof(tpm_type_));
+        reinterpret_cast<char*>(&max_dpi_x_)) + sizeof(tpm_type_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -5954,6 +6109,15 @@ const char* SystemProfileProto_Hardware::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
+      // optional string tpm_rw_firmware_version = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
+          auto str = _internal_mutable_tpm_rw_firmware_version();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -5992,13 +6156,13 @@ uint8_t* SystemProfileProto_Hardware::_InternalSerialize(
   }
 
   // optional int64 system_ram_mb = 2;
-  if (cached_has_bits & 0x00000400u) {
+  if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_system_ram_mb(), target);
   }
 
   // optional int64 dll_base = 3;
-  if (cached_has_bits & 0x00000800u) {
+  if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_dll_base(), target);
   }
@@ -6010,70 +6174,70 @@ uint8_t* SystemProfileProto_Hardware::_InternalSerialize(
   }
 
   // optional int32 screen_count = 5;
-  if (cached_has_bits & 0x00001000u) {
+  if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_screen_count(), target);
   }
 
   // optional int32 primary_screen_width = 6;
-  if (cached_has_bits & 0x00002000u) {
+  if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_primary_screen_width(), target);
   }
 
   // optional int32 primary_screen_height = 7;
-  if (cached_has_bits & 0x00004000u) {
+  if (cached_has_bits & 0x00008000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_primary_screen_height(), target);
   }
 
   // optional .metrics.SystemProfileProto.Hardware.Graphics gpu = 8;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(8, _Internal::gpu(this),
         _Internal::gpu(this).GetCachedSize(), target, stream);
   }
 
   // optional float max_dpi_x = 9;
-  if (cached_has_bits & 0x00008000u) {
+  if (cached_has_bits & 0x00010000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(9, this->_internal_max_dpi_x(), target);
   }
 
   // optional float max_dpi_y = 10;
-  if (cached_has_bits & 0x00010000u) {
+  if (cached_has_bits & 0x00020000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(10, this->_internal_max_dpi_y(), target);
   }
 
   // optional float primary_screen_scale_factor = 12;
-  if (cached_has_bits & 0x00020000u) {
+  if (cached_has_bits & 0x00040000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(12, this->_internal_primary_screen_scale_factor(), target);
   }
 
   // optional .metrics.SystemProfileProto.Hardware.CPU cpu = 13;
-  if (cached_has_bits & 0x00000040u) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(13, _Internal::cpu(this),
         _Internal::cpu(this).GetCachedSize(), target, stream);
   }
 
   // optional bool internal_display_supports_touch = 14;
-  if (cached_has_bits & 0x00040000u) {
+  if (cached_has_bits & 0x00080000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(14, this->_internal_internal_display_supports_touch(), target);
   }
 
   // optional .metrics.SystemProfileProto.Hardware.Drive app_drive = 16;
-  if (cached_has_bits & 0x00000080u) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(16, _Internal::app_drive(this),
         _Internal::app_drive(this).GetCachedSize(), target, stream);
   }
 
   // optional .metrics.SystemProfileProto.Hardware.Drive user_data_drive = 17;
-  if (cached_has_bits & 0x00000100u) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(17, _Internal::user_data_drive(this),
         _Internal::user_data_drive(this).GetCachedSize(), target, stream);
@@ -6100,14 +6264,14 @@ uint8_t* SystemProfileProto_Hardware::_InternalSerialize(
   }
 
   // optional .metrics.SystemProfileProto.Hardware.FormFactor form_factor = 22;
-  if (cached_has_bits & 0x00080000u) {
+  if (cached_has_bits & 0x00100000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       22, this->_internal_form_factor(), target);
   }
 
   // optional .metrics.SystemProfileProto.Hardware.TpmType tpm_type = 23;
-  if (cached_has_bits & 0x00200000u) {
+  if (cached_has_bits & 0x00400000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       23, this->_internal_tpm_type(), target);
@@ -6120,16 +6284,22 @@ uint8_t* SystemProfileProto_Hardware::_InternalSerialize(
   }
 
   // optional .metrics.SystemProfileProto.Hardware.Motherboard motherboard = 25;
-  if (cached_has_bits & 0x00000200u) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(25, _Internal::motherboard(this),
         _Internal::motherboard(this).GetCachedSize(), target, stream);
   }
 
   // optional uint64 tpm_firmware_version = 26;
-  if (cached_has_bits & 0x00100000u) {
+  if (cached_has_bits & 0x00200000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(26, this->_internal_tpm_firmware_version(), target);
+  }
+
+  // optional string tpm_rw_firmware_version = 27;
+  if (cached_has_bits & 0x00000020u) {
+    target = stream->WriteStringMaybeAliased(
+        27, this->_internal_tpm_rw_firmware_version(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6192,105 +6362,112 @@ size_t SystemProfileProto_Hardware::ByteSizeLong() const {
           this->_internal_cellular_device_variant());
     }
 
-    // optional .metrics.SystemProfileProto.Hardware.Graphics gpu = 8;
+    // optional string tpm_rw_firmware_version = 27;
     if (cached_has_bits & 0x00000020u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_tpm_rw_firmware_version());
+    }
+
+    // optional .metrics.SystemProfileProto.Hardware.Graphics gpu = 8;
+    if (cached_has_bits & 0x00000040u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *gpu_);
     }
 
     // optional .metrics.SystemProfileProto.Hardware.CPU cpu = 13;
-    if (cached_has_bits & 0x00000040u) {
+    if (cached_has_bits & 0x00000080u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *cpu_);
     }
 
+  }
+  if (cached_has_bits & 0x0000ff00u) {
     // optional .metrics.SystemProfileProto.Hardware.Drive app_drive = 16;
-    if (cached_has_bits & 0x00000080u) {
+    if (cached_has_bits & 0x00000100u) {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *app_drive_);
     }
 
-  }
-  if (cached_has_bits & 0x0000ff00u) {
     // optional .metrics.SystemProfileProto.Hardware.Drive user_data_drive = 17;
-    if (cached_has_bits & 0x00000100u) {
+    if (cached_has_bits & 0x00000200u) {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *user_data_drive_);
     }
 
     // optional .metrics.SystemProfileProto.Hardware.Motherboard motherboard = 25;
-    if (cached_has_bits & 0x00000200u) {
+    if (cached_has_bits & 0x00000400u) {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *motherboard_);
     }
 
     // optional int64 system_ram_mb = 2;
-    if (cached_has_bits & 0x00000400u) {
+    if (cached_has_bits & 0x00000800u) {
       total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_system_ram_mb());
     }
 
     // optional int64 dll_base = 3;
-    if (cached_has_bits & 0x00000800u) {
+    if (cached_has_bits & 0x00001000u) {
       total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_dll_base());
     }
 
     // optional int32 screen_count = 5;
-    if (cached_has_bits & 0x00001000u) {
+    if (cached_has_bits & 0x00002000u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_screen_count());
     }
 
     // optional int32 primary_screen_width = 6;
-    if (cached_has_bits & 0x00002000u) {
+    if (cached_has_bits & 0x00004000u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_primary_screen_width());
     }
 
     // optional int32 primary_screen_height = 7;
-    if (cached_has_bits & 0x00004000u) {
+    if (cached_has_bits & 0x00008000u) {
       total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_primary_screen_height());
     }
 
-    // optional float max_dpi_x = 9;
-    if (cached_has_bits & 0x00008000u) {
-      total_size += 1 + 4;
-    }
-
   }
-  if (cached_has_bits & 0x003f0000u) {
-    // optional float max_dpi_y = 10;
+  if (cached_has_bits & 0x007f0000u) {
+    // optional float max_dpi_x = 9;
     if (cached_has_bits & 0x00010000u) {
       total_size += 1 + 4;
     }
 
-    // optional float primary_screen_scale_factor = 12;
+    // optional float max_dpi_y = 10;
     if (cached_has_bits & 0x00020000u) {
       total_size += 1 + 4;
     }
 
-    // optional bool internal_display_supports_touch = 14;
+    // optional float primary_screen_scale_factor = 12;
     if (cached_has_bits & 0x00040000u) {
+      total_size += 1 + 4;
+    }
+
+    // optional bool internal_display_supports_touch = 14;
+    if (cached_has_bits & 0x00080000u) {
       total_size += 1 + 1;
     }
 
     // optional .metrics.SystemProfileProto.Hardware.FormFactor form_factor = 22;
-    if (cached_has_bits & 0x00080000u) {
+    if (cached_has_bits & 0x00100000u) {
       total_size += 2 +
         ::_pbi::WireFormatLite::EnumSize(this->_internal_form_factor());
     }
 
     // optional uint64 tpm_firmware_version = 26;
-    if (cached_has_bits & 0x00100000u) {
+    if (cached_has_bits & 0x00200000u) {
       total_size += 2 +
         ::_pbi::WireFormatLite::UInt64Size(
           this->_internal_tpm_firmware_version());
     }
 
     // optional .metrics.SystemProfileProto.Hardware.TpmType tpm_type = 23;
-    if (cached_has_bits & 0x00200000u) {
+    if (cached_has_bits & 0x00400000u) {
       total_size += 2 +
         ::_pbi::WireFormatLite::EnumSize(this->_internal_tpm_type());
     }
@@ -6335,59 +6512,62 @@ void SystemProfileProto_Hardware::MergeFrom(const SystemProfileProto_Hardware& f
       _internal_set_cellular_device_variant(from._internal_cellular_device_variant());
     }
     if (cached_has_bits & 0x00000020u) {
-      _internal_mutable_gpu()->::metrics::SystemProfileProto_Hardware_Graphics::MergeFrom(from._internal_gpu());
+      _internal_set_tpm_rw_firmware_version(from._internal_tpm_rw_firmware_version());
     }
     if (cached_has_bits & 0x00000040u) {
-      _internal_mutable_cpu()->::metrics::SystemProfileProto_Hardware_CPU::MergeFrom(from._internal_cpu());
+      _internal_mutable_gpu()->::metrics::SystemProfileProto_Hardware_Graphics::MergeFrom(from._internal_gpu());
     }
     if (cached_has_bits & 0x00000080u) {
-      _internal_mutable_app_drive()->::metrics::SystemProfileProto_Hardware_Drive::MergeFrom(from._internal_app_drive());
+      _internal_mutable_cpu()->::metrics::SystemProfileProto_Hardware_CPU::MergeFrom(from._internal_cpu());
     }
   }
   if (cached_has_bits & 0x0000ff00u) {
     if (cached_has_bits & 0x00000100u) {
-      _internal_mutable_user_data_drive()->::metrics::SystemProfileProto_Hardware_Drive::MergeFrom(from._internal_user_data_drive());
+      _internal_mutable_app_drive()->::metrics::SystemProfileProto_Hardware_Drive::MergeFrom(from._internal_app_drive());
     }
     if (cached_has_bits & 0x00000200u) {
-      _internal_mutable_motherboard()->::metrics::SystemProfileProto_Hardware_Motherboard::MergeFrom(from._internal_motherboard());
+      _internal_mutable_user_data_drive()->::metrics::SystemProfileProto_Hardware_Drive::MergeFrom(from._internal_user_data_drive());
     }
     if (cached_has_bits & 0x00000400u) {
-      system_ram_mb_ = from.system_ram_mb_;
+      _internal_mutable_motherboard()->::metrics::SystemProfileProto_Hardware_Motherboard::MergeFrom(from._internal_motherboard());
     }
     if (cached_has_bits & 0x00000800u) {
-      dll_base_ = from.dll_base_;
+      system_ram_mb_ = from.system_ram_mb_;
     }
     if (cached_has_bits & 0x00001000u) {
-      screen_count_ = from.screen_count_;
+      dll_base_ = from.dll_base_;
     }
     if (cached_has_bits & 0x00002000u) {
-      primary_screen_width_ = from.primary_screen_width_;
+      screen_count_ = from.screen_count_;
     }
     if (cached_has_bits & 0x00004000u) {
-      primary_screen_height_ = from.primary_screen_height_;
+      primary_screen_width_ = from.primary_screen_width_;
     }
     if (cached_has_bits & 0x00008000u) {
-      max_dpi_x_ = from.max_dpi_x_;
+      primary_screen_height_ = from.primary_screen_height_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x003f0000u) {
+  if (cached_has_bits & 0x007f0000u) {
     if (cached_has_bits & 0x00010000u) {
-      max_dpi_y_ = from.max_dpi_y_;
+      max_dpi_x_ = from.max_dpi_x_;
     }
     if (cached_has_bits & 0x00020000u) {
-      primary_screen_scale_factor_ = from.primary_screen_scale_factor_;
+      max_dpi_y_ = from.max_dpi_y_;
     }
     if (cached_has_bits & 0x00040000u) {
-      internal_display_supports_touch_ = from.internal_display_supports_touch_;
+      primary_screen_scale_factor_ = from.primary_screen_scale_factor_;
     }
     if (cached_has_bits & 0x00080000u) {
-      form_factor_ = from.form_factor_;
+      internal_display_supports_touch_ = from.internal_display_supports_touch_;
     }
     if (cached_has_bits & 0x00100000u) {
-      tpm_firmware_version_ = from.tpm_firmware_version_;
+      form_factor_ = from.form_factor_;
     }
     if (cached_has_bits & 0x00200000u) {
+      tpm_firmware_version_ = from.tpm_firmware_version_;
+    }
+    if (cached_has_bits & 0x00400000u) {
       tpm_type_ = from.tpm_type_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -6432,6 +6612,10 @@ void SystemProfileProto_Hardware::InternalSwap(SystemProfileProto_Hardware* othe
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &cellular_device_variant_, lhs_arena,
       &other->cellular_device_variant_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &tpm_rw_firmware_version_, lhs_arena,
+      &other->tpm_rw_firmware_version_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SystemProfileProto_Hardware, tpm_type_)
@@ -11758,6 +11942,9 @@ class SystemProfileProto::_Internal {
   static void set_has_client_side_sampling_status(HasBits* has_bits) {
     (*has_bits)[0] |= 2147483648u;
   }
+  static void set_has_metrics_filtering_status(HasBits* has_bits) {
+    (*has_bits)[1] |= 1u;
+  }
   static void set_has_installer_package(HasBits* has_bits) {
     (*has_bits)[0] |= 268435456u;
   }
@@ -11768,6 +11955,9 @@ class SystemProfileProto::_Internal {
   static const ::metrics::SystemProfileProto_DemoModeDimensions& demo_mode_dimensions(const SystemProfileProto* msg);
   static void set_has_demo_mode_dimensions(HasBits* has_bits) {
     (*has_bits)[0] |= 32768u;
+  }
+  static void set_has_lts_channel(HasBits* has_bits) {
+    (*has_bits)[1] |= 2u;
   }
 };
 
@@ -11936,8 +12126,8 @@ SystemProfileProto::SystemProfileProto(const SystemProfileProto& from)
     demo_mode_dimensions_ = nullptr;
   }
   ::memcpy(&build_timestamp_, &from.build_timestamp_,
-    static_cast<size_t>(reinterpret_cast<char*>(&client_side_sampling_status_) -
-    reinterpret_cast<char*>(&build_timestamp_)) + sizeof(client_side_sampling_status_));
+    static_cast<size_t>(reinterpret_cast<char*>(&lts_channel_) -
+    reinterpret_cast<char*>(&build_timestamp_)) + sizeof(lts_channel_));
   // @@protoc_insertion_point(copy_constructor:metrics.SystemProfileProto)
 }
 
@@ -11972,8 +12162,8 @@ log_written_by_app_version_.InitDefault();
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&os_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&client_side_sampling_status_) -
-    reinterpret_cast<char*>(&os_)) + sizeof(client_side_sampling_status_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&lts_channel_) -
+    reinterpret_cast<char*>(&os_)) + sizeof(lts_channel_));
 }
 
 SystemProfileProto::~SystemProfileProto() {
@@ -12094,13 +12284,18 @@ void SystemProfileProto::Clear() {
         reinterpret_cast<char*>(&client_side_sampling_status_) -
         reinterpret_cast<char*>(&is_instrumented_build_)) + sizeof(client_side_sampling_status_));
   }
+  cached_has_bits = _has_bits_[1];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&metrics_filtering_status_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&lts_channel_) -
+        reinterpret_cast<char*>(&metrics_filtering_status_)) + sizeof(lts_channel_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -12108,7 +12303,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional int64 build_timestamp = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_build_timestamp(&has_bits);
+          _Internal::set_has_build_timestamp(&_has_bits_);
           build_timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -12126,7 +12321,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional int64 uma_enabled_date = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_uma_enabled_date(&has_bits);
+          _Internal::set_has_uma_enabled_date(&_has_bits_);
           uma_enabled_date_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -12240,7 +12435,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional int64 install_date = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
-          _Internal::set_has_install_date(&has_bits);
+          _Internal::set_has_install_date(&_has_bits_);
           install_date_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -12249,7 +12444,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional uint32 multi_profile_user_count = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
-          _Internal::set_has_multi_profile_user_count(&has_bits);
+          _Internal::set_has_multi_profile_user_count(&_has_bits_);
           multi_profile_user_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -12287,7 +12482,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional bool is_instrumented_build = 20 [default = false];
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
-          _Internal::set_has_is_instrumented_build(&has_bits);
+          _Internal::set_has_is_instrumented_build(&_has_bits_);
           is_instrumented_build_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -12374,7 +12569,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional int32 low_entropy_source = 31;
       case 31:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 248)) {
-          _Internal::set_has_low_entropy_source(&has_bits);
+          _Internal::set_has_low_entropy_source(&_has_bits_);
           low_entropy_source_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -12383,7 +12578,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional int32 old_low_entropy_source = 32;
       case 32:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
-          _Internal::set_has_old_low_entropy_source(&has_bits);
+          _Internal::set_has_old_low_entropy_source(&_has_bits_);
           old_low_entropy_source_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -12392,7 +12587,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional bool client_id_was_used_for_trial_assignment = 33;
       case 33:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_client_id_was_used_for_trial_assignment(&has_bits);
+          _Internal::set_has_client_id_was_used_for_trial_assignment(&_has_bits_);
           client_id_was_used_for_trial_assignment_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -12423,7 +12618,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional bool is_extended_stable_channel = 36 [default = false];
       case 36:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_is_extended_stable_channel(&has_bits);
+          _Internal::set_has_is_extended_stable_channel(&_has_bits_);
           is_extended_stable_channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -12432,7 +12627,7 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
       // optional int32 pseudo_low_entropy_source = 37;
       case 37:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_pseudo_low_entropy_source(&has_bits);
+          _Internal::set_has_pseudo_low_entropy_source(&_has_bits_);
           pseudo_low_entropy_source_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -12500,6 +12695,32 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
+      // optional .metrics.SystemProfileProto.MetricsFilteringStatus metrics_filtering_status = 44;
+      case 44:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::metrics::SystemProfileProto_MetricsFilteringStatus_IsValid(val))) {
+            _internal_set_metrics_filtering_status(static_cast<::metrics::SystemProfileProto_MetricsFilteringStatus>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(44, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .metrics.SystemProfileProto.LTSChannel lts_channel = 45;
+      case 45:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::metrics::SystemProfileProto_LTSChannel_IsValid(val))) {
+            _internal_set_lts_channel(static_cast<::metrics::SystemProfileProto_LTSChannel>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(45, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -12516,7 +12737,6 @@ const char* SystemProfileProto::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -12787,6 +13007,21 @@ uint8_t* SystemProfileProto::_InternalSerialize(
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       43, this->_internal_client_side_sampling_status(), target);
+  }
+
+  cached_has_bits = _has_bits_[1];
+  // optional .metrics.SystemProfileProto.MetricsFilteringStatus metrics_filtering_status = 44;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      44, this->_internal_metrics_filtering_status(), target);
+  }
+
+  // optional .metrics.SystemProfileProto.LTSChannel lts_channel = 45;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      45, this->_internal_lts_channel(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -13077,6 +13312,21 @@ size_t SystemProfileProto::ByteSizeLong() const {
     }
 
   }
+  cached_has_bits = _has_bits_[1];
+  if (cached_has_bits & 0x00000003u) {
+    // optional .metrics.SystemProfileProto.MetricsFilteringStatus metrics_filtering_status = 44;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_metrics_filtering_status());
+    }
+
+    // optional .metrics.SystemProfileProto.LTSChannel lts_channel = 45;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_lts_channel());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -13211,6 +13461,16 @@ void SystemProfileProto::MergeFrom(const SystemProfileProto& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
+  cached_has_bits = from._has_bits_[1];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      metrics_filtering_status_ = from.metrics_filtering_status_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      lts_channel_ = from.lts_channel_;
+    }
+    _has_bits_[1] |= cached_has_bits;
+  }
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -13231,6 +13491,7 @@ void SystemProfileProto::InternalSwap(SystemProfileProto* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
+  swap(_has_bits_[1], other->_has_bits_[1]);
   field_trial_.InternalSwap(&other->field_trial_);
   external_audio_video_device_.InternalSwap(&other->external_audio_video_device_);
   occupied_extension_bucket_.InternalSwap(&other->occupied_extension_bucket_);
@@ -13267,8 +13528,8 @@ void SystemProfileProto::InternalSwap(SystemProfileProto* other) {
       &other->log_written_by_app_version_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SystemProfileProto, client_side_sampling_status_)
-      + sizeof(SystemProfileProto::client_side_sampling_status_)
+      PROTOBUF_FIELD_OFFSET(SystemProfileProto, lts_channel_)
+      + sizeof(SystemProfileProto::lts_channel_)
       - PROTOBUF_FIELD_OFFSET(SystemProfileProto, os_)>(
           reinterpret_cast<char*>(&os_),
           reinterpret_cast<char*>(&other->os_));

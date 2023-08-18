@@ -22,8 +22,8 @@ PackagesListConfig::PackagesListConfig(PackagesListConfig&&) noexcept = default;
 PackagesListConfig& PackagesListConfig::operator=(PackagesListConfig&&) = default;
 
 bool PackagesListConfig::operator==(const PackagesListConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && package_name_filter_ == other.package_name_filter_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(package_name_filter_, other.package_name_filter_);
 }
 
 bool PackagesListConfig::ParseFromArray(const void* raw, size_t size) {

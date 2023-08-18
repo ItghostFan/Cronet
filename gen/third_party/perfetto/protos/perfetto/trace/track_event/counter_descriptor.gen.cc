@@ -22,13 +22,13 @@ CounterDescriptor::CounterDescriptor(CounterDescriptor&&) noexcept = default;
 CounterDescriptor& CounterDescriptor::operator=(CounterDescriptor&&) = default;
 
 bool CounterDescriptor::operator==(const CounterDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && type_ == other.type_
-   && categories_ == other.categories_
-   && unit_ == other.unit_
-   && unit_name_ == other.unit_name_
-   && unit_multiplier_ == other.unit_multiplier_
-   && is_incremental_ == other.is_incremental_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(categories_, other.categories_)
+   && ::protozero::internal::gen_helpers::EqualsField(unit_, other.unit_)
+   && ::protozero::internal::gen_helpers::EqualsField(unit_name_, other.unit_name_)
+   && ::protozero::internal::gen_helpers::EqualsField(unit_multiplier_, other.unit_multiplier_)
+   && ::protozero::internal::gen_helpers::EqualsField(is_incremental_, other.is_incremental_);
 }
 
 bool CounterDescriptor::ParseFromArray(const void* raw, size_t size) {

@@ -140,7 +140,8 @@ class SurfaceFlingerLayersSnapshotTable : public macros_internal::MacroTable {
 
    private:
     friend class SurfaceFlingerLayersSnapshotTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SurfaceFlingerLayersSnapshotTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -427,7 +428,8 @@ class SurfaceFlingerLayerTable : public macros_internal::MacroTable {
 
    private:
     friend class SurfaceFlingerLayerTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SurfaceFlingerLayerTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -714,7 +716,8 @@ class SurfaceFlingerTransactionsTable : public macros_internal::MacroTable {
 
    private:
     friend class SurfaceFlingerTransactionsTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, SurfaceFlingerTransactionsTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

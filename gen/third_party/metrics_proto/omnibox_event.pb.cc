@@ -139,6 +139,8 @@ PROTOBUF_CONSTEXPR OmniboxEventProto::OmniboxEventProto(
   , in_keyword_mode_(false)
   , is_query_started_from_tile_(false)
   , keyword_mode_entry_method_(0)
+
+  , steady_state_omnibox_position_(0)
 {}
 struct OmniboxEventProtoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR OmniboxEventProtoDefaultTypeInternal()
@@ -973,6 +975,69 @@ constexpr OmniboxEventProto_Feature OmniboxEventProto::ML_URL_SCORING;
 constexpr OmniboxEventProto_Feature OmniboxEventProto::Feature_MIN;
 constexpr OmniboxEventProto_Feature OmniboxEventProto::Feature_MAX;
 constexpr int OmniboxEventProto::Feature_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+bool OmniboxEventProto_OmniboxPosition_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+static ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<std::string> OmniboxEventProto_OmniboxPosition_strings[3] = {};
+
+static const char OmniboxEventProto_OmniboxPosition_names[] =
+  "BOTTOM_POSITION"
+  "TOP_POSITION"
+  "UNKNOWN_POSITION";
+
+static const ::PROTOBUF_NAMESPACE_ID::internal::EnumEntry OmniboxEventProto_OmniboxPosition_entries[] = {
+  { {OmniboxEventProto_OmniboxPosition_names + 0, 15}, 2 },
+  { {OmniboxEventProto_OmniboxPosition_names + 15, 12}, 1 },
+  { {OmniboxEventProto_OmniboxPosition_names + 27, 16}, 0 },
+};
+
+static const int OmniboxEventProto_OmniboxPosition_entries_by_number[] = {
+  2, // 0 -> UNKNOWN_POSITION
+  1, // 1 -> TOP_POSITION
+  0, // 2 -> BOTTOM_POSITION
+};
+
+const std::string& OmniboxEventProto_OmniboxPosition_Name(
+    OmniboxEventProto_OmniboxPosition value) {
+  static const bool dummy =
+      ::PROTOBUF_NAMESPACE_ID::internal::InitializeEnumStrings(
+          OmniboxEventProto_OmniboxPosition_entries,
+          OmniboxEventProto_OmniboxPosition_entries_by_number,
+          3, OmniboxEventProto_OmniboxPosition_strings);
+  (void) dummy;
+  int idx = ::PROTOBUF_NAMESPACE_ID::internal::LookUpEnumName(
+      OmniboxEventProto_OmniboxPosition_entries,
+      OmniboxEventProto_OmniboxPosition_entries_by_number,
+      3, value);
+  return idx == -1 ? ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString() :
+                     OmniboxEventProto_OmniboxPosition_strings[idx].get();
+}
+bool OmniboxEventProto_OmniboxPosition_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, OmniboxEventProto_OmniboxPosition* value) {
+  int int_value;
+  bool success = ::PROTOBUF_NAMESPACE_ID::internal::LookUpEnumValue(
+      OmniboxEventProto_OmniboxPosition_entries, 3, name, &int_value);
+  if (success) {
+    *value = static_cast<OmniboxEventProto_OmniboxPosition>(int_value);
+  }
+  return success;
+}
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto::UNKNOWN_POSITION;
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto::TOP_POSITION;
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto::BOTTOM_POSITION;
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto::OmniboxPosition_MIN;
+constexpr OmniboxEventProto_OmniboxPosition OmniboxEventProto::OmniboxPosition_MAX;
+constexpr int OmniboxEventProto::OmniboxPosition_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
@@ -2956,6 +3021,9 @@ class OmniboxEventProto::_Internal {
   static void set_has_profile_data(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
+  static void set_has_steady_state_omnibox_position(HasBits* has_bits) {
+    (*has_bits)[0] |= 1048576u;
+  }
 };
 
 const ::metrics::OmniboxEventProto_ProfileData&
@@ -2990,16 +3058,16 @@ OmniboxEventProto::OmniboxEventProto(const OmniboxEventProto& from)
     profile_data_ = nullptr;
   }
   ::memcpy(&time_sec_, &from.time_sec_,
-    static_cast<size_t>(reinterpret_cast<char*>(&keyword_mode_entry_method_) -
-    reinterpret_cast<char*>(&time_sec_)) + sizeof(keyword_mode_entry_method_));
+    static_cast<size_t>(reinterpret_cast<char*>(&steady_state_omnibox_position_) -
+    reinterpret_cast<char*>(&time_sec_)) + sizeof(steady_state_omnibox_position_));
   // @@protoc_insertion_point(copy_constructor:metrics.OmniboxEventProto)
 }
 
 inline void OmniboxEventProto::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&profile_data_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&keyword_mode_entry_method_) -
-    reinterpret_cast<char*>(&profile_data_)) + sizeof(keyword_mode_entry_method_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&steady_state_omnibox_position_) -
+    reinterpret_cast<char*>(&profile_data_)) + sizeof(steady_state_omnibox_position_));
 }
 
 OmniboxEventProto::~OmniboxEventProto() {
@@ -3047,10 +3115,10 @@ void OmniboxEventProto::Clear() {
         reinterpret_cast<char*>(&mode_type_) -
         reinterpret_cast<char*>(&input_type_)) + sizeof(mode_type_));
   }
-  if (cached_has_bits & 0x000f0000u) {
+  if (cached_has_bits & 0x001f0000u) {
     ::memset(&is_paste_and_go_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&keyword_mode_entry_method_) -
-        reinterpret_cast<char*>(&is_paste_and_go_)) + sizeof(keyword_mode_entry_method_));
+        reinterpret_cast<char*>(&steady_state_omnibox_position_) -
+        reinterpret_cast<char*>(&is_paste_and_go_)) + sizeof(steady_state_omnibox_position_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3358,6 +3426,19 @@ const char* OmniboxEventProto::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
+      // optional .metrics.OmniboxEventProto.OmniboxPosition steady_state_omnibox_position = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 216)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::metrics::OmniboxEventProto_OmniboxPosition_IsValid(val))) {
+            _internal_set_steady_state_omnibox_position(static_cast<::metrics::OmniboxEventProto_OmniboxPosition>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(27, val, mutable_unknown_fields());
+          }
+        } else
+          goto handle_unusual;
+        continue;
       default:
         goto handle_unusual;
     }  // switch
@@ -3556,6 +3637,13 @@ uint8_t* OmniboxEventProto::_InternalSerialize(
         26, this->_internal_feature_triggered_in_session(i), target);
   }
 
+  // optional .metrics.OmniboxEventProto.OmniboxPosition steady_state_omnibox_position = 27;
+  if (cached_has_bits & 0x00100000u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      27, this->_internal_steady_state_omnibox_position(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -3714,7 +3802,7 @@ size_t OmniboxEventProto::ByteSizeLong() const {
     }
 
   }
-  if (cached_has_bits & 0x000f0000u) {
+  if (cached_has_bits & 0x001f0000u) {
     // optional bool is_paste_and_go = 16;
     if (cached_has_bits & 0x00010000u) {
       total_size += 2 + 1;
@@ -3734,6 +3822,12 @@ size_t OmniboxEventProto::ByteSizeLong() const {
     if (cached_has_bits & 0x00080000u) {
       total_size += 2 +
         ::_pbi::WireFormatLite::EnumSize(this->_internal_keyword_mode_entry_method());
+    }
+
+    // optional .metrics.OmniboxEventProto.OmniboxPosition steady_state_omnibox_position = 27;
+    if (cached_has_bits & 0x00100000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::EnumSize(this->_internal_steady_state_omnibox_position());
     }
 
   }
@@ -3818,7 +3912,7 @@ void OmniboxEventProto::MergeFrom(const OmniboxEventProto& from) {
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  if (cached_has_bits & 0x000f0000u) {
+  if (cached_has_bits & 0x001f0000u) {
     if (cached_has_bits & 0x00010000u) {
       is_paste_and_go_ = from.is_paste_and_go_;
     }
@@ -3830,6 +3924,9 @@ void OmniboxEventProto::MergeFrom(const OmniboxEventProto& from) {
     }
     if (cached_has_bits & 0x00080000u) {
       keyword_mode_entry_method_ = from.keyword_mode_entry_method_;
+    }
+    if (cached_has_bits & 0x00100000u) {
+      steady_state_omnibox_position_ = from.steady_state_omnibox_position_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -3858,8 +3955,8 @@ void OmniboxEventProto::InternalSwap(OmniboxEventProto* other) {
   feature_triggered_.InternalSwap(&other->feature_triggered_);
   feature_triggered_in_session_.InternalSwap(&other->feature_triggered_in_session_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(OmniboxEventProto, keyword_mode_entry_method_)
-      + sizeof(OmniboxEventProto::keyword_mode_entry_method_)
+      PROTOBUF_FIELD_OFFSET(OmniboxEventProto, steady_state_omnibox_position_)
+      + sizeof(OmniboxEventProto::steady_state_omnibox_position_)
       - PROTOBUF_FIELD_OFFSET(OmniboxEventProto, profile_data_)>(
           reinterpret_cast<char*>(&profile_data_),
           reinterpret_cast<char*>(&other->profile_data_));

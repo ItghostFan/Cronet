@@ -23,24 +23,24 @@ PerfEventConfig::PerfEventConfig(PerfEventConfig&&) noexcept = default;
 PerfEventConfig& PerfEventConfig::operator=(PerfEventConfig&&) = default;
 
 bool PerfEventConfig::operator==(const PerfEventConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && timebase_ == other.timebase_
-   && callstack_sampling_ == other.callstack_sampling_
-   && ring_buffer_read_period_ms_ == other.ring_buffer_read_period_ms_
-   && ring_buffer_pages_ == other.ring_buffer_pages_
-   && max_enqueued_footprint_kb_ == other.max_enqueued_footprint_kb_
-   && max_daemon_memory_kb_ == other.max_daemon_memory_kb_
-   && remote_descriptor_timeout_ms_ == other.remote_descriptor_timeout_ms_
-   && unwind_state_clear_period_ms_ == other.unwind_state_clear_period_ms_
-   && target_installed_by_ == other.target_installed_by_
-   && all_cpus_ == other.all_cpus_
-   && sampling_frequency_ == other.sampling_frequency_
-   && kernel_frames_ == other.kernel_frames_
-   && target_pid_ == other.target_pid_
-   && target_cmdline_ == other.target_cmdline_
-   && exclude_pid_ == other.exclude_pid_
-   && exclude_cmdline_ == other.exclude_cmdline_
-   && additional_cmdline_count_ == other.additional_cmdline_count_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(timebase_, other.timebase_)
+   && ::protozero::internal::gen_helpers::EqualsField(callstack_sampling_, other.callstack_sampling_)
+   && ::protozero::internal::gen_helpers::EqualsField(ring_buffer_read_period_ms_, other.ring_buffer_read_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(ring_buffer_pages_, other.ring_buffer_pages_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_enqueued_footprint_kb_, other.max_enqueued_footprint_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(max_daemon_memory_kb_, other.max_daemon_memory_kb_)
+   && ::protozero::internal::gen_helpers::EqualsField(remote_descriptor_timeout_ms_, other.remote_descriptor_timeout_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(unwind_state_clear_period_ms_, other.unwind_state_clear_period_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_installed_by_, other.target_installed_by_)
+   && ::protozero::internal::gen_helpers::EqualsField(all_cpus_, other.all_cpus_)
+   && ::protozero::internal::gen_helpers::EqualsField(sampling_frequency_, other.sampling_frequency_)
+   && ::protozero::internal::gen_helpers::EqualsField(kernel_frames_, other.kernel_frames_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_pid_, other.target_pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_cmdline_, other.target_cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(exclude_pid_, other.exclude_pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(exclude_cmdline_, other.exclude_cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(additional_cmdline_count_, other.additional_cmdline_count_);
 }
 
 bool PerfEventConfig::ParseFromArray(const void* raw, size_t size) {
@@ -232,10 +232,10 @@ PerfEventConfig_CallstackSampling::PerfEventConfig_CallstackSampling(PerfEventCo
 PerfEventConfig_CallstackSampling& PerfEventConfig_CallstackSampling::operator=(PerfEventConfig_CallstackSampling&&) = default;
 
 bool PerfEventConfig_CallstackSampling::operator==(const PerfEventConfig_CallstackSampling& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && scope_ == other.scope_
-   && kernel_frames_ == other.kernel_frames_
-   && user_frames_ == other.user_frames_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(scope_, other.scope_)
+   && ::protozero::internal::gen_helpers::EqualsField(kernel_frames_, other.kernel_frames_)
+   && ::protozero::internal::gen_helpers::EqualsField(user_frames_, other.user_frames_);
 }
 
 bool PerfEventConfig_CallstackSampling::ParseFromArray(const void* raw, size_t size) {
@@ -305,13 +305,13 @@ PerfEventConfig_Scope::PerfEventConfig_Scope(PerfEventConfig_Scope&&) noexcept =
 PerfEventConfig_Scope& PerfEventConfig_Scope::operator=(PerfEventConfig_Scope&&) = default;
 
 bool PerfEventConfig_Scope::operator==(const PerfEventConfig_Scope& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && target_pid_ == other.target_pid_
-   && target_cmdline_ == other.target_cmdline_
-   && exclude_pid_ == other.exclude_pid_
-   && exclude_cmdline_ == other.exclude_cmdline_
-   && additional_cmdline_count_ == other.additional_cmdline_count_
-   && process_shard_count_ == other.process_shard_count_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_pid_, other.target_pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(target_cmdline_, other.target_cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(exclude_pid_, other.exclude_pid_)
+   && ::protozero::internal::gen_helpers::EqualsField(exclude_cmdline_, other.exclude_cmdline_)
+   && ::protozero::internal::gen_helpers::EqualsField(additional_cmdline_count_, other.additional_cmdline_count_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_shard_count_, other.process_shard_count_);
 }
 
 bool PerfEventConfig_Scope::ParseFromArray(const void* raw, size_t size) {

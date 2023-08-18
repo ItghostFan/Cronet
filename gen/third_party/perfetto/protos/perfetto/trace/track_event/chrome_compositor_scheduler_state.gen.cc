@@ -23,14 +23,14 @@ CompositorTimingHistory::CompositorTimingHistory(CompositorTimingHistory&&) noex
 CompositorTimingHistory& CompositorTimingHistory::operator=(CompositorTimingHistory&&) = default;
 
 bool CompositorTimingHistory::operator==(const CompositorTimingHistory& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && begin_main_frame_queue_critical_estimate_delta_us_ == other.begin_main_frame_queue_critical_estimate_delta_us_
-   && begin_main_frame_queue_not_critical_estimate_delta_us_ == other.begin_main_frame_queue_not_critical_estimate_delta_us_
-   && begin_main_frame_start_to_ready_to_commit_estimate_delta_us_ == other.begin_main_frame_start_to_ready_to_commit_estimate_delta_us_
-   && commit_to_ready_to_activate_estimate_delta_us_ == other.commit_to_ready_to_activate_estimate_delta_us_
-   && prepare_tiles_estimate_delta_us_ == other.prepare_tiles_estimate_delta_us_
-   && activate_estimate_delta_us_ == other.activate_estimate_delta_us_
-   && draw_estimate_delta_us_ == other.draw_estimate_delta_us_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_main_frame_queue_critical_estimate_delta_us_, other.begin_main_frame_queue_critical_estimate_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_main_frame_queue_not_critical_estimate_delta_us_, other.begin_main_frame_queue_not_critical_estimate_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_main_frame_start_to_ready_to_commit_estimate_delta_us_, other.begin_main_frame_start_to_ready_to_commit_estimate_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(commit_to_ready_to_activate_estimate_delta_us_, other.commit_to_ready_to_activate_estimate_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(prepare_tiles_estimate_delta_us_, other.prepare_tiles_estimate_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(activate_estimate_delta_us_, other.activate_estimate_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(draw_estimate_delta_us_, other.draw_estimate_delta_us_);
 }
 
 bool CompositorTimingHistory::ParseFromArray(const void* raw, size_t size) {
@@ -132,11 +132,11 @@ BeginFrameSourceState::BeginFrameSourceState(BeginFrameSourceState&&) noexcept =
 BeginFrameSourceState& BeginFrameSourceState::operator=(BeginFrameSourceState&&) = default;
 
 bool BeginFrameSourceState::operator==(const BeginFrameSourceState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && source_id_ == other.source_id_
-   && paused_ == other.paused_
-   && num_observers_ == other.num_observers_
-   && last_begin_frame_args_ == other.last_begin_frame_args_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_id_, other.source_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(paused_, other.paused_)
+   && ::protozero::internal::gen_helpers::EqualsField(num_observers_, other.num_observers_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_begin_frame_args_, other.last_begin_frame_args_);
 }
 
 bool BeginFrameSourceState::ParseFromArray(const void* raw, size_t size) {
@@ -214,18 +214,18 @@ BeginFrameArgs::BeginFrameArgs(BeginFrameArgs&&) noexcept = default;
 BeginFrameArgs& BeginFrameArgs::operator=(BeginFrameArgs&&) = default;
 
 bool BeginFrameArgs::operator==(const BeginFrameArgs& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && type_ == other.type_
-   && source_id_ == other.source_id_
-   && sequence_number_ == other.sequence_number_
-   && frame_time_us_ == other.frame_time_us_
-   && deadline_us_ == other.deadline_us_
-   && interval_delta_us_ == other.interval_delta_us_
-   && on_critical_path_ == other.on_critical_path_
-   && animate_only_ == other.animate_only_
-   && source_location_iid_ == other.source_location_iid_
-   && source_location_ == other.source_location_
-   && frames_throttled_since_last_ == other.frames_throttled_since_last_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_id_, other.source_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(sequence_number_, other.sequence_number_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_time_us_, other.frame_time_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(deadline_us_, other.deadline_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(interval_delta_us_, other.interval_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(on_critical_path_, other.on_critical_path_)
+   && ::protozero::internal::gen_helpers::EqualsField(animate_only_, other.animate_only_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_location_iid_, other.source_location_iid_)
+   && ::protozero::internal::gen_helpers::EqualsField(source_location_, other.source_location_)
+   && ::protozero::internal::gen_helpers::EqualsField(frames_throttled_since_last_, other.frames_throttled_since_last_);
 }
 
 bool BeginFrameArgs::ParseFromArray(const void* raw, size_t size) {
@@ -359,9 +359,9 @@ BeginFrameObserverState::BeginFrameObserverState(BeginFrameObserverState&&) noex
 BeginFrameObserverState& BeginFrameObserverState::operator=(BeginFrameObserverState&&) = default;
 
 bool BeginFrameObserverState::operator==(const BeginFrameObserverState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && dropped_begin_frame_args_ == other.dropped_begin_frame_args_
-   && last_begin_frame_args_ == other.last_begin_frame_args_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(dropped_begin_frame_args_, other.dropped_begin_frame_args_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_begin_frame_args_, other.last_begin_frame_args_);
 }
 
 bool BeginFrameObserverState::ParseFromArray(const void* raw, size_t size) {
@@ -423,13 +423,13 @@ BeginImplFrameArgs::BeginImplFrameArgs(BeginImplFrameArgs&&) noexcept = default;
 BeginImplFrameArgs& BeginImplFrameArgs::operator=(BeginImplFrameArgs&&) = default;
 
 bool BeginImplFrameArgs::operator==(const BeginImplFrameArgs& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && updated_at_us_ == other.updated_at_us_
-   && finished_at_us_ == other.finished_at_us_
-   && state_ == other.state_
-   && current_args_ == other.current_args_
-   && last_args_ == other.last_args_
-   && timestamps_in_us_ == other.timestamps_in_us_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(updated_at_us_, other.updated_at_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(finished_at_us_, other.finished_at_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(state_, other.state_)
+   && ::protozero::internal::gen_helpers::EqualsField(current_args_, other.current_args_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_args_, other.last_args_)
+   && ::protozero::internal::gen_helpers::EqualsField(timestamps_in_us_, other.timestamps_in_us_);
 }
 
 bool BeginImplFrameArgs::ParseFromArray(const void* raw, size_t size) {
@@ -523,14 +523,14 @@ BeginImplFrameArgs_TimestampsInUs::BeginImplFrameArgs_TimestampsInUs(BeginImplFr
 BeginImplFrameArgs_TimestampsInUs& BeginImplFrameArgs_TimestampsInUs::operator=(BeginImplFrameArgs_TimestampsInUs&&) = default;
 
 bool BeginImplFrameArgs_TimestampsInUs::operator==(const BeginImplFrameArgs_TimestampsInUs& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && interval_delta_ == other.interval_delta_
-   && now_to_deadline_delta_ == other.now_to_deadline_delta_
-   && frame_time_to_now_delta_ == other.frame_time_to_now_delta_
-   && frame_time_to_deadline_delta_ == other.frame_time_to_deadline_delta_
-   && now_ == other.now_
-   && frame_time_ == other.frame_time_
-   && deadline_ == other.deadline_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(interval_delta_, other.interval_delta_)
+   && ::protozero::internal::gen_helpers::EqualsField(now_to_deadline_delta_, other.now_to_deadline_delta_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_time_to_now_delta_, other.frame_time_to_now_delta_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_time_to_deadline_delta_, other.frame_time_to_deadline_delta_)
+   && ::protozero::internal::gen_helpers::EqualsField(now_, other.now_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_time_, other.frame_time_)
+   && ::protozero::internal::gen_helpers::EqualsField(deadline_, other.deadline_);
 }
 
 bool BeginImplFrameArgs_TimestampsInUs::ParseFromArray(const void* raw, size_t size) {
@@ -632,9 +632,9 @@ ChromeCompositorStateMachine::ChromeCompositorStateMachine(ChromeCompositorState
 ChromeCompositorStateMachine& ChromeCompositorStateMachine::operator=(ChromeCompositorStateMachine&&) = default;
 
 bool ChromeCompositorStateMachine::operator==(const ChromeCompositorStateMachine& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && major_state_ == other.major_state_
-   && minor_state_ == other.minor_state_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(major_state_, other.major_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(minor_state_, other.minor_state_);
 }
 
 bool ChromeCompositorStateMachine::ParseFromArray(const void* raw, size_t size) {
@@ -696,52 +696,52 @@ ChromeCompositorStateMachine_MinorState::ChromeCompositorStateMachine_MinorState
 ChromeCompositorStateMachine_MinorState& ChromeCompositorStateMachine_MinorState::operator=(ChromeCompositorStateMachine_MinorState&&) = default;
 
 bool ChromeCompositorStateMachine_MinorState::operator==(const ChromeCompositorStateMachine_MinorState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && commit_count_ == other.commit_count_
-   && current_frame_number_ == other.current_frame_number_
-   && last_frame_number_submit_performed_ == other.last_frame_number_submit_performed_
-   && last_frame_number_draw_performed_ == other.last_frame_number_draw_performed_
-   && last_frame_number_begin_main_frame_sent_ == other.last_frame_number_begin_main_frame_sent_
-   && did_draw_ == other.did_draw_
-   && did_send_begin_main_frame_for_current_frame_ == other.did_send_begin_main_frame_for_current_frame_
-   && did_notify_begin_main_frame_not_expected_until_ == other.did_notify_begin_main_frame_not_expected_until_
-   && did_notify_begin_main_frame_not_expected_soon_ == other.did_notify_begin_main_frame_not_expected_soon_
-   && wants_begin_main_frame_not_expected_ == other.wants_begin_main_frame_not_expected_
-   && did_commit_during_frame_ == other.did_commit_during_frame_
-   && did_invalidate_layer_tree_frame_sink_ == other.did_invalidate_layer_tree_frame_sink_
-   && did_perform_impl_side_invalidaion_ == other.did_perform_impl_side_invalidaion_
-   && did_prepare_tiles_ == other.did_prepare_tiles_
-   && consecutive_checkerboard_animations_ == other.consecutive_checkerboard_animations_
-   && pending_submit_frames_ == other.pending_submit_frames_
-   && submit_frames_with_current_layer_tree_frame_sink_ == other.submit_frames_with_current_layer_tree_frame_sink_
-   && needs_redraw_ == other.needs_redraw_
-   && needs_prepare_tiles_ == other.needs_prepare_tiles_
-   && needs_begin_main_frame_ == other.needs_begin_main_frame_
-   && needs_one_begin_impl_frame_ == other.needs_one_begin_impl_frame_
-   && visible_ == other.visible_
-   && begin_frame_source_paused_ == other.begin_frame_source_paused_
-   && can_draw_ == other.can_draw_
-   && resourceless_draw_ == other.resourceless_draw_
-   && has_pending_tree_ == other.has_pending_tree_
-   && pending_tree_is_ready_for_activation_ == other.pending_tree_is_ready_for_activation_
-   && active_tree_needs_first_draw_ == other.active_tree_needs_first_draw_
-   && active_tree_is_ready_to_draw_ == other.active_tree_is_ready_to_draw_
-   && did_create_and_initialize_first_layer_tree_frame_sink_ == other.did_create_and_initialize_first_layer_tree_frame_sink_
-   && tree_priority_ == other.tree_priority_
-   && scroll_handler_state_ == other.scroll_handler_state_
-   && critical_begin_main_frame_to_activate_is_fast_ == other.critical_begin_main_frame_to_activate_is_fast_
-   && main_thread_missed_last_deadline_ == other.main_thread_missed_last_deadline_
-   && video_needs_begin_frames_ == other.video_needs_begin_frames_
-   && defer_begin_main_frame_ == other.defer_begin_main_frame_
-   && last_commit_had_no_updates_ == other.last_commit_had_no_updates_
-   && did_draw_in_last_frame_ == other.did_draw_in_last_frame_
-   && did_submit_in_last_frame_ == other.did_submit_in_last_frame_
-   && needs_impl_side_invalidation_ == other.needs_impl_side_invalidation_
-   && current_pending_tree_is_impl_side_ == other.current_pending_tree_is_impl_side_
-   && previous_pending_tree_was_impl_side_ == other.previous_pending_tree_was_impl_side_
-   && processing_animation_worklets_for_active_tree_ == other.processing_animation_worklets_for_active_tree_
-   && processing_animation_worklets_for_pending_tree_ == other.processing_animation_worklets_for_pending_tree_
-   && processing_paint_worklets_for_pending_tree_ == other.processing_paint_worklets_for_pending_tree_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(commit_count_, other.commit_count_)
+   && ::protozero::internal::gen_helpers::EqualsField(current_frame_number_, other.current_frame_number_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_frame_number_submit_performed_, other.last_frame_number_submit_performed_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_frame_number_draw_performed_, other.last_frame_number_draw_performed_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_frame_number_begin_main_frame_sent_, other.last_frame_number_begin_main_frame_sent_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_draw_, other.did_draw_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_send_begin_main_frame_for_current_frame_, other.did_send_begin_main_frame_for_current_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_notify_begin_main_frame_not_expected_until_, other.did_notify_begin_main_frame_not_expected_until_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_notify_begin_main_frame_not_expected_soon_, other.did_notify_begin_main_frame_not_expected_soon_)
+   && ::protozero::internal::gen_helpers::EqualsField(wants_begin_main_frame_not_expected_, other.wants_begin_main_frame_not_expected_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_commit_during_frame_, other.did_commit_during_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_invalidate_layer_tree_frame_sink_, other.did_invalidate_layer_tree_frame_sink_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_perform_impl_side_invalidaion_, other.did_perform_impl_side_invalidaion_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_prepare_tiles_, other.did_prepare_tiles_)
+   && ::protozero::internal::gen_helpers::EqualsField(consecutive_checkerboard_animations_, other.consecutive_checkerboard_animations_)
+   && ::protozero::internal::gen_helpers::EqualsField(pending_submit_frames_, other.pending_submit_frames_)
+   && ::protozero::internal::gen_helpers::EqualsField(submit_frames_with_current_layer_tree_frame_sink_, other.submit_frames_with_current_layer_tree_frame_sink_)
+   && ::protozero::internal::gen_helpers::EqualsField(needs_redraw_, other.needs_redraw_)
+   && ::protozero::internal::gen_helpers::EqualsField(needs_prepare_tiles_, other.needs_prepare_tiles_)
+   && ::protozero::internal::gen_helpers::EqualsField(needs_begin_main_frame_, other.needs_begin_main_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(needs_one_begin_impl_frame_, other.needs_one_begin_impl_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(visible_, other.visible_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_frame_source_paused_, other.begin_frame_source_paused_)
+   && ::protozero::internal::gen_helpers::EqualsField(can_draw_, other.can_draw_)
+   && ::protozero::internal::gen_helpers::EqualsField(resourceless_draw_, other.resourceless_draw_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_pending_tree_, other.has_pending_tree_)
+   && ::protozero::internal::gen_helpers::EqualsField(pending_tree_is_ready_for_activation_, other.pending_tree_is_ready_for_activation_)
+   && ::protozero::internal::gen_helpers::EqualsField(active_tree_needs_first_draw_, other.active_tree_needs_first_draw_)
+   && ::protozero::internal::gen_helpers::EqualsField(active_tree_is_ready_to_draw_, other.active_tree_is_ready_to_draw_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_create_and_initialize_first_layer_tree_frame_sink_, other.did_create_and_initialize_first_layer_tree_frame_sink_)
+   && ::protozero::internal::gen_helpers::EqualsField(tree_priority_, other.tree_priority_)
+   && ::protozero::internal::gen_helpers::EqualsField(scroll_handler_state_, other.scroll_handler_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(critical_begin_main_frame_to_activate_is_fast_, other.critical_begin_main_frame_to_activate_is_fast_)
+   && ::protozero::internal::gen_helpers::EqualsField(main_thread_missed_last_deadline_, other.main_thread_missed_last_deadline_)
+   && ::protozero::internal::gen_helpers::EqualsField(video_needs_begin_frames_, other.video_needs_begin_frames_)
+   && ::protozero::internal::gen_helpers::EqualsField(defer_begin_main_frame_, other.defer_begin_main_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(last_commit_had_no_updates_, other.last_commit_had_no_updates_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_draw_in_last_frame_, other.did_draw_in_last_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(did_submit_in_last_frame_, other.did_submit_in_last_frame_)
+   && ::protozero::internal::gen_helpers::EqualsField(needs_impl_side_invalidation_, other.needs_impl_side_invalidation_)
+   && ::protozero::internal::gen_helpers::EqualsField(current_pending_tree_is_impl_side_, other.current_pending_tree_is_impl_side_)
+   && ::protozero::internal::gen_helpers::EqualsField(previous_pending_tree_was_impl_side_, other.previous_pending_tree_was_impl_side_)
+   && ::protozero::internal::gen_helpers::EqualsField(processing_animation_worklets_for_active_tree_, other.processing_animation_worklets_for_active_tree_)
+   && ::protozero::internal::gen_helpers::EqualsField(processing_animation_worklets_for_pending_tree_, other.processing_animation_worklets_for_pending_tree_)
+   && ::protozero::internal::gen_helpers::EqualsField(processing_paint_worklets_for_pending_tree_, other.processing_paint_worklets_for_pending_tree_);
 }
 
 bool ChromeCompositorStateMachine_MinorState::ParseFromArray(const void* raw, size_t size) {
@@ -1147,12 +1147,12 @@ ChromeCompositorStateMachine_MajorState::ChromeCompositorStateMachine_MajorState
 ChromeCompositorStateMachine_MajorState& ChromeCompositorStateMachine_MajorState::operator=(ChromeCompositorStateMachine_MajorState&&) = default;
 
 bool ChromeCompositorStateMachine_MajorState::operator==(const ChromeCompositorStateMachine_MajorState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && next_action_ == other.next_action_
-   && begin_impl_frame_state_ == other.begin_impl_frame_state_
-   && begin_main_frame_state_ == other.begin_main_frame_state_
-   && layer_tree_frame_sink_state_ == other.layer_tree_frame_sink_state_
-   && forced_redraw_state_ == other.forced_redraw_state_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(next_action_, other.next_action_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_impl_frame_state_, other.begin_impl_frame_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_main_frame_state_, other.begin_main_frame_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(layer_tree_frame_sink_state_, other.layer_tree_frame_sink_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(forced_redraw_state_, other.forced_redraw_state_);
 }
 
 bool ChromeCompositorStateMachine_MajorState::ParseFromArray(const void* raw, size_t size) {
@@ -1238,23 +1238,23 @@ ChromeCompositorSchedulerState::ChromeCompositorSchedulerState(ChromeCompositorS
 ChromeCompositorSchedulerState& ChromeCompositorSchedulerState::operator=(ChromeCompositorSchedulerState&&) = default;
 
 bool ChromeCompositorSchedulerState::operator==(const ChromeCompositorSchedulerState& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && state_machine_ == other.state_machine_
-   && observing_begin_frame_source_ == other.observing_begin_frame_source_
-   && begin_impl_frame_deadline_task_ == other.begin_impl_frame_deadline_task_
-   && pending_begin_frame_task_ == other.pending_begin_frame_task_
-   && skipped_last_frame_missed_exceeded_deadline_ == other.skipped_last_frame_missed_exceeded_deadline_
-   && inside_action_ == other.inside_action_
-   && deadline_mode_ == other.deadline_mode_
-   && deadline_us_ == other.deadline_us_
-   && deadline_scheduled_at_us_ == other.deadline_scheduled_at_us_
-   && now_us_ == other.now_us_
-   && now_to_deadline_delta_us_ == other.now_to_deadline_delta_us_
-   && now_to_deadline_scheduled_at_delta_us_ == other.now_to_deadline_scheduled_at_delta_us_
-   && begin_impl_frame_args_ == other.begin_impl_frame_args_
-   && begin_frame_observer_state_ == other.begin_frame_observer_state_
-   && begin_frame_source_state_ == other.begin_frame_source_state_
-   && compositor_timing_history_ == other.compositor_timing_history_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(state_machine_, other.state_machine_)
+   && ::protozero::internal::gen_helpers::EqualsField(observing_begin_frame_source_, other.observing_begin_frame_source_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_impl_frame_deadline_task_, other.begin_impl_frame_deadline_task_)
+   && ::protozero::internal::gen_helpers::EqualsField(pending_begin_frame_task_, other.pending_begin_frame_task_)
+   && ::protozero::internal::gen_helpers::EqualsField(skipped_last_frame_missed_exceeded_deadline_, other.skipped_last_frame_missed_exceeded_deadline_)
+   && ::protozero::internal::gen_helpers::EqualsField(inside_action_, other.inside_action_)
+   && ::protozero::internal::gen_helpers::EqualsField(deadline_mode_, other.deadline_mode_)
+   && ::protozero::internal::gen_helpers::EqualsField(deadline_us_, other.deadline_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(deadline_scheduled_at_us_, other.deadline_scheduled_at_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(now_us_, other.now_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(now_to_deadline_delta_us_, other.now_to_deadline_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(now_to_deadline_scheduled_at_delta_us_, other.now_to_deadline_scheduled_at_delta_us_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_impl_frame_args_, other.begin_impl_frame_args_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_frame_observer_state_, other.begin_frame_observer_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(begin_frame_source_state_, other.begin_frame_source_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(compositor_timing_history_, other.compositor_timing_history_);
 }
 
 bool ChromeCompositorSchedulerState::ParseFromArray(const void* raw, size_t size) {

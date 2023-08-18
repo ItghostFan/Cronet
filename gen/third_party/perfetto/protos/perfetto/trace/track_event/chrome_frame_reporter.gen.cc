@@ -22,21 +22,21 @@ ChromeFrameReporter::ChromeFrameReporter(ChromeFrameReporter&&) noexcept = defau
 ChromeFrameReporter& ChromeFrameReporter::operator=(ChromeFrameReporter&&) = default;
 
 bool ChromeFrameReporter::operator==(const ChromeFrameReporter& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && state_ == other.state_
-   && reason_ == other.reason_
-   && frame_source_ == other.frame_source_
-   && frame_sequence_ == other.frame_sequence_
-   && affects_smoothness_ == other.affects_smoothness_
-   && scroll_state_ == other.scroll_state_
-   && has_main_animation_ == other.has_main_animation_
-   && has_compositor_animation_ == other.has_compositor_animation_
-   && has_smooth_input_main_ == other.has_smooth_input_main_
-   && has_missing_content_ == other.has_missing_content_
-   && layer_tree_host_id_ == other.layer_tree_host_id_
-   && has_high_latency_ == other.has_high_latency_
-   && frame_type_ == other.frame_type_
-   && high_latency_contribution_stage_ == other.high_latency_contribution_stage_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(state_, other.state_)
+   && ::protozero::internal::gen_helpers::EqualsField(reason_, other.reason_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_source_, other.frame_source_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_sequence_, other.frame_sequence_)
+   && ::protozero::internal::gen_helpers::EqualsField(affects_smoothness_, other.affects_smoothness_)
+   && ::protozero::internal::gen_helpers::EqualsField(scroll_state_, other.scroll_state_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_main_animation_, other.has_main_animation_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_compositor_animation_, other.has_compositor_animation_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_smooth_input_main_, other.has_smooth_input_main_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_missing_content_, other.has_missing_content_)
+   && ::protozero::internal::gen_helpers::EqualsField(layer_tree_host_id_, other.layer_tree_host_id_)
+   && ::protozero::internal::gen_helpers::EqualsField(has_high_latency_, other.has_high_latency_)
+   && ::protozero::internal::gen_helpers::EqualsField(frame_type_, other.frame_type_)
+   && ::protozero::internal::gen_helpers::EqualsField(high_latency_contribution_stage_, other.high_latency_contribution_stage_);
 }
 
 bool ChromeFrameReporter::ParseFromArray(const void* raw, size_t size) {

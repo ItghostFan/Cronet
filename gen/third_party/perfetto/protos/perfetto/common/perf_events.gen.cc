@@ -22,7 +22,7 @@ PerfEvents::PerfEvents(PerfEvents&&) noexcept = default;
 PerfEvents& PerfEvents::operator=(PerfEvents&&) = default;
 
 bool PerfEvents::operator==(const PerfEvents& other) const {
-  return unknown_fields_ == other.unknown_fields_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_);
 }
 
 bool PerfEvents::ParseFromArray(const void* raw, size_t size) {
@@ -68,11 +68,11 @@ PerfEvents_RawEvent::PerfEvents_RawEvent(PerfEvents_RawEvent&&) noexcept = defau
 PerfEvents_RawEvent& PerfEvents_RawEvent::operator=(PerfEvents_RawEvent&&) = default;
 
 bool PerfEvents_RawEvent::operator==(const PerfEvents_RawEvent& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && type_ == other.type_
-   && config_ == other.config_
-   && config1_ == other.config1_
-   && config2_ == other.config2_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(type_, other.type_)
+   && ::protozero::internal::gen_helpers::EqualsField(config_, other.config_)
+   && ::protozero::internal::gen_helpers::EqualsField(config1_, other.config1_)
+   && ::protozero::internal::gen_helpers::EqualsField(config2_, other.config2_);
 }
 
 bool PerfEvents_RawEvent::ParseFromArray(const void* raw, size_t size) {
@@ -150,9 +150,9 @@ PerfEvents_Tracepoint::PerfEvents_Tracepoint(PerfEvents_Tracepoint&&) noexcept =
 PerfEvents_Tracepoint& PerfEvents_Tracepoint::operator=(PerfEvents_Tracepoint&&) = default;
 
 bool PerfEvents_Tracepoint::operator==(const PerfEvents_Tracepoint& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && name_ == other.name_
-   && filter_ == other.filter_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(filter_, other.filter_);
 }
 
 bool PerfEvents_Tracepoint::ParseFromArray(const void* raw, size_t size) {
@@ -214,14 +214,14 @@ PerfEvents_Timebase::PerfEvents_Timebase(PerfEvents_Timebase&&) noexcept = defau
 PerfEvents_Timebase& PerfEvents_Timebase::operator=(PerfEvents_Timebase&&) = default;
 
 bool PerfEvents_Timebase::operator==(const PerfEvents_Timebase& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && frequency_ == other.frequency_
-   && period_ == other.period_
-   && counter_ == other.counter_
-   && tracepoint_ == other.tracepoint_
-   && raw_event_ == other.raw_event_
-   && timestamp_clock_ == other.timestamp_clock_
-   && name_ == other.name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(frequency_, other.frequency_)
+   && ::protozero::internal::gen_helpers::EqualsField(period_, other.period_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_, other.counter_)
+   && ::protozero::internal::gen_helpers::EqualsField(tracepoint_, other.tracepoint_)
+   && ::protozero::internal::gen_helpers::EqualsField(raw_event_, other.raw_event_)
+   && ::protozero::internal::gen_helpers::EqualsField(timestamp_clock_, other.timestamp_clock_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_);
 }
 
 bool PerfEvents_Timebase::ParseFromArray(const void* raw, size_t size) {

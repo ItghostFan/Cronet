@@ -266,7 +266,8 @@ class ProcessTable : public macros_internal::MacroTable {
 
    private:
     friend class ProcessTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ProcessTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -814,7 +815,8 @@ class ThreadTable : public macros_internal::MacroTable {
 
    private:
     friend class ThreadTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ThreadTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1299,7 +1301,8 @@ class ArgTable : public macros_internal::MacroTable {
 
    private:
     friend class ArgTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ArgTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -1775,7 +1778,8 @@ class ClockSnapshotTable : public macros_internal::MacroTable {
 
    private:
     friend class ClockSnapshotTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ClockSnapshotTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2143,7 +2147,8 @@ class CpuTable : public macros_internal::MacroTable {
 
    private:
     friend class CpuTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CpuTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2430,7 +2435,8 @@ class CpuFreqTable : public macros_internal::MacroTable {
 
    private:
     friend class CpuFreqTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, CpuFreqTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -2717,7 +2723,8 @@ class ExpMissingChromeProcTable : public macros_internal::MacroTable {
 
    private:
     friend class ExpMissingChromeProcTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, ExpMissingChromeProcTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3058,7 +3065,8 @@ class FiledescriptorTable : public macros_internal::MacroTable {
 
    private:
     friend class FiledescriptorTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, FiledescriptorTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3462,7 +3470,8 @@ class MetadataTable : public macros_internal::MacroTable {
 
    private:
     friend class MetadataTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, MetadataTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -3875,7 +3884,8 @@ class RawTable : public macros_internal::MacroTable {
 
    private:
     friend class RawTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, RawTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:
@@ -4322,7 +4332,8 @@ class FtraceEventTable : public macros_internal::MacroTable {
 
    private:
     friend class FtraceEventTable;
-    friend class AbstractConstIterator;
+    friend class macros_internal::AbstractConstIterator<
+      ConstIterator, FtraceEventTable, RowNumber, ConstRowReference>;
   };
   class Iterator : public ConstIterator {
     public:

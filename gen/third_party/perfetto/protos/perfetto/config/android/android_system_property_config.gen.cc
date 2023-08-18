@@ -22,9 +22,9 @@ AndroidSystemPropertyConfig::AndroidSystemPropertyConfig(AndroidSystemPropertyCo
 AndroidSystemPropertyConfig& AndroidSystemPropertyConfig::operator=(AndroidSystemPropertyConfig&&) = default;
 
 bool AndroidSystemPropertyConfig::operator==(const AndroidSystemPropertyConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && poll_ms_ == other.poll_ms_
-   && property_name_ == other.property_name_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(poll_ms_, other.poll_ms_)
+   && ::protozero::internal::gen_helpers::EqualsField(property_name_, other.property_name_);
 }
 
 bool AndroidSystemPropertyConfig::ParseFromArray(const void* raw, size_t size) {

@@ -27,16 +27,16 @@ TrackDescriptor::TrackDescriptor(TrackDescriptor&&) noexcept = default;
 TrackDescriptor& TrackDescriptor::operator=(TrackDescriptor&&) = default;
 
 bool TrackDescriptor::operator==(const TrackDescriptor& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && uuid_ == other.uuid_
-   && parent_uuid_ == other.parent_uuid_
-   && name_ == other.name_
-   && process_ == other.process_
-   && chrome_process_ == other.chrome_process_
-   && thread_ == other.thread_
-   && chrome_thread_ == other.chrome_thread_
-   && counter_ == other.counter_
-   && disallow_merging_with_system_tracks_ == other.disallow_merging_with_system_tracks_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(uuid_, other.uuid_)
+   && ::protozero::internal::gen_helpers::EqualsField(parent_uuid_, other.parent_uuid_)
+   && ::protozero::internal::gen_helpers::EqualsField(name_, other.name_)
+   && ::protozero::internal::gen_helpers::EqualsField(process_, other.process_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_process_, other.chrome_process_)
+   && ::protozero::internal::gen_helpers::EqualsField(thread_, other.thread_)
+   && ::protozero::internal::gen_helpers::EqualsField(chrome_thread_, other.chrome_thread_)
+   && ::protozero::internal::gen_helpers::EqualsField(counter_, other.counter_)
+   && ::protozero::internal::gen_helpers::EqualsField(disallow_merging_with_system_tracks_, other.disallow_merging_with_system_tracks_);
 }
 
 bool TrackDescriptor::ParseFromArray(const void* raw, size_t size) {

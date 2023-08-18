@@ -367,6 +367,7 @@
 		78EB506A2A8F188B00265ED0 /* module_cache_apple.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50692A8F188A00265ED0 /* module_cache_apple.cc */; };
 		78EB506D2A8F18D300265ED0 /* message_pump_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB506B2A8F18D200265ED0 /* message_pump_apple.mm */; };
 		78EB506F2A8F18FB00265ED0 /* file_util_apple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB506E2A8F18FB00265ED0 /* file_util_apple.mm */; };
+		78EB50C62A8FC68C00265ED0 /* osstatus_logging.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78EB50C42A8FC68C00265ED0 /* osstatus_logging.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1063,6 +1064,8 @@
 		78EB506B2A8F18D200265ED0 /* message_pump_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = message_pump_apple.mm; path = ../../src/base/message_loop/message_pump_apple.mm; sourceTree = "<group>"; };
 		78EB506C2A8F18D200265ED0 /* message_pump_apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = message_pump_apple.h; path = ../../src/base/message_loop/message_pump_apple.h; sourceTree = "<group>"; };
 		78EB506E2A8F18FB00265ED0 /* file_util_apple.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = file_util_apple.mm; path = ../../src/base/files/file_util_apple.mm; sourceTree = "<group>"; };
+		78EB50C42A8FC68C00265ED0 /* osstatus_logging.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = osstatus_logging.mm; path = ../../src/base/apple/osstatus_logging.mm; sourceTree = "<group>"; };
+		78EB50C52A8FC68C00265ED0 /* osstatus_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osstatus_logging.h; path = ../../src/base/apple/osstatus_logging.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2028,6 +2031,8 @@
 		787AD4172A853A7600CBEF59 /* apple */ = {
 			isa = PBXGroup;
 			children = (
+				78EB50C52A8FC68C00265ED0 /* osstatus_logging.h */,
+				78EB50C42A8FC68C00265ED0 /* osstatus_logging.mm */,
 				787AD41A2A853A8300CBEF59 /* bundle_locations.h */,
 				787AD4192A853A8300CBEF59 /* bundle_locations.mm */,
 				78EB50502A8F162A00265ED0 /* scoped_nsautorelease_pool.cc */,
@@ -2374,6 +2379,7 @@
 				785BFC6C2A7786F20088C2FC /* thread_pool_impl.cc in Sources */,
 				785BFBE82A7777030088C2FC /* lazy_thread_pool_task_runner.cc in Sources */,
 				785BFBEA2A7777030088C2FC /* current_thread.cc in Sources */,
+				78EB50C62A8FC68C00265ED0 /* osstatus_logging.mm in Sources */,
 				78EB50562A8F167D00265ED0 /* call_with_eh_frame.cc in Sources */,
 				785BFB092A7766660088C2FC /* field_trial.cc in Sources */,
 				785BFA012A775F9B0088C2FC /* at_exit.cc in Sources */,

@@ -22,16 +22,16 @@ TrackEventConfig::TrackEventConfig(TrackEventConfig&&) noexcept = default;
 TrackEventConfig& TrackEventConfig::operator=(TrackEventConfig&&) = default;
 
 bool TrackEventConfig::operator==(const TrackEventConfig& other) const {
-  return unknown_fields_ == other.unknown_fields_
-   && disabled_categories_ == other.disabled_categories_
-   && enabled_categories_ == other.enabled_categories_
-   && disabled_tags_ == other.disabled_tags_
-   && enabled_tags_ == other.enabled_tags_
-   && disable_incremental_timestamps_ == other.disable_incremental_timestamps_
-   && timestamp_unit_multiplier_ == other.timestamp_unit_multiplier_
-   && filter_debug_annotations_ == other.filter_debug_annotations_
-   && enable_thread_time_sampling_ == other.enable_thread_time_sampling_
-   && filter_dynamic_event_names_ == other.filter_dynamic_event_names_;
+  return ::protozero::internal::gen_helpers::EqualsField(unknown_fields_, other.unknown_fields_)
+   && ::protozero::internal::gen_helpers::EqualsField(disabled_categories_, other.disabled_categories_)
+   && ::protozero::internal::gen_helpers::EqualsField(enabled_categories_, other.enabled_categories_)
+   && ::protozero::internal::gen_helpers::EqualsField(disabled_tags_, other.disabled_tags_)
+   && ::protozero::internal::gen_helpers::EqualsField(enabled_tags_, other.enabled_tags_)
+   && ::protozero::internal::gen_helpers::EqualsField(disable_incremental_timestamps_, other.disable_incremental_timestamps_)
+   && ::protozero::internal::gen_helpers::EqualsField(timestamp_unit_multiplier_, other.timestamp_unit_multiplier_)
+   && ::protozero::internal::gen_helpers::EqualsField(filter_debug_annotations_, other.filter_debug_annotations_)
+   && ::protozero::internal::gen_helpers::EqualsField(enable_thread_time_sampling_, other.enable_thread_time_sampling_)
+   && ::protozero::internal::gen_helpers::EqualsField(filter_dynamic_event_names_, other.filter_dynamic_event_names_);
 }
 
 bool TrackEventConfig::ParseFromArray(const void* raw, size_t size) {
